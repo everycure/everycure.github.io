@@ -1,1 +1,1 @@
-# everycure.github.io
+:)

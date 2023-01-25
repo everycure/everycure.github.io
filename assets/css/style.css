@@ -1,6 +1,7 @@
 /* CSS DIRECTORY
 	1. =GLOBAL
   2. =NAVBAR
+  3. =DATA STUDIO
   
 */
 
@@ -25,11 +26,11 @@
   --accent3: #F04E3E;
   --accent4: #F9C20A;
 
+
   /* paper textures */
   --project_paper: url("https://www.transparenttextures.com/patterns/project-paper.png");
   --cardboard: url("https://www.transparenttextures.com/patterns/cardboard.png");
   --noisy_grid: url("https://www.transparenttextures.com/patterns/noisy-grid.png");
-
 }
 
 * {
@@ -175,4 +176,15 @@ h6 {
   .nav2 {
     display: none;
   }
+}
+
+/* ===GOOGLE DATA STUDIO (AKA survey insights) === 
+
+  adjust the width of the Google Data Studio report
+
+*/
+
+.data_studio iframe {
+  width: 70vw;
+  height: 8000px;
 }

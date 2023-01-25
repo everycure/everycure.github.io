@@ -16,6 +16,15 @@
 
 */
 
+
+/*  remove the popup overlay (helps during editing/troubleshooting)
+
+.overlay {
+    display: none!important;
+} 
+
+*/
+
 /* create the main overlay (that the white background sits on top of) */
 .overlay {
     position: fixed;
@@ -46,6 +55,11 @@
 .overlay_heading {
     font-size: 1.8em;
     margin-top: -30px;
+}
+
+.overlay_heading2 {
+    font-size: 1.4em;
+    text-transform: uppercase;
 }
 
 /* button controls */
@@ -203,9 +217,8 @@
     height: 100px;
     position: relative;
     font-family: 'Work Sans', sans-serif;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 600;
-    float: center;
     color: var(roadmap_dark);
 }
 
@@ -291,13 +304,16 @@
 .flexcontainer {
     display: flex;
     justify-content: space-between;
-    margin-left: 50px !important;
+    margin-left: 30px;
 }
+
+
 
 /* hide branches until stops are clicked */
 .branch_line_inactive {
     width: 0vw;
 }
+
 
 /* give all branches cardboard texture */
 .branch_line_2.branch_line_active,
@@ -305,6 +321,7 @@
 .branch_line_4.branch_line_active,
 .branch_line_5.branch_line_active {
     background-image: var(--cardboard);
+    z-index: 1000;
 
 }
 
@@ -334,6 +351,7 @@ and arrange the dots in evenly-spaced lines*/
     border-radius: 50%;
     background-color: white;
     font-weight: 700;
+    z-index: 1000;
 
 }
 
@@ -368,6 +386,8 @@ and arrange the dots in evenly-spaced lines*/
 .branch_dot_text {
     margin-top: 15px;
     font-weight: 400;
+    width: 100px;
+    margin-left: -45px;
     font-size: 12px;
     display: flex;
     position: relative;
@@ -382,7 +402,7 @@ and arrange the dots in evenly-spaced lines*/
 .main_dot:focus,
 .branch_dot:focus {
     background: black;
-    background-image: url("https://www.transparenttextures.com/patterns/cardboard.png");
+    background-image: var(--cardboard);
 }
 
 /* arrange branch stops in evenly-spaced row  */
@@ -397,6 +417,7 @@ and arrange the dots in evenly-spaced lines*/
 }
 
 #branch_dot {
+    z-index:1000;
     display: -webkit-flex;
     -webkit-flex-flow: row wrap;
     -webkit-justify-content: flex-between;
@@ -414,6 +435,21 @@ and arrange the dots in evenly-spaced lines*/
     opacity: 100%;
 }
 
+.verticalLine, .verticalLineLong {
+    margin-top: 12px!important;
+    margin-left:3.8px!important;
+    background-color:   #00B050;
+    background-image: var(--cardboard);
+    width: 3px!important;
+
+}
+.verticalLine {
+    height: 30px;
+}
+
+.verticalLineLong {
+    height: 170px;
+}
 /* turns cursor arrow to hand on hover */
 .branch_dot,
 .main_dot {
@@ -851,11 +887,26 @@ and arrange the dots in evenly-spaced lines*/
         top: 843px;
     }
 
+
 }
 
 @media only screen and (min-width: 1500px) {
+
+}
+
+@media only screen and (min-width: 1600px) {
     .buttondiv {
         position: absolute;
         right: 300px !important;
+    }
+    .branchTextWide {
+        width: 130px;
+        margin-left: -60px;
+    }
+
+    .flexcontainer {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 90px !important;
     }
 }

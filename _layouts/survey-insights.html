@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{page.title}} | {{site.name}}</title>
+
+    {% seo %}
+
+    <link rel="shortcut icon" type="image/x-icon" href="{{site.baseurl}}/{{site.favicon}}">
+    <!-- Font Awesome -->
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css"
+    rel="stylesheet"
+  />    
+
+  <link
+  href="{{site.baseurl}}/assets/css/style.css"
+  rel="stylesheet"
+/>    
+
+<!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
+
+
+  </head>
+
+  <style>
+
+    .link-text, i {color: white;}
+    .navbar_gds {
+      position: fixed!important;
+      background-color: #1A1B53;
+      transition: width 600ms ease;
+      box-shadow: none;
+      height: 100vh;
+    }
+    
+    .navbar_gds, .navbar_gds-nav, .nav-item_gds, .nav-link_gds, .link-text {
+        width: 270px;
+        font-family: 'IBM Plex Sans', sans-serif !important;
+
+    }
+
+    .nav-item_gds p {
+      padding-left: 30px;
+      padding-top: 15px;
+    }
+
+    .navbar_gds-nav {
+      list-style: none;
+      padding: 3em;
+      padding-left: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+    }
+    
+    .nav-item_gds {
+      width: 100%;
+    }
+
+    .icon {
+      height: 30px;
+      width: auto;
+    }
+    
+    
+    .nav-link_gds {
+      display: flex;
+      align-items: center;
+      color: var(--text-primary);
+      text-decoration: none;
+    }
+
+    .link-text  {
+      padding-left: 5px;
+      font-size: 1em;
+
+    }
+    
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    
+    body::-webkit-scrollbar {
+      width: 0.25rem;
+    }
+    
+    main {
+      margin-left: 270px;
+      padding-left: 0!important;
+      padding-top: 0!important;
+    }
+
+    .nav-link_gds:hover{
+        font-weight: 800;
+
+    }
+    
+    .heading p {
+      margin-left: 4px!important;
+      padding-left: 4px!important;
+    }
+    
+    </style>
+    
+<body >
+
+{% include navbar.html %}
+    <!-- Content -->
+    <div class = "pt-5">
+      <nav class="navbar_gds ">
+        <ul class="navbar_gds-nav">
+          <li class="nav-item_gds nav-0 ">
+            <a href="/survey-insights-welcome.html" class="nav-link_gds">
+                    <p class = "link-text">
+                      Welcome</p>
+            </a>
+          </li>
+          <li class="nav-item_gds heading ">
+                    <p class = "link-text">RARE DISEASE NON PROFITS</p>
+          </li>
+
+          <li class="nav-item_gds nav-1">
+            <a href="/survey-insights-organizational-characteristics.html" class="nav-link_gds">
+                    <p class = "link-text">
+                      Organizational characteristics</p>
+            </a>
+          </li>
+          <li class="nav-item_gds nav-2">
+            <a href="/survey-insights-rare-disease-state-of-research.html" class="nav-link_gds">
+                    <p class = "link-text">
+                      Rare disease state of research</p>
+            </a>
+          </li>
+          <li class="nav-item_gds nav-3">
+            <a href="/survey-insights-drug-repurposing" class="nav-link_gds">
+               <p class = "link-text">
+                Drug repurposing</p>
+            </a>
+          </li>
+          <li class="nav-item_gds nav-4">
+            <a href="/survey-insights-collaboration.html" class="nav-link_gds">
+                    <p class = "link-text">
+                      Collaboration</p>
+            </a>
+          </li>
+          <li class="nav-item_gds heading ">
+            <p class = "link-text">STAKEHOLDER DATA</p>
+    </li>
+
+
+          <li class="nav-item_gds nav-5">
+            <a href="/survey-insights-patients-loved-ones.html" class="nav-link_gds">
+                    <p class = "link-text">
+                      Patients and loved ones</p>
+            </a>
+          </li>
+          <li class="nav-item_gds nav-6">
+            <a href="/survey-insights-physicians.html" class="nav-link_gds">
+                    <p class = "link-text">
+                      Physicians</p>
+            </a>
+          </li>
+          <li class="nav-item_gds nav-7">
+            <a href="/survey-insights-researchers.html" class="nav-link_gds">
+                    <p class = "link-text">
+                      Researchers</p>
+            </a>
+          </li>
+
+
+
+        </ul>
+      </nav>
+
+    </div>
+    <main role="main" class="site-content">
+
+      <div class = "pt-5">
+        
+{{content}}
+
+      </div>
+    </main>
+
+
+</body>
+
+</html>

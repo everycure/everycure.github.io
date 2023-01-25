@@ -78,8 +78,11 @@ body a {
 
 body p,
 body li,
-body ol {
-  font-size: .85em;
+body ol,
+ol li,
+ul li,
+li p {
+  font-size: .9em;
   color: var(--roadmap_dark);
 
 }

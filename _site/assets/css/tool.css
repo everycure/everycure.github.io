@@ -16,12 +16,25 @@
 
 */
 
+.cardboard {
+    background-image: var(--cardboard)!important;
+}
 
-/*  remove the popup overlay (helps during editing/troubleshooting)
+.listIcon {
+    height: 70px;
+    width: auto;
+
+}
+
+.accentImage {
+    max-height: 200px;
+    width: auto; 
+}
 
 .overlay {
     display: none!important;
 } 
+/*  remove the popup overlay (helps during editing/troubleshooting)
 
 */
 
@@ -47,7 +60,8 @@
 
 /* create the white screen (where the conent goes) */
 .overlay_content {
-    width: 70vw !important;
+    width: 70vw !important ;
+    position: relative;
     background: rgba(255, 255, 255, .9);
 }
 
@@ -540,11 +554,13 @@ and arrange the dots in evenly-spaced lines*/
     text-align: right;
     display: block;
     background-image: url("https://www.transparenttextures.com/patterns/cardboard.png");
-    padding-top: 13px !important;
-    padding-bottom: 14px !important;
+    padding-bottom: 3px !important;
+    color: var(--roadmap_light);
 
 }
-
+.main_heading {
+    font-weight: 500 !important;
+}
 /* format branch 2 headings */
 #heading_2.active_heading_2,
 #heading_2_1.active_heading_2_1,

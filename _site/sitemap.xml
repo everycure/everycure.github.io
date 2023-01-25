@@ -31,9 +31,6 @@
 <loc>http://localhost:4000/roadmap.html</loc>
 </url>
 <url>
-<loc>http://localhost:4000/survey-insights.html</loc>
-</url>
-<url>
 <loc>http://localhost:4000/about.html</loc>
 </url>
 <url>
@@ -44,5 +41,8 @@
 </url>
 <url>
 <loc>http://localhost:4000/resources.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/roadmap-welcome.html</loc>
 </url>
 </urlset>

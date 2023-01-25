@@ -1,7 +1,7 @@
 ---
 title: "About the ROADMAP project"
 layout: markdown
-permalink: "/about.html"
+permalink: "/ignore.html"
 ---
 
 <div class = "pt-5"></div>

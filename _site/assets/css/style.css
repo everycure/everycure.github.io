@@ -81,7 +81,8 @@ body li,
 body ol,
 ol li,
 ul li,
-li p {
+li p,
+.textSmall {
   font-size: .9em;
   color: var(--roadmap_dark);
 

@@ -14,4 +14,46 @@ permalink: "/survey-insights-organizational-characteristics.html"
     }
 </style>
 
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<div class = "container">
 <h1>Organizational characteristics</h1>
+
+
+<p>
+    This section shares information about the general characteristics of the RDNPs we surveyed.​ These characteristics provide insight into the kinds of organizations who participated in the project, and they also help to identify characteristics that may be precursors for success in both general research support and in the successful pursuit of drug repurposing. 
+</p>
+
+<div class="container vizSection">
+    <h2 class="">Leadership Titles</h2>
+
+    <p>
+        Only members of RDNPs' leadership teams were invited to provide data for their organization. Most of our responses were from the Executive Director, President, or Founder of the organization. ​ 
+
+    </p>
+
+    <canvas width = "500" height = "500" id="orgchart1"></canvas>
+</div>
+</div>
+
+<script>
+    var ctx = document.getElementById("orgchart1");
+var myChart = new Chart(ctx, {
+  type: 'doughnut',
+  data: {
+    labels: ['Leadership Team', 'Director-level', 'C-Suite', 'Research/Medical Team', 'Other'],
+    datasets: [{
+      label: '# of Tomatoes',
+      data: [101, 67, 22, 8, 2]
+   
+    }]
+  },
+  options: {
+   	//cutoutPercentage: 40,
+    responsive: false,
+
+  }
+});
+</script>

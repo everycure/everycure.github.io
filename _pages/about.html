@@ -6,145 +6,8 @@ permalink: "/about.html"
 
 {% include navbar.html %}
 
-<style>
-html {
-  scroll-behavior: smooth;
-}
+<link href="{{site.baseurl}}/assets/css/about.css" rel="stylesheet" />
 
-body {
-  margin:0px;
-  padding:0px;
-}
-
-
-nav .navul, nav .navli {
-  margin-top:8%;
-  padding: 0;
-  margin-left:6px;
-  list-style: none;
-
-}
-
-/* Titles move right when hovering over the Sections*/
-.navul>li>a:hover,.navul>li>a:focus {
-  text-decoration:none;
-  transform: translatex(8px);
-}
-
-.main-menu li:hover>a {
-  color:black;
-  font-weight: 800;
-}
-/*End Hover Sections*/
-
-
-.main-menu li>a {
-  position:relative;
-  display:table;
-  border-collapse:collapse;
-  border-spacing:0;
-  font-size: 13px;
-  transition:all .14s linear;
-  font-family: 'Strait', sans-serif;
-  text-shadow: 1px 1px 1px white;
-  text-decoration: none;
-  list-style: none;
-}
-
-/* Sidebar Navigation Icons*/
-ul .fas {
-  position:relative;
-  display: inline-block;
-  font-size: 20px;
-  height: 10px;
-  width: auto;
-  margin-right: 20px;
-  padding-top: 5px;
-  padding-bottom: 10px;
-  top:8px;
-}
-
-/* Sidebar Navigation Menu Text*/
-.main-menu .nav-text  {
-  position:relative;
-  display:table-cell;
-  text-align: left;
-  top:8px;
-  font-family: 'IBM Plex Sans', sans-serif !important;
-  font-weight: 400;
-  line-height: 80%;
-  
-}
-
-
-/* Sidebar Navigation on Hover Scrollbar*/
-.scrollbar {
-  height: 100%;
-  width: 100%;
-  overflow-y: hidden;
-  overflow-x: hidden;
-}
-
-.scrollbar:hover {
-  height: 100%;
-  width: 100%;
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
-
-/* Scrollbar Style */ 
-#style-1::-webkit-scrollbar-track {
-  margin-top: 15px;
-  height: 100%;
-}
-
-#style-1::-webkit-scrollbar {
-  width: 5px;
-  height: 100%;
-}
-
-#style-1::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  height: 100%;
-}
-/* Scrollbar End */ 
-
-/*Sticky Navigation Menu*/
-@media (min-height: 30rem) {
-  nav ul li i{
-  position: sticky;
-  }
-}
-
-/* The sticky class is added to the navbar_about with JS when it reaches its scroll position */
-.sticky {
-  position: fixed;
-  top: 0;
-  height: 100%;
-
-}
-
-main {
-  padding-bottom: 0rem;
-}
-
-/* Main body */
-section {
-  padding-top: 3rem;
-  padding-left: 20rem;
-  padding-right: 8rem;
-}
-
-.icon {
-    height: 27px;
-    width: auto;
-    position:relative;
-  display: inline-block;
-  top:8px;
-
-}
-
-</style>
 <script src="https://kit.fontawesome.com/90f1981f5b.js"></script>
   <div id="navbar_about" class = "pt-5">
     <nav class="main-menu pt-3">
@@ -162,7 +25,9 @@ section {
               <span class="nav-text px-1">Methods</span></a></li>
               <li class = "navli mx-5">
                  <a href="#section-4">
-                    <span class="nav-text">Crowdsourcing data</span>
+                    <span class="nav-text">
+                      Crowdsourcing data
+                    </span>
                  </a>
              </li>
              
@@ -208,306 +73,61 @@ section {
     </div>
 
     <main>
+
       <section id="section-1" class = "pt-5" >
-        <h1 class = "pt-5">Background</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque in dictum non. Semper eget duis at tellus at urna condimentum mattis. Purus sit amet luctus venenatis. Sed viverra ipsum nunc aliquet bibendum enim. Tempus imperdiet nulla malesuada pellentesque elit. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Blandit cursus risus at ultrices mi. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Fringilla ut morbi tincidunt augue. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Pretium viverra suspendisse potenti nullam. At erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Sem fringilla ut morbi tincidunt augue interdum velit euismod. Non consectetur a erat nam. Massa sed elementum tempus egestas sed sed risus pretium.
-        </p>
-<p>
-            Nulla pellentesque dignissim enim sit amet. Nunc sed id semper risus in hendrerit. Imperdiet proin fermentum leo vel orci porta. Volutpat lacus laoreet non curabitur. Erat imperdiet sed euismod nisi porta lorem mollis. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Massa vitae tortor condimentum lacinia quis vel eros donec. Donec enim diam vulputate ut pharetra sit amet. Dui sapien eget mi proin sed libero. Faucibus interdum posuere lorem ipsum dolor sit amet. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Gravida rutrum quisque non tellus orci ac auctor augue. Duis tristique sollicitudin nibh sit. Enim praesent elementum facilisis leo vel. Quis vel eros donec ac odio tempor orci dapibus ultrices. Nibh nisl condimentum id venenatis a condimentum vitae. Iaculis urna id volutpat lacus laoreet non. Elementum integer enim neque volutpat.
-        </p>
-            
-        <p>
-            Nisi vitae suscipit tellus mauris a. Tellus at urna condimentum mattis. Ornare lectus sit amet est placerat in. Fringilla ut morbi tincidunt augue interdum velit euismod in. Phasellus faucibus scelerisque eleifend donec. Tellus id interdum velit laoreet id donec. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Dictum fusce ut placerat orci nulla. Malesuada fames ac turpis egestas integer eget aliquet. Eu volutpat odio facilisis mauris sit amet massa. Vestibulum rhoncus est pellentesque elit. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Bibendum est ultricies integer quis auctor elit. Pulvinar pellentesque habitant morbi tristique senectus et netus.
-        </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque in dictum non. Semper eget duis at tellus at urna condimentum mattis. Purus sit amet luctus venenatis. Sed viverra ipsum nunc aliquet bibendum enim. Tempus imperdiet nulla malesuada pellentesque elit. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Blandit cursus risus at ultrices mi. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Fringilla ut morbi tincidunt augue. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Pretium viverra suspendisse potenti nullam. At erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Sem fringilla ut morbi tincidunt augue interdum velit euismod. Non consectetur a erat nam. Massa sed elementum tempus egestas sed sed risus pretium.
-        </p>
-<p>
-            Nulla pellentesque dignissim enim sit amet. Nunc sed id semper risus in hendrerit. Imperdiet proin fermentum leo vel orci porta. Volutpat lacus laoreet non curabitur. Erat imperdiet sed euismod nisi porta lorem mollis. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Massa vitae tortor condimentum lacinia quis vel eros donec. Donec enim diam vulputate ut pharetra sit amet. Dui sapien eget mi proin sed libero. Faucibus interdum posuere lorem ipsum dolor sit amet. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Gravida rutrum quisque non tellus orci ac auctor augue. Duis tristique sollicitudin nibh sit. Enim praesent elementum facilisis leo vel. Quis vel eros donec ac odio tempor orci dapibus ultrices. Nibh nisl condimentum id venenatis a condimentum vitae. Iaculis urna id volutpat lacus laoreet non. Elementum integer enim neque volutpat.
-        </p>
-            
-        <p>
-            Nisi vitae suscipit tellus mauris a. Tellus at urna condimentum mattis. Ornare lectus sit amet est placerat in. Fringilla ut morbi tincidunt augue interdum velit euismod in. Phasellus faucibus scelerisque eleifend donec. Tellus id interdum velit laoreet id donec. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Dictum fusce ut placerat orci nulla. Malesuada fames ac turpis egestas integer eget aliquet. Eu volutpat odio facilisis mauris sit amet massa. Vestibulum rhoncus est pellentesque elit. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Bibendum est ultricies integer quis auctor elit. Pulvinar pellentesque habitant morbi tristique senectus et netus.
-        </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque in dictum non. Semper eget duis at tellus at urna condimentum mattis. Purus sit amet luctus venenatis. Sed viverra ipsum nunc aliquet bibendum enim. Tempus imperdiet nulla malesuada pellentesque elit. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Blandit cursus risus at ultrices mi. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Fringilla ut morbi tincidunt augue. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Pretium viverra suspendisse potenti nullam. At erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Sem fringilla ut morbi tincidunt augue interdum velit euismod. Non consectetur a erat nam. Massa sed elementum tempus egestas sed sed risus pretium.
-        </p>
-<p>
-            Nulla pellentesque dignissim enim sit amet. Nunc sed id semper risus in hendrerit. Imperdiet proin fermentum leo vel orci porta. Volutpat lacus laoreet non curabitur. Erat imperdiet sed euismod nisi porta lorem mollis. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Massa vitae tortor condimentum lacinia quis vel eros donec. Donec enim diam vulputate ut pharetra sit amet. Dui sapien eget mi proin sed libero. Faucibus interdum posuere lorem ipsum dolor sit amet. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Gravida rutrum quisque non tellus orci ac auctor augue. Duis tristique sollicitudin nibh sit. Enim praesent elementum facilisis leo vel. Quis vel eros donec ac odio tempor orci dapibus ultrices. Nibh nisl condimentum id venenatis a condimentum vitae. Iaculis urna id volutpat lacus laoreet non. Elementum integer enim neque volutpat.
-        </p>
-            
-        <p>
-            Nisi vitae suscipit tellus mauris a. Tellus at urna condimentum mattis. Ornare lectus sit amet est placerat in. Fringilla ut morbi tincidunt augue interdum velit euismod in. Phasellus faucibus scelerisque eleifend donec. Tellus id interdum velit laoreet id donec. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Dictum fusce ut placerat orci nulla. Malesuada fames ac turpis egestas integer eget aliquet. Eu volutpat odio facilisis mauris sit amet massa. Vestibulum rhoncus est pellentesque elit. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Bibendum est ultricies integer quis auctor elit. Pulvinar pellentesque habitant morbi tristique senectus et netus.
-        </p>
+        <h1 class = "pt-5"><span class = "d-inline"><img src = "https://img.icons8.com/plasticine/512/information.png" class = "iconLarge img-fluid"/>Background</span></h1>
+        {% include /ABOUT/background.html %}
         </section>
+
       <section id="section-2">
-        <h1>Acknowledgements</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque in dictum non. Semper eget duis at tellus at urna condimentum mattis. Purus sit amet luctus venenatis. Sed viverra ipsum nunc aliquet bibendum enim. Tempus imperdiet nulla malesuada pellentesque elit. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Blandit cursus risus at ultrices mi. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Fringilla ut morbi tincidunt augue. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Pretium viverra suspendisse potenti nullam. At erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Sem fringilla ut morbi tincidunt augue interdum velit euismod. Non consectetur a erat nam. Massa sed elementum tempus egestas sed sed risus pretium.
-        </p>
-<p>
-            Nulla pellentesque dignissim enim sit amet. Nunc sed id semper risus in hendrerit. Imperdiet proin fermentum leo vel orci porta. Volutpat lacus laoreet non curabitur. Erat imperdiet sed euismod nisi porta lorem mollis. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Massa vitae tortor condimentum lacinia quis vel eros donec. Donec enim diam vulputate ut pharetra sit amet. Dui sapien eget mi proin sed libero. Faucibus interdum posuere lorem ipsum dolor sit amet. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Gravida rutrum quisque non tellus orci ac auctor augue. Duis tristique sollicitudin nibh sit. Enim praesent elementum facilisis leo vel. Quis vel eros donec ac odio tempor orci dapibus ultrices. Nibh nisl condimentum id venenatis a condimentum vitae. Iaculis urna id volutpat lacus laoreet non. Elementum integer enim neque volutpat.
-        </p>
-            
-        <p>
-            Nisi vitae suscipit tellus mauris a. Tellus at urna condimentum mattis. Ornare lectus sit amet est placerat in. Fringilla ut morbi tincidunt augue interdum velit euismod in. Phasellus faucibus scelerisque eleifend donec. Tellus id interdum velit laoreet id donec. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Dictum fusce ut placerat orci nulla. Malesuada fames ac turpis egestas integer eget aliquet. Eu volutpat odio facilisis mauris sit amet massa. Vestibulum rhoncus est pellentesque elit. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Bibendum est ultricies integer quis auctor elit. Pulvinar pellentesque habitant morbi tristique senectus et netus.
-        </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque in dictum non. Semper eget duis at tellus at urna condimentum mattis. Purus sit amet luctus venenatis. Sed viverra ipsum nunc aliquet bibendum enim. Tempus imperdiet nulla malesuada pellentesque elit. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Blandit cursus risus at ultrices mi. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Fringilla ut morbi tincidunt augue. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Pretium viverra suspendisse potenti nullam. At erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Sem fringilla ut morbi tincidunt augue interdum velit euismod. Non consectetur a erat nam. Massa sed elementum tempus egestas sed sed risus pretium.
-        </p>
-<p>
-            Nulla pellentesque dignissim enim sit amet. Nunc sed id semper risus in hendrerit. Imperdiet proin fermentum leo vel orci porta. Volutpat lacus laoreet non curabitur. Erat imperdiet sed euismod nisi porta lorem mollis. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Massa vitae tortor condimentum lacinia quis vel eros donec. Donec enim diam vulputate ut pharetra sit amet. Dui sapien eget mi proin sed libero. Faucibus interdum posuere lorem ipsum dolor sit amet. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Gravida rutrum quisque non tellus orci ac auctor augue. Duis tristique sollicitudin nibh sit. Enim praesent elementum facilisis leo vel. Quis vel eros donec ac odio tempor orci dapibus ultrices. Nibh nisl condimentum id venenatis a condimentum vitae. Iaculis urna id volutpat lacus laoreet non. Elementum integer enim neque volutpat.
-        </p>
-            
-        <p>
-            Nisi vitae suscipit tellus mauris a. Tellus at urna condimentum mattis. Ornare lectus sit amet est placerat in. Fringilla ut morbi tincidunt augue interdum velit euismod in. Phasellus faucibus scelerisque eleifend donec. Tellus id interdum velit laoreet id donec. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Dictum fusce ut placerat orci nulla. Malesuada fames ac turpis egestas integer eget aliquet. Eu volutpat odio facilisis mauris sit amet massa. Vestibulum rhoncus est pellentesque elit. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Bibendum est ultricies integer quis auctor elit. Pulvinar pellentesque habitant morbi tristique senectus et netus.
-        </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque in dictum non. Semper eget duis at tellus at urna condimentum mattis. Purus sit amet luctus venenatis. Sed viverra ipsum nunc aliquet bibendum enim. Tempus imperdiet nulla malesuada pellentesque elit. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Blandit cursus risus at ultrices mi. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Fringilla ut morbi tincidunt augue. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Pretium viverra suspendisse potenti nullam. At erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Sem fringilla ut morbi tincidunt augue interdum velit euismod. Non consectetur a erat nam. Massa sed elementum tempus egestas sed sed risus pretium.
-        </p>
-<p>
-            Nulla pellentesque dignissim enim sit amet. Nunc sed id semper risus in hendrerit. Imperdiet proin fermentum leo vel orci porta. Volutpat lacus laoreet non curabitur. Erat imperdiet sed euismod nisi porta lorem mollis. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Massa vitae tortor condimentum lacinia quis vel eros donec. Donec enim diam vulputate ut pharetra sit amet. Dui sapien eget mi proin sed libero. Faucibus interdum posuere lorem ipsum dolor sit amet. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Gravida rutrum quisque non tellus orci ac auctor augue. Duis tristique sollicitudin nibh sit. Enim praesent elementum facilisis leo vel. Quis vel eros donec ac odio tempor orci dapibus ultrices. Nibh nisl condimentum id venenatis a condimentum vitae. Iaculis urna id volutpat lacus laoreet non. Elementum integer enim neque volutpat.
-        </p>
-            
-        <p>
-            Nisi vitae suscipit tellus mauris a. Tellus at urna condimentum mattis. Ornare lectus sit amet est placerat in. Fringilla ut morbi tincidunt augue interdum velit euismod in. Phasellus faucibus scelerisque eleifend donec. Tellus id interdum velit laoreet id donec. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Dictum fusce ut placerat orci nulla. Malesuada fames ac turpis egestas integer eget aliquet. Eu volutpat odio facilisis mauris sit amet massa. Vestibulum rhoncus est pellentesque elit. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Bibendum est ultricies integer quis auctor elit. Pulvinar pellentesque habitant morbi tristique senectus et netus.
-        </p>
+        <h1 class = "pt-5"><span class = "d-inline"><img src = "https://img.icons8.com/parakeet/512/applause.png" class = "iconLarge img-fluid"/>Acknowledgements</span></h1>
+
+        {% include /ABOUT/acknowledgements.html %}
       </section>
+
+
       <section id="section-3">
-        <h1>Methods</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque in dictum non. Semper eget duis at tellus at urna condimentum mattis. Purus sit amet luctus venenatis. Sed viverra ipsum nunc aliquet bibendum enim. Tempus imperdiet nulla malesuada pellentesque elit. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Blandit cursus risus at ultrices mi. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Fringilla ut morbi tincidunt augue. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Pretium viverra suspendisse potenti nullam. At erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Sem fringilla ut morbi tincidunt augue interdum velit euismod. Non consectetur a erat nam. Massa sed elementum tempus egestas sed sed risus pretium.
-        </p>
-<p>
-            Nulla pellentesque dignissim enim sit amet. Nunc sed id semper risus in hendrerit. Imperdiet proin fermentum leo vel orci porta. Volutpat lacus laoreet non curabitur. Erat imperdiet sed euismod nisi porta lorem mollis. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Massa vitae tortor condimentum lacinia quis vel eros donec. Donec enim diam vulputate ut pharetra sit amet. Dui sapien eget mi proin sed libero. Faucibus interdum posuere lorem ipsum dolor sit amet. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Gravida rutrum quisque non tellus orci ac auctor augue. Duis tristique sollicitudin nibh sit. Enim praesent elementum facilisis leo vel. Quis vel eros donec ac odio tempor orci dapibus ultrices. Nibh nisl condimentum id venenatis a condimentum vitae. Iaculis urna id volutpat lacus laoreet non. Elementum integer enim neque volutpat.
-        </p>
-            
-        <p>
-            Nisi vitae suscipit tellus mauris a. Tellus at urna condimentum mattis. Ornare lectus sit amet est placerat in. Fringilla ut morbi tincidunt augue interdum velit euismod in. Phasellus faucibus scelerisque eleifend donec. Tellus id interdum velit laoreet id donec. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Dictum fusce ut placerat orci nulla. Malesuada fames ac turpis egestas integer eget aliquet. Eu volutpat odio facilisis mauris sit amet massa. Vestibulum rhoncus est pellentesque elit. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Bibendum est ultricies integer quis auctor elit. Pulvinar pellentesque habitant morbi tristique senectus et netus.
-        </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque in dictum non. Semper eget duis at tellus at urna condimentum mattis. Purus sit amet luctus venenatis. Sed viverra ipsum nunc aliquet bibendum enim. Tempus imperdiet nulla malesuada pellentesque elit. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Blandit cursus risus at ultrices mi. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Fringilla ut morbi tincidunt augue. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Pretium viverra suspendisse potenti nullam. At erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Sem fringilla ut morbi tincidunt augue interdum velit euismod. Non consectetur a erat nam. Massa sed elementum tempus egestas sed sed risus pretium.
-        </p>
-<p>
-            Nulla pellentesque dignissim enim sit amet. Nunc sed id semper risus in hendrerit. Imperdiet proin fermentum leo vel orci porta. Volutpat lacus laoreet non curabitur. Erat imperdiet sed euismod nisi porta lorem mollis. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Massa vitae tortor condimentum lacinia quis vel eros donec. Donec enim diam vulputate ut pharetra sit amet. Dui sapien eget mi proin sed libero. Faucibus interdum posuere lorem ipsum dolor sit amet. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Gravida rutrum quisque non tellus orci ac auctor augue. Duis tristique sollicitudin nibh sit. Enim praesent elementum facilisis leo vel. Quis vel eros donec ac odio tempor orci dapibus ultrices. Nibh nisl condimentum id venenatis a condimentum vitae. Iaculis urna id volutpat lacus laoreet non. Elementum integer enim neque volutpat.
-        </p>
-            
-        <p>
-            Nisi vitae suscipit tellus mauris a. Tellus at urna condimentum mattis. Ornare lectus sit amet est placerat in. Fringilla ut morbi tincidunt augue interdum velit euismod in. Phasellus faucibus scelerisque eleifend donec. Tellus id interdum velit laoreet id donec. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Dictum fusce ut placerat orci nulla. Malesuada fames ac turpis egestas integer eget aliquet. Eu volutpat odio facilisis mauris sit amet massa. Vestibulum rhoncus est pellentesque elit. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Bibendum est ultricies integer quis auctor elit. Pulvinar pellentesque habitant morbi tristique senectus et netus.
-        </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque in dictum non. Semper eget duis at tellus at urna condimentum mattis. Purus sit amet luctus venenatis. Sed viverra ipsum nunc aliquet bibendum enim. Tempus imperdiet nulla malesuada pellentesque elit. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Blandit cursus risus at ultrices mi. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Fringilla ut morbi tincidunt augue. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Pretium viverra suspendisse potenti nullam. At erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Sem fringilla ut morbi tincidunt augue interdum velit euismod. Non consectetur a erat nam. Massa sed elementum tempus egestas sed sed risus pretium.
-        </p>
-<p>
-            Nulla pellentesque dignissim enim sit amet. Nunc sed id semper risus in hendrerit. Imperdiet proin fermentum leo vel orci porta. Volutpat lacus laoreet non curabitur. Erat imperdiet sed euismod nisi porta lorem mollis. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Massa vitae tortor condimentum lacinia quis vel eros donec. Donec enim diam vulputate ut pharetra sit amet. Dui sapien eget mi proin sed libero. Faucibus interdum posuere lorem ipsum dolor sit amet. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Gravida rutrum quisque non tellus orci ac auctor augue. Duis tristique sollicitudin nibh sit. Enim praesent elementum facilisis leo vel. Quis vel eros donec ac odio tempor orci dapibus ultrices. Nibh nisl condimentum id venenatis a condimentum vitae. Iaculis urna id volutpat lacus laoreet non. Elementum integer enim neque volutpat.
-        </p>
-            
-        <p>
-            Nisi vitae suscipit tellus mauris a. Tellus at urna condimentum mattis. Ornare lectus sit amet est placerat in. Fringilla ut morbi tincidunt augue interdum velit euismod in. Phasellus faucibus scelerisque eleifend donec. Tellus id interdum velit laoreet id donec. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Dictum fusce ut placerat orci nulla. Malesuada fames ac turpis egestas integer eget aliquet. Eu volutpat odio facilisis mauris sit amet massa. Vestibulum rhoncus est pellentesque elit. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Bibendum est ultricies integer quis auctor elit. Pulvinar pellentesque habitant morbi tristique senectus et netus.
-        </p>
+        <h1 class = "pt-5"><span class = "d-inline"><img src = "https://img.icons8.com/external-becris-flat-becris/512/external-social-science-literary-genres-becris-flat-becris.png" class = "iconLarge img-fluid"/>Methods</span></h1>
+        {% include /ABOUT/methods.html %}
       </section>
+
       <section id="section-4">
         <h2>Crowdsourcing data</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque in dictum non. Semper eget duis at tellus at urna condimentum mattis. Purus sit amet luctus venenatis. Sed viverra ipsum nunc aliquet bibendum enim. Tempus imperdiet nulla malesuada pellentesque elit. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Blandit cursus risus at ultrices mi. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Fringilla ut morbi tincidunt augue. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Pretium viverra suspendisse potenti nullam. At erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Sem fringilla ut morbi tincidunt augue interdum velit euismod. Non consectetur a erat nam. Massa sed elementum tempus egestas sed sed risus pretium.
-        </p>
-<p>
-            Nulla pellentesque dignissim enim sit amet. Nunc sed id semper risus in hendrerit. Imperdiet proin fermentum leo vel orci porta. Volutpat lacus laoreet non curabitur. Erat imperdiet sed euismod nisi porta lorem mollis. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Massa vitae tortor condimentum lacinia quis vel eros donec. Donec enim diam vulputate ut pharetra sit amet. Dui sapien eget mi proin sed libero. Faucibus interdum posuere lorem ipsum dolor sit amet. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Gravida rutrum quisque non tellus orci ac auctor augue. Duis tristique sollicitudin nibh sit. Enim praesent elementum facilisis leo vel. Quis vel eros donec ac odio tempor orci dapibus ultrices. Nibh nisl condimentum id venenatis a condimentum vitae. Iaculis urna id volutpat lacus laoreet non. Elementum integer enim neque volutpat.
-        </p>
-            
-        <p>
-            Nisi vitae suscipit tellus mauris a. Tellus at urna condimentum mattis. Ornare lectus sit amet est placerat in. Fringilla ut morbi tincidunt augue interdum velit euismod in. Phasellus faucibus scelerisque eleifend donec. Tellus id interdum velit laoreet id donec. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Dictum fusce ut placerat orci nulla. Malesuada fames ac turpis egestas integer eget aliquet. Eu volutpat odio facilisis mauris sit amet massa. Vestibulum rhoncus est pellentesque elit. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Bibendum est ultricies integer quis auctor elit. Pulvinar pellentesque habitant morbi tristique senectus et netus.
-        </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque in dictum non. Semper eget duis at tellus at urna condimentum mattis. Purus sit amet luctus venenatis. Sed viverra ipsum nunc aliquet bibendum enim. Tempus imperdiet nulla malesuada pellentesque elit. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Blandit cursus risus at ultrices mi. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Fringilla ut morbi tincidunt augue. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Pretium viverra suspendisse potenti nullam. At erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Sem fringilla ut morbi tincidunt augue interdum velit euismod. Non consectetur a erat nam. Massa sed elementum tempus egestas sed sed risus pretium.
-        </p>
-<p>
-            Nulla pellentesque dignissim enim sit amet. Nunc sed id semper risus in hendrerit. Imperdiet proin fermentum leo vel orci porta. Volutpat lacus laoreet non curabitur. Erat imperdiet sed euismod nisi porta lorem mollis. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Massa vitae tortor condimentum lacinia quis vel eros donec. Donec enim diam vulputate ut pharetra sit amet. Dui sapien eget mi proin sed libero. Faucibus interdum posuere lorem ipsum dolor sit amet. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Gravida rutrum quisque non tellus orci ac auctor augue. Duis tristique sollicitudin nibh sit. Enim praesent elementum facilisis leo vel. Quis vel eros donec ac odio tempor orci dapibus ultrices. Nibh nisl condimentum id venenatis a condimentum vitae. Iaculis urna id volutpat lacus laoreet non. Elementum integer enim neque volutpat.
-        </p>
-            
-        <p>
-            Nisi vitae suscipit tellus mauris a. Tellus at urna condimentum mattis. Ornare lectus sit amet est placerat in. Fringilla ut morbi tincidunt augue interdum velit euismod in. Phasellus faucibus scelerisque eleifend donec. Tellus id interdum velit laoreet id donec. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Dictum fusce ut placerat orci nulla. Malesuada fames ac turpis egestas integer eget aliquet. Eu volutpat odio facilisis mauris sit amet massa. Vestibulum rhoncus est pellentesque elit. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Bibendum est ultricies integer quis auctor elit. Pulvinar pellentesque habitant morbi tristique senectus et netus.
-        </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque in dictum non. Semper eget duis at tellus at urna condimentum mattis. Purus sit amet luctus venenatis. Sed viverra ipsum nunc aliquet bibendum enim. Tempus imperdiet nulla malesuada pellentesque elit. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Blandit cursus risus at ultrices mi. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Fringilla ut morbi tincidunt augue. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Pretium viverra suspendisse potenti nullam. At erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Sem fringilla ut morbi tincidunt augue interdum velit euismod. Non consectetur a erat nam. Massa sed elementum tempus egestas sed sed risus pretium.
-        </p>
-<p>
-            Nulla pellentesque dignissim enim sit amet. Nunc sed id semper risus in hendrerit. Imperdiet proin fermentum leo vel orci porta. Volutpat lacus laoreet non curabitur. Erat imperdiet sed euismod nisi porta lorem mollis. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Massa vitae tortor condimentum lacinia quis vel eros donec. Donec enim diam vulputate ut pharetra sit amet. Dui sapien eget mi proin sed libero. Faucibus interdum posuere lorem ipsum dolor sit amet. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Gravida rutrum quisque non tellus orci ac auctor augue. Duis tristique sollicitudin nibh sit. Enim praesent elementum facilisis leo vel. Quis vel eros donec ac odio tempor orci dapibus ultrices. Nibh nisl condimentum id venenatis a condimentum vitae. Iaculis urna id volutpat lacus laoreet non. Elementum integer enim neque volutpat.
-        </p>
-            
-        <p>
-            Nisi vitae suscipit tellus mauris a. Tellus at urna condimentum mattis. Ornare lectus sit amet est placerat in. Fringilla ut morbi tincidunt augue interdum velit euismod in. Phasellus faucibus scelerisque eleifend donec. Tellus id interdum velit laoreet id donec. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Dictum fusce ut placerat orci nulla. Malesuada fames ac turpis egestas integer eget aliquet. Eu volutpat odio facilisis mauris sit amet massa. Vestibulum rhoncus est pellentesque elit. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Bibendum est ultricies integer quis auctor elit. Pulvinar pellentesque habitant morbi tristique senectus et netus.
-        </p>
+        {% include /ABOUT/crowdsourcing-data.html %}
       </section>
+
       <section id="section-5">
         <h2> Survey execution</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque in dictum non. Semper eget duis at tellus at urna condimentum mattis. Purus sit amet luctus venenatis. Sed viverra ipsum nunc aliquet bibendum enim. Tempus imperdiet nulla malesuada pellentesque elit. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Blandit cursus risus at ultrices mi. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Fringilla ut morbi tincidunt augue. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Pretium viverra suspendisse potenti nullam. At erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Sem fringilla ut morbi tincidunt augue interdum velit euismod. Non consectetur a erat nam. Massa sed elementum tempus egestas sed sed risus pretium.
-        </p>
-<p>
-            Nulla pellentesque dignissim enim sit amet. Nunc sed id semper risus in hendrerit. Imperdiet proin fermentum leo vel orci porta. Volutpat lacus laoreet non curabitur. Erat imperdiet sed euismod nisi porta lorem mollis. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Massa vitae tortor condimentum lacinia quis vel eros donec. Donec enim diam vulputate ut pharetra sit amet. Dui sapien eget mi proin sed libero. Faucibus interdum posuere lorem ipsum dolor sit amet. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Gravida rutrum quisque non tellus orci ac auctor augue. Duis tristique sollicitudin nibh sit. Enim praesent elementum facilisis leo vel. Quis vel eros donec ac odio tempor orci dapibus ultrices. Nibh nisl condimentum id venenatis a condimentum vitae. Iaculis urna id volutpat lacus laoreet non. Elementum integer enim neque volutpat.
-        </p>
-            
-        <p>
-            Nisi vitae suscipit tellus mauris a. Tellus at urna condimentum mattis. Ornare lectus sit amet est placerat in. Fringilla ut morbi tincidunt augue interdum velit euismod in. Phasellus faucibus scelerisque eleifend donec. Tellus id interdum velit laoreet id donec. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Dictum fusce ut placerat orci nulla. Malesuada fames ac turpis egestas integer eget aliquet. Eu volutpat odio facilisis mauris sit amet massa. Vestibulum rhoncus est pellentesque elit. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Bibendum est ultricies integer quis auctor elit. Pulvinar pellentesque habitant morbi tristique senectus et netus.
-        </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque in dictum non. Semper eget duis at tellus at urna condimentum mattis. Purus sit amet luctus venenatis. Sed viverra ipsum nunc aliquet bibendum enim. Tempus imperdiet nulla malesuada pellentesque elit. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Blandit cursus risus at ultrices mi. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Fringilla ut morbi tincidunt augue. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Pretium viverra suspendisse potenti nullam. At erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Sem fringilla ut morbi tincidunt augue interdum velit euismod. Non consectetur a erat nam. Massa sed elementum tempus egestas sed sed risus pretium.
-        </p>
-<p>
-            Nulla pellentesque dignissim enim sit amet. Nunc sed id semper risus in hendrerit. Imperdiet proin fermentum leo vel orci porta. Volutpat lacus laoreet non curabitur. Erat imperdiet sed euismod nisi porta lorem mollis. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Massa vitae tortor condimentum lacinia quis vel eros donec. Donec enim diam vulputate ut pharetra sit amet. Dui sapien eget mi proin sed libero. Faucibus interdum posuere lorem ipsum dolor sit amet. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Gravida rutrum quisque non tellus orci ac auctor augue. Duis tristique sollicitudin nibh sit. Enim praesent elementum facilisis leo vel. Quis vel eros donec ac odio tempor orci dapibus ultrices. Nibh nisl condimentum id venenatis a condimentum vitae. Iaculis urna id volutpat lacus laoreet non. Elementum integer enim neque volutpat.
-        </p>
-            
-        <p>
-            Nisi vitae suscipit tellus mauris a. Tellus at urna condimentum mattis. Ornare lectus sit amet est placerat in. Fringilla ut morbi tincidunt augue interdum velit euismod in. Phasellus faucibus scelerisque eleifend donec. Tellus id interdum velit laoreet id donec. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Dictum fusce ut placerat orci nulla. Malesuada fames ac turpis egestas integer eget aliquet. Eu volutpat odio facilisis mauris sit amet massa. Vestibulum rhoncus est pellentesque elit. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Bibendum est ultricies integer quis auctor elit. Pulvinar pellentesque habitant morbi tristique senectus et netus.
-        </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque in dictum non. Semper eget duis at tellus at urna condimentum mattis. Purus sit amet luctus venenatis. Sed viverra ipsum nunc aliquet bibendum enim. Tempus imperdiet nulla malesuada pellentesque elit. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Blandit cursus risus at ultrices mi. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Fringilla ut morbi tincidunt augue. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Pretium viverra suspendisse potenti nullam. At erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Sem fringilla ut morbi tincidunt augue interdum velit euismod. Non consectetur a erat nam. Massa sed elementum tempus egestas sed sed risus pretium.
-        </p>
-<p>
-            Nulla pellentesque dignissim enim sit amet. Nunc sed id semper risus in hendrerit. Imperdiet proin fermentum leo vel orci porta. Volutpat lacus laoreet non curabitur. Erat imperdiet sed euismod nisi porta lorem mollis. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Massa vitae tortor condimentum lacinia quis vel eros donec. Donec enim diam vulputate ut pharetra sit amet. Dui sapien eget mi proin sed libero. Faucibus interdum posuere lorem ipsum dolor sit amet. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Gravida rutrum quisque non tellus orci ac auctor augue. Duis tristique sollicitudin nibh sit. Enim praesent elementum facilisis leo vel. Quis vel eros donec ac odio tempor orci dapibus ultrices. Nibh nisl condimentum id venenatis a condimentum vitae. Iaculis urna id volutpat lacus laoreet non. Elementum integer enim neque volutpat.
-        </p>
-            
-        <p>
-            Nisi vitae suscipit tellus mauris a. Tellus at urna condimentum mattis. Ornare lectus sit amet est placerat in. Fringilla ut morbi tincidunt augue interdum velit euismod in. Phasellus faucibus scelerisque eleifend donec. Tellus id interdum velit laoreet id donec. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Dictum fusce ut placerat orci nulla. Malesuada fames ac turpis egestas integer eget aliquet. Eu volutpat odio facilisis mauris sit amet massa. Vestibulum rhoncus est pellentesque elit. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Bibendum est ultricies integer quis auctor elit. Pulvinar pellentesque habitant morbi tristique senectus et netus.
-        </p>
+        {% include /ABOUT/survey-execution.html %}
       </section>
+
       <section id="section-6">
         <h2>Survey data analysis</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque in dictum non. Semper eget duis at tellus at urna condimentum mattis. Purus sit amet luctus venenatis. Sed viverra ipsum nunc aliquet bibendum enim. Tempus imperdiet nulla malesuada pellentesque elit. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Blandit cursus risus at ultrices mi. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Fringilla ut morbi tincidunt augue. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Pretium viverra suspendisse potenti nullam. At erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Sem fringilla ut morbi tincidunt augue interdum velit euismod. Non consectetur a erat nam. Massa sed elementum tempus egestas sed sed risus pretium.
-        </p>
-<p>
-            Nulla pellentesque dignissim enim sit amet. Nunc sed id semper risus in hendrerit. Imperdiet proin fermentum leo vel orci porta. Volutpat lacus laoreet non curabitur. Erat imperdiet sed euismod nisi porta lorem mollis. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Massa vitae tortor condimentum lacinia quis vel eros donec. Donec enim diam vulputate ut pharetra sit amet. Dui sapien eget mi proin sed libero. Faucibus interdum posuere lorem ipsum dolor sit amet. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Gravida rutrum quisque non tellus orci ac auctor augue. Duis tristique sollicitudin nibh sit. Enim praesent elementum facilisis leo vel. Quis vel eros donec ac odio tempor orci dapibus ultrices. Nibh nisl condimentum id venenatis a condimentum vitae. Iaculis urna id volutpat lacus laoreet non. Elementum integer enim neque volutpat.
-        </p>
-            
-        <p>
-            Nisi vitae suscipit tellus mauris a. Tellus at urna condimentum mattis. Ornare lectus sit amet est placerat in. Fringilla ut morbi tincidunt augue interdum velit euismod in. Phasellus faucibus scelerisque eleifend donec. Tellus id interdum velit laoreet id donec. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Dictum fusce ut placerat orci nulla. Malesuada fames ac turpis egestas integer eget aliquet. Eu volutpat odio facilisis mauris sit amet massa. Vestibulum rhoncus est pellentesque elit. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Bibendum est ultricies integer quis auctor elit. Pulvinar pellentesque habitant morbi tristique senectus et netus.
-        </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque in dictum non. Semper eget duis at tellus at urna condimentum mattis. Purus sit amet luctus venenatis. Sed viverra ipsum nunc aliquet bibendum enim. Tempus imperdiet nulla malesuada pellentesque elit. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Blandit cursus risus at ultrices mi. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Fringilla ut morbi tincidunt augue. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Pretium viverra suspendisse potenti nullam. At erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Sem fringilla ut morbi tincidunt augue interdum velit euismod. Non consectetur a erat nam. Massa sed elementum tempus egestas sed sed risus pretium.
-        </p>
-<p>
-            Nulla pellentesque dignissim enim sit amet. Nunc sed id semper risus in hendrerit. Imperdiet proin fermentum leo vel orci porta. Volutpat lacus laoreet non curabitur. Erat imperdiet sed euismod nisi porta lorem mollis. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Massa vitae tortor condimentum lacinia quis vel eros donec. Donec enim diam vulputate ut pharetra sit amet. Dui sapien eget mi proin sed libero. Faucibus interdum posuere lorem ipsum dolor sit amet. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Gravida rutrum quisque non tellus orci ac auctor augue. Duis tristique sollicitudin nibh sit. Enim praesent elementum facilisis leo vel. Quis vel eros donec ac odio tempor orci dapibus ultrices. Nibh nisl condimentum id venenatis a condimentum vitae. Iaculis urna id volutpat lacus laoreet non. Elementum integer enim neque volutpat.
-        </p>
-            
-        <p>
-            Nisi vitae suscipit tellus mauris a. Tellus at urna condimentum mattis. Ornare lectus sit amet est placerat in. Fringilla ut morbi tincidunt augue interdum velit euismod in. Phasellus faucibus scelerisque eleifend donec. Tellus id interdum velit laoreet id donec. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Dictum fusce ut placerat orci nulla. Malesuada fames ac turpis egestas integer eget aliquet. Eu volutpat odio facilisis mauris sit amet massa. Vestibulum rhoncus est pellentesque elit. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Bibendum est ultricies integer quis auctor elit. Pulvinar pellentesque habitant morbi tristique senectus et netus.
-        </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque in dictum non. Semper eget duis at tellus at urna condimentum mattis. Purus sit amet luctus venenatis. Sed viverra ipsum nunc aliquet bibendum enim. Tempus imperdiet nulla malesuada pellentesque elit. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Blandit cursus risus at ultrices mi. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Fringilla ut morbi tincidunt augue. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Pretium viverra suspendisse potenti nullam. At erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Sem fringilla ut morbi tincidunt augue interdum velit euismod. Non consectetur a erat nam. Massa sed elementum tempus egestas sed sed risus pretium.
-        </p>
-<p>
-            Nulla pellentesque dignissim enim sit amet. Nunc sed id semper risus in hendrerit. Imperdiet proin fermentum leo vel orci porta. Volutpat lacus laoreet non curabitur. Erat imperdiet sed euismod nisi porta lorem mollis. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Massa vitae tortor condimentum lacinia quis vel eros donec. Donec enim diam vulputate ut pharetra sit amet. Dui sapien eget mi proin sed libero. Faucibus interdum posuere lorem ipsum dolor sit amet. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Gravida rutrum quisque non tellus orci ac auctor augue. Duis tristique sollicitudin nibh sit. Enim praesent elementum facilisis leo vel. Quis vel eros donec ac odio tempor orci dapibus ultrices. Nibh nisl condimentum id venenatis a condimentum vitae. Iaculis urna id volutpat lacus laoreet non. Elementum integer enim neque volutpat.
-        </p>
-            
-        <p>
-            Nisi vitae suscipit tellus mauris a. Tellus at urna condimentum mattis. Ornare lectus sit amet est placerat in. Fringilla ut morbi tincidunt augue interdum velit euismod in. Phasellus faucibus scelerisque eleifend donec. Tellus id interdum velit laoreet id donec. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Dictum fusce ut placerat orci nulla. Malesuada fames ac turpis egestas integer eget aliquet. Eu volutpat odio facilisis mauris sit amet massa. Vestibulum rhoncus est pellentesque elit. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Bibendum est ultricies integer quis auctor elit. Pulvinar pellentesque habitant morbi tristique senectus et netus.
-        </p>
+        {% include /ABOUT/survey-data-analysis.html %}
       </section>
+
       <section id="section-7">
         <h2>Interview execution</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque in dictum non. Semper eget duis at tellus at urna condimentum mattis. Purus sit amet luctus venenatis. Sed viverra ipsum nunc aliquet bibendum enim. Tempus imperdiet nulla malesuada pellentesque elit. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Blandit cursus risus at ultrices mi. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Fringilla ut morbi tincidunt augue. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Pretium viverra suspendisse potenti nullam. At erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Sem fringilla ut morbi tincidunt augue interdum velit euismod. Non consectetur a erat nam. Massa sed elementum tempus egestas sed sed risus pretium.
-        </p>
-<p>
-            Nulla pellentesque dignissim enim sit amet. Nunc sed id semper risus in hendrerit. Imperdiet proin fermentum leo vel orci porta. Volutpat lacus laoreet non curabitur. Erat imperdiet sed euismod nisi porta lorem mollis. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Massa vitae tortor condimentum lacinia quis vel eros donec. Donec enim diam vulputate ut pharetra sit amet. Dui sapien eget mi proin sed libero. Faucibus interdum posuere lorem ipsum dolor sit amet. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Gravida rutrum quisque non tellus orci ac auctor augue. Duis tristique sollicitudin nibh sit. Enim praesent elementum facilisis leo vel. Quis vel eros donec ac odio tempor orci dapibus ultrices. Nibh nisl condimentum id venenatis a condimentum vitae. Iaculis urna id volutpat lacus laoreet non. Elementum integer enim neque volutpat.
-        </p>
-            
-        <p>
-            Nisi vitae suscipit tellus mauris a. Tellus at urna condimentum mattis. Ornare lectus sit amet est placerat in. Fringilla ut morbi tincidunt augue interdum velit euismod in. Phasellus faucibus scelerisque eleifend donec. Tellus id interdum velit laoreet id donec. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Dictum fusce ut placerat orci nulla. Malesuada fames ac turpis egestas integer eget aliquet. Eu volutpat odio facilisis mauris sit amet massa. Vestibulum rhoncus est pellentesque elit. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Bibendum est ultricies integer quis auctor elit. Pulvinar pellentesque habitant morbi tristique senectus et netus.
-        </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque in dictum non. Semper eget duis at tellus at urna condimentum mattis. Purus sit amet luctus venenatis. Sed viverra ipsum nunc aliquet bibendum enim. Tempus imperdiet nulla malesuada pellentesque elit. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Blandit cursus risus at ultrices mi. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Fringilla ut morbi tincidunt augue. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Pretium viverra suspendisse potenti nullam. At erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Sem fringilla ut morbi tincidunt augue interdum velit euismod. Non consectetur a erat nam. Massa sed elementum tempus egestas sed sed risus pretium.
-        </p>
-<p>
-            Nulla pellentesque dignissim enim sit amet. Nunc sed id semper risus in hendrerit. Imperdiet proin fermentum leo vel orci porta. Volutpat lacus laoreet non curabitur. Erat imperdiet sed euismod nisi porta lorem mollis. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Massa vitae tortor condimentum lacinia quis vel eros donec. Donec enim diam vulputate ut pharetra sit amet. Dui sapien eget mi proin sed libero. Faucibus interdum posuere lorem ipsum dolor sit amet. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Gravida rutrum quisque non tellus orci ac auctor augue. Duis tristique sollicitudin nibh sit. Enim praesent elementum facilisis leo vel. Quis vel eros donec ac odio tempor orci dapibus ultrices. Nibh nisl condimentum id venenatis a condimentum vitae. Iaculis urna id volutpat lacus laoreet non. Elementum integer enim neque volutpat.
-        </p>
-            
-        <p>
-            Nisi vitae suscipit tellus mauris a. Tellus at urna condimentum mattis. Ornare lectus sit amet est placerat in. Fringilla ut morbi tincidunt augue interdum velit euismod in. Phasellus faucibus scelerisque eleifend donec. Tellus id interdum velit laoreet id donec. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Dictum fusce ut placerat orci nulla. Malesuada fames ac turpis egestas integer eget aliquet. Eu volutpat odio facilisis mauris sit amet massa. Vestibulum rhoncus est pellentesque elit. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Bibendum est ultricies integer quis auctor elit. Pulvinar pellentesque habitant morbi tristique senectus et netus.
-        </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque in dictum non. Semper eget duis at tellus at urna condimentum mattis. Purus sit amet luctus venenatis. Sed viverra ipsum nunc aliquet bibendum enim. Tempus imperdiet nulla malesuada pellentesque elit. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Blandit cursus risus at ultrices mi. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Fringilla ut morbi tincidunt augue. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Pretium viverra suspendisse potenti nullam. At erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Sem fringilla ut morbi tincidunt augue interdum velit euismod. Non consectetur a erat nam. Massa sed elementum tempus egestas sed sed risus pretium.
-        </p>
-<p>
-            Nulla pellentesque dignissim enim sit amet. Nunc sed id semper risus in hendrerit. Imperdiet proin fermentum leo vel orci porta. Volutpat lacus laoreet non curabitur. Erat imperdiet sed euismod nisi porta lorem mollis. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Massa vitae tortor condimentum lacinia quis vel eros donec. Donec enim diam vulputate ut pharetra sit amet. Dui sapien eget mi proin sed libero. Faucibus interdum posuere lorem ipsum dolor sit amet. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Gravida rutrum quisque non tellus orci ac auctor augue. Duis tristique sollicitudin nibh sit. Enim praesent elementum facilisis leo vel. Quis vel eros donec ac odio tempor orci dapibus ultrices. Nibh nisl condimentum id venenatis a condimentum vitae. Iaculis urna id volutpat lacus laoreet non. Elementum integer enim neque volutpat.
-        </p>
-            
-        <p>
-            Nisi vitae suscipit tellus mauris a. Tellus at urna condimentum mattis. Ornare lectus sit amet est placerat in. Fringilla ut morbi tincidunt augue interdum velit euismod in. Phasellus faucibus scelerisque eleifend donec. Tellus id interdum velit laoreet id donec. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Dictum fusce ut placerat orci nulla. Malesuada fames ac turpis egestas integer eget aliquet. Eu volutpat odio facilisis mauris sit amet massa. Vestibulum rhoncus est pellentesque elit. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Bibendum est ultricies integer quis auctor elit. Pulvinar pellentesque habitant morbi tristique senectus et netus.
-        </p>
+        {% include /ABOUT/interview-execution.html %}
       </section>
+
+
       <section id="section-8">
         <h2>Interview data analysis</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque in dictum non. Semper eget duis at tellus at urna condimentum mattis. Purus sit amet luctus venenatis. Sed viverra ipsum nunc aliquet bibendum enim. Tempus imperdiet nulla malesuada pellentesque elit. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Blandit cursus risus at ultrices mi. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Fringilla ut morbi tincidunt augue. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Pretium viverra suspendisse potenti nullam. At erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Sem fringilla ut morbi tincidunt augue interdum velit euismod. Non consectetur a erat nam. Massa sed elementum tempus egestas sed sed risus pretium.
-        </p>
-<p>
-            Nulla pellentesque dignissim enim sit amet. Nunc sed id semper risus in hendrerit. Imperdiet proin fermentum leo vel orci porta. Volutpat lacus laoreet non curabitur. Erat imperdiet sed euismod nisi porta lorem mollis. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Massa vitae tortor condimentum lacinia quis vel eros donec. Donec enim diam vulputate ut pharetra sit amet. Dui sapien eget mi proin sed libero. Faucibus interdum posuere lorem ipsum dolor sit amet. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Gravida rutrum quisque non tellus orci ac auctor augue. Duis tristique sollicitudin nibh sit. Enim praesent elementum facilisis leo vel. Quis vel eros donec ac odio tempor orci dapibus ultrices. Nibh nisl condimentum id venenatis a condimentum vitae. Iaculis urna id volutpat lacus laoreet non. Elementum integer enim neque volutpat.
-        </p>
-            
-        <p>
-            Nisi vitae suscipit tellus mauris a. Tellus at urna condimentum mattis. Ornare lectus sit amet est placerat in. Fringilla ut morbi tincidunt augue interdum velit euismod in. Phasellus faucibus scelerisque eleifend donec. Tellus id interdum velit laoreet id donec. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Dictum fusce ut placerat orci nulla. Malesuada fames ac turpis egestas integer eget aliquet. Eu volutpat odio facilisis mauris sit amet massa. Vestibulum rhoncus est pellentesque elit. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Bibendum est ultricies integer quis auctor elit. Pulvinar pellentesque habitant morbi tristique senectus et netus.
-        </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque in dictum non. Semper eget duis at tellus at urna condimentum mattis. Purus sit amet luctus venenatis. Sed viverra ipsum nunc aliquet bibendum enim. Tempus imperdiet nulla malesuada pellentesque elit. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Blandit cursus risus at ultrices mi. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Fringilla ut morbi tincidunt augue. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Pretium viverra suspendisse potenti nullam. At erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Sem fringilla ut morbi tincidunt augue interdum velit euismod. Non consectetur a erat nam. Massa sed elementum tempus egestas sed sed risus pretium.
-        </p>
-<p>
-            Nulla pellentesque dignissim enim sit amet. Nunc sed id semper risus in hendrerit. Imperdiet proin fermentum leo vel orci porta. Volutpat lacus laoreet non curabitur. Erat imperdiet sed euismod nisi porta lorem mollis. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Massa vitae tortor condimentum lacinia quis vel eros donec. Donec enim diam vulputate ut pharetra sit amet. Dui sapien eget mi proin sed libero. Faucibus interdum posuere lorem ipsum dolor sit amet. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Gravida rutrum quisque non tellus orci ac auctor augue. Duis tristique sollicitudin nibh sit. Enim praesent elementum facilisis leo vel. Quis vel eros donec ac odio tempor orci dapibus ultrices. Nibh nisl condimentum id venenatis a condimentum vitae. Iaculis urna id volutpat lacus laoreet non. Elementum integer enim neque volutpat.
-        </p>
-            
-        <p>
-            Nisi vitae suscipit tellus mauris a. Tellus at urna condimentum mattis. Ornare lectus sit amet est placerat in. Fringilla ut morbi tincidunt augue interdum velit euismod in. Phasellus faucibus scelerisque eleifend donec. Tellus id interdum velit laoreet id donec. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Dictum fusce ut placerat orci nulla. Malesuada fames ac turpis egestas integer eget aliquet. Eu volutpat odio facilisis mauris sit amet massa. Vestibulum rhoncus est pellentesque elit. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Bibendum est ultricies integer quis auctor elit. Pulvinar pellentesque habitant morbi tristique senectus et netus.
-        </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque in dictum non. Semper eget duis at tellus at urna condimentum mattis. Purus sit amet luctus venenatis. Sed viverra ipsum nunc aliquet bibendum enim. Tempus imperdiet nulla malesuada pellentesque elit. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Blandit cursus risus at ultrices mi. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Fringilla ut morbi tincidunt augue. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Pretium viverra suspendisse potenti nullam. At erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Sem fringilla ut morbi tincidunt augue interdum velit euismod. Non consectetur a erat nam. Massa sed elementum tempus egestas sed sed risus pretium.
-        </p>
-<p>
-            Nulla pellentesque dignissim enim sit amet. Nunc sed id semper risus in hendrerit. Imperdiet proin fermentum leo vel orci porta. Volutpat lacus laoreet non curabitur. Erat imperdiet sed euismod nisi porta lorem mollis. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Massa vitae tortor condimentum lacinia quis vel eros donec. Donec enim diam vulputate ut pharetra sit amet. Dui sapien eget mi proin sed libero. Faucibus interdum posuere lorem ipsum dolor sit amet. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Gravida rutrum quisque non tellus orci ac auctor augue. Duis tristique sollicitudin nibh sit. Enim praesent elementum facilisis leo vel. Quis vel eros donec ac odio tempor orci dapibus ultrices. Nibh nisl condimentum id venenatis a condimentum vitae. Iaculis urna id volutpat lacus laoreet non. Elementum integer enim neque volutpat.
-        </p>
-            
-        <p>
-            Nisi vitae suscipit tellus mauris a. Tellus at urna condimentum mattis. Ornare lectus sit amet est placerat in. Fringilla ut morbi tincidunt augue interdum velit euismod in. Phasellus faucibus scelerisque eleifend donec. Tellus id interdum velit laoreet id donec. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Dictum fusce ut placerat orci nulla. Malesuada fames ac turpis egestas integer eget aliquet. Eu volutpat odio facilisis mauris sit amet massa. Vestibulum rhoncus est pellentesque elit. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Bibendum est ultricies integer quis auctor elit. Pulvinar pellentesque habitant morbi tristique senectus et netus.
-        </p>
+        {% include /ABOUT/interview-data-analysis.html %}
       </section>
+
       <section id="section-9">
         <h2>Synthesis and tool development</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque in dictum non. Semper eget duis at tellus at urna condimentum mattis. Purus sit amet luctus venenatis. Sed viverra ipsum nunc aliquet bibendum enim. Tempus imperdiet nulla malesuada pellentesque elit. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Blandit cursus risus at ultrices mi. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Fringilla ut morbi tincidunt augue. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Pretium viverra suspendisse potenti nullam. At erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Sem fringilla ut morbi tincidunt augue interdum velit euismod. Non consectetur a erat nam. Massa sed elementum tempus egestas sed sed risus pretium.
-        </p>
-<p>
-            Nulla pellentesque dignissim enim sit amet. Nunc sed id semper risus in hendrerit. Imperdiet proin fermentum leo vel orci porta. Volutpat lacus laoreet non curabitur. Erat imperdiet sed euismod nisi porta lorem mollis. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Massa vitae tortor condimentum lacinia quis vel eros donec. Donec enim diam vulputate ut pharetra sit amet. Dui sapien eget mi proin sed libero. Faucibus interdum posuere lorem ipsum dolor sit amet. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Gravida rutrum quisque non tellus orci ac auctor augue. Duis tristique sollicitudin nibh sit. Enim praesent elementum facilisis leo vel. Quis vel eros donec ac odio tempor orci dapibus ultrices. Nibh nisl condimentum id venenatis a condimentum vitae. Iaculis urna id volutpat lacus laoreet non. Elementum integer enim neque volutpat.
-        </p>
-            
-        <p>
-            Nisi vitae suscipit tellus mauris a. Tellus at urna condimentum mattis. Ornare lectus sit amet est placerat in. Fringilla ut morbi tincidunt augue interdum velit euismod in. Phasellus faucibus scelerisque eleifend donec. Tellus id interdum velit laoreet id donec. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Dictum fusce ut placerat orci nulla. Malesuada fames ac turpis egestas integer eget aliquet. Eu volutpat odio facilisis mauris sit amet massa. Vestibulum rhoncus est pellentesque elit. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Bibendum est ultricies integer quis auctor elit. Pulvinar pellentesque habitant morbi tristique senectus et netus.
-        </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque in dictum non. Semper eget duis at tellus at urna condimentum mattis. Purus sit amet luctus venenatis. Sed viverra ipsum nunc aliquet bibendum enim. Tempus imperdiet nulla malesuada pellentesque elit. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Blandit cursus risus at ultrices mi. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Fringilla ut morbi tincidunt augue. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Pretium viverra suspendisse potenti nullam. At erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Sem fringilla ut morbi tincidunt augue interdum velit euismod. Non consectetur a erat nam. Massa sed elementum tempus egestas sed sed risus pretium.
-        </p>
-<p>
-            Nulla pellentesque dignissim enim sit amet. Nunc sed id semper risus in hendrerit. Imperdiet proin fermentum leo vel orci porta. Volutpat lacus laoreet non curabitur. Erat imperdiet sed euismod nisi porta lorem mollis. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Massa vitae tortor condimentum lacinia quis vel eros donec. Donec enim diam vulputate ut pharetra sit amet. Dui sapien eget mi proin sed libero. Faucibus interdum posuere lorem ipsum dolor sit amet. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Gravida rutrum quisque non tellus orci ac auctor augue. Duis tristique sollicitudin nibh sit. Enim praesent elementum facilisis leo vel. Quis vel eros donec ac odio tempor orci dapibus ultrices. Nibh nisl condimentum id venenatis a condimentum vitae. Iaculis urna id volutpat lacus laoreet non. Elementum integer enim neque volutpat.
-        </p>
-            
-        <p>
-            Nisi vitae suscipit tellus mauris a. Tellus at urna condimentum mattis. Ornare lectus sit amet est placerat in. Fringilla ut morbi tincidunt augue interdum velit euismod in. Phasellus faucibus scelerisque eleifend donec. Tellus id interdum velit laoreet id donec. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Dictum fusce ut placerat orci nulla. Malesuada fames ac turpis egestas integer eget aliquet. Eu volutpat odio facilisis mauris sit amet massa. Vestibulum rhoncus est pellentesque elit. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Bibendum est ultricies integer quis auctor elit. Pulvinar pellentesque habitant morbi tristique senectus et netus.
-        </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque in dictum non. Semper eget duis at tellus at urna condimentum mattis. Purus sit amet luctus venenatis. Sed viverra ipsum nunc aliquet bibendum enim. Tempus imperdiet nulla malesuada pellentesque elit. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Blandit cursus risus at ultrices mi. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Fringilla ut morbi tincidunt augue. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Pretium viverra suspendisse potenti nullam. At erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Sem fringilla ut morbi tincidunt augue interdum velit euismod. Non consectetur a erat nam. Massa sed elementum tempus egestas sed sed risus pretium.
-        </p>
-<p>
-            Nulla pellentesque dignissim enim sit amet. Nunc sed id semper risus in hendrerit. Imperdiet proin fermentum leo vel orci porta. Volutpat lacus laoreet non curabitur. Erat imperdiet sed euismod nisi porta lorem mollis. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Massa vitae tortor condimentum lacinia quis vel eros donec. Donec enim diam vulputate ut pharetra sit amet. Dui sapien eget mi proin sed libero. Faucibus interdum posuere lorem ipsum dolor sit amet. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Gravida rutrum quisque non tellus orci ac auctor augue. Duis tristique sollicitudin nibh sit. Enim praesent elementum facilisis leo vel. Quis vel eros donec ac odio tempor orci dapibus ultrices. Nibh nisl condimentum id venenatis a condimentum vitae. Iaculis urna id volutpat lacus laoreet non. Elementum integer enim neque volutpat.
-        </p>
-            
-        <p>
-            Nisi vitae suscipit tellus mauris a. Tellus at urna condimentum mattis. Ornare lectus sit amet est placerat in. Fringilla ut morbi tincidunt augue interdum velit euismod in. Phasellus faucibus scelerisque eleifend donec. Tellus id interdum velit laoreet id donec. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Dictum fusce ut placerat orci nulla. Malesuada fames ac turpis egestas integer eget aliquet. Eu volutpat odio facilisis mauris sit amet massa. Vestibulum rhoncus est pellentesque elit. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Bibendum est ultricies integer quis auctor elit. Pulvinar pellentesque habitant morbi tristique senectus et netus.
-        </p>
+        {% include /ABOUT/synthesis-and-tool.html %}
       </section>
+
       <section id="section-10">
-        <h1>Overview of findings</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque in dictum non. Semper eget duis at tellus at urna condimentum mattis. Purus sit amet luctus venenatis. Sed viverra ipsum nunc aliquet bibendum enim. Tempus imperdiet nulla malesuada pellentesque elit. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Blandit cursus risus at ultrices mi. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Fringilla ut morbi tincidunt augue. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Pretium viverra suspendisse potenti nullam. At erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Sem fringilla ut morbi tincidunt augue interdum velit euismod. Non consectetur a erat nam. Massa sed elementum tempus egestas sed sed risus pretium.
-        </p>
-<p>
-            Nulla pellentesque dignissim enim sit amet. Nunc sed id semper risus in hendrerit. Imperdiet proin fermentum leo vel orci porta. Volutpat lacus laoreet non curabitur. Erat imperdiet sed euismod nisi porta lorem mollis. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Massa vitae tortor condimentum lacinia quis vel eros donec. Donec enim diam vulputate ut pharetra sit amet. Dui sapien eget mi proin sed libero. Faucibus interdum posuere lorem ipsum dolor sit amet. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Gravida rutrum quisque non tellus orci ac auctor augue. Duis tristique sollicitudin nibh sit. Enim praesent elementum facilisis leo vel. Quis vel eros donec ac odio tempor orci dapibus ultrices. Nibh nisl condimentum id venenatis a condimentum vitae. Iaculis urna id volutpat lacus laoreet non. Elementum integer enim neque volutpat.
-        </p>
-            
-        <p>
-            Nisi vitae suscipit tellus mauris a. Tellus at urna condimentum mattis. Ornare lectus sit amet est placerat in. Fringilla ut morbi tincidunt augue interdum velit euismod in. Phasellus faucibus scelerisque eleifend donec. Tellus id interdum velit laoreet id donec. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Dictum fusce ut placerat orci nulla. Malesuada fames ac turpis egestas integer eget aliquet. Eu volutpat odio facilisis mauris sit amet massa. Vestibulum rhoncus est pellentesque elit. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Bibendum est ultricies integer quis auctor elit. Pulvinar pellentesque habitant morbi tristique senectus et netus.
-        </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque in dictum non. Semper eget duis at tellus at urna condimentum mattis. Purus sit amet luctus venenatis. Sed viverra ipsum nunc aliquet bibendum enim. Tempus imperdiet nulla malesuada pellentesque elit. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Blandit cursus risus at ultrices mi. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Fringilla ut morbi tincidunt augue. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Pretium viverra suspendisse potenti nullam. At erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Sem fringilla ut morbi tincidunt augue interdum velit euismod. Non consectetur a erat nam. Massa sed elementum tempus egestas sed sed risus pretium.
-        </p>
-<p>
-            Nulla pellentesque dignissim enim sit amet. Nunc sed id semper risus in hendrerit. Imperdiet proin fermentum leo vel orci porta. Volutpat lacus laoreet non curabitur. Erat imperdiet sed euismod nisi porta lorem mollis. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Massa vitae tortor condimentum lacinia quis vel eros donec. Donec enim diam vulputate ut pharetra sit amet. Dui sapien eget mi proin sed libero. Faucibus interdum posuere lorem ipsum dolor sit amet. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Gravida rutrum quisque non tellus orci ac auctor augue. Duis tristique sollicitudin nibh sit. Enim praesent elementum facilisis leo vel. Quis vel eros donec ac odio tempor orci dapibus ultrices. Nibh nisl condimentum id venenatis a condimentum vitae. Iaculis urna id volutpat lacus laoreet non. Elementum integer enim neque volutpat.
-        </p>
-            
-        <p>
-            Nisi vitae suscipit tellus mauris a. Tellus at urna condimentum mattis. Ornare lectus sit amet est placerat in. Fringilla ut morbi tincidunt augue interdum velit euismod in. Phasellus faucibus scelerisque eleifend donec. Tellus id interdum velit laoreet id donec. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Dictum fusce ut placerat orci nulla. Malesuada fames ac turpis egestas integer eget aliquet. Eu volutpat odio facilisis mauris sit amet massa. Vestibulum rhoncus est pellentesque elit. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Bibendum est ultricies integer quis auctor elit. Pulvinar pellentesque habitant morbi tristique senectus et netus.
-        </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque in dictum non. Semper eget duis at tellus at urna condimentum mattis. Purus sit amet luctus venenatis. Sed viverra ipsum nunc aliquet bibendum enim. Tempus imperdiet nulla malesuada pellentesque elit. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Blandit cursus risus at ultrices mi. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Fringilla ut morbi tincidunt augue. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Pretium viverra suspendisse potenti nullam. At erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Sem fringilla ut morbi tincidunt augue interdum velit euismod. Non consectetur a erat nam. Massa sed elementum tempus egestas sed sed risus pretium.
-        </p>
-<p>
-            Nulla pellentesque dignissim enim sit amet. Nunc sed id semper risus in hendrerit. Imperdiet proin fermentum leo vel orci porta. Volutpat lacus laoreet non curabitur. Erat imperdiet sed euismod nisi porta lorem mollis. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Massa vitae tortor condimentum lacinia quis vel eros donec. Donec enim diam vulputate ut pharetra sit amet. Dui sapien eget mi proin sed libero. Faucibus interdum posuere lorem ipsum dolor sit amet. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Gravida rutrum quisque non tellus orci ac auctor augue. Duis tristique sollicitudin nibh sit. Enim praesent elementum facilisis leo vel. Quis vel eros donec ac odio tempor orci dapibus ultrices. Nibh nisl condimentum id venenatis a condimentum vitae. Iaculis urna id volutpat lacus laoreet non. Elementum integer enim neque volutpat.
-        </p>
-            
-        <p>
-            Nisi vitae suscipit tellus mauris a. Tellus at urna condimentum mattis. Ornare lectus sit amet est placerat in. Fringilla ut morbi tincidunt augue interdum velit euismod in. Phasellus faucibus scelerisque eleifend donec. Tellus id interdum velit laoreet id donec. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Dictum fusce ut placerat orci nulla. Malesuada fames ac turpis egestas integer eget aliquet. Eu volutpat odio facilisis mauris sit amet massa. Vestibulum rhoncus est pellentesque elit. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Bibendum est ultricies integer quis auctor elit. Pulvinar pellentesque habitant morbi tristique senectus et netus.
-        </p>
+        <h1 class = "pt-5"><span class = "d-inline"><img src = "https://img.icons8.com/external-flaticons-lineal-color-flat-icons/512/external-discovery-bioengineering-flaticons-lineal-color-flat-icons.png" class = "iconLarge img-fluid"/>Overview of findings</span></h1>
+
+        {% include /ABOUT/findings.html %}
       </section>
+
 <div class = "py-5 my-5"><br></div>
   </main>
 

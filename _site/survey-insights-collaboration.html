@@ -44,7 +44,32 @@ rel="stylesheet"
 
 
   </head>
+<style>
+  .siteContent {
+  padding-left: 40px;
+  padding-right: 40px;
 
+}
+
+@media screen and (min-width: 1200px) {
+  .siteContent {
+  padding-left: 130px;
+  padding-right: 130px;
+
+}
+}
+
+
+.whitespace {
+        height: 400px !important;
+    }
+
+section {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+</style>
     
 <body >
 
@@ -187,8 +212,34 @@ rel="stylesheet"
     </div>
     <main role="main" class="site-content">
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+
+
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+</script>
+
+        <script src="https://www.amcharts.com/lib/4/core.js"></script>
+        <script src="https://www.amcharts.com/lib/4/plugins/wordCloud.js"></script>
+        <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+
       <div class = "pt-5">
         
+        <script>
+          var color1 = 'rgba(0,23,31, 0.9)'
+          var color2 = 'rgba(0,52,89, 0.9)'
+          var color3 = 'rgba(0,126,167, 0.9)'
+          var color4 = 'rgba(0,168,232, 0.9)'
+          var color5 = 'rgba(122,172,221, 0.9)'
+          var color6 = 'rgba(254,95,85, 0.8)'
+          var color7 = 'rgba(187,176,220, 0.8'
+
+
+</script>
 <style>
     .nav-4 a, .nav-4 .link-text {
         font-weight: 500;
@@ -198,12 +249,248 @@ rel="stylesheet"
     }
 </style>
 
-<div class = "container">
+<div class = "container siteContent">
     <h1>Collaboration</h1>
     
-    </div>
+    <section>
+        <div class = "container">
+            <h2 class = "">How many organizations do you collaborate with on a regular basis for either research or community-centered projects?</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+              <canvas style="width:60vw!important;" id="howManyOrgs"></canvas>
+              <p class = "text-end"><small>n = 130</small></p>
+        </div>
+    </section>
 
+    <section>
+        <div class = "container">
+            <h2 class = "">What kinds of activities do you engage in with these organizations?</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+              <canvas style="width:60vw!important;" id="kindsOfActivities"></canvas>
+              <p class = "text-end"><small>n = 114</small></p>
+        </div>
+    </section>
+
+    <section>
+        <div class = "container">
+            <h2 class = "">Are there organizations focusing on the same rare disease or genetic mutation as your organization?</h2>
+
+        <div class = "row py-5">
+          <div class = "col-12 col-xl-4">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          </div>
+          <div class = "col-12 col-xl-6">
+            <canvas style="height:300px;" id="orgsSameDisease"></canvas>
+            <p class = "text-end"><small>n = 130</small></p>
+          </div>
+        </div>
+        </div>
+    </section>
+
+    <section>
+        <div class = "container">
+            <h2 class = "">Do you collaborate with these organizations on a regular basis for either research or community-centered projects?</h2>
+
+            <div class = "row py-5">
+              <div class = "col-12 col-xl-4">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              </div>
+              <div class = "col-12 col-xl-6">
+                <canvas style="height:300px;" id="collaborateRegularBasis"></canvas>
+                <p class = "text-end"><small>n = 80</small></p>
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class = "container">
+            <h2 class = "">What are some factors that contribute to the lack of collaboration?</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+              <canvas style="width:60vw!important;" id="lackOfCollab"></canvas>
+              <p class = "text-end"><small>n = 13</small></p>
+        </div>
+    </section>
+
+    <section>
+        <div class = "container">
+            <h2 class = "">Have you merged with or separated from any other rare disease organizations?</h2>
+
+            <div class = "row py-5">
+              <div class = "col-12 col-xl-4">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              </div>
+              <div class = "col-12 col-xl-6">
+                <canvas style="height:300px;" id="mergedSeparated"></canvas>
+                <p class = "text-end"><small>n = 130</small></p>
+              </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+
+
+// HOW MANY ORGS DO YOU COLLAB WITH
+var ctxHowManyOrgs = document.getElementById("howManyOrgs");
+var howManyOrgsBar = new Chart(ctxHowManyOrgs, {
+type: 'horizontalBar',
+data: {
+  labels: ['1-5 organizations', '10-20 organizations', '20-50 organizations', '5-10 organizations', '50 or more'],
+  datasets: [{
+    label: '# of responses',
+    data: [51, 23, 11, 41, 4],
+    backgroundColor: [ color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        xAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+// WHAT KINDS OF ACTIVITIES
+var ctxKindsOfActivities = document.getElementById("kindsOfActivities");
+var kindsOfActivitiesBar = new Chart(ctxKindsOfActivities, {
+type: 'horizontalBar',
+data: {
+  labels: ["Sharing prior experiences that can inform future decision making", "Creating a shared research agenda", "Sharing resources", "Joint community building & fundraising", "Sharing data and/or samples for research", "Pooling patient populations together to conduct future research", "Conducting research studies including clinical trials", "Organization provides us funding", "Applying for funding together", "Co-creating or co-supporting a center of excellence", "Other: collaborating on creation and management of patient registry", "Other: funding research together"],
+  datasets: [{
+    label: '# of responses',
+    data: [274, 207, 204, 188, 160, 159, 135, 100, 85, 64, 2, 2],
+    backgroundColor: [ color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        xAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+// ORGS FOCUSING ON SAME RD
+var ctxOrgsSameDisease = document.getElementById("orgsSameDisease");
+var orgsSameDiseasePie = new Chart(ctxOrgsSameDisease, {
+  type: 'doughnut',
+  data: {
+    labels: ['Yes', 'No'],
+    datasets: [{
+      label: '# of responses',
+      data: [80, 50],
+      backgroundColor: [color3, color6]
+    }]
+  },
+  options: {
+    legend: {
+                  position: 'right' ,
+                  align: 'start'
+                },
+    responsive: false,
+  }
+});
+
+// COLLABORATE ON REGULAR BASIS
+var ctxCollabRegular = document.getElementById("collaborateRegularBasis");
+var collaborateRegularBasisPie = new Chart(ctxCollabRegular, {
+  type: 'doughnut',
+  data: {
+    labels: ['Yes', 'No'],
+    datasets: [{
+      label: '# of responses',
+      data: [67, 13],
+      backgroundColor: [color3, color6]
+    }]
+  },
+  options: {
+    legend: {
+                  position: 'right' ,
+                  align: 'start'
+                },
+    responsive: false,
+  }
+});
+
+// LACK OF COLLAB
+var ctxLackOfCollab = document.getElementById("lackOfCollab");
+var lackOfCollabBar = new Chart(ctxLackOfCollab, {
+type: 'horizontalBar',
+data: {
+  labels: ["Difference in organizational focus or strategy", "Different viewpoints on next steps", "Limited staff and/or resources", "Limited time", "Personal disagreements", "Limited financial resources", "No tangible benefit or reason for collaboration", "Don’t know how best to collaborate", "Limited patient population - collaboration would mean pulling resources away from our focus", "They are no longer active / defunct", "Other: other organization is international"],
+  datasets: [{
+    label: '# of responses',
+    data: [9, 6, 5, 4, 4, 3, 3, 2, 1, 1, 1],
+    backgroundColor: [ color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        xAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+// MERGED OR SEPARATED
+var ctxMergedOrSeparated = document.getElementById("mergedSeparated");
+var mergedSeparatedPie = new Chart(ctxMergedOrSeparated, {
+  type: 'doughnut',
+  data: {
+    labels: ['Yes', 'No'],
+    datasets: [{
+      label: '# of responses',
+      data: [8, 122],
+      backgroundColor: [color3, color6]
+    }]
+  },
+  options: {
+    legend: {
+                  position: 'right' ,
+                  align: 'start'
+                },
+    responsive: false,
+  }
+});
+
+</script>
       </div>
+<div class="whitespace"></div>
+
     </main>
 
 

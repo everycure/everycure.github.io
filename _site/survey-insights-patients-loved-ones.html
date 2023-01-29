@@ -44,7 +44,32 @@ rel="stylesheet"
 
 
   </head>
+<style>
+  .siteContent {
+  padding-left: 40px;
+  padding-right: 40px;
 
+}
+
+@media screen and (min-width: 1200px) {
+  .siteContent {
+  padding-left: 130px;
+  padding-right: 130px;
+
+}
+}
+
+
+.whitespace {
+        height: 400px !important;
+    }
+
+section {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+</style>
     
 <body >
 
@@ -187,8 +212,34 @@ rel="stylesheet"
     </div>
     <main role="main" class="site-content">
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+
+
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+</script>
+
+        <script src="https://www.amcharts.com/lib/4/core.js"></script>
+        <script src="https://www.amcharts.com/lib/4/plugins/wordCloud.js"></script>
+        <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+
       <div class = "pt-5">
         
+        <script>
+          var color1 = 'rgba(0,23,31, 0.9)'
+          var color2 = 'rgba(0,52,89, 0.9)'
+          var color3 = 'rgba(0,126,167, 0.9)'
+          var color4 = 'rgba(0,168,232, 0.9)'
+          var color5 = 'rgba(122,172,221, 0.9)'
+          var color6 = 'rgba(254,95,85, 0.8)'
+          var color7 = 'rgba(187,176,220, 0.8'
+
+
+</script>
 <style>
     .nav-5 a, .nav-5 .link-text {
         font-weight: 500;
@@ -198,12 +249,865 @@ rel="stylesheet"
     }
 </style>
 
-<div class = "container">
+<div class = "container siteContent">
     <h1>Patients and loved ones</h1>
     
-    </div>
+    <section>
+        <div class = "container">
+            <h2 class = "">What kinds of activities in the rare disease organization that sent you this survey are you involved in?</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+              <canvas style="width:60vw!important;" id="activitiesInvolvedIn"></canvas>
+              <p class = "text-end"><small>n = 429</small></p>
+        </div>
+    </section>
 
+    <section>
+        <div class = "container">
+            <h2 class = "">What prescription drugs have you taken to treat your RD in the last 5 years?</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+              <div id="prescriptionCloud" style = "height: 400px;"></div>
+              <p class = "text-end"><small>n = ## drugs</small></p>
+        </div>
+    </section>
+    
+    <section>
+        <div class = "container">
+            <h2 class = "">For the prescription drugs you listed, please specify whether they are FDA-approved for your rare disease or if they are "off-label.</h2>
+
+        <div class = "row py-5">
+            <div class = "col-12 col-xl-4">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            </div>
+            <div class = "col-12 col-xl-6">
+              <canvas style="height:300px;" id="fdaOrOffLabel"></canvas>
+              <p class = "text-end"><small>n = 347</small></p>
+            </div>
+          </div>
+  
+        </div>
+    </section>
+
+    <section>
+        <div class = "container">
+            <h2 class = "">How long have you been taking these drugs?</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+              <canvas style="width:60vw!important;" id="howLong"></canvas>
+              <p class = "text-end"><small>n = 121</small></p>
+        </div>
+    </section>
+
+    <section>
+        <div class = "container">
+            <h2 class = "">How comfortable are you taking these drugs?
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+              <canvas style="width:60vw!important;" id="howComfortable"></canvas>
+              <p class = "text-end"><small>n = 121</small></p>
+        </div>
+    </section>
+
+    <section>
+        <div class = "container">
+            <h2 class = "">How effective are these drugs at reducing the overall symptoms associated with your rare disease?
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+              <canvas style="width:60vw!important;" id="howEffectiveOverall"></canvas>
+              <p class = "text-end"><small>n = 121</small></p>
+        </div>
+    </section>
+    
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                How effective are these drugs at preventing worsening of your disease?
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+              <canvas style="width:60vw!important;" id="howEffectiveWorsening"></canvas>
+              <p class = "text-end"><small>n = 120</small></p>
+        </div>
+    </section>
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                How effective are these drugs at completely addressing all challenges associated with your rare disease?
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+              <canvas style="width:60vw!important;" id="completelyAddressing"></canvas>
+              <p class = "text-end"><small>n = 121</small></p>
+        </div>
+    </section>
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                What roadblocks have you had in getting access to these drugs?
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+              <canvas style="width:60vw!important;" id="whatRoadblocks"></canvas>
+              <p class = "text-end"><small>n = 122</small></p>
+        </div>
+    </section>
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                Have you heard of off-label drug use prior to this survey?
+            </h2>
+
+            <div class = "row py-5">
+                <div class = "col-12 col-xl-4">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                </div>
+                <div class = "col-12 col-xl-6">
+                  <canvas style="height:300px;" id="heardOfOffLabel"></canvas>
+                  <p class = "text-end"><small>n = 420</small></p>
+                </div>
+              </div>
+      
+        </div>
+    </section>
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                Have you asked your doctor to try an off-label drug before?
+            </h2>
+            <div class = "row py-5">
+                <div class = "col-12 col-xl-4">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                </div>
+                <div class = "col-12 col-xl-6">
+                  <canvas style="height:300px;" id="askedDoctor"></canvas>
+                  <p class = "text-end"><small>n = 418</small></p>
+                </div>
+              </div>
+
+        </div>
+    </section>
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                Are you aware of any off-label drugs which have been given to other patients with your disease, but you have not received?
+            </h2>
+            <div class = "row py-5">
+                <div class = "col-12 col-xl-4">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                </div>
+                <div class = "col-12 col-xl-6">
+                  <canvas style="height:300px;" id="othersNotReceived"></canvas>
+                  <p class = "text-end"><small>n = 418</small></p>
+                </div>
+              </div>
+
+            </div>
+    </section>
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                What off-label drugs do you know of that given to other patients with your rare disease, but you have not received?
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+              <div id="othersNotReceivedCloud" style = "height: 400px;"></div>
+              <p class = "text-end"><small>n = 246 drugs</small></p>
+        </div>
+    </section>
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                How willing are you to follow your doctor’s recommendation to take an off-label drug?
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+              <canvas style="width:60vw!important;" id="howWilling"></canvas>
+              <p class = "text-end"><small>n = 409</small></p>
+        </div>
+    </section>
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                What factors impact your decision to take an off-label drug or not?
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+              <canvas style="width:60vw!important;" id="whatFactors"></canvas>
+              <p class = "text-end"><small>n = 413</small></p>
+        </div>
+    </section>
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                Please rate your level of familiarity with drug repurposing for your rare disease prior to this survey.
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+              <canvas style="width:60vw!important;" id="familiarityPrior"></canvas>
+              <p class = "text-end"><small>n = 399</small></p>
+        </div>
+    </section>
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                Please rate your level of interest in drug repurposing for your rare disease prior to this survey.
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+              <canvas style="width:60vw!important;" id="interestPrior"></canvas>
+              <p class = "text-end"><small>n = 397</small></p>
+        </div>
+    </section>
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                Do you know of any examples of drug repurposing being done for your rare disease?
+            </h2>
+            <div class = "row py-5">
+                <div class = "col-12 col-xl-4">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                </div>
+                <div class = "col-12 col-xl-6">
+                  <canvas style="height:300px;" id="drExamples"></canvas>
+                  <p class = "text-end"><small>n = 396</small></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                What aspects of drug repurposing could be most impactful for you?
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+              <canvas style="width:60vw!important;" id="mostImpactful"></canvas>
+              <p class = "text-end"><small>n = 394</small></p>
+        </div>
+    </section>
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                On a scale from 1-5, do you think drug repurposing is….
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+              
+            
+              <p class = "pt-3"><b>Safe</b></p>
+              <canvas style="width:60vw!important;" id="drSafe"></canvas>
+              <p class = "text-end"><small>n = 318</small></p>
+              <p class = "pt-5"><b>Important</b></p>
+              <canvas style="width:60vw!important;" id="drImportant"></canvas>
+              <p class = "text-end"><small>n = 358</small></p>
+              <p class = "pt-5"><b>Necessary</b></p>
+              <canvas style="width:60vw!important;" id="drNecessary"></canvas>
+              <p class = "text-end"><small>n = 334</small></p>
+
+        </div>
+    </section>
+</div>
+
+<script>
+
+// ACTIVITIES INVOLVED IN
+var ctxLackOfCollab = document.getElementById("activitiesInvolvedIn");
+var lackOfCollabBar = new Chart(ctxLackOfCollab, {
+type: 'horizontalBar',
+data: {
+  labels: ["Contributing data through taking surveys", "Raising disease awareness", "Providing support to other patients and loves ones", "Attending disease-specific conferences", "Contributing to research discussions; suggesting research ideas; etc", "Contributing medical records", "Fundraising", "Contributing samples ", "Advisory or Patient Board", "Being a member of the rare disease organization’s Board of Directors", "Helping organize events", "None of the above", "Contributing samples", "Other"],
+  datasets: [{
+    label: '# of responses',
+    data: [265, 265, 232, 222, 162, 159, 152, 128, 92, 92, 82, 44, 16, 22],
+    backgroundColor: [ color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        xAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+// PRESCRIPTION DRUGS
+am4core.useTheme(am4themes_animated);
+    // Themes end
+
+    var prescriptionCloud = am4core.create("prescriptionCloud", am4plugins_wordCloud.WordCloud);
+    var series = prescriptionCloud.series.push(new am4plugins_wordCloud.WordCloudSeries());
+
+    series.accuracy = 4;
+    series.step = 15;
+    series.rotationThreshold = 0.7;
+    series.maxCount = 200;
+    series.minWordLength = 2;
+    series.labels.template.tooltipText = "{word}: {value}";
+    series.fontFamily = "IBM Plex Sans";
+    series.maxFontSize = am4core.percent(30);
+
+    series.text = "Deferiprone  Alpelisib  Sirolimus  Rituximab  Valganciclovir  Rituximab  Rituximab  Gabapentin  Siltuximab  Prednisolone  Lenalidomide  Remove  Rituximab  Siltuximab  Rituximab  Tocilizumab  Immune Globulin  Siltuximab  Prednisone  Rituximab  Siltuximab  Prednisone  Prednisone  Levetiracetam  Phenytoin  Siltuximab  Gabapentin  Trifarotene  Hydrocodone  Glycerol Phenylbutyrate  Ibuprofen  Tramadol  Clobazam  Omeprazole  Bevacizumab  Anakinra  Canakinumab  Cimetidine  Canakinumab  Colchicine  Colchicine  Colchicine  Colchicine  Prednisone  Clonazepam  Sacubitril/Valsartan  Prednisone  Methotrexate  Leflunomide  Infliximab  Adalimumab  Prednisone  Methotrexate  Prednisone  Prednisone  Mycophenolate  Olmesartan  Infliximab  Oxytocin  Ibuprofen  Lamotrigine  Prednisone  Prednisone  Fluticasone Furoate/Vilanterol Trifenatate  Topiramate  Methotrexate  Prednisone  Prednisone  Prednisone  Hydroxychloroquine  Levetiracetam  Prednisone  Methotrexate  Methotrexate  Prednisone  Adalimumab  Ruxolitinib  Doxycycline  Posaconazole  Acetazolamide  Prednisone  Cyclosporine  Immune Globulin  Rituximab  Diazepam  Immune Globulin  Immune Globulin  Spironolactone  Levothyroxine  Immune Globulin  Levothyroxine  Carbidopa/Levodopa  Hydroxychloroquine  Cetirizine  Levothyroxine  Levothyroxine  Albuterol  Levothyroxine  Prednisone  Prednisone  Prednisone  Prednisone  Methotrexate  Prednisone  Prednisone  Prednisone  Nintedanib  Infliximab  Azathioprine  Meloxicam  Prednisone  Prednisone  Prednisone  Prednisone  Mycophenolate  Prednisone  Prednisone  Prednisone  Prednisone  Methotrexate  Methotrexate  Prednisone  Prednisone  Prednisone  Mycophenolate  Methotrexate  Prednisone  Prednisone  Prednisone  Methotrexate  Prednisone  Prednisone  Methotrexate  Immune Globulin  Methotrexate  Infliximab  Methotrexate  Prednisone  Prednisone  Methotrexate  Steroids NOS  Infliximab  Prednisone  Hydroxychloroquine  Prednisone  Prednisone  Fluticasone Propionate/Salmeterol  Prednisone  Methotrexate  Prednisone  Prednisone  Prednisone  Prednisone  Etanercept  Fluticasone Propionate/Salmeterol  Omeprazole  Prednisone  Steroids NOS  Pregabalin  Prednisone  Prednisone  Immune Globulin  Methotrexate  Prednisone  Prednisone  Methotrexate  Prednisone  Prednisone  Prednisone  CBD  Infliximab  Cyproheptadine  Prednisone  Prednisone  Polyethylene Glycol 3350  Ursodiol  Methotrexate  Pembrolizumab  Budesonide  Prednisone  Methotrexate  Prednisone  Prednisone  Prednisone  Tacrolimus  Sirolimus  Methotrexate  Prednisone  Prednisone  Prednisone  Prednisone  Acetazolamide  Methotrexate  Divalproex  Levetiracetam  Phenobarbital  Budesonide  Ivosidenib  Melatonin  Ivosidenib  Budesonide/Formoterol  Levetiracetam  Infliximab  Prednisone  Lamotrigine  Gabapentin  Acetazolamide  Corticotropin  Rituximab  Corticotropin  Vancomycin  Rosuvastatin  Sargramostim  Prednisone  Sirolimus  Fluticasone  Oxcarbazepine  Cyclosporine  Rituximab  Prednisone  Tranexamic Acid  Prednisone  Triheptanoin  Esomeprazole  Caplacizumab  Hydrocodone  Antihemophilic Factor  Chlorambucil  Lacosamide  Atorvastatin  Lisdexamfetamine  Acyclovir  Sargramostim  Sargramostim  Trihexyphenidyl  Rituximab  Ethosuximide  Atorvastatin  Clonidine  Sirolimus  Fluoxetine  Flunarizine  Polyethylene Glycol 3350  Cyproheptadine  Levetiracetam  Oxcarbazepine  Rituximab  Sargramostim  Somatropin  Sirolimus  Methylphenidate  Diazepam  Sirolimus  Steroids NOS  Baclofen  Levetiracetam  Temozolomide  Budesonide/Formoterol  Siltuximab  Rituximab  Siltuximab  Siltuximab  Siltuximab  Siltuximab  Siltuximab  Everolimus  Rituximab  Fenofibrate  Fenofibrate  Sirolimus  Rituximab  Rituximab  Clobazam  Siltuximab  Vancomycin  Clonazepam  Siltuximab  Ursodiol  Siltuximab  Sargramostim  Siltuximab  Sirolimus  Trazodone  Risperidone  Somatropin  Sargramostim  Somatropin  Amitriptyline  Rituximab  Siltuximab  Clonidine  Siltuximab  Sargramostim  Prednisone  Dantrolene  Bevacizumab  Bevacizumab  Cidofovir  Rituximab  Folinic Acid  Sirolimus  Monoclonal Antibodies NOS  Siltuximab  Tizanidine  Ursodiol  Remove  Fenofibrate  Levetiracetam  Dexmethylphenidate  Ursodiol  Gemcitabine/Cisplatin  Prednisone  Mycophenolate  Levetiracetam  Prednisone  Prednisone  Methotrexate  Prednisone  Sirolimus  Levothyroxine  Prednisone  Hydroxychloroquine  Azathioprine  Methylprednisolone  Steroids NOS  Methotrexate  Sulfasalazine  Sirolimus  Canakinumab  Brivaracetam  Baricitinib  Remove  Levetiracetam  Octreotide  Verapamil  Clobazam  Guanfacine  Fluticasone Propionate/Salmeterol  Acetazolamide  Oxcarbazepine  Infliximab  Zonisamide  Corn Starch  Apixaban  Fenofibrate  Baclofen  Dornase Alfa  Dextroamphetamine/Amphetamine  Miransertib  Anakinra  Rituximab  Siltuximab  Valacyclovir  Azathioprine  Remove  Siltuximab  Prednisone  Dexamethasone  Sirolimus  Vinblastine  Rituximab  Rituximab  Cyclophosphamide  Trimethoprim/Sulfamethoxazole  Baclofen  Gabapentin  Rituximab  Duloxetine  Benzocaine  Lidocaine  Gabapentin  Levetiracetam  HPV Quadrivalent Vaccine  Cidofovir  Canakinumab  Anakinra  Prednisolone  Ondansetron  Prednisone  Montelukast  Methotrexate  Cimetidine  Colchicine  Coenzyme Q10  Spironolactone  Hydroxychloroquine  Gamunex C  Prednisone  Hydroxychloroquine  Prednisone  Methylprednisolone  Infliximab  Rituximab  Itraconazole  Adalimumab  Naltrexone  Azathioprine  Fluticasone  Pravastatin  Prednisone  Hydroxychloroquine  Methotrexate  Midazolam  Gabapentin  Adalimumab  Prednisone  Hydroxychloroquine  Prednisone  Tranexamic Acid  Ursodiol  Fluticasone  Rituximab  Methylprednisolone  Gabapentin  Diazepam  Rituximab  Levothyroxine  Estradiol  Baclofen  Levetiracetam  Levocetirizine  Sertraline  Levetiracetam  Pyridostigmine  Osimertinib  Hydroxychloroquine  Corticotropin  Prednisone  Methotrexate  Methotrexate  Methotrexate  Infliximab  Prednisone  Prednisone  Methotrexate  Infliximab  Hydroxychloroquine  Albuterol  Prednisone  Methotrexate  Methotrexate  Infliximab-Abda  Adalimumab  Hydroxychloroquine  Adalimumab  Lisinopril  Methotrexate  Infliximab  Budesonide  Infliximab  Hydroxychloroquine  Beclomethasone  Prednisone  Ipratropium/Albuterol  Trimethoprim/Sulfamethoxazole  Prednisone  Methotrexate  Folic Acid  Rituximab  Prednisone  Methotrexate  Hydroxychloroquine  Mycophenolate  Methotrexate  Prednisone  Methotrexate  Adalimumab  Methotrexate  Bevacizumab  Fluticasone Propionate/Salmeterol  Hydroxychloroquine  Folic Acid  Infliximab  Methotrexate  Ursodiol  Hydroxychloroquine  Methotrexate  Albuterol  Esomeprazole  Nortriptyline  Mycophenolate  Hydroxychloroquine  Gabapentin  Prednisone  Prednisone  Budesonide/Formoterol  Azathioprine  Mitochondrial Support Supplement Combination  Gabapentin  Levetiracetam  Trimethoprim/Sulfamethoxazole  Budesonide/Glycopyr/Formoterol  Leflunomide  Mycophenolate  Methotrexate  Adalimumab  Infliximab  Oxycodone/Acetaminophen  Duloxetine  Prednisone  Methylprednisolone  Tramadol  Methotrexate  Mycophenolate  Methotrexate  Amitriptyline  Topiramate  Verapamil  Acetazolamide  Albuterol  Folinic Acid/Fluorouracil/Oxaliplatin  Capecitabine  Albuterol  Pamidronate  Prednisone  Methotrexate  Vitamin D  Carbidopa/Levodopa  Prednisone  Prednisone  Rituximab  Caplacizumab  Levothyroxine  Levetiracetam  Rituximab  Prednisone  Methotrexate  Methotrexate  Baclofen  Prednisone  Hydromorphone  Apremilast  Cyproheptadine  Sulfamethoxazole  Atorvastatin  Carbidopa/Levodopa  Sargramostim  Risperidone  Suvorexant  Acetazolamide  Mometasone  Zonisamide  Aspirin  Trimethoprim/Sulfamethoxazole  Zonisamide  Everolimus  Methylphenidate  Spironolactone  Mirabegron  Somatropin  Lomustine  Albuterol  Tocilizumab  Rituximab  Obinutuzumab  Gemfibrozil  Siltuximab  Levetiracetam  Rituximab  Mercaptopurine  Lamotrigine  Denosumab  Minocycline  Lisinopril  Siltuximab  Desvenlafaxine  Aripiprazole  Sertraline  Hydrocortisone  Aripiprazole  Rituximab  Mycophenolate  Midodrine  Bevacizumab  Cyclophosphamide  CBD  Immune Globulin  Remove  Rosuvastatin  Clobazam  Risperidone  Furosemide  Capecitabine  Mycophenolate  Clonidine  Albuterol  Gabapentin  Folic Acid  Levothyroxine  Prednisone  Methotrexate  Azathioprine  Propranolol  Hydroxychloroquine  Levetiracetam  Midazolam  Lamotrigine  Levetiracetam  Polyethylene Glycol 3350  Olopatadine  Metformin  Cannabidiol  Metronidazole  Clobazam  Vitamin E  Empagliflozin  Volanesorsen  Onabotulinumtoxina  Methylphenidate  Rilonacept  Curcumin  ACETAMINOPHEN  Hydroxychloroquine  Remove  Sirolimus  Lisinopril  Acetaminophen  Hydroxychloroquine  Tocilizumab  R-CHOP Chemotherapy  Rituximab  Acyclovir  Carisoprodol  Baclofen  Rituximab  Armodafinil  Doxycycline  Meloxicam  Prednisolone  Bevacizumab  Measles Mumps And Rubella Vaccine  Tocilizumab  Prednisone  Prednisone  Prednisolone  Prednisolone  Prednisone  Canakinumab  Diclofenac  Sertraline  Iron  Mometasone/Formoterol  Leflunomide  Infliximab  Fluticasone/Umeclidinium/Vilanterol  Methylprednisolone  Infliximab  Methotrexate  Liothyronine  Hydroxychloroquine  Tiotropium  Methotrexate  Carvedilol  Diazepam  Clobetasol  Prednisone  Memantine  Mycophenolate  Pomalidomide  Trimethoprim/Sulfamethoxazole  Cetirizine  Hydroxychloroquine  Prednisone  Immune Globulin  Gabapentin  Linaclotide  Sertraline  Diazepam  Simvastatin  Fexofenadine  Ferrous Sulfate  Desipramine  Sulfasalazine  Hydroxychloroquine  Azathioprine  Rituximab  Azathioprine  Tocilizumab  Methotrexate  Hydrocortisone  Adalimumab  Azathioprine  Methotrexate  Hydroxychloroquine  Methotrexate  Hydroxychloroquine  Prednisone  Methotrexate  Trimethoprim/Sulfamethoxazole  Prednisone  Infliximab  Adalimumab  Umeclidinium Bromide/Vilanterol  Fluticasone Propionate/Salmeterol  Albuterol  Bronchodilators NOS  Prednisone  Gabapentin  Tocilizumab  Mycophenolate  Infliximab  Folic Acid  Mycophenolate  Methotrexate  Adalimumab  Methotrexate  Fluticasone Furoate/Vilanterol Trifenatate  Infliximab  Adalimumab  Methotrexate  Methotrexate  Topiramate  Prednisone  Lansoprazole  Duloxetine  Spironolactone  Adalimumab  Metformin  Folic Acid  Celecoxib  Medical Marijuana  Modafinil  Vitamin D3  Albuterol  Mycophenolate  Nortriptyline  Methotrexate  Mycophenolate  Ibuprofen  Azathioprine  Gabapentin  Levetiracetam  Diazepam  Memantine  Montelukast  Nab-Paclitaxel  Folinic Acid/Fluorouracil/Irinotecan  Calcium  Mycophenolate  Teriparatide  Calcitriol  Baclofen  Methotrexate  Atorvastatin  Rituximab  Norethindrone  Topiramate  Dexamethasone  Azathioprine  Desipramine  Cyclophosphamide  Oxycodone  Prednisone  COA-Z  Vitamin D  Escitalopram  Albuterol  Perampanel  Prednisone  Topiramate  Levetiracetam  Methylphenidate  Blood Transfusions NOS  Clobazam  Ivosidenib  Prednisone  Etoposide  Icosapent  Sirolimus  Valproic Acid  Omeprazole  Budesonide  Gabapentin  Immune Globulin  Adalimumab  Cupric Chloride Copper  Oxcarbazepine  Leflunomide  Pregabalin  Sirolimus  Pyrroloquinoline Quinone  Remove  Icosapent  Lactulose  Guanfacine  Spironolactone  Citalopram  Hydroxychloroquine  Mycophenolate  Levetiracetam  Gabapentin  Topiramate  Diazepam  Lithium  Lansoprazole  L-Theanine  Ipratropium/Albuterol  Paroxetine  Lansoprazole  Tiotropium  Midazolam  Calcium/Vitamin D  Hydrochlorothiazide  Oxybutynin  Dexmethylphenidate  Prednisone  Divalproex Sodium  Immune Globulin  Atorvastatin  Vitamin D  Siltuximab  Omeprazole  Tramadol  Meloxicam  Mupirocin  MVA E2  Tacrolimus  Cimetidine  Montelukast  Naproxen  Anakinra  Rilonacept  Carvedilol  Zafirlukast  Methotrexate  Propranolol  Albuterol  Naltrexone  Tocilizumab  Leflunomide  Steroids NOS  Digoxin  Beclomethasone  Folic Acid  Levothyroxine  Acyclovir  Bevacizumab  Nystatin  Esomeprazole  Methylprednisolone  Immune Globulin  Medical Marijuana  Clonazepam  Pyridostigmine  Metformin  Gabapentin  Levothyroxine  Loratadine  Calcium  Methotrexate  Infliximab  Dexamethasone  Tnf Inhibitors NOS  Pregabalin  Gabapentin  Infliximab  Infliximab  Apixaban  Folic Acid  Benzonatate  Fluoxetine  Mycophenolate  Methotrexate  Hydrocodone/Homatropine  Hydroxychloroquine  Meloxicam  Ocrelizumab  Adalimumab  Sertraline  Diclofenac  Mycophenolate  Prednisone  CBD  Methotrexate  Prednisone  Infliximab  Leflunomide  Nabumetone  Morphine  Metoprolol  Furosemide  Pregabalin  Methotrexate  Fexofenadine  Vitamin D  Gabapentin  Lidocaine  Trimethoprim/Sulfamethoxazole  Albuterol  Azathioprine  Potassium  Brivaracetam  Acetazolamide  Felbamate  Lansoprazole  Gemcitabine  Calcitriol  Methotrexate  Lifitegrast  Calcium  Clonazepam  Methylprednisolone  Medroxyprogesterone  Rufinamide  Folic Acid  RT001  Ondansetron  Lifitegrast  RE014  Calcium  Ondansetron  Everolimus  Dexamethasone  Lorazepam  Brivaracetam  Clonidine  Ferric Oxyhydroxide  Levothyroxine  Pamiparib  Hydrocortisone  Prednisone  Niacin  Levocarnitine  Amoxicillin  Ciprofloxacin  Cyclophosphamide  Prednisone  Sulindac  Vitamin B12  Quetiapine  Atenolol  N-Acetyl Cysteine  Remove  Polyethylene Glycol 3350  Exemestane  Prednisone  Infliximab  Prednisone  Lamotrigine  Clonazepam  Divalproex  Famotidine  Sennosides  Azithromycin  Levothyroxine  Cromolyn  Ganaxolone  Filgrastim  Valsartan  Guanfacine  Cyclophosphamide  Corticosteroids NOS,Rituximab  Pantoprazole  Iron  Pentoxifylline  Odansetron  Cyclobenzaprine  Fluconazole  Methotrexate  Cimetidine  Prednisone  Enalapril  Fluticasone  Hydroxychloroquine  Diltiazem  Albuterol  Prednisone  Prednisone  Folic Acid  Folic Acid  Clonazepam  Topiramate  Omeprazole  Clobetasol  Treprostinil  Venetoclax  Famotidine  Diazepam  Baclofen  Acetaminophen/Hydrocodone  Tamsulosin  Loratadine  Duloxetine  Sertraline  Cromolyn  Oxycodone  Methotrexate  Midodrine  Immune Globulin  Tocilizumab  Ipratropium/Albuterol  Mycophenolate  Gabapentin  Leflunomide  Budesonide/Formoterol  Triamcinolone  Infliximab  Duloxetine  Mycophenolate  Umeclidinium Bromide/Vilanterol  Buspirone  Adalimumab  Lamotrigine  Fluticasone  Tiotropium Bromide/Olodaterol  Hydroxychloroquine  Hydroxychloroquine  Hydromorphone  Amiodarone  Galcanezumab-Gnlm  Mometasone/Formoterol  Folic Acid  CBD  Lorazepam  Amlodipine  Hydroxychloroquine  Sertraline  Cannabidiol  Divalproex  Triamcinolone  Cisplatin  Naproxen  Rivaroxaban  Pamidronate  Leuprolide  CBD  Sacubitril/Valsartan  Albuterol  Pancrelipase  Hydroxychloroquine  Metoclopramide  Polyethylene Glycol 3350  Folic Acid  Clonazepam  Buspirone  Polyethylene Glycol 3350  Rosuvastatin  Vitamin D  Bupropion  Eculizumab  Triamcinolone  Sulfasalazine  Famotidine  Doxycycline  Alpha-Lipoic Acid  Remove  Ipratropium  Methylprednisolone  Vortioxetine  Cyproheptadine  Melatonin  Polyethylene Glycol 3350  Fluticasone Propionate/Salmeterol  Dexmethylphenidate  Probiotic NOS  Atorvastatin  Sertraline  Omeprazole  Oxycodone  Tofacitinib  Ibuprofen  Furosemide  Fluticasone  Gabapentin  Amitriptyline  Fluticasone  Duloxetine  Lisinopril  Ipratropium  Chlordiazepoxide/Clidinium Bromide  Rosuvastatin  Macitentan  Tacrolimus  Bismuth Subsalicylate  Tizanidine  Rituximab  Mirabegron  Rizatriptan  Azelastine  Albuterol  Sarilumab  Ivabradine  Folic Acid  Tramadol  Vitamin D2  Corticotropin  Hydroxychloroquine  Fluticasone/Umeclidinium/Vilanterol  Oxygen  Fluticasone  Mycophenolate  Aripiprazole  Adalimumab  Citalopram  Steroids NOS  Furosemide  Dulaglutide  Montelukast  Famotidine  Mirtazapine  Ursodiol  Mycophenolate  Ivabradine  Fenfluramine  Sertraline  Hydrocortisone  Folinic Acid/Fluorouracil/Oxaliplatin  Ondansetron  Atorvastatin  Idebenone  Carvedilol  Insulin NOS  Iron  Lansoprazole  Sennosides  Sertraline  Melatonin  Omega-3 Fatty Acids  Iron  Dexamethazone  Amlodipine  Acetaminophen/Codeine  Omeprazole  Prednisone  Coenzyme Q10  Fluticasone  Midazolam  Melatonin  Levocetirizine  Sertraline  Metoprolol  Cetirizine  Hydrocodone  Pentamidine  Ipratropium  Tiotropium  Mycophenolate  Gabapentin  Trimethoprim/Sulfamethoxazole  Pantoprazole  Amiodarone  Pregabalin  Bupropion  Loratadine  Allergy Shots NOS  Prednisone  Zonisamide  Latanoprost  Ciclesonide  Tramadol  Fluticasone Furoate/Vilanterol Trifenatate  Ketorolac  Metoprolol  Hydroxychloroquine  Benzonatate  Alprazolam  Oxycodone  Dabigatran  Alendronate  Venlafaxine  Gabapentin  Lisinopril  Albuterol  Probiotic NOS  Meloxicam  Acyclovir  Adalimumab  Clobazam  Vitamin B12  Dicyclomine  Oxycodone  Metoprolol  Magnesium Hydroxide  Losartan  Palivizumab  Simethicone  Fluoxetine  Lansoprazole  Sirolimus  Prednisone  Furosemide  Vitamin D  Prednisone  Mexiletine  Omega-3 Fatty Acids  Albuterol  Amoxicillin  Hydrocortisone  Midazolam  Amitriptyline  Acyclovir  Vitamin D  Prednisolone  Fluticasone  Adalimumab  Topiramate  Medical Marijuana  Amitriptyline  Aspirin  Furosemide  Duloxetine  Letermovir  Zoledronic Acid  Leflunomide  Triamcinolone  Mometasone  Interferons NOS  Methotrexate  Leflunomide  Levothyroxine  Brimonidine  Adalimumab  Ursodiol  Steroids NOS  Diphenhydramine  Valganciclovir  Acetazolamide  Vitamin D  Ferrous Sulfate  Diazepam  Polyethylene Glycol 3350  Metoprolol  Esomeprazole  Hydroxyzine  Diazepam  Diphenhydramine  Ondansetron  Trimethoprim/Sulfamethoxazole  Omega-6 Fatty Acids  Divalproex  Losartan  Topiramate  Acetaminophen  Promethazine  Methylprednisolone  Albuterol  Albuterol  Levothyroxine  Insulin Aspart  Tadalafil  Spironolactone  Gabapentin  Mycophenolate  Vitamin D  Prednisone  Levothyroxine  Cyclosporine  Infliximab  Zolpidem  Hydroxychloroquine  Cyclobenzaprine  Cetirizine/Pseudoephedrine  Nystatin  Verapamil  Magnesium  Erythromycin  Omeprazole  Modafinil  Fexofenadine  L-Lysine  Phenobarbital  Famotidine  Omeprazole  Diphenhydramine  Diazepam  Ruxolitinib  Budesonide  Methotrexate  Arnica  Insulin Glargine  Levothyroxine  Prednisone  Pantoprazole  Allopurinol  Magnesium  Mycophenolate  Liothyronine  Infliximab  Rifampin  Prochlorperazine  Epinephrine  Nifedipine  Spironolactone  Sevelamer  Methylphenidate  Valacyclovir  Nicotinamide Adenine Dinucleotide  Dicyclomine  Zileuton  Humulin NOS"; 
+
+// FDA OR OFF LABEL
+var ctxfdaOrOffLabel = document.getElementById("fdaOrOffLabel");
+var fdaOrOffLabelPie = new Chart(ctxfdaOrOffLabel, {
+  type: 'doughnut',
+  data: {
+    labels: ["FDA-approved for my rare disease", "Off-label (FDA-approved to treat another disease)", "Not sure"],
+    datasets: [{
+      label: '# of responses',
+      data: [414, 489, 366],
+      backgroundColor: [color1, color2, color7]
+    }]
+  },
+  options: {
+    legend: {
+                  position: 'right' ,
+                  align: 'start'
+                },
+    responsive: false,
+  }
+});
+
+// HOW LONG HAVE YOU BEEN TAKING THESE DRUGS
+var ctxhowLong = document.getElementById("howLong");
+var howLongBar = new Chart(ctxhowLong, {
+type: 'bar',
+data: {
+  labels: ["Less than a week", "Less than a month", "1-3 months", "3-6 months", "6 months to a year", "1-2 years", "3-4 years", "5 or more years"],
+  datasets: [{
+    label: '# of responses',
+    data: [1, 13, 34, 45, 43, 108, 89, 121],
+    backgroundColor: [ color3, color3, color3, color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+// HOW COMFORTABLE
+var ctxhowComfortable = document.getElementById("howComfortable");
+var howComfortableBar = new Chart(ctxhowComfortable, {
+type: 'horizontalBar',
+data: {
+  labels: ["Very comfortable", "Somewhat comfortable", "Neutral", "Somewhat uncomfortable", "Not at all comfortable"],
+  datasets: [{
+    label: '# of responses',
+    data: [165, 140, 61, 61, 30],
+    backgroundColor: [ color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        xAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+// HOW EFFECTIVE OVERALL
+var ctxhowEffectiveOverall = document.getElementById("howEffectiveOverall");
+var howEffectiveOverallBar = new Chart(ctxhowEffectiveOverall, {
+type: 'horizontalBar',
+data: {
+  labels: ["Very effective", "Somewhat effective", "Neutral effect", "Somewhat ineffective", "Not effective"],
+  datasets: [{
+    label: '# of responses',
+    data: [136, 171, 51, 29, 67],
+    backgroundColor: [ color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        xAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+// HOW EFFECTIVE PREVENTING WORSENING
+var ctxhowEffectiveWorsening = document.getElementById("howEffectiveWorsening");
+var howEffectiveWorseningBar = new Chart(ctxhowEffectiveWorsening, {
+type: 'horizontalBar',
+data: {
+  labels: ["Very effective", "Somewhat effective", "Neutral effect", "Somewhat ineffective", "Not effective"],
+  datasets: [{
+    label: '# of responses',
+    data: [107, 125, 89, 41, 91],
+    backgroundColor: [ color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        xAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+// HOW EFFECTIVE AT COMPLETELY ADDRESSING
+var ctxcompletelyAddressing = document.getElementById("completelyAddressing");
+var completelyAddressingBer = new Chart(ctxcompletelyAddressing, {
+type: 'horizontalBar',
+data: {
+  labels: ["Very effective", "Somewhat effective", "Neutral effect", "Somewhat ineffective", "Not effective"],
+  datasets: [{
+    label: '# of responses',
+    data: [56, 116, 96, 62, 124],
+    backgroundColor: [ color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        xAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+// WHAT ROADBLOCKS
+var ctxwhatRoadblocks = document.getElementById("whatRoadblocks");
+var whatRoadblocksBar = new Chart(ctxwhatRoadblocks, {
+type: 'horizontalBar',
+data: {
+  labels: ["No Roadblocks", "Insurance won’t cover it", "Drug is not available in some pharmacies", "Physician was hesitant to prescribe it", "Can’t afford it (even with insurance)"],
+  datasets: [{
+    label: '# of responses',
+    data: [301, 46, 43, 29, 16, 95],
+    backgroundColor: [ color3, color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        xAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+// HEARD OF OFF LABEL
+var ctxheardOfOffLabel = document.getElementById("heardOfOffLabel");
+var heardOfOffLabelPie = new Chart(ctxheardOfOffLabel, {
+  type: 'doughnut',
+  data: {
+    labels: ["Yes", "No"],
+    datasets: [{
+      label: '# of responses',
+      data: [322, 98],
+      backgroundColor: [color3, color6]
+    }]
+  },
+  options: {
+    legend: {
+                  position: 'right' ,
+                  align: 'start'
+                },
+    responsive: false,
+  }
+});
+
+// ASKED DOCTOR
+var ctxheardOfOffLabel = document.getElementById("askedDoctor");
+var heardOfOffLabelPie = new Chart(ctxheardOfOffLabel, {
+  type: 'doughnut',
+  data: {
+    labels: ["Yes", "No"],
+    datasets: [{
+      label: '# of responses',
+      data: [130, 288],
+      backgroundColor: [color3, color6]
+    }]
+  },
+  options: {
+    legend: {
+                  position: 'right' ,
+                  align: 'start'
+                },
+    responsive: false,
+  }
+});
+
+// OTHERS BUT NOT YOU
+var ctxheardOfOffLabel = document.getElementById("othersNotReceived");
+var heardOfOffLabelPie = new Chart(ctxheardOfOffLabel, {
+  type: 'doughnut',
+  data: {
+    labels: ["Yes", "No"],
+    datasets: [{
+      label: '# of responses',
+      data: [140, 278],
+      backgroundColor: [color3, color6]
+    }]
+  },
+  options: {
+    legend: {
+                  position: 'right' ,
+                  align: 'start'
+                },
+    responsive: false,
+  }
+});
+
+// PRESCRIPTION DRUGS
+am4core.useTheme(am4themes_animated);
+    // Themes end
+
+    var othersNotReceivedCloud = am4core.create("othersNotReceivedCloud", am4plugins_wordCloud.WordCloud);
+    var seriesothersNotReceivedCloud = othersNotReceivedCloud.series.push(new am4plugins_wordCloud.WordCloudSeries());
+
+    seriesothersNotReceivedCloud.accuracy = 4;
+    seriesothersNotReceivedCloud.step = 15;
+    seriesothersNotReceivedCloud.rotationThreshold = 0.7;
+    seriesothersNotReceivedCloud.maxCount = 200;
+    seriesothersNotReceivedCloud.minWordLength = 2;
+    seriesothersNotReceivedCloud.labels.template.tooltipText = "{word}: {value}";
+    seriesothersNotReceivedCloud.fontFamily = "IBM Plex Sans";
+    seriesothersNotReceivedCloud.maxFontSize = am4core.percent(30);
+
+    seriesothersNotReceivedCloud.text = "Sirolimus Alpelisib Sirolimus Sirolimus Sirolimus Sirolimus Rituximab Tocilizumab Sirolimus Sirolimus Siltuximab Rituximab Tocilizumab Sirolimus Bevacizumab Sirolimus Sirolimus Ketamine Dantrolene Sirolimus Alzheimer's Drug NOS Cidofovir Photodynamic Therapy NOS Guaiacol Jak Inhibitor NOS Adalimumab Anakinra Anakinra Infliximab Methotrexate Adalimumab Adalimumab IMMUNE GLOBULIN Infliximab Immune Globulin Immune Globulin Adalimumab Naltrexone Topiramate Prednisone Hydroxychloroquine Methotrexate Hydroxychloroquine Ruxolitinib Bevacizumab Flunarizine Danazol Baclofen Bevacizumab Sirolimus Sirolimus RT001 Everolimus Adalimumab Rituximab Infliximab Adalimumab Infliximab Infliximab Hydroxychloroquine Hydroxychloroquine Infliximab Infliximab Adalimumab Dupilumab Infliximab Biologics NOS Minocycline Sirolimus Adalimumab Methotrexate Methotrexate Vancomycin Infliximab Paclitaxel Vancomycin Infliximab Hydroxychloroquine Pembrolizumab Zoledronic Acid Remdesivir GM-CSF Vincristine Adalimumab Metformin Ivacaftor Antihemophilic Factor Chlorambucil Rituximab-abbs Triheptanoin Everolimus Acetazolamide Human Growth Hormone Sirolimus Bortezomib Mycophenolate Immune Globulin Noscapine Risperidone Ivosidenib Sirolimus Sirolimus Everolimus Everolimus Sirolimus Tocilizumab Ursodiol Sirolimus Ursodiol Sirolimus Cyproheptadine Sirolimus Sirolimus Cidofovir Ruxolitinib Rituximab Baclofen Vancomycin Tnf Inhibitors NOS Sirolimus Infliximab Riluzole STEROIDS NOS Metformin CARBIDOPA/LEVODOPA Ganaxolone EMPAGLIFLOZIN Thalidomide Siltuximab Rituximab Cyclophosphamide Rituximab Pazopanib Quetiapine Amifampridine Pembrolizumab Canakinumab Canakinumab Corticotropin Infliximab Methotrexate Pregabalin Hydroxychloroquine Azithromycin Bupropion/Naltrexone Methotrexate Adalimumab Rituximab Pazopanib Nintedanib,Pirfenidone Steroids NOS Everolimus Immune Globulin Azathioprine Rituximab Adalimumab Dexlansoprazole Methotrexate Methotrexate Infliximab Prednisone BRAF Inhibitors NOS Cholestyramine Infliximab GM-CSF Icosapent Infliximab Acetazolamide Rituximab SSRI NOS Pamiparib Tocilizumab Rituximab Thalidomide Rifaximin Vancomycin Nortriptyline Tocilizumab Immune Globulin Cyclophosphamide Diazepam Fenofibrate Adalimumab BIOLOGICS NOS Atorvastatin Baclofen Bromides NOS Tocilizumab Doxycycline Medical Marijuana Pyridostigmine Cimetidine Leflunomide Azathioprine Clindamycin Dextroamphetamine/Amphetamine Gabapentin Infliximab Metformin Ketamine Methotrexate Hydroxychloroquine Azathioprine Infliximab Budesonide Mycophenolate MEK Inhibitors NOS Rifampin Buspirone Lorazepam Jak Inhibitor NOS Ruxolitinib Onabotulinumtoxina Doxycycline Diazoxide Pomalidomide Meperidine Quinine Immune Globulin Minocycline Lisdexamfetamine Tnf Inhibitors NOS Azathioprine,Cyclophosphamide Mycophenolate Mycophenolate Fluticasone Immune Checkpoint Inhibitors NOS CBD Propranolol Cyclosporine Mebendazole Tacrolimus Buprenorphine Cyclophosphamide Metformin Hydroxychloroquine Mycophenolate Methotrexate Minocycline Ondansetron Etoposide Sirolimus"; 
+
+
+// HOW WILLING
+var ctxhowWilling = document.getElementById("howWilling");
+var howWillingBar = new Chart(ctxhowWilling, {
+type: 'horizontalBar',
+data: {
+  labels: ["Very willing", "Somewhat willing", "Neutral", "Somewhat unwilling", "Very unwilling"],
+  datasets: [{
+    label: '# of responses',
+    data: [196, 132, 46, 15, 20],
+    backgroundColor: [ color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        xAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+
+// WHAT FACTORS
+var ctxwhatFactors = document.getElementById("whatFactors");
+var whatFactorsBar = new Chart(ctxwhatFactors, {
+type: 'horizontalBar',
+data: {
+  labels: ["Whether or not there is data on the drug’s safety", "Whether or not I trust my doctor", "Whether or not there there is data on the drug’s effectiveness", "Whether my disease severity has left me without options", "Whether not taking the drug will lead to severe progression of my disease", "Whether or not I can afford the drug", "Whether there are alternative treatments available to me", "Whether or not I know other people with my disease who have taken the drug", "Whether I fear not taking anything; so something is better than nothing", "Whether the hospital near me has the drug available", "None", "Other"],
+  datasets: [{
+    label: '# of responses',
+    data: [324, 316, 295, 229, 223, 208, 202, 194, 101, 82, 2, 26],
+    backgroundColor: [ color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        xAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+// FAMILIARITY PRIOR
+var ctxfamiliarityPrior = document.getElementById("familiarityPrior");
+var familiarityPriorBar = new Chart(ctxfamiliarityPrior, {
+type: 'horizontalBar',
+data: {
+  labels: ["Extremely familiar", "Very familiar", "Moderately familiar", "Slightly familiar", "Not familiar at all"],
+  datasets: [{
+    label: '# of responses',
+    data: [39, 74, 97, 70, 119],
+    backgroundColor: [ color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        xAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+// INTEREST PRIOR
+var ctxinterestPrior = document.getElementById("interestPrior");
+var interestPriorBar = new Chart(ctxinterestPrior, {
+type: 'horizontalBar',
+data: {
+  labels: ["Extremely interested", "Very interested", "Moderately interested", "Slightly interested", "Not interested at all"],
+  datasets: [{
+    label: '# of responses',
+    data: [135, 112, 88, 37, 25],
+    backgroundColor: [ color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+
+// DOCTOR EXAMPLES
+var ctxdrExamples = document.getElementById("drExamples");
+var drExamplesPie = new Chart(ctxdrExamples, {
+  type: 'doughnut',
+  data: {
+    labels: ["Yes", "No"],
+    datasets: [{
+      label: '# of responses',
+      data: [158, 238],
+      backgroundColor: [color3, color6]
+    }]
+  },
+  options: {
+    legend: {
+                  position: 'right' ,
+                  align: 'start'
+                },
+    responsive: false,
+  }
+});
+
+
+// MOST IMPACTFUL
+var ctxmostImpactful = document.getElementById("mostImpactful");
+var mostImpactfulBar = new Chart(ctxmostImpactful, {
+type: 'horizontalBar',
+data: {
+  labels: ["More options for treatments for my disease", "More real world data to determine which off-label drugs are potentially safe and effective for my rare disease", "More clinical trial research to show that the drug is safe and effective for my disease", "Easier access to drugs that may be able to treat my disease", "Opportunity to participate in patient registries to help researchers measure long-term treatment outcomes", "Opportunity to participate in clinical trials for drugs to treat my disease", "I’m not sure", "None", "Other"],
+  datasets: [{
+    label: '# of responses',
+    data: [346, 281, 280, 250, 232, 220, 15, 1, 11],
+    backgroundColor: [ color3, color3, color3, color3, color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        xAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+// DR - SAFE
+var ctxdrSafe = document.getElementById("drSafe");
+var drSafeBar = new Chart(ctxdrSafe, {
+type: 'bar',
+data: {
+  labels: ["1", "2", "3", "4", "5"],
+  datasets: [{
+    label: '# of responses',
+    data: [5, 19, 63, 177, 54],
+    backgroundColor: [ color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+// DR - IMPORTANT
+var ctxdrImportant = document.getElementById("drImportant");
+var drImportantBar = new Chart(ctxdrImportant, {
+type: 'bar',
+data: {
+  labels: ["1", "2", "3", "4", "5"],
+  datasets: [{
+    label: '# of responses',
+    data: [10, 7, 27, 119, 195],
+    backgroundColor: [ color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+// DR - NECESSARY
+var ctxdrNecessary = document.getElementById("drNecessary");
+var drNecessaryBar = new Chart(ctxdrNecessary, {
+type: 'bar',
+data: {
+  labels: ["1", "2", "3", "4", "5"],
+  datasets: [{
+    label: '# of responses',
+    data: [13, 14, 34, 91, 182],
+    backgroundColor: [ color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+
+
+
+</script>
       </div>
+<div class="whitespace"></div>
+
     </main>
 
 

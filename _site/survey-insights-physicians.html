@@ -44,7 +44,32 @@ rel="stylesheet"
 
 
   </head>
+<style>
+  .siteContent {
+  padding-left: 40px;
+  padding-right: 40px;
 
+}
+
+@media screen and (min-width: 1200px) {
+  .siteContent {
+  padding-left: 130px;
+  padding-right: 130px;
+
+}
+}
+
+
+.whitespace {
+        height: 400px !important;
+    }
+
+section {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+</style>
     
 <body >
 
@@ -187,8 +212,34 @@ rel="stylesheet"
     </div>
     <main role="main" class="site-content">
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+
+
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+</script>
+
+        <script src="https://www.amcharts.com/lib/4/core.js"></script>
+        <script src="https://www.amcharts.com/lib/4/plugins/wordCloud.js"></script>
+        <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+
       <div class = "pt-5">
         
+        <script>
+          var color1 = 'rgba(0,23,31, 0.9)'
+          var color2 = 'rgba(0,52,89, 0.9)'
+          var color3 = 'rgba(0,126,167, 0.9)'
+          var color4 = 'rgba(0,168,232, 0.9)'
+          var color5 = 'rgba(122,172,221, 0.9)'
+          var color6 = 'rgba(254,95,85, 0.8)'
+          var color7 = 'rgba(187,176,220, 0.8'
+
+
+</script>
 <style>
     .nav-6 a, .nav-6 .link-text {
         font-weight: 500;
@@ -198,12 +249,619 @@ rel="stylesheet"
     }
 </style>
 
-<div class = "container">
+<div class = "container siteContent">
     <h1>Physicians</h1>
-    
-    </div>
 
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                Are there any treatments prescribed off-label for this rare disease?
+            </h2>
+
+            <div class = "row py-5">
+              <div class = "col-12 col-xl-4">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              </div>
+              <div class = "col-12 col-xl-6">
+                <canvas style="height:300px;" id="prescriptionOffLabel"></canvas>
+                <p class = "text-end"><small>n = 17</small></p>
+              </div>
+            </div>
       </div>
+    </section>
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                How effective are these drugs at reducing overall symptoms associated with your patients’ rare disease?
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <canvas style="width:60vw!important;" id="howEffectiveSymptoms"></canvas>
+            <p class = "text-end"><small>n = 9</small></p>
+      </div>
+    </section>
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                How effective are these drugs at preventing worsening of your patients’ rare disease?
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <canvas style="width:60vw!important;" id="howEffectiveWorsening"></canvas>
+            <p class = "text-end"><small>n = 9</small></p>
+      </div>
+    </section>
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                How effective are these drugs at improving your patients’ overall state of health?
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <canvas style="width:60vw!important;" id="howEffectiveOverall"></canvas>
+            <p class = "text-end"><small>n = 9</small></p>
+      </div>
+    </section>
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                Would you consider any of these drugs to be able to completely address all of the challenges associated with your patients’ rare disease?
+            </h2>
+            <div class = "row py-5">
+              <div class = "col-12 col-xl-4">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              </div>
+              <div class = "col-12 col-xl-6">
+                <canvas style="height:300px;" id="completelyAddress"></canvas>
+                <p class = "text-end"><small>n = 9</small></p>
+              </div>
+            </div>
+      </div>
+    </section>
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                What roadblocks do your patients have in getting access to these drugs?
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <canvas style="width:60vw!important;" id="whatRoadblocks"></canvas>
+            <p class = "text-end"><small>n = 9</small></p>
+      </div>
+    </section>
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                Thinking specifically about your rare disease population, how often have you prescribed a drug off-label?
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <canvas style="width:60vw!important;" id="howOftenOffLabel"></canvas>
+            <p class = "text-end"><small>n = 17</small></p>
+      </div>
+    </section>
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                What are the 3 most important factors you take into consideration when deciding to prescribe a drug off-label? 
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <canvas style="width:60vw!important;" id="threeMostImp"></canvas>
+            <p class = "text-end"><small>n = 17</small></p>
+      </div>
+    </section>
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                When you prescribe drugs off-label for your patients, do you regularly share your patient’s clinical response so that other physicians can learn from your experience?
+            </h2>
+            <div class = "row py-5">
+              <div class = "col-12 col-xl-4">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              </div>
+              <div class = "col-12 col-xl-6">
+                <canvas style="height:300px;" id="shareClinical"></canvas>
+                <p class = "text-end"><small>n = 17</small></p>
+              </div>
+            </div>
+      </div>
+    </section>
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                In what format do you share your patient's clinical response?
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <canvas style="width:60vw!important;" id="clinicalFormat"></canvas>
+            <p class = "text-end"><small>n = 9</small></p>
+      </div>
+    </section>
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                Please rate your familiarity with drug repurposing prior to this survey
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <canvas style="width:60vw!important;" id="priorFamiliarity"></canvas>
+            <p class = "text-end"><small>n = 17</small></p>
+      </div>
+    </section>
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                Are you aware of clinical trials of drugs that are being repurposed for the rare diseases you treat?
+            </h2>
+            <div class = "row py-5">
+              <div class = "col-12 col-xl-4">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              </div>
+              <div class = "col-12 col-xl-6">
+                <canvas style="height:300px;" id="clinicalTrials"></canvas>
+                <p class = "text-end"><small>n = 17</small></p>
+              </div>
+            </div>
+      </div>
+    </section>
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                Have you referred any patients to this / these clinical trial(s)?            
+            </h2>
+            <div class = "row py-5">
+              <div class = "col-12 col-xl-4">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              </div>
+              <div class = "col-12 col-xl-6">
+                <canvas style="height:300px;" id="referredPatients"></canvas>
+                <p class = "text-end"><small>n = 11</small></p>
+              </div>
+            </div>
+      </div>
+    </section>
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                If the opportunity presented itself, would you be willing to be a co-investigator on a clinical trial to assess the efficacy of a drug that is being repurposed for a rare disease that you treat?
+            </h2>
+            <div class = "row py-5">
+              <div class = "col-12 col-xl-4">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              </div>
+              <div class = "col-12 col-xl-6">
+                <canvas style="height:300px;" id="coInvestigator"></canvas>
+                <p class = "text-end"><small>n = 17</small></p>
+              </div>
+            </div>
+      </div>
+    </section>
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                What factors did you take into consideration when choosing your response?
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <canvas style="width:60vw!important;" id="factorsConsidered"></canvas>
+            <p class = "text-end"><small>n = 17</small></p>
+      </div>
+    </section>
+
+
+<script>
+
+// PRESCRIBE OFF LABEL
+var ctxprescriptionOffLabel = document.getElementById("prescriptionOffLabel");
+var prescriptionOffLabelPie = new Chart(ctxprescriptionOffLabel, {
+  type: 'doughnut',
+  data: {
+    labels: ["Yes", "No"],
+    datasets: [{
+      label: '# of responses',
+      data: [12, 3],
+      backgroundColor: [color3, color6]
+    }]
+  },
+  options: {
+    legend: {
+                  position: 'right' ,
+                  align: 'start'
+                },
+    responsive: false,
+  }
+});
+
+// HOW EFFECTIVE SYMPTOMS
+var ctxhowEffectiveSymptoms = document.getElementById("howEffectiveSymptoms");
+var howEffectiveSymptomsBar = new Chart(ctxhowEffectiveSymptoms, {
+type: 'horizontalBar',
+data: {
+  labels: ["Very effective", "Somewhat effective", "Neutral effect", "Somewhat ineffective", "Not effective"],
+  datasets: [{
+    label: '# of responses',
+    data: [5, 18, null, 3, null, null],
+    backgroundColor: [ color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        xAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+// HOW EFFECTIVE SYMPTOMS
+var ctxhowEffectiveWorsening = document.getElementById("howEffectiveWorsening");
+var howEffectiveWorseningBar = new Chart(ctxhowEffectiveWorsening, {
+type: 'horizontalBar',
+data: {
+  labels: ["Very effective", "Somewhat effective", "Neutral effect", "Somewhat ineffective", "Not effective"],
+  datasets: [{
+    label: '# of responses',
+    data: [4, 17, 2, 2, 1],
+    backgroundColor: [ color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        xAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+// HOW EFFECTIVE SYMPTOMS
+var howEffectiveOverall = document.getElementById("howEffectiveOverall");
+var howEffectiveOverallBar = new Chart(howEffectiveOverall, {
+type: 'horizontalBar',
+data: {
+  labels: ["Very effective", "Somewhat effective", "Neutral effect", "Somewhat ineffective", "Not effective"],
+  datasets: [{
+    label: '# of responses',
+    data: [3, 20, 3, null, null],
+    backgroundColor: [ color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        xAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+// COMPLETELY ADDRESS
+var completelyAddress = document.getElementById("completelyAddress");
+var completelyAddressPie = new Chart(completelyAddress, {
+  type: 'doughnut',
+  data: {
+    labels: ["Yes", "No"],
+    datasets: [{
+      label: '# of responses',
+      data: [5, 20],
+      backgroundColor: [color3, color6]
+    }]
+  },
+  options: {
+    legend: {
+                  position: 'right' ,
+                  align: 'start'
+                },
+    responsive: false,
+  }
+});
+
+// WHAT ROADBLOCKS
+var whatRoadblocks = document.getElementById("whatRoadblocks");
+var whatRoadblocksBar = new Chart(whatRoadblocks, {
+type: 'horizontalBar',
+data: {
+  labels: ["Insurance coverage/approval", "Accessibility", "Affordability", "None", "Other"],
+  datasets: [{
+    label: '# of responses',
+    data: [12, 9, 9, 7, 8],
+    backgroundColor: [ color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        xAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+// HOW OFTEN OFF LABEL
+var howOftenOffLabel = document.getElementById("howOftenOffLabel");
+var howOftenOffLabelBar = new Chart(howOftenOffLabel, {
+type: 'horizontalBar',
+data: {
+  labels: ["Every patient", "Often", "Occasionally", "Once or twice", "Never"],
+  datasets: [{
+    label: '# of responses',
+    data: [2, 9, 4, 1, 1],
+    backgroundColor: [ color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        xAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+// THREE MOST IMPORTANT
+var threeMostImp = document.getElementById("threeMostImp");
+var threeMostImpBar = new Chart(threeMostImp, {
+type: 'horizontalBar',
+data: {
+  labels: ["Published recommendations by physician-experts", "Side effect profile of the drug", "Clinical research evidence", "Randomized clinical trial demonstrating efficacy", "Patient’s clinical presentation", "Pre-clinical research evidence", "Word of mouth anecdotal evidence from peers", "Patient request", "UpToDate and similar clinical recommendation databases", "Other"],
+  datasets: [{
+    label: '# of responses',
+    data: [12, 10, 8, 7, 6, 3, 2, 1, 1, 1],
+    backgroundColor: [ color3, color3, color3, color3, color3, color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+// SHARE CLINICAL
+var shareClinical = document.getElementById("shareClinical");
+var shareClinicalPie = new Chart(shareClinical, {
+  type: 'doughnut',
+  data: {
+    labels: ["Yes", "No"],
+    datasets: [{
+      label: '# of responses',
+      data: [9, 8],
+      backgroundColor: [color3, color6]
+    }]
+  },
+  options: {
+    legend: {
+                  position: 'right' ,
+                  align: 'start'
+                },
+    responsive: false,
+  }
+});
+
+// CLINICAL FORMAT
+var clinicalFormat = document.getElementById("clinicalFormat");
+var clinicalFormatBar = new Chart(clinicalFormat, {
+type: 'horizontalBar',
+data: {
+  labels: ["Published literature", "Medical forums", "Word of mouth", "Natural history registries", "Scientific advisory boards"],
+  datasets: [{
+    label: '# of responses',
+    data: [8, 3, 3, 2, 2],
+    backgroundColor: [ color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        xAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+// PRIOR FAMILIARITY
+var priorFamiliarity = document.getElementById("priorFamiliarity");
+var priorFamiliarityBar = new Chart(priorFamiliarity, {
+type: 'horizontalBar',
+data: {
+  labels: ["High familiarity", "Somewhat familiar", "Neutral", "Low familiarity"],
+  datasets: [{
+    label: '# of responses',
+    data: [6, 6, 3, 2],
+    backgroundColor: [ color3, color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        xAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+// CLINICAL TRIALS
+var clinicalTrials = document.getElementById("clinicalTrials");
+var clinicalTrialsPie = new Chart(clinicalTrials, {
+  type: 'doughnut',
+  data: {
+    labels: ["Yes", "No"],
+    datasets: [{
+      label: '# of responses',
+      data: [11, 6],
+      backgroundColor: [color3, color6]
+    }]
+  },
+  options: {
+    legend: {
+                  position: 'right' ,
+                  align: 'start'
+                },
+    responsive: false,
+  }
+});
+
+// REFERRED PATIENTS
+var referredPatients = document.getElementById("referredPatients");
+var referredPatientsPie = new Chart(referredPatients, {
+  type: 'doughnut',
+  data: {
+    labels: ["Yes", "No"],
+    datasets: [{
+      label: '# of responses',
+      data: [9, 2],
+      backgroundColor: [color3, color6]
+    }]
+  },
+  options: {
+    legend: {
+                  position: 'right' ,
+                  align: 'start'
+                },
+    responsive: false,
+  }
+});
+
+// CO-INVESTIGATOR
+var coInvestigator = document.getElementById("coInvestigator");
+var coInvestigatorPie = new Chart(coInvestigator, {
+  type: 'doughnut',
+  data: {
+    labels: ["Yes"],
+    datasets: [{
+      label: '# of responses',
+      data: [17],
+      backgroundColor: [color3]
+    }]
+  },
+  options: {
+    legend: {
+                  position: 'right' ,
+                  align: 'start'
+                },
+    responsive: false,
+  }
+});
+
+// FACTORS CONSIDERED
+var factorsConsidered = document.getElementById("factorsConsidered");
+var factorsConsideredBar = new Chart(factorsConsidered, {
+type: 'horizontalBar',
+data: {
+  labels: ["Clinical trials are important for rare disease research", "Clinical trials bring direct benefit to patients", "Level of personal Interest", "Career development and resulting publication"],
+  datasets: [{
+    label: '# of responses',
+    data: [17, 15, 11, 9],
+    backgroundColor: [ color3, color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        xAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+</script>
+
+
+</div>
+      </div>
+<div class="whitespace"></div>
+
     </main>
 
 

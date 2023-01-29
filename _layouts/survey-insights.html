@@ -30,7 +30,32 @@ rel="stylesheet"
 
 
   </head>
+<style>
+  .siteContent {
+  padding-left: 40px;
+  padding-right: 40px;
 
+}
+
+@media screen and (min-width: 1200px) {
+  .siteContent {
+  padding-left: 130px;
+  padding-right: 130px;
+
+}
+}
+
+
+.whitespace {
+        height: 400px !important;
+    }
+
+section {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+</style>
     
 <body >
 
@@ -105,11 +130,38 @@ rel="stylesheet"
     </div>
     <main role="main" class="site-content">
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+
+
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+</script>
+
+        <script src="https://www.amcharts.com/lib/4/core.js"></script>
+        <script src="https://www.amcharts.com/lib/4/plugins/wordCloud.js"></script>
+        <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+
       <div class = "pt-5">
         
-{{content}}
+        <script>
+          var color1 = 'rgba(0,23,31, 0.9)'
+          var color2 = 'rgba(0,52,89, 0.9)'
+          var color3 = 'rgba(0,126,167, 0.9)'
+          var color4 = 'rgba(0,168,232, 0.9)'
+          var color5 = 'rgba(122,172,221, 0.9)'
+          var color6 = 'rgba(254,95,85, 0.8)'
+          var color7 = 'rgba(187,176,220, 0.8'
 
+
+</script>
+{{content}}
       </div>
+<div class="whitespace"></div>
+
     </main>
 
 

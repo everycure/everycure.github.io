@@ -2,11 +2,10 @@
     .link-text, i {color: white;}
     .navbar_gds {
       position: fixed!important;
-      background-color: #03021c;
       transition: width 600ms ease;
       box-shadow: none;
-      background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
-
+      background-color: #00171f !important;
+      background-image: url("https://www.transparenttextures.com/patterns/black-paper.png");
       height: 100vh;
     }
     

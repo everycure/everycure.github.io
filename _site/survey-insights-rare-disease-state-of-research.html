@@ -44,7 +44,32 @@ rel="stylesheet"
 
 
   </head>
+<style>
+  .siteContent {
+  padding-left: 40px;
+  padding-right: 40px;
 
+}
+
+@media screen and (min-width: 1200px) {
+  .siteContent {
+  padding-left: 130px;
+  padding-right: 130px;
+
+}
+}
+
+
+.whitespace {
+        height: 400px !important;
+    }
+
+section {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+</style>
     
 <body >
 
@@ -187,8 +212,34 @@ rel="stylesheet"
     </div>
     <main role="main" class="site-content">
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+
+
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+</script>
+
+        <script src="https://www.amcharts.com/lib/4/core.js"></script>
+        <script src="https://www.amcharts.com/lib/4/plugins/wordCloud.js"></script>
+        <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+
       <div class = "pt-5">
         
+        <script>
+          var color1 = 'rgba(0,23,31, 0.9)'
+          var color2 = 'rgba(0,52,89, 0.9)'
+          var color3 = 'rgba(0,126,167, 0.9)'
+          var color4 = 'rgba(0,168,232, 0.9)'
+          var color5 = 'rgba(122,172,221, 0.9)'
+          var color6 = 'rgba(254,95,85, 0.8)'
+          var color7 = 'rgba(187,176,220, 0.8'
+
+
+</script>
 <style>
     .nav-2 a, .nav-2 .link-text {
         font-weight: 500;
@@ -198,12 +249,747 @@ rel="stylesheet"
     }
 </style>
 
-<div class = "container">
+<div class = "container siteContent">
     <h1>Rare disease state of research</h1>
     
-    </div>
 
+<section>
+    <div class = "container">
+        <h2 class = "">Does your rare disease have the following?</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+          <canvas style="width:60vw!important;" id="rdHasFollowing"></canvas>
+          <p class = "text-end"><small>n = 140</small></p>
+    </div>
+</section>
+
+<section>
+    <div class = "container">
+        <h2 class = "">Are there any FDA-approved drugs for your rare disease or diseases of focus?</h2>
+          <div class = "row py-5 ">
+            <div class = "col-12 col-xl-4">
+              <canvas style = "height: 200px;" id="fdaApprovedDrugsPie"></canvas>
+              <p class = "text-end"><small>n = 139</small></p>    
+            </div>
+            <div class = "col-12 col-xl-8 px-xl-5 mt-xl-4">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            </div>
+          </div>
+
+    </div>
+        <div id="fdaApprovedDrugsCloud" style = "height: 400px;"></div>
+        <p class="text-end"><small>n = 84 drugs</small></p>
+</section>
+
+<section>
+    <div class = "container">
+        <h2 class = "">What percentage of your rare disease patient population benefits from this FDA-approved drug?</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+          <canvas style="width:60vw!important;" id="percentageBenefitsFda"></canvas>
+          <p class = "text-end"><small>n = 30</small></p>
+    </div>
+</section>
+
+<section>
+    <div class = "container">
+        <h2 class = "">For those patients that benefit from it, how effective is this FDA-approved drug at:</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+          <canvas style="width:60vw!important;" id="howEffectiveFDA"></canvas>
+          <p class = "text-end"><small>n = 28</small></p>
+    </div>
+</section>
+
+<section>
+    <div class = "container">
+        <h2 class = "">Would you consider this FDA-approved drug to be a “cure” for at least some of your patient population?</h2>
+
+        <div class = "row py-5">
+          <div class = "col-12 col-xl-4">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          </div>
+          <div class = "col-12 col-xl-6">
+            <canvas style="height:300px;" id="fdaCure"></canvas>
+            <p class = "text-end"><small>n = 32</small></p>
+          </div>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <div class = "container">
+        <h2 class = "">What roadblocks does your patient population have in accessing this FDA-approved drug?</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+          <canvas style="width:60vw!important;" id="patientRoadblocksFda"></canvas>
+          <p class = "text-end"><small>n = 30</small></p>
+    </div>
+</section>
+
+<section>
+    <div class = "container">
+        <h2 class = "">Have any other drugs (which have not been FDA approved for your rare disease of focus) been identified as promising for your rare disease of interest?</h2>
+
+        <div class = "row py-5">
+          <div class = "col-12 col-xl-4">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          </div>
+          <div class = "col-12 col-xl-6">
+            <canvas style="height:300px;" id="nonFdaPie"></canvas>
+            <p class = "text-end"><small>n = 23</small></p>
+          </div>
+        </div>
+
+    </div>
+        <div id="nonFdaCloud" style = "height: 400px;"></div>
+        <p class="text-end"><small>n = ## drugs</small></p>
+</section>
+
+<section>
+    <div class = "container">
+        <h2 class = "">What percentage of your rare disease patient population benefits from this off-label drug?</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+          <canvas style="width:60vw!important;" id="patientBenefitOff"></canvas>
+          <p class = "text-end"><small>n = 58</small></p>
+    </div>
+</section>
+
+<section>
+    <div class = "container">
+        <h2 class = "">Would you consider this off-label drug to be a “cure” for at least some of your patient population?</h2>
+
+        <div class = "row py-5">
+          <div class = "col-12 col-xl-4">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          </div>
+          <div class = "col-12 col-xl-6">
+            <canvas style="height:300px;" id="offLabelCure"></canvas>
+            <p class = "text-end"><small>n = ##</small></p>
+          </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class = "container">
+        <h2 class = "">For those patients that benefit from it, how effective is this off-label drug at:</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+          <canvas style="width:60vw!important;" id="howEffectiveOffLabel"></canvas>
+          <p class = "text-end"><small>n = ##</small></p>
+    </div>
+</section>
+
+<section>
+    <div class = "container">
+        <h2 class = "">What roadblocks does your patient population have in accessing this off-label drug?</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+          <canvas style="width:60vw!important;" id="patientRoadblocksOffLabel"></canvas>
+          <p class = "text-end"><small>n = ##</small></p>
+    </div>
+</section>
+
+<section>
+    <div class = "container">
+        <h2 class = "">SUPER FUN ONE</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+
+        <p class = "pt-4"><b>Among all patients with your rare disease, what percentage of patients have had a reduction in the burden of their disease from a treatment that your organization supported in some way, through funding, research, resources, or otherwise?</b></p>
+          <canvas style="width:60vw!important;" id="superfun1"></canvas>
+
+          <p class = "pt-5"><b>Overall, what percentage of your patient population are currently helped with a drug, FDA approved or not?</b></p>
+          <canvas style="width:60vw!important;" id="superfun2"></canvas>
+
+          <p class = "pt-5"><b>Out of the above percentage of patients which are being helped with a drug, FDA approved or not, how much have these patients improved?</b></p>
+          <canvas style="width:60vw!important;" id="superfun3"></canvas>
+
+
+          <p class = "text-end"><small>n = 30</small></p>
+    </div>
+</section>
+
+<section>
+    <div class = "container">
+        <h2 class = "">Does your organization systematically track off-label drug use in your patient population?</h2>
+       
+        <div class = "row py-5">
+          <div class = "col-12 col-xl-4">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          </div>
+          <div class = "col-12 col-xl-6">
+            <canvas style="height:300px;" id="trackOffLabel"></canvas>
+            <p class = "text-end"><small>n = 139</small></p>
+          </div>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <div class = "container">
+        <h2 class = "">Are you interested in tracking this information in the future?</h2>
+        <div class = "row py-5">
+          <div class = "col-12 col-xl-4">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          </div>
+          <div class = "col-12 col-xl-6">
+            <canvas style="height:300px;" id="interestedTrackOffLabel"></canvas>
+            <p class = "text-end"><small>n = 121></small></p>
+          </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class = "container">
+        <h2 class = "">How do you track this off-label use?</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+          <canvas style="width:60vw!important;" id="howTrackOffLabel"></canvas>
+          <p class = "text-end"><small>n = 121</small></p>
+    </div>
+</section>
+</div>
+
+
+<script>
+    
+// DOES RD HAVE THE FOLLOWING
+var ctxActivities = document.getElementById("rdHasFollowing");
+var activitiesOfFocusBar = new Chart(ctxActivities, {
+type: 'horizontalBar',
+data: {
+    labels: ['A specific ICD-10 code', 'Animal models', 'Cell lines', 'Clear understanding of etiology or disease pathogenesis', 'Diagnostic Criteria', 'Identified genetic mutation', 'Predictive biomarkers', 'Treatment guidelines / Standard of Care guidelines'],
+    datasets: [{
+      label: 'Yes', 
+      backgroundColor: color1,
+      data: [65, 104, 82, 68, 116, 112, 34, 71],
+    }, {
+      label: 'No but in progress',
+      backgroundColor: color2,
+      data: [35, 10, 14, 60, 17, 13, 62, 54],
+    }
+    , {
+      label: 'No and not planned',
+      backgroundColor: color3,
+      data: [14, 5, 9, 4, 3, 4, 17, 10],
+    }, {
+      label: 'Unknown',
+      backgroundColor: color4,
+      data: [23, 14, 24, 6, 4, 7, 20, 3],
+    }],
+  },
+options: {
+  scales: {
+         xAxes: [{
+            stacked: true // this should be set to make the bars stacked
+         }],
+         yAxes: [{
+            stacked: true // this also..
+         }]
+      },
+
+      legend: {
+                  position: 'right' ,
+                  align: 'start'
+                },
+  responsive: true,
+
+}
+});
+
+// FDA APPROVED DRUGS FOR RD (DONUT)
+var ctxResearchSupportPie = document.getElementById("fdaApprovedDrugsPie");
+var supportingResearchPie = new Chart(ctxResearchSupportPie, {
+  type: 'doughnut',
+  data: {
+    labels: ['Yes', 'No'],
+    datasets: [{
+      label: '# of responses',
+      data: [41, 98],
+      backgroundColor: [color3, color6]
+    }]
+  },
+  options: {
+    legend: {
+                  position: 'left' ,
+                  align: 'start'
+                },
+   	//cutoutPercentage: 40,
+    responsive: false,
+  }
+});
+
+// FDA APPROVED DRUGS FOR RD (WORD CLOUD) 
+am4core.useTheme(am4themes_animated);
+    // Themes end
+
+    var fdaApprovedCloud = am4core.create("fdaApprovedDrugsCloud", am4plugins_wordCloud.WordCloud);
+    var series = fdaApprovedCloud.series.push(new am4plugins_wordCloud.WordCloudSeries());
+
+    series.accuracy = 4;
+    series.step = 15;
+    series.rotationThreshold = 0.7;
+    series.maxCount = 200;
+    series.minWordLength = 2;
+    series.labels.template.tooltipText = "{word}: {value}";
+    series.fontFamily = "IBM Plex Sans";
+    series.maxFontSize = am4core.percent(30);
+
+    series.text = "Dantrolene CFTR Modulators NOS Sapropterin Dihydrochloride Carglumic Acid Tasimelteon Rituximab Tetrabenazine Selumetinib Eculizumab Siltuximab Hydroxurea Inebilizumab-cdon Octreotide Odevixibat Filgrastim Caplacizumab Pamidronate Selumetinib Prednisone Pyridostigmine Temozolomide TBI Conditioning Regimen Steroids NOS Diazoxide Imatinib Selumetinib Tasimelteon Anakinra Calcium,Magnesium,Potassium,Sodium Oxybates Daratumumab/Hyaluronidase Pemigatinib Sirolimus Riluzole ARM 210 Pegvaliase Levocarnitine Deutetrabenazine Inebilizumab-cdon Voxelotor Eculizumab Lanreotide Filgrastim-Sdnz Risedronate Rituximab Prednisone Danazol,Oxymetholone Immune Globulin Sunitinib Canakinumab Tafamidis Infigratinib Edaravone Satralizumab-mwge Crizanlizumab-Tcma Satralizumab-mwge Pegvisomant Filgrastim-Aafi Etidronate Immune Globulin Eculizumab Thrombopoietin-Receptor Agonists NOS Regorafenib Rilonacept Patisiran Entrectinib L-Glutamine Pasireotide Pegfilgrastim Sodium Thiosulfate Methotrexate Immune Globulin Avapritinib Colchicine Inotersen Larotrectinib Phosphorus DMARD Drugs NOS Immune Globulin Ripretinib Pembrolizumab Calcitriol Sodium Thiosulfate Pexidartinib Ivosidenib"; 
+
+
+// PERCENTAGE THAT BENEFITS FROM FDA APPROVED DRUG
+var ctxPercBenefitsFda = document.getElementById("percentageBenefitsFda");
+var percentageBenefitsFdaBar = new Chart(ctxPercBenefitsFda, {
+type: 'bar',
+data: {
+  labels: ['0', '10', '20', '30', '40', '50', '60', '70', '80', '90', '100'],
+  datasets: [{
+    label: '# of responses',
+    data: [1, 15, 14, 6, 6, 11, 8, 4, 4, 2, 1], 
+    backgroundColor: [color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+  scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+    display: false
+    },  
+  responsive: true,
+}
+});
+
+// HOW EFFECTIVE IS FDA APPROVED DRUG
+var ctxHowEffectiveFda = document.getElementById("howEffectiveFDA");
+var howEffectiveFdaBar = new Chart(ctxHowEffectiveFda, {
+type: 'horizontalBar',
+data: {
+    labels: ['1', '2', '3', '4', '5'],
+    datasets: [{
+      label: 'Reducing symptoms',
+      backgroundColor: color1,
+      data: [3, 3, 8, 31, 13],
+    }, {
+      label: 'Preventing worsening',
+      backgroundColor: color2,
+      data: [null, 3, 13, 20, 9],
+    }, {
+      label: 'Addressing all challenges',
+      backgroundColor: color3,
+      data: [4, 8, 15, 11, 1],
+    }],
+  },
+options: {
+  scales: {
+        xAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                  position: 'right' ,
+                  align: 'start'
+                },
+  responsive: true,
+
+}
+});
+
+// CONSIDER DRUG CURE
+var ctxFdaCure = document.getElementById("fdaCure");
+var fdaCurePie = new Chart(ctxFdaCure, {
+  type: 'doughnut',
+  data: {
+    labels: ['Yes', 'No'],
+    datasets: [{
+      label: '# of responses',
+      data: [3, 76],
+      backgroundColor: [color3, color6]
+    }]
+  },
+  options: {
+    legend: {
+                  position: 'right' ,
+                  align: 'start'
+                },
+   	//cutoutPercentage: 40,
+    responsive: false,
+  }
+});
+
+// PATIENT ROADBLOCKS TO FDA DRUGS
+var patientRoadblocksFda = document.getElementById("patientRoadblocksFda");
+var patientRoadblocksFdaBar = new Chart(patientRoadblocksFda, {
+type: 'horizontalBar',
+data: {
+  labels: ["Insurance coverage / approval issues", "Physician won’t prescribe it", "Affordability issues", "Accessibility", "No roadblocks", "Other: Drug in clinical trials", "Other: not enough clinical evidence", "Other: still in preclinial stage", "Other: patient education/awareness", "Other: not FDA approved", "Other: drug dose or drug schedule issues", "Other: concerns about side effects", "Other: issues with availability outside the US", "Other: Only available via compassionate use"],
+  datasets: [{
+    label: '# of responses',
+    data: [93, 89, 69, 45, 10, 25, 16, 15, 10, 9, 8, 7, 3, 1], 
+    backgroundColor: [ color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+  scales: {
+        xAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+// FDA APPROVED DRUGS FOR RD (DONUT)
+var ctxNonFdaPie = document.getElementById("nonFdaPie");
+var nonFdaPie = new Chart(ctxNonFdaPie, {
+  type: 'doughnut',
+  data: {
+    labels: ['Yes', 'No'],
+    datasets: [{
+      label: '# of responses',
+      data: [79, 40],
+      backgroundColor: [color3, color6]
+    }]
+  },
+  options: {
+    legend: {
+                  position: 'right' ,
+                  align: 'start'
+                },
+   	//cutoutPercentage: 40,
+    responsive: false,
+  }
+});
+
+// FDA APPROVED DRUGS FOR RD (WORD CLOUD) 
+    var nonFdaCloud = am4core.create("nonFdaCloud", am4plugins_wordCloud.WordCloud);
+    var seriesNonFdaCloud = nonFdaCloud.series.push(new am4plugins_wordCloud.WordCloudSeries());
+
+    seriesNonFdaCloud.accuracy = 4;
+    seriesNonFdaCloud.step = 15;
+    seriesNonFdaCloud.rotationThreshold = 0.7;
+    seriesNonFdaCloud.maxCount = 200;
+    seriesNonFdaCloud.minWordLength = 2;
+    seriesNonFdaCloud.labels.template.tooltipText = "{word}: {value}";
+    seriesNonFdaCloud.fontFamily = "IBM Plex Sans";
+    seriesNonFdaCloud.maxFontSize = am4core.percent(30);
+
+    seriesNonFdaCloud.text = "Palovarotene Deferiprone Deferiprone Azithromycin Sirolimus Alpelisib N-Acetylcysteine Amide Glycerol Phenylbutyrate D-Mannose HST5040 Mycophenolate Flunarizine Baricitinib Palopegteriparatide Glycerol Phenylbutyrate Inverse Agonist NOS Ivacaftor Arimoclomol Rituximab Oxytocin Rituximab Clonidine Ketotifin Prednisone Ace Inhibitors NOS Rituximab Cabergoline Pazopanib Maralixibat Verapamil Diazepam Everolimus Rituximab Sirolimus Sargramostim Probiotic NOS,Prebiotic NOS Acetazolamide RT001 Adalimumab Gene Therapy Treatment NOS Sirolimus Pirfenidone Empagliflozin Ipilimumab Sparsentan Ivosidenib MEK Inhibitors NOS Triptans NOS Alipogene Tiparvovec Rituximab Isotretinoin Benralizumab Octreotide Ponatinib Ursodeoxycholic Acid,Norursodeoxycholic Acid Rituximab Spermine Prodrugs NOS Melatonin Sirolimus Bevacizumab Baricitinib Nitisinone Adalimumab,Infliximab Afatinib Flumazenil Sacubitril/Valsartan Venetoclax Hydroxychloroquine Imatinib,Tyrosine Kinase Inhibitors NOS Garetosmab COA-Z Deoxyribonuclease Everolimus Miransertib SS-31 Galactose MRNA-3927 Methotrexate Acetylleucine Ruxolitinib Lacosamide AMX0035 Azathioprine Sirolimus Cromolyn Immune Globulin Angiotensin Ii Receptor Blockers NOS Tofacitinib Bevacizumab Lithium Immune Globulin Sirolimus Molgramostim Metformin ESB1609 Certolizumab Miglustat Jak Inhibitor NOS Infliximab Bardoxolone Anti-Emetics NOS Volanesorsen Dupilumab Lanreotide Vimseltinib Vancomycin Cyclophosphamide Tacrolimus Pembrolizumab Tofacitinib Tofacitinib Cetuximab Orexin Agonists NOS Filgrastim Diflunisal Celecoxib Sodium Phenylbutyrate Base Editors NOS Enac Inhibitors NOS Alpelisib Sirolimus Omaveloxolone Acetazolamide BBP-671 Azathioprine RTI CB-5339 Mycophenolate Histamine 1 Blockers NOS Cyclosporine Tacrolimus Divalproex Baclofen Levodopa Azoramide Dupilumab Trehalose Interferons NOS Rituximab Benzodiazepines NOS Lirentelimab Glucagon Fenofibrate Mycophenolate Prednisone Tocilizumab Pamidronate,Zoledronic Acid Pemetrexed Pitolisant Simvastatin Tauroursodeoxycholic Acid KER047 Trametinib Everolimus Sirolimus Epalrestat MRNA-3705 Immune Globulin Histamine 2 Blockers NOS Mycophenolate Sirolimus Lamotrigine Rituximab Diazoxide R55 Etanercept Antibiotics NOS Anticonvulsants NOS Budesonide Sulfasalazine Azathioprine Metformin MCC950 Palbociclib Solriamfetol Resveratrol Anti-ACVR1 Bisphosphonates NOS HLB-001 Dupilumab Masitinib Ganciclovir Pomalidomide Melatonin Gabapentin Myriocin Golimumab Anti-Psychotics NOS Mepolizumab Curcumin Tocilizumab Estradiol Valerate Emapalumab LZSG Nivolumab Modafinil Mizoribine Antisense Therapy ERK Inhibitors NOS Infliximab Cyclosporine Baclofen Methylprednisolone Guselkumab Antimigraine Drugs NOS Tezepelumab Simvastatin Bortezomib Earth Quake - REMOVE Adalimumab Armodafinil Mycophenolate Nras Inhibitors NOS Adalimumab Omalizumab Sodium Oxybate Azathioprine Infliximab Volixibat Anti-IL-18 Meds NOS Imatinib Ixekizumab Doxycycline Ixekizumab Saracatinib Bertilimumab Avapritinib Ustekinumab Everolimus CAAR-T Therapy NOS Midostaurin Secukinumab"; 
+
+// PERCENT PATIENTS BENEFIT OFF LABEL
+var ctxBenefitsOff = document.getElementById("patientBenefitOff");
+var patientBenefitOffBar = new Chart(ctxBenefitsOff, {
+type: 'bar',
+data: {
+  labels: ['0', '10', '20', '30', '40', '50', '60', '70', '80', '90', '100'],
+  datasets: [{
+    label: '# of responses',
+    data: [8, 62, 18, 20, 8, 9, 6, 5, 9, 12, 9], 
+    backgroundColor: [ color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+  scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+// OFF LABEL CONSIDERED CURE
+var ctxOffLabelCure = document.getElementById("offLabelCure");
+var offLabelCurePie = new Chart(ctxOffLabelCure, {
+  type: 'doughnut',
+  data: {
+    labels: ['Yes', 'No'],
+    datasets: [{
+      label: '# of responses',
+      data: [28, 182],
+      backgroundColor: [color3, color6]
+    }]
+  },
+  options: {
+    legend: {
+                  position: 'right' ,
+                  align: 'start'
+                },
+   	//cutoutPercentage: 40,
+    responsive: false,
+  }
+});
+
+// HOW EFFECTIVE IS OFF LABEL DRUG
+var ctxHowEffectiveOffLabel = document.getElementById("howEffectiveOffLabel");
+var howEffectiveOffLabelBar = new Chart(ctxHowEffectiveOffLabel, {
+type: 'horizontalBar',
+data: {
+    labels: ['1', '2', '3', '4', '5'],
+    datasets: [{
+      label: 'Reducing symptoms',
+      backgroundColor: color1,
+      data: [3, 21, 2, 63, 29],
+    }, {
+      label: 'Preventing worsening',
+      backgroundColor: color2,
+      data: [5, 9, 8, 50, 23],
+    }, {
+      label: 'Addressing all challenges',
+      backgroundColor: color3,
+      data: [16, 12, 16, 28, 10],
+    }],
+  },
+options: {
+  scales: {
+        xAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                  position: 'right' ,
+                  align: 'start'
+                },
+  responsive: true,
+}
+});
+
+
+// PT ROADBLOCKS 
+
+var ctxpatientRoadblocksOffLabel = document.getElementById("patientRoadblocksOffLabel");
+var patientRoadblocksOffLabelBar = new Chart(ctxpatientRoadblocksOffLabel, {
+type: 'horizontalBar',
+data: {
+    labels: ["Insurance coverage / approval issues", "Physician won’t prescribe it", "Affordability issues", "Accessibility", "No roadblocks", "Other: Drug in clinical trials", "Other: not enough clinical evidence", "Other: still in preclinial stage", "Other: patient education/awareness", "Other: not FDA approved", "Other: drug dose or drug schedule issues", "Other: concerns about side effects", "Other: issues with availability outside the US", "Other: Only available via compassionate use"],
+    datasets: [{
+    label: '# of responses',
+    data: [93, 89, 69, 45, 10, 25, 16, 15, 10, 9, 8, 7, 3, 1], 
+    backgroundColor: [ color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3,color3,color3,color3]
+  }],
+  },
+options: {
+  scales: {
+        xAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                  position: 'right' ,
+                  align: 'start'
+                },
+  responsive: true,
+}
+});
+
+
+
+
+// SUPER FUN ONE - 1
+var ctxSuperFun1 = document.getElementById("superfun1");
+var superfun1Bar = new Chart(ctxSuperFun1, {
+type: 'bar',
+data: {
+  labels: ['0', '10', '20', '30', '40', '50', '60', '70', '80', '90', '100'],
+  datasets: [{
+    label: '# of responses',
+    data: [17, 3, 4, 11, null, 6, 2, null, 5, 4, 2],
+    backgroundColor: [ color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+        scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+// SUPER FUN ONE - 2
+var ctxSuperFun2 = document.getElementById("superfun2");
+var superfun2Bar = new Chart(ctxSuperFun2, {
+type: 'bar',
+data: {
+  labels: ['0', '10', '20', '30', '40', '50', '60', '70', '80', '90', '100'],
+  datasets: [{
+    label: '# of responses',
+    data: [14, 8, 2, 7, 4, 11, 2, 5, 8, 12, 5],
+    backgroundColor: [ color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+// SUPER FUN ONE - 3
+var ctxSuperFun3 = document.getElementById("superfun3");
+var superfun3Bar = new Chart(ctxSuperFun3, {
+type: 'bar',
+data: {
+  labels: ['0', '10', '20', '30', '40', '50', '60', '70', '80', '90', '100'],
+  datasets: [{
+    label: '# of responses',
+    data: [10, 5, 6, 3, 5, 10, 10, 3, 7, 2, 2],
+    backgroundColor: [ color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+
+// SYSTEMATICALLY TRACK OFF LABEL
+var ctxTrackOffLabel = document.getElementById("trackOffLabel");
+var trackOffLabelPie = new Chart(ctxTrackOffLabel, {
+  type: 'doughnut',
+  data: {
+    labels: ['Yes', 'No'],
+    datasets: [{
+      label: '# of responses',
+      data: [17, 122],
+      backgroundColor: [color3, color6]
+    }]
+  },
+  options: {
+    legend: {
+                  position: 'right' ,
+                  align: 'start'
+                },
+   	//cutoutPercentage: 40,
+    responsive: false,
+  }
+});
+
+// INTERESTED IN THE FUTURE
+var ctxInterestedTrackOffLabel = document.getElementById("interestedTrackOffLabel");
+var interestedTrackOffLabel = new Chart(ctxInterestedTrackOffLabel, {
+  type: 'doughnut',
+  data: {
+    labels: ['Yes', 'No'],
+    datasets: [{
+      label: '# of responses',
+      data: [101, 20],
+      backgroundColor: [color3, color6]
+    }]
+  },
+  options: {
+    legend: {
+                  position: 'right' ,
+                  align: 'start'
+                },
+   	//cutoutPercentage: 40,
+    responsive: false,
+  }
+});
+
+// HOW TRACK OFF LABEL
+var ctxHowTrackOffLabel = document.getElementById("howTrackOffLabel");
+var howTrackOffLabelBar = new Chart(ctxHowTrackOffLabel, {
+type: 'horizontalBar',
+data: {
+  labels: ['Patient registry', 'Natural history study', 'From the published scientific literature', 'Reports from the rare disease physician community', 'Direct email communication ', 'Other'],
+  datasets: [{
+    label: '# of responses',
+    data: [9, 8, 6, 5, 4, 3],
+    backgroundColor: [color3, color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+  scales: {
+        xAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+</script>
       </div>
+<div class="whitespace"></div>
+
     </main>
 
 

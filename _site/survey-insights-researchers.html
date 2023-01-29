@@ -44,7 +44,32 @@ rel="stylesheet"
 
 
   </head>
+<style>
+  .siteContent {
+  padding-left: 40px;
+  padding-right: 40px;
 
+}
+
+@media screen and (min-width: 1200px) {
+  .siteContent {
+  padding-left: 130px;
+  padding-right: 130px;
+
+}
+}
+
+
+.whitespace {
+        height: 400px !important;
+    }
+
+section {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+</style>
     
 <body >
 
@@ -187,8 +212,34 @@ rel="stylesheet"
     </div>
     <main role="main" class="site-content">
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+
+
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+</script>
+
+        <script src="https://www.amcharts.com/lib/4/core.js"></script>
+        <script src="https://www.amcharts.com/lib/4/plugins/wordCloud.js"></script>
+        <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+
       <div class = "pt-5">
         
+        <script>
+          var color1 = 'rgba(0,23,31, 0.9)'
+          var color2 = 'rgba(0,52,89, 0.9)'
+          var color3 = 'rgba(0,126,167, 0.9)'
+          var color4 = 'rgba(0,168,232, 0.9)'
+          var color5 = 'rgba(122,172,221, 0.9)'
+          var color6 = 'rgba(254,95,85, 0.8)'
+          var color7 = 'rgba(187,176,220, 0.8'
+
+
+</script>
 <style>
     .nav-7 a, .nav-7 .link-text {
         font-weight: 500;
@@ -198,12 +249,825 @@ rel="stylesheet"
     }
 </style>
 
-<div class = "container">
+<div class = "container siteContent">
     <h1>Researchers</h1>
-    
-    </div>
 
+    <p>
+        For researchers, we asked questions regarding their involvement in research projects to advance drug repurposing for any rare diseases, what their motivations are and what challenges they’ve encountered. 
+    </p>
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                What is your current title at your research institution?
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <canvas style="width:60vw!important;" id="currentTitle"></canvas>
+            <p class = "text-end"><small>n = 40</small></p>
       </div>
+    </section>    
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                What is your primary affiliation?
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <canvas style="width:60vw!important;" id="primaryAffiliation"></canvas>
+            <p class = "text-end"><small>n = 40</small></p>
+      </div>
+    </section>    
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                How many years have you been in your current position?
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <canvas style="width:60vw!important;" id="positionYears"></canvas>
+            <p class = "text-end"><small>n = 40</small></p>
+      </div>
+    </section>    
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                Please rate your level of interest in drug repurposing for your rare disease of focus prior to this survey.
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <canvas style="width:60vw!important;" id="priorInterest"></canvas>
+            <p class = "text-end"><small>n = 40</small></p>
+      </div>
+    </section>    
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                Based on your knowledge, how common is drug repurposing research?
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <canvas style="width:60vw!important;" id="howCommon"></canvas>
+            <p class = "text-end"><small>n = 40</small></p>
+      </div>
+    </section>    
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                How important do you feel drug repurposing is in the rare disease space?
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <canvas style="width:60vw!important;" id="howImportant"></canvas>
+            <p class = "text-end"><small>n = 40</small></p>
+      </div>
+    </section>    
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                ​Does your research or the research of your lab directly relate to novel drug development?
+            </h2>
+            <div class = "row py-5">
+              <div class = "col-12 col-xl-4">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              </div>
+              <div class = "col-12 col-xl-6">
+                <canvas style="height:300px;" id="relateNovelDrug"></canvas>
+                <p class = "text-end"><small>n = 40</small></p>
+              </div>
+            </div>
+      </div>
+    </section>    
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                Does your research or the research of your lab directly relate to drug repurposing?
+            </h2>
+            <div class = "row py-5">
+              <div class = "col-12 col-xl-4">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              </div>
+              <div class = "col-12 col-xl-6">
+                <canvas style="height:300px;" id="labRelateDR"></canvas>
+                <p class = "text-end"><small>n = 40</small></p>
+              </div>
+            </div>
+      </div>
+    </section>    
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                Are you personally currently involved in drug repurposing research work, or have previously?
+            </h2>
+            <div class = "row py-5">
+              <div class = "col-12 col-xl-4">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              </div>
+              <div class = "col-12 col-xl-6">
+                <canvas style="height:300px;" id="currentlyInvolved"></canvas>
+                <p class = "text-end"><small>n = 40</small></p>
+              </div>
+            </div>
+      </div>
+    </section>    
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                Was this repurposing research work related to a rare disease?
+            </h2>
+            <div class = "row py-5">
+              <div class = "col-12 col-xl-4">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              </div>
+              <div class = "col-12 col-xl-6">
+                <canvas style="height:300px;" id="relatedToRD"></canvas>
+                <p class = "text-end"><small>n = 32</small></p>
+              </div>
+            </div>
+      </div>
+    </section>    
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                What motivated you to pursue drug repurposing for this rare disease?
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <canvas style="width:60vw!important;" id="motivatedDR"></canvas>
+            <p class = "text-end"><small>n = 28</small></p>
+      </div>
+    </section>    
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                What techniques and resources are/were used in your workplace for rare disease drug repurposing?
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <canvas style="width:60vw!important;" id="techniquesResources"></canvas>
+            <p class = "text-end"><small>n = 28</small></p>
+      </div>
+    </section>    
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                What difficulties have you faced in pursuing drug repurposing for rare diseases, if any?
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <canvas style="width:60vw!important;" id="whatDifficulties"></canvas>
+            <p class = "text-end"><small>n = 28</small></p>
+      </div>
+    </section>    
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                I or my lab has contributed to the completed drug repurposing rare disease research work through:
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <canvas style="width:60vw!important;" id="completedThrough"></canvas>
+            <p class = "text-end"><small>n = 3</small></p>
+      </div>
+    </section>    
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                I am / My lab is in the process of drug repurposing and am currently at the following stage.
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <canvas style="width:60vw!important;" id="followingStage"></canvas>
+            <p class = "text-end"><small>n = 25</small></p>
+      </div>
+    </section>    
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                Do you have access to the drugs you’re interested in repurposing for pre-clinical work?
+            </h2>
+            <div class = "row py-5">
+              <div class = "col-12 col-xl-4">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              </div>
+              <div class = "col-12 col-xl-6">
+                <canvas style="height:300px;" id="haveAccess"></canvas>
+                <p class = "text-end"><small>n = 29</small></p>
+              </div>
+            </div>
+      </div>
+    </section>    
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                Have you published work regarding rare disease drug repurposing?
+            </h2>
+            <div class = "row py-5">
+              <div class = "col-12 col-xl-4">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              </div>
+              <div class = "col-12 col-xl-6">
+                <canvas style="height:300px;" id="havePublished"></canvas>
+                <p class = "text-end"><small>n = 29</small></p>
+              </div>
+            </div>
+      </div>
+    </section>    
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                Are you directly involved in the dissemination of this information to the rare disease patient, researcher, and physician community?
+            </h2>
+            <div class = "row py-5">
+              <div class = "col-12 col-xl-4">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              </div>
+              <div class = "col-12 col-xl-6">
+                <canvas style="height:300px;" id="involvedDissemination"></canvas>
+                <p class = "text-end"><small>n = 15</small></p>
+              </div>
+            </div>
+      </div>
+    </section>    
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                How do you disseminate this information?
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <canvas style="width:60vw!important;" id="howDisseminate"></canvas>
+            <p class = "text-end"><small>n = 10</small></p>
+      </div>
+    </section>    
+
+    <section>
+        <div class = "container">
+            <h2 class = "">
+                Does your lab engage the rare disease patient population at any stage of your research process?
+            </h2>
+            <div class = "row py-5">
+              <div class = "col-12 col-xl-4">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              </div>
+              <div class = "col-12 col-xl-6">
+                <canvas style="height:300px;" id="engagePatients"></canvas>
+                <p class = "text-end"><small>n = 36</small></p>
+              </div>
+            </div>
+      </div>
+    </section>    
+
+<script>
+
+// CURRENT TITLE
+var currentTitle = document.getElementById("currentTitle");
+var currentTitleBar = new Chart(currentTitle, {
+type: 'horizontalBar',
+data: {
+  labels: ["Professor", "Researcher", "Student", "Chairperson", "Unknown"],
+  datasets: [{
+    label: '# of responses',
+    data: [23, 11, 3, 1, 3],
+    backgroundColor: [ color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        xAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+// CURRENT TITLE
+var primaryAffiliation = document.getElementById("primaryAffiliation");
+var primaryAffiliationBar = new Chart(primaryAffiliation, {
+type: 'horizontalBar',
+data: {
+  labels: ["University", "Rare disease research organization", "Pharmaceutical/biotech company", "Other"],
+  datasets: [{
+    label: '# of responses',
+    data: [33, 3, 1, 3],
+    backgroundColor: [ color3, color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        xAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+// POSITION YEARS
+var positionYears = document.getElementById("positionYears");
+var positionYearsBar = new Chart(positionYears, {
+type: 'bar',
+data: {
+  labels: ["0", "0.5", "1", "2", "3", "4", "5", "6", "8", "9", "13", "14", "16", "17", "18", "18.5", "20", "21", "25", "26", "32", "41"],
+  datasets: [{
+    label: '# of responses',
+    data: [1, 1, 4, 4, 5, 2, 6, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+    backgroundColor: [ color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+// PRIOR INTEREST
+var priorInterest = document.getElementById("priorInterest");
+var priorInterestBar = new Chart(priorInterest, {
+type: 'horizontalBar',
+data: {
+  labels: ["Extremely interested", "Very interested", "Moderately interested", "Slightly interested"],
+  datasets: [{
+    label: '# of responses',
+    data: [20, 13, 4, 3],
+    backgroundColor: [ color3, color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        xAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+// HOW COMMON
+var howCommon = document.getElementById("howCommon");
+var howCommonBar = new Chart(howCommon, {
+type: 'horizontalBar',
+data: {
+  labels: ["Very common", "Somewhat common", "Not very common"],
+  datasets: [{
+    label: '# of responses',
+    data: [3, 25, 12],
+    backgroundColor: [ color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        xAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+// HOW IMPORTANT
+var howImportant = document.getElementById("howImportant");
+var howImportantBar = new Chart(howImportant, {
+type: 'horizontalBar',
+data: {
+  labels: ["Extremely important", "Very important", "Moderately important", "Slightly important"],
+  datasets: [{
+    label: '# of responses',
+    data: [22, 10, 7, 1],
+    backgroundColor: [ color3, color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        xAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+// RELATE NOVEL DRUG
+var relateNovelDrug = document.getElementById("relateNovelDrug");
+var relateNovelDrugPie = new Chart(relateNovelDrug, {
+  type: 'doughnut',
+  data: {
+    labels: ["Yes", "No"],
+    datasets: [{
+      label: '# of responses',
+      data: [26, 14],
+      backgroundColor: [color3, color6]
+    }]
+  },
+  options: {
+    legend: {
+                  position: 'right' ,
+                  align: 'start'
+                },
+    responsive: false,
+  }
+});
+
+// LAB RELATE DR
+var labRelateDR = document.getElementById("labRelateDR");
+var labRelateDRPie = new Chart(labRelateDR, {
+  type: 'doughnut',
+  data: {
+    labels: ["Yes", "No"],
+    datasets: [{
+      label: '# of responses',
+      data: [26, 13],
+      backgroundColor: [color3, color6]
+    }]
+  },
+  options: {
+    legend: {
+                  position: 'right' ,
+                  align: 'start'
+                },
+    responsive: false,
+  }
+});
+
+// CURRENTLY INVOLVED
+var currentlyInvolved = document.getElementById("currentlyInvolved");
+var currentlyInvolvedPie = new Chart(currentlyInvolved, {
+  type: 'doughnut',
+  data: {
+    labels: ["Yes", "No"],
+    datasets: [{
+      label: '# of responses',
+      data: [32, 8],
+      backgroundColor: [color3, color6]
+    }]
+  },
+  options: {
+    legend: {
+                  position: 'right' ,
+                  align: 'start'
+                },
+    responsive: false,
+  }
+});
+
+// RELATED TO DR
+var relatedToRD = document.getElementById("relatedToRD");
+var relatedToRDPie = new Chart(relatedToRD, {
+  type: 'doughnut',
+  data: {
+    labels: ["Yes", "No"],
+    datasets: [{
+      label: '# of responses',
+      data: [31, 1],
+      backgroundColor: [color3, color6]
+    }]
+  },
+  options: {
+    legend: {
+                  position: 'right' ,
+                  align: 'start'
+                },
+    responsive: false,
+  }
+});
+
+// MOTIVATED DR
+var motivatedDR = document.getElementById("motivatedDR");
+var motivatedDRBar = new Chart(motivatedDR, {
+type: 'horizontalBar',
+data: {
+  labels: ["Impact to patients", "Interest in subject area", "Opportunities for collaboration", "Potential publications", "Ease of execution", "Serendipitous discovery", "Career development", "Funding opportunities", "Potential IP/patents", "Staff availability"],
+  datasets: [{
+    label: '# of responses',
+    data: [27, 20, 15, 12, 10, 8, 7, 7, 6, 2],
+    backgroundColor: [ color3, color3, color3, color3, color3, color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        xAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+// TECHNIQUES RESOURCES
+var techniquesResources = document.getElementById("techniquesResources");
+var techniquesResourcesBar = new Chart(techniquesResources, {
+type: 'horizontalBar',
+data: {
+  labels: ["Cell lines", "Clinical trials", "Mouse models", "Biomarker discovery", "Computational analyses", "Diagnostic testing of patient samples", "Immunohistochemistry or immunofluorescence", "Drug screens", "Genetic testing", "Natural history registry", "Other", "Structural biology"],
+  datasets: [{
+    label: '# of responses',
+    data: [16, 15, 11, 10, 10, 9, 9, 8, 8, 8, 8, 1],
+    backgroundColor: [ color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        xAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+// WHAT DIFFICULTIES
+var whatDifficulties = document.getElementById("whatDifficulties");
+var whatDifficultiesBar = new Chart(whatDifficulties, {
+type: 'horizontalBar',
+data: {
+  labels: ["Lack of funding", "Lack of support/collaboration from pharma company", "Lack of biospecimens", "Not enough patients to have significant impact", "Access to drugs of interest", "Lack of Interest in subject area", "Staffing issues", "Lack of support from rare disease non profit organization", "Lack of systematic patient data aggregation", "Fear of career stagnation", "Technological issues", "None"],
+  datasets: [{
+    label: '# of responses',
+    data: [20, 13, 8, 7, 6, 5, 5, 4, 4, 1, 1, 1],
+    backgroundColor: [ color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        xAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+// COMPLETED THROUGH
+var completedThrough = document.getElementById("completedThrough");
+var completedThroughBar = new Chart(completedThrough, {
+type: 'horizontalBar',
+data: {
+  labels: ["Published my findings in the scientific literature", "Identifying the primary mechanism of the disease", "Identifying a therapeutic drug target", "Securing access to drug for pre-clinical studies / reaching out to pharma companies", "Supported development of a clinical trial", "Was an investigator on a clinical trial"],
+  datasets: [{
+    label: '# of responses',
+    data: [3, 3, 1, 1, 1, 1],
+    backgroundColor: [ color3, color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        xAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+// FOLLOWING STAGE
+var followingStage = document.getElementById("followingStage");
+var followingStageBar = new Chart(followingStage, {
+type: 'horizontalBar',
+data: {
+  labels: ["Working to understand mechanisms", "Searching for drug target", "Drug target has been identified; now considering which drugs are best for the target population", "Drug(s) have been identified and some pre-clinical data has been collected", "Clinical trial is ongoing", "Drug(s) to repurpose have been identified but they have not been tested in pre-clinical models yet", "Clinical trial completed and we're analyzing the data", "I’ve generated pre-clinical data and am working with the drug owner to pursue a clinical trial", "Other"],
+  datasets: [{
+    label: '# of responses',
+    data: [14, 12, 10, 8, 7, 7, 3, 3, 5],
+    backgroundColor: [ color3, color3, color3, color3, color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        xAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+// HAVRE ACCESS
+var haveAccess = document.getElementById("haveAccess");
+var haveAccessPie = new Chart(haveAccess, {
+  type: 'doughnut',
+  data: {
+    labels: ["Yes", "No", "N/A"],
+    datasets: [{
+      label: '# of responses',
+      data: [21, 1, 7],
+      backgroundColor: [color3, color6, color7]
+    }]
+  },
+  options: {
+    legend: {
+                  position: 'right' ,
+                  align: 'start'
+                },
+    responsive: false,
+  }
+});
+
+
+// HAVE PUBLISHED
+var havePublished = document.getElementById("havePublished");
+var havePublishedPie = new Chart(havePublished, {
+  type: 'doughnut',
+  data: {
+    labels: ["Yes", "No"],
+    datasets: [{
+      label: '# of responses',
+      data: [15, 14],
+      backgroundColor: [color3, color6]
+    }]
+  },
+  options: {
+    legend: {
+                  position: 'right' ,
+                  align: 'start'
+                },
+    responsive: false,
+  }
+});
+
+// INVOLVED DISSEMINATION 
+var involvedDissemination = document.getElementById("involvedDissemination");
+var involvedDisseminationPie = new Chart(involvedDissemination, {
+  type: 'doughnut',
+  data: {
+    labels: ["Yes", "No"],
+    datasets: [{
+      label: '# of responses',
+      data: [10, 5],
+      backgroundColor: [color3, color6]
+    }]
+  },
+  options: {
+    legend: {
+                  position: 'right' ,
+                  align: 'start'
+                },
+    responsive: false,
+  }
+});
+
+// HOW DISSEMINATE
+var howDisseminate = document.getElementById("howDisseminate");
+var howDisseminateBar = new Chart(howDisseminate, {
+type: 'horizontalBar',
+data: {
+  labels: ["Through contact with rare disease organization", "Through media", "Through social media", "Through workshops", "Other"],
+  datasets: [{
+    label: '# of responses',
+    data: [8, 4, 4, 3, 3],
+    backgroundColor: [ color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+    scales: {
+        xAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+                display: false
+            },
+  responsive: true,
+}
+});
+
+// ENGAGE PATIENTS 
+var engagePatients = document.getElementById("engagePatients");
+var engagePatientsPie = new Chart(engagePatients, {
+  type: 'doughnut',
+  data: {
+    labels: ["Yes", "No"],
+    datasets: [{
+      label: '# of responses',
+      data: [31, 5],
+      backgroundColor: [color3, color6]
+    }]
+  },
+  options: {
+    legend: {
+                  position: 'right' ,
+                  align: 'start'
+                },
+    responsive: false,
+  }
+});
+
+
+
+
+
+</script>
+</div>
+      </div>
+<div class="whitespace"></div>
+
     </main>
 
 

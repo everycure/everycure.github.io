@@ -44,7 +44,32 @@ rel="stylesheet"
 
 
   </head>
+<style>
+  .siteContent {
+  padding-left: 40px;
+  padding-right: 40px;
 
+}
+
+@media screen and (min-width: 1200px) {
+  .siteContent {
+  padding-left: 130px;
+  padding-right: 130px;
+
+}
+}
+
+
+.whitespace {
+        height: 400px !important;
+    }
+
+section {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+</style>
     
 <body >
 
@@ -187,8 +212,54 @@ rel="stylesheet"
     </div>
     <main role="main" class="site-content">
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+
+
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+</script>
+
+        <script src="https://www.amcharts.com/lib/4/core.js"></script>
+        <script src="https://www.amcharts.com/lib/4/plugins/wordCloud.js"></script>
+        <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+
       <div class = "pt-5">
         
+        <script>
+          var color1 = 'rgba(0,23,31, 0.9)'
+          var color2 = 'rgba(0,52,89, 0.9)'
+          var color3 = 'rgba(0,126,167, 0.9)'
+          var color4 = 'rgba(0,168,232, 0.9)'
+          var color5 = 'rgba(122,172,221, 0.9)'
+          var color6 = 'rgba(254,95,85, 0.8)'
+          var color7 = 'rgba(187,176,220, 0.8'
+
+
+</script>
+<style>
+  body {
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+#chartdiv, #leadershipTitlesCloud {
+width:100%;
+height: 500px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.buttonContainer button {
+  width: 100px;
+}
+</style>
 <style>
     .nav-1 a, .nav-1 .link-text {
         font-weight: 500;
@@ -196,53 +267,571 @@ rel="stylesheet"
         color: black;
         background-image: var(--project_paper);
     }
+
 </style>
 
 
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-<div class = "container">
+<div class = "container siteContent">
 <h1>Organizational characteristics</h1>
-
-
 <p>
     This section shares information about the general characteristics of the RDNPs we surveyed.​ These characteristics provide insight into the kinds of organizations who participated in the project, and they also help to identify characteristics that may be precursors for success in both general research support and in the successful pursuit of drug repurposing. 
 </p>
 
-<div class="container vizSection">
+<section>
     <h2 class="">Leadership Titles</h2>
+    <div class = "row py-3">
+      <div class = "col-xl-6 col-12">
+        <p>
+          Only members of RDNPs' leadership teams were invited to provide data for their organization. Most of our responses were from the Executive Director, President, or Founder of the organization. ​ 
+          <canvas class = "canvasViz mt-5" id="leadershipTitlesPie"></canvas>
+      </p>  
+      </div>
+      <div class = "col-xl-6 ">
+        <div id="leadershipTitlesCloud" style = "margin-top: -70px;"></div>    
+      </div>
+      <p class = "text-end"><small>n = 146</small></p>
+    </div>
 
+</section>
+
+<section>
+  <div class = "container">
+    <h2 class = "">Organization year of founding​</h2>
     <p>
-        Only members of RDNPs' leadership teams were invited to provide data for their organization. Most of our responses were from the Executive Director, President, or Founder of the organization. ​ 
-
+      ​Our organizations are "young"! 83 organizations (56%) were founded in 2010 or later, with 9 founded as recently as 2020 during the COVID pandemic. 
     </p>
+    <canvas style="width:40vw!important;" id="yearOfFounding"></canvas>
+    <p class = "text-end"><small>n = 147</small></p>
+  </div>
+</section>
 
-    <canvas width = "500" height = "500" id="orgchart1"></canvas>
+<section>
+  <div class = "container">
+    <h2 class = "">Number of full-time staff</h2>
+    <p>
+      Impressively, most organizations (62%) have no or just one full time, paid staff member. This speaks to the incredibly valuable role that volunteers play in both leading these organizations, as well as conducting all the day to day duties, from patient support to research coordination.  
+    </p>
+    <canvas style="width:40vw!important;" id="fullTimeStaff"></canvas>
+    <p class = "text-end"><small>n = 146</small></p>
+  </div>
+</section>
+
+<setion>
+  <div class = "container">
+    <h2 class = "">Average annual funding (past 3 years)</h2>
+    <p>
+      Though some of the 147 RDNPs in our survey reported notably higher or lower funding levels, generally most of our 147 organizations lean towards middle ground funding, from $50 to $1,000k on average.
+    </p>
+    <canvas style="width:40vw!important;" id="averageFunding"></canvas>
+    <p class = "text-end"><small>n = 144</small></p>
+  </div>
+</setion>
+
+<section>
+  <div class = "container">
+    <h2 class = "">Organizations' activities of focus </h2>
+    <p>
+      Though our organizations focus on a wide range of activities, patient education, disease awareness and community development are clear top choices for both general focus as well as top 3 prioritization.     
+    </p>
+    <canvas style="width:40vw!important;" id="activitiesOfFocus"></canvas>
+    <p class = "text-end"><small>n = 147</small></p>
+  </div>
+</section>
+
+<section>
+  <div class = "container">
+    <h2 class = "">Organizations supporting research</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <canvas style = "height: 300px;" id="supportingResearchPie"></canvas>
+    <p class = "text-end"><small>n = 145</small></p>
+  </div>
+<div class = "container">
+  <canvas style="width:40vw!important;" id="supportingResearchBar"></canvas>
+  <p class = "text-end"><small>n = 145</small></p>
 </div>
+</section>
+
+<section>
+  <div class = "container">
+    <h2 class = "">Percentage of funding that supports research</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <canvas style="width:40vw!important;" id="percentageFunding"></canvas>
+    <p class = "text-end"><small>n = 100</small></p>
+  </div>
+</section>
+
+<section>
+  <div class = "container">
+    <h2 class = "">What kind of fundraising activities is your organization involved in to be able to fund research?</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <canvas style="width:40vw!important;" id="fundraisingActivities"></canvas>
+    <p class = "text-end"><small>n = 138</small></p>
+  </div>
+</section>
+
+<section>
+  <div class = "container">
+    <h2 class = "">Does your organization currently have the following resources?</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <canvas style="width:40vw!important;" id="orgResources"></canvas>
+    <p class = "text-end"><small>n = 144</small></p>
+  </div>
+</section>
+
+<section>
+  <div class = "container">
+    <h2 class = "">What are the reasons you’re not interested in developing?</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <div class = "row buttonContainer py-3">
+
+<style>
+  .chartBox {
+      width: 90vw;
+  }
+</style>
+
+<div class = "selectBox my-3  mb-5">
+  <select id = "notBeingDeveloped">
+      <option value = "11, 2, 1, 7, 6, 5, 3, 5">Biobank to collect patient samples</option>
+      <option value = "1, null, null, 1, 1, null, 1, 3">Community discussion space</option>
+      <option value = "1, null, null, 1, 2, null, 2, 1">Contact registry</option>
+      <option value = "null, null, null, null, null, null, 3, null">Fundraising events</option>
+      <option value = "3, null, null, 2, 1, null, null, 1">Natural history study</option>
+      <option value = "1, 2, 1, 4, 3, 1, 2, 4">Patient & Loved one community gatherings</option>
+      <option value = "null, null, null, 7, 6, null, 3, 2">Patient community navigator</option>
+      <option value = "1, null, null, 1, null, null, null, 4">Patient registry</option>
+      <option value = "2, null, 1, 3, 3, 1, 2, 2">Patient reported outcomes (PRO) assessments</option>
+      <option value = "1, null, null, 1, null, null, null, 1">Research Conferences</option>
+      <option value = "1, null, null, 1, 2, null, 1, null">Research strategy or research agenda</option>
+      <option value = "null, null, null, null, null, null, 1, null">Scientific or medical advisory board</option>
+  </select>
 </div>
+
+<div class = "chartBox">
+  <canvas id = "reasonsNotInterested"></canvas>
+</div>
+<p class = "text-end"><small>n = 130</small></p>
 
 <script>
-    var ctx = document.getElementById("orgchart1");
-var myChart = new Chart(ctx, {
+ const ctxNotInterested = document.getElementById('reasonsNotInterested').getContext('2d');
+  const reasonsNotInterestedBar = new Chart(ctxNotInterested, {
+      type: 'horizontalBar',
+      data: {
+          labels: ["Academic or industry partners have already developed", "Lack of academic or industry collaboration/partership/support", "Not enough data or knowledge about rare disease", "Not enough funding", "Not enough people", "Not feasible to develop", "Not interested", "Other organizations focused on the same/similar rare disease or genetic mutation as yours"],
+          datasets: [{
+              label: 'Biobank to collect patient samples',
+              data: [11, 2, 1, 7, 6, 5, 3, 5],
+              backgroundColor: [ color3, color3, color3, color3, color3, color3, color3, color3],
+              borderWidth: 1
+          }]
+      },
+      options: {
+        legend: {
+    display: false
+    },  
+          scales: {
+              y: {
+                  beginAtZero: true
+              }
+          }
+      }
+  });
+
+const notBeingDeveloped = document.getElementById('notBeingDeveloped');
+notBeingDeveloped.addEventListener('change', changeData);
+
+function changeData() {
+  // console.log(coffeesales.value.split(','));
+  const label = notBeingDeveloped.options[notBeingDeveloped.selectedIndex].text;
+  reasonsNotInterestedBar.data.datasets[0].label = label;
+  reasonsNotInterestedBar.data.datasets[0].data = notBeingDeveloped.value.split(',');
+  reasonsNotInterestedBar.update();
+}
+</script>
+
+
+</section>
+
+
+</div>
+
+
+</div>
+</section>
+
+<script>
+
+// LEADERSHIP TITLES (DONUT)
+var ctxLeadership = document.getElementById("leadershipTitlesPie");
+var leadershipPie = new Chart(ctxLeadership, {
   type: 'doughnut',
   data: {
     labels: ['Leadership Team', 'Director-level', 'C-Suite', 'Research/Medical Team', 'Other'],
     datasets: [{
-      label: '# of Tomatoes',
-      data: [101, 67, 22, 8, 2]
-   
+      label: '# of responses',
+      data: [101, 67, 22, 8, 2],
+      backgroundColor: [color1, color2, color3, color4, color5]
     }]
   },
   options: {
-   	//cutoutPercentage: 40,
-    responsive: false,
+    legend: {
+                  position: 'left' ,
+                  align: 'start'
+                },
 
+   	//cutoutPercentage: 40,
+    responsive: true,
   }
 });
+
+// LEADERSHIP TITLES (WORD CLOUD)
+am4core.useTheme(am4themes_animated);
+
+var chart = am4core.create("leadershipTitlesCloud", am4plugins_wordCloud.WordCloud);
+var series = chart.series.push(new am4plugins_wordCloud.WordCloudSeries());
+
+series.accuracy = 4;
+series.step = 15;
+series.rotationThreshold = 0.7;
+series.maxCount = 200;
+series.minWordLength = 2;
+series.labels.template.tooltipText = "{word}: {value}";
+series.fontFamily = "IBM Plex Sans";
+series.maxFontSize = am4core.percent(30);
+
+series.text = "Development Director Director Research Development Partnerships Founder President President  Founder Executive Director Executive Director Program Director Executive Director Executive Director Founder CEO Founder CEO President Co-Founder Founder CEO   President President Executive Director Executive Director Scientific Director Founder President Executive Director Executive Director Advocacy Research Coordinator Executive Director President   CEO Executive Director President Co-Founder VP President Co-Founder President Founder Co-founder CEO Executive Director Founder CEO Director Research Programs President Executive Director Executive Director Executive Director President CEO Executive Director Founder President Founder Executive Director President Executive Director Founder Executive Director President Board Executive Director Board Member   Director  Strategy International President Executive Director Executive Director Executive Director Founder President Founder   President President Founder Founder Executive Director Director Operations Vice President President President Co-Founder Co-Director Co-Founder Medical Liaison Board Member Secretary Treasurer Founder Executive Director Director Scientific Director Executive Director Founder CEO Executive Director Co-Founder Chief Science Officer President Founder President Project Director Founder Co-President COO Co-Chair Director Science Research Executive Director President Founder Board Member President   CEO Patient Center Research Advisor Executive Director Board Chair Director Patient Advocacy   Community Engagement Committee Member Executive Director Founder President   CEO CEO CEO Founder Founder Founder CEO Executive Director President President Board Member  Tech Chair Scientific Director Research Program Manager CEO President Founder Founder Executive Director Vice President Program Services Director Advocacy Co-Founder Executive Director Executive Director Board Member Director Research Strategy  Patient Registry Director Founder President Founder President President President   Treasurer Founder Secretary Executive Director Executive Director Executive Director Executive Director Founder Scientific Director President CEO Chief Development Offiver President Registered Nurse President Founder President Executive Director Executive Director CEO Co-Founder Executive Director Executive Director Executive Director Board Member Executive Director President President Executive Director Executive Director Founder Executive Director Chief Scientific Officer Director Research Founder CEO Director Grants Manager Executive Director CEO Director Research Operations"; 
+
+// YEAR OF FOUNDING 
+var ctxFounding = document.getElementById("yearOfFounding");
+var yearOfFoundingBar = new Chart(ctxFounding, {
+type: 'bar',
+data: {
+  labels: ['1950', '1952', '1967', '1978', '1981', '1984', '1987', '1989', '1990', '1991', '1993', '1994', '1995', '1996', '1998', '1999', '2000', '2001', '2002', '2003', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020'],
+  datasets: [{
+    label: '# of responses',
+    backgroundColor: [color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3],
+    data: [1, 1, 1, 1, 2, 2, 1, 3, 2, 2, 2, 6, 3, 2, 2, 1, 4, 2, 3, 4, 6, 2, 4, 6, 1, 4, 6, 3, 5, 8, 5, 4, 17, 14, 8, 9]
+
+  }]
+},
+options: {
+  scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+  legend: {
+    display: false
+    },  
+    responsive: true,
+
+}
+});
+
+// FULL TIME STAFF
+var ctxStaff = document.getElementById("fullTimeStaff");
+var staffBar = new Chart(ctxStaff, {
+type: 'bar',
+data: {
+  labels: ['0', '1', '1.5', '2', '3', '4', '5', '6', '7', '9', '10', '13', '15', '20', '26', '40', '100', '150'],
+  datasets: [{
+    label: '# of responses',
+    data: [52, 39, 1, 15, 9, 4, 4, 5, 3, 4, 3, 1, 1, 1, 1, 1, 1, 1],
+    backgroundColor:[ color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+  scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+    display: false
+    },    responsive: true,
+}
+});
+
+// AVERAGE ANNUAL FUNDING
+
+var ctxFunding = document.getElementById("averageFunding");
+var averageFundingBar = new Chart(ctxFunding, {
+type: 'horizontalBar',
+data: {
+  labels: ['Less than $5,000', 'Between $5,000 and $10,000', 'Between $10,000 and $50,000', 'Between $50,000 and $100,000', 'Between $100,000 and $500,000', 'Between $500,000 and $1,000,000', 'Between $1,000,000 and $2,000,000', 'Between $2,000,000 and $5,000,000', 'More than $5,000,000'],
+  datasets: [{
+    label: '# of responses',
+    data: [6, 7, 25, 15, 48, 19, 12, 6, 6],
+    backgroundColor: [ color3, color3, color3, color3, color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+  scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+    display: false
+    },    responsive: true,
+
+}
+});
+
+
+// ACTIVITIES OF FOCUS
+var ctxActivities = document.getElementById("activitiesOfFocus");
+var activitiesOfFocusBar = new Chart(ctxActivities, {
+type: 'horizontalBar',
+data: {
+    labels: ['Disease awareness', 'Patient community development', 'Patient education', 'Fundraising efforts', 'Newly diagnosed patient support', 'Patient data collection', 'Basic research', 'Policy development and advocacy', 'Translational research', 'Developing centers of excellence and disease area guidelines', 'Drug repurposing', 'Patient financial support', 'Novel drug development', 'Other: Funding research', 'Other: Nonfinancial research support', 'Other: Developing partnerships with academics; pharma; service providers; etc.', 'Other: Developing diagnostic or screening tests', 'Other: Patient nonfinancial support'],
+    datasets: [{
+      label: 'Does activity',
+      backgroundColor:  color1,
+      data: [142, 137, 135, 133, 122, 110, 87, 82, 74, 66, 54, 47, 44, 8, 7, 4, 2, 1],
+    }, {
+      label: 'One of top 3 most important',
+      backgroundColor: color3,
+      data: [56, 48, 69, 40, 25, 38, 30, 12, 34, 16, 18, 8, 10, null, null, null, null, null],
+    }],
+  },
+options: {
+  legend: {
+                  position: 'right' ,
+                  align: 'start'
+                },
+
+  scales: {
+         xAxes: [{
+            stacked: true // this should be set to make the bars stacked
+         }],
+         yAxes: [{
+            stacked: true, // this also..
+            ticks: {
+                beginAtZero: true
+            }
+
+         }]
+      },
+
+
+  responsive: true,
+
+}
+});
+
+
+// SUPPORTING RESEARCH (DONUT)
+var ctxResearchSupportPie = document.getElementById("supportingResearchPie");
+var supportingResearchPie = new Chart(ctxResearchSupportPie, {
+  type: 'doughnut',
+  data: {
+    labels: ['Supports research', 'Plans to support research', 'Does not support research', 'Other'],
+    datasets: [{
+      label: '# of responses',
+      data: [127, 28, 6, 31],
+      backgroundColor: [color1, color2, color3, color4]
+    }]
+  },
+  options: {
+    legend: {
+                  position: 'right' ,
+                  align: 'start'
+                },
+   	//cutoutPercentage: 40,
+    responsive: false,
+  }
+});
+
+// SUPPORTING RESEARCH (BAR)
+var ctxResearchSupportBar = document.getElementById("supportingResearchBar");
+var supportingResearchBar = new Chart(ctxResearchSupportBar, {
+type: 'horizontalBar',
+data: {
+  labels: ['We find and fund researchers to study the questions that are important to our disease', 'We provide additional non-financial support to researchers', 'We fund the most promising research grants that we receive through our requests for proposals program', 'Our organization directs researchers and studies in our disease space', 'Other: Create research partnerships', 'Other: Provide patient data/resources through registry; natural history study; etc.', 'Other: Participate in UPenn Orphan Disease Center MDBR grant program', 'Other: We conduct research ourselves', 'We currently do not fund or direct research but are interested in doing so in the future', 'We currently do not fund or direct research and do not plan to do so in the future'],
+  datasets: [{
+    label: '# of responses',
+    data: [88, 73, 72, 53, 11, 6, 4, 3, 28, 6],
+    backgroundColor: [color3, color3, color3, color3, color3, color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+  scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+    display: false
+    },    responsive: true,
+}
+});
+
+// PERCENTAGE FUNDING
+var ctxPercentageFunding = document.getElementById("percentageFunding");
+var percentageFundingBar = new Chart(ctxPercentageFunding, {
+type: 'bar',
+data: {
+  labels: ['10', '20', '30', '40', '50', '60', '70', '80', '90', '100'],
+  datasets: [{
+    label: '# of responses',
+    data: [4, 5, 15, 5, 6, 8, 13, 11, 22, 11], 
+    backgroundColor: [ color3, color3, color3, color3, color3, color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+  scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+    display: false
+    },    responsive: true,
+}
+});
+
+// FUNDRAISING ACTIVITIES
+var ctxFundraisingActivities = document.getElementById("fundraisingActivities");
+var fundraisingActivitiesBar = new Chart(ctxFundraisingActivities, {
+type: 'horizontalBar',
+data: {
+  labels: ['Grassroots / Patient-led fundraising', 'Organization-led events', 'Grant-writing / Applying for grants', 'Engaging with major private donors / philanthropists', 'Engaging with corporate/ industry donors', 'Employer matching', 'Family foundation / creating a trust', 'Other: Collecting fees from conferences; symposia; events', 'Other: Federal; state; and/or local government funding', 'Other: Participate in UPenn Orphan Disease Center MDBR grant program', 'Other: no fundraising', 'Other: Sponsorships'],
+  datasets: [{
+    label: '# of responses',
+    data: [104, 88, 82, 75, 68, 59, 29, 3, 2, 2, 1, 1],
+    backgroundColor: [ color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+  scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+    display: false
+    },  
+      responsive: true,
+}
+});
+
+// ORGANIZATION RESOURCES
+var ctxOrgResources = document.getElementById("orgResources");
+var orgResourcesBar = new Chart(ctxOrgResources, {
+
+  type: 'horizontalBar',
+data: {
+    labels: ['Biobank to collect patient samples'
+              , 'Community discussion space'
+              , 'Contact registry'
+              , 'Fundraising events'
+              , 'Natural history study'
+              , 'Patient & Loved one community gatherings'
+              , 'Patient community navigator'
+              , 'Patient registry'
+              , 'Patient reported outcomes (PRO) assessments'
+              , 'Research Conferences'
+              , 'Research strategy or research agenda'
+              , 'Scientific or medical advisory board'],
+    datasets: [{
+      label: 'Yes',
+      backgroundColor: color1,
+      data: [45, 133, 105, 118, 59, 103, 88, 85, 34, 98, 76, 132],
+    }, {
+      label: 'Not yet, but we are actively developing',
+      backgroundColor: color2,
+      data: [14, 2, 17, 5, 25, 4, 10, 25, 30, 9, 28, 4],
+    }, {
+      label: 'Not yet, but we are actively developing',
+      backgroundColor: color3,
+      data: [14, 2, 17, 5, 25, 4, 10, 25, 30, 9, 28, 4],
+    }, {
+      label: 'No, and we are not interested in developing',
+      backgroundColor: color4,
+      data: [27, 4, 5, 3, 6, 9, 12, 5, 8, 3, 5, 1],
+    }],
+  },
+options: {
+  scales: {
+         xAxes: [{
+            stacked: true // this should be set to make the bars stacked
+         }],
+         yAxes: [{
+            stacked: true,
+            ticks: {
+                beginAtZero: true
+            }
+         }]
+      },
+                legend: {
+                  position: 'right' ,
+                  align: 'start'
+                },
+  responsive: true,
+
+}
+});
+
+
+
+// FUNDRAISING ACTIVITIES
+var ctxFundraisingActivities = document.getElementById("notInterestedDeveloping");
+var fundraisingActivitiesBar = new Chart(ctxFundraisingActivities, {
+type: 'horizontalBar',
+data: {
+  labels: ['Grassroots / Patient-led fundraising', 'Organization-led events', 'Grant-writing / Applying for grants', 'Engaging with major private donors / philanthropists', 'Engaging with corporate/ industry donors', 'Employer matching', 'Family foundation / creating a trust', 'Other: Collecting fees from conferences; symposia; events', 'Other: Federal; state; and/or local government funding', 'Other: Participate in UPenn Orphan Disease Center MDBR grant program', 'Other: no fundraising', 'Other: Sponsorships'],
+  datasets: [{
+    label: '# of responses',
+    data: [104, 88, 82, 75, 68, 59, 29, 3, 2, 2, 1, 1],
+    backgroundColor: [color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+  scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+   plugins: {
+                legend: {
+                    display: false
+                },
+            },
+  responsive: true,
+}
+});
+
 </script>
 
+
       </div>
+<div class="whitespace"></div>
+
     </main>
 
 

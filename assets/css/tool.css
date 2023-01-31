@@ -32,11 +32,11 @@
     width: auto; 
 }
 
+/*  remove the popup overlay (helps during editing/troubleshooting)
 
 .overlay {
     display: none!important;
 } 
-/*  remove the popup overlay (helps during editing/troubleshooting)
 
 */
 

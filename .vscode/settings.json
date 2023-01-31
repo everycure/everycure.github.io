@@ -1,0 +1,36 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "_site": true,
+        ".jekyll-cache": true,
+        ".vscode": true,
+        ".gitignore": true,
+        "docker-compose.yml": true,
+        "Gemfile.lock": true,
+        "assets/ROADMAP.png": true,
+        "assets/ROADMAP.ico": true,
+        "assets/everycure_blue@4x.png": true,
+        "assets/cdcn.png": true,
+        "assets/czi.png": true,
+        "assets/czi.svg": true
+    },
+    "hide-files.files": [
+        "_site",
+        ".jekyll-cache",
+        ".vscode",
+        ".gitignore",
+        "docker-compose.yml",
+        "Gemfile.lock",
+        "assets/ROADMAP.png",
+        "assets/ROADMAP.ico",
+        "assets/everycure_blue@4x.png",
+        "assets/cdcn.png",
+        "assets/czi.png",
+        "assets/czi.svg"
+    ]
+}

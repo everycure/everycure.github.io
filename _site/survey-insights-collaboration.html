@@ -73,75 +73,97 @@ section {
     
 <body >
 
+
 <style>
-  .navbar .nav-link {
-    font-weight: 500;
-    color: var(--accent1) !important;
-  }
+    .globalnavdark {
+        background-color: #00171f !important;
+      background-image: url("https://www.transparenttextures.com/patterns/black-paper.png");
+    }
+
+    .navbar a, .navbar .nav-link {
+        color: var(--roadmap_light) !important;
+    }
+
 </style>
 
-<div class="nav1 ">
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <!-- Container wrapper -->
-    <div class="container-fluid">
-      <!-- Navbar brand -->
-      <a class="navbar-brand mt-2 mt-lg-0" href="/index.html">
-        <img src="./assets/ROADMAP.png" height="27px" alt="ROADMAP logo" loading="lazy" />
-      </a>
-      <!-- Left links -->
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item mx-2"><a class="nav-link" href="/about.html">About</a></li>
-        <li class="nav-item mx-2"><a class="nav-link" href="/roadmap-welcome.html">ROADMAP Tool</a></li>
-        <li class="nav-item mx-2"><a class="nav-link" href="/survey-insights-welcome.html">Survey Insights</a></li>
-        <li class="nav-item mx-2"><a class="nav-link" href="/resources.html">Resources</a></li>
-      </ul>
-      <!-- Left links -->
-
-      <!-- Right elements -->
-      <div class="d-flex align-items-center ">
-        <a class="d-flex align-items-center mx-2  " href="https://cdcn.org/" target="_blank">
-          <img src="./assets/cdcn.png" height="27px" alt="CDCN logo" style="margin-top: 7px;" />
+<style>
+    .navbar .nav-link {
+      font-weight: 500;
+    }
+  
+    .navbar {
+      padding-top: 25px;
+      padding-bottom: 26px;
+    }
+  </style>
+  
+  <div class="nav1 ">
+    <!-- Navbar -->
+    <nav class="navbar globalnavdark navbar-expand-lg navbar-light bg-light">
+      <!-- Container wrapper -->
+      <div class="container-fluid" >
+        <!-- Navbar brand -->
+        <a class="navbar-brand mt-2 mt-lg-0" href="/index.html">
+          <img src="./assets/ROADMAP.png" height="27px" alt="ROADMAP logo" loading="lazy" />
         </a>
-        <a class="d-flex align-items-center mx-3 " href="https://chanzuckerberg.com/" target="_blank">
-          <img src="./assets/czi.svg" height="27px" alt="CZI logo" style="margin-top: 7px;" />
-        </a>
-      </div>
-      <!-- Right elements -->
-    </div>
-    <!-- Container wrapper -->
-  </nav>
-  <!-- Navbar -->
-</div>
-
-<div class="nav2">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <!-- Navbar brand -->
-      <ul class="navbar-nav">
-        <!-- Dropdown -->
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-            data-mdb-toggle="dropdown" aria-expanded="false">
-            Navigation
+        <!-- Left links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item mx-2"><a class="nav-link" href="/about.html">About</a></li>
+          <li class="nav-item mx-2"><a class="nav-link" href="/roadmap.html">ROADMAP Tool</a></li>
+          <li class="nav-item mx-2"><a class="nav-link" href="/survey-insights-welcome.html">Survey Insights</a></li>
+          <li class="nav-item mx-2"><a class="nav-link" href="/resources.html">Resources</a></li>
+        </ul>
+        <!-- Left links -->
+  
+        <!-- Right elements -->
+        <div class="d-flex align-items-center">
+          <a class="d-flex align-items-center mx-3  " href="https://everycure.org/" target="_blank">
+            <img src="./assets/everycure_w@4x.png" height="23px" alt="EveryCure logo"  />
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="/about.html">About</a></li>
-            <li><a class="dropdown-item" href="/roadmap-welcome.html">ROADMAP Tool</a></li>
-            <li><a class="dropdown-item" href="/survey-insights-welcome.html">Survey Insights</a></li>
-            <li><a class="dropdown-item" href="/resources.html">Resources</a></li>
-          </ul>
-        </li>
-      </ul>
-      <div class="d-flex align-items-center">
-        <!-- Icon -->
-        <a class="text-reset me-3" href="/index.html">
-          <img src="./assets/ROADMAP.png" height="25px;" style="margin-top: -10px;" alt="logo" /> </a>
+          <a class="d-flex align-items-center mx-3  " href="https://cdcn.org/" target="_blank">
+            <img src="./assets/cdcn.png" height="27px" alt="CDCN logo"  />
+          </a>
+          <a class="d-flex align-items-center mx-3 " href="https://chanzuckerberg.com/" target="_blank">
+            <img src="./assets/czi.svg" height="27px" alt="CZI logo"  />
+          </a>
+  
+          
+        </div>
+        <!-- Right elements -->
       </div>
-    </div>
-  </nav>
-</div>
+      <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+  </div>
+  
+  <div class="nav2">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <!-- Navbar brand -->
+        <ul class="navbar-nav">
+          <!-- Dropdown -->
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-mdb-toggle="dropdown" aria-expanded="false">
+              Navigation
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="/about.html">About</a></li>
+              <li><a class="dropdown-item" href="/roadmap.html">ROADMAP Tool</a></li>
+              <li><a class="dropdown-item" href="/survey-insights-welcome.html">Survey Insights</a></li>
+              <li><a class="dropdown-item" href="/resources.html">Resources</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="d-flex align-items-center">
+          <!-- Icon -->
+          <a class="text-reset me-3" href="/index.html">
+            <img src="./assets/ROADMAP.png" height="25px;" style="margin-top: -10px;" alt="logo" /> </a>
+        </div>
+      </div>
+    </nav>
+  </div>
     <!-- Content -->
     <div class = "pt-5">
       <nav class="navbar_gds ">

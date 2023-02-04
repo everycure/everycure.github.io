@@ -181,14 +181,3 @@ h6 {
     display: none;
   }
 }
-
-/* ===GOOGLE DATA STUDIO (AKA survey insights) === 
-
-  adjust the width of the Google Data Studio report
-
-*/
-
-.data_studio iframe {
-  width: 70vw;
-  height: 8000px;
-}

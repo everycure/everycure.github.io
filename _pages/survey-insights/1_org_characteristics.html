@@ -23,14 +23,13 @@ height: 500px;
 .buttonContainer button {
   width: 100px;
 }
-</style>
-<style>
-    .nav-1 a, .nav-1 .link-text {
+
+.nav-1 a, .nav-1 .link-text {
         font-weight: 500;
         background-color: var(--roadmap_light);
         color: black;
         background-image: var(--project_paper);
-    }
+}
 
 </style>
 
@@ -273,7 +272,185 @@ series.labels.template.tooltipText = "{word}: {value}";
 series.fontFamily = "IBM Plex Sans";
 series.maxFontSize = am4core.percent(30);
 
-series.text = "Development Director Director Research Development Partnerships Founder President President  Founder Executive Director Executive Director Program Director Executive Director Executive Director Founder CEO Founder CEO President Co-Founder Founder CEO   President President Executive Director Executive Director Scientific Director Founder President Executive Director Executive Director Advocacy Research Coordinator Executive Director President   CEO Executive Director President Co-Founder VP President Co-Founder President Founder Co-founder CEO Executive Director Founder CEO Director Research Programs President Executive Director Executive Director Executive Director President CEO Executive Director Founder President Founder Executive Director President Executive Director Founder Executive Director President Board Executive Director Board Member   Director  Strategy International President Executive Director Executive Director Executive Director Founder President Founder   President President Founder Founder Executive Director Director Operations Vice President President President Co-Founder Co-Director Co-Founder Medical Liaison Board Member Secretary Treasurer Founder Executive Director Director Scientific Director Executive Director Founder CEO Executive Director Co-Founder Chief Science Officer President Founder President Project Director Founder Co-President COO Co-Chair Director Science Research Executive Director President Founder Board Member President   CEO Patient Center Research Advisor Executive Director Board Chair Director Patient Advocacy   Community Engagement Committee Member Executive Director Founder President   CEO CEO CEO Founder Founder Founder CEO Executive Director President President Board Member  Tech Chair Scientific Director Research Program Manager CEO President Founder Founder Executive Director Vice President Program Services Director Advocacy Co-Founder Executive Director Executive Director Board Member Director Research Strategy  Patient Registry Director Founder President Founder President President President   Treasurer Founder Secretary Executive Director Executive Director Executive Director Executive Director Founder Scientific Director President CEO Chief Development Offiver President Registered Nurse President Founder President Executive Director Executive Director CEO Co-Founder Executive Director Executive Director Executive Director Board Member Executive Director President President Executive Director Executive Director Founder Executive Director Chief Scientific Officer Director Research Founder CEO Director Grants Manager Executive Director CEO Director Research Operations"; 
+series.data = [
+ {
+   "tag": "Advocacy Research Coordinator",
+   "count": 1
+ },
+ {
+   "tag": "Board Chair",
+   "count": 1
+ },
+ {
+   "tag": "Board Member",
+   "count": 5
+ },
+ {
+   "tag": "Board Member & Director – Strategy/International",
+   "count": 1
+ },
+ {
+   "tag": "CEO",
+   "count": 18
+ },
+ {
+   "tag": "Chief Development Officer",
+   "count": 1
+ },
+ {
+   "tag": "Chief Science Officer",
+   "count": 1
+ },
+ {
+   "tag": "Chief Scientific Officer",
+   "count": 1
+ },
+ {
+   "tag": "Co-Chair",
+   "count": 1
+ },
+ {
+   "tag": "Co-Director",
+   "count": 1
+ },
+ {
+   "tag": "Co-Founder",
+   "count": 9
+ },
+ {
+   "tag": "Co-President",
+   "count": 1
+ },
+ {
+   "tag": "COO",
+   "count": 1
+ },
+ {
+   "tag": "Development Director",
+   "count": 1
+ },
+ {
+   "tag": "Director",
+   "count": 3
+ },
+ {
+   "tag": "Director Of Advocacy",
+   "count": 1
+ },
+ {
+   "tag": "Director Of Operations",
+   "count": 1
+ },
+ {
+   "tag": "Director of Research",
+   "count": 1
+ },
+ {
+   "tag": "Director Of Research And Programs",
+   "count": 1
+ },
+ {
+   "tag": "Director Of Research Development And Partnerships",
+   "count": 1
+ },
+ {
+   "tag": "Director Of Research Operations",
+   "count": 1
+ },
+ {
+   "tag": "Director Of Research Strategy",
+   "count": 1
+ },
+ {
+   "tag": "Director Of Science And Research",
+   "count": 1
+ },
+ {
+   "tag": "Executive Director",
+   "count": 47
+ },
+ {
+   "tag": "Founder",
+   "count": 34
+ },
+ {
+   "tag": "Grants Manager",
+   "count": 1
+ },
+ {
+   "tag": "Iowa Ambassador",
+   "count": 1
+ },
+ {
+   "tag": "Medical Liaison",
+   "count": 1
+ },
+ {
+   "tag": "Member Of The Pharmaceutical Development Committee",
+   "count": 1
+ },
+ {
+   "tag": "Patient Advocacy & Community Engagement",
+   "count": 1
+ },
+ {
+   "tag": "Patient-Center Research Advisor",
+   "count": 1
+ },
+ {
+   "tag": "Physician",
+   "count": 1
+ },
+ {
+   "tag": "President",
+   "count": 41
+ },
+ {
+   "tag": "Program Director",
+   "count": 1
+ },
+ {
+   "tag": "Project Director",
+   "count": 1
+ },
+ {
+   "tag": "Registered Nurse",
+   "count": 1
+ },
+ {
+   "tag": "Registry Director",
+   "count": 1
+ },
+ {
+   "tag": "Research Program Manager",
+   "count": 1
+ },
+ {
+   "tag": "Scientific Director",
+   "count": 4
+ },
+ {
+   "tag": "Secretary",
+   "count": 2
+ },
+ {
+   "tag": "Tech Chair",
+   "count": 1
+ },
+ {
+   "tag": "Treasurer",
+   "count": 2
+ },
+ {
+   "tag": "Vice President",
+   "count": 3
+ }
+];
+
+
+series.dataFields.word = "tag";
+series.dataFields.value = "count";
+
 
 // YEAR OF FOUNDING 
 var ctxFounding = document.getElementById("yearOfFounding");

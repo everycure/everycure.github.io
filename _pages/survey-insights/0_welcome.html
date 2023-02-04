@@ -13,11 +13,6 @@ permalink: "/survey-insights-welcome.html"
         background-image: var(--project_paper);
     }
 
-    #rareDiseases {
-        width: 100%;
-        height: 500px;
-    }
-
     .counterContainer {
         background-color: var(--accent2);
         background-image: var(--cardboard);
@@ -147,18 +142,6 @@ permalink: "/survey-insights-welcome.html"
     </div>
 </section>
 
-<section>
-    <div class="container">
-        <h2>Rare diseases of focus</h2>
-        <p>Generally, all 147 organizations who participated in the survey focused on either a unique rare disease or
-            set of diseases. Only Usher Syndrome and Neurofibromatosis had two organizations each in our dataset. </p>
-    </div>
-
-    <div class="container">
-        <div id="rareDiseases"></div>
-        <p class="text-end"><small>n = 244</small></p>
-</section>
-
 </div>
 </div>
 <script>
@@ -210,22 +193,3 @@ permalink: "/survey-insights-welcome.html"
 </script>
 
 
-
-<script>
-    am4core.useTheme(am4themes_animated);
-    // Themes end
-
-    var chart = am4core.create("rareDiseases", am4plugins_wordCloud.WordCloud);
-    var series = chart.series.push(new am4plugins_wordCloud.WordCloudSeries());
-
-    series.accuracy = 4;
-    series.step = 15;
-    series.rotationThreshold = 0.7;
-    series.maxCount = 200;
-    series.minWordLength = 2;
-    series.labels.template.tooltipText = "{word}: {value}";
-    series.fontFamily = "IBM Plex Sans";
-    series.maxFontSize = am4core.percent(30);
-
-    series.text = "Juvenile mysositis Fibrodysplasia ossificans progressiva Chromosome Alignment Maintaining Phosphoprotein 1 Neurodegeneration with brain iron accumulation disorders Superficial siderosis Primary ciliary dyskinesia RYR1-related diseases Generalized lymphatic anomaly Gorham-Stout disease Kaposiform lymphangiomatosis Central conducting lymphatic anomaly CLOVES syndrome MEPAN syndrome SLC6A1 epileptic encephalopathy Trigeminal neuralgia Congenital disorders of glycosylation Cystic fibrosis Edwards syndrome GM1 gangliosidosis Phenylketonuria Mucolipidosis type IV Limb-girdle muscular dystrophy Tatton-Brown-Rahman syndrome Shwachman-Diamond syndrome Organic acidemias Smith-Magenis syndrome Pemphigus Pemphigoid Pachyonychia congenita Huntington's disease DDX3X syndrome CACNA1A-related disorders Aicardi-Goutieres syndrome Hypoparathyroidism STXBP1-related disorders Jansen's metaphyseal chondrodysplasia Neurofibromatosis Chronic pancreatitis Clear cell sarcoma VCP disease Acute disseminated encephalomyelitis Acute flaccid myelitis MOG antibody disease Neuromyelitis optica spectrum disorder Optic neuritis Transverse myelitis Cerebral autosomal dominant arteriopathy with subcortical infarcts   leukoencephalopathy Hypothalamic-pituitary brain tumors Hypothalamic obesity Lafora disease Castleman disease SYNGAP1-reated syndrome Sickle cell disease Mast cell disease DRESS syndrome Alport syndrome Beta-propeller protein-associated neurodegeneration Koolen-de Vries syndrome Uveal melanoma Neuromyelitis optica spectrum disorder MOG antibody disease Acromegaly Hereditary hemorrhagic telangiectasia Progressive familial intrahepatic cholestasis Telomere biology disorders CAMK2 mutation disorders Stiff-person syndrome PTEN hamartoma tumor syndrome Okur-Chung neurodevelopmental syndrome Wolf-Hirschhorn syndrome Mitochondrial disease Neutropenia Thrombotic microangiopathies Thrombotic thrombocytopenic purpura Smith-Kingsmore syndrome Jansen-de Vries syndrome Usher syndrome Food protein-induced enterocolitis syndrome Pulmonary alveolar proteinosis Necrotizing enterocolitis Sarcoidosis SLC13A5 epilepsy Glucose transporter type 1 deficiency syndrome Isolated congenital asplenia Infantile neuroaxonal dystrophy KIF1A associated neurological disorder SATB2-associated syndrome Pityriasis rubra pilaris Jordan's syndrome Generalized arterial calcification of infancy Autosomal recessive hypophosphatemic rickets type 2 Rare forms of epilepsy NOS GNAO1-related neurodevelopmental disorders Malan syndrome TBCK syndrome Neurofibromatosis Batten disease Idiopathic inflammatory myopathies Hermansky-Pudlak syndrome PCDH19-epilepsy Myasthenia gravis Adult polyglucosan body disease Glycogen storage disease type IB Uveal melanoma Rare pediatric cancers NOS Angelman Syndrome Nephrotic syndrome Nephritic syndrome Single large-scale mitochondrial deletion syndromes Mitochondrial disease Susac syndrome Rare diseases NOS Oligodendroglioma Cardiofaciocutaneous syndrome RUNX1 mutations Cyclic vomiting syndrome Familial chylomicronemia syndrome Fanconi anemia Immune thrombocytopenia Ichthyosis Eosinophilic diseases Congenital hyperinsulinism Gastrointestinal stromal tumors Giant cell tumors Choroideremia FOXG1 syndrome Acute disseminated encephalomyelitis Addison's disease Adrenoleukodystrophy Amyloidosis Arteriovenous malformation Atrial septal defect Charcot-Marie-Tooth disease Central pain syndrome Chiari malformation Chronic inflammatory demyelinating polyneuropathy Dysautonomia Eagle syndrome Ehlers-Danlos syndrome Epidermolysis bullosa Erythromelalgia Fabry disease Chronic facial pain syndrome Graves' disease Glossopharyngeal neuralgia Guillain-Barre syndrome Idiopathic pulmonary fibrosis Lyme disease Mast cell disease Multiple myeloma Myasthenia gravis Myositis Narcolepsy Nephrotic syndrome Oculopharyngeal muscular dystrophy Primary sclerosing cholangitis Sarcoidosis Synovial sarcoma Hereditary spastic paraplegia Primary lateral sclerosis Primary sclerosing cholangitis Cardiofaciocutaneous syndrome Costello syndrome Noonan syndrome Autoimmune encephalitis Cardiofaciocutaneous syndrome Costello syndrome Noonan syndrome Smith-Lemli-Opitz syndrome Vici syndrome Kabuki syndrome Neurofibromatosis Snyder-Robinson syndrome Circadian rhythm sleep disorders Giant axonal neuropathy Congenital muscular dystrophy Rare diseases NOS ASXL gene disorders Recurrent respiratory papillomatosis Cryopyrin-associated periodic syndrome Familial Mediterranean fever Mevalonate kinase deficiency TNF receptor-associated periodic syndrome Periodic fever; aphthous stomatitis; pharyngitis;   cervical adenitis Deficiency of interleukin-1 receptor antagonist disease Majeed syndrome Chronic recurrent multifocal osteomyelitis Pyogenic arthritis Pyoderma gangrenosum   acne Schnitzler syndrome Pediatric granulomatous arthritis NLRP12-associated systemic autoinflammatory disorder C LE syndrome Behcets syndrome Systemic juvenile idiopathic arthritis Autoinflammatory disease NOS Alkaptonuria Chronic recurrent multifocal osteomyelitis X-linked diseases Kleefstra syndrome Chordoma Appendix cancer Pseudomyxoma peritonei Peritoneal surface malignancy Spontaneous intracranial hypotension Idiopathic hypersomnia Barth syndrome Amyloidosis DeSanto-Shinawi syndrome Dup15q syndrome Disorders of the corpus callosum Ectodermal dysplasias Cholangiocarcinoma Glutaric aciduria type I Rare pediatric neurologic conditions NOS Becker muscular dystrophy Congenital muscular dystrophy Duchenne muscular dystrophy Emery-Dreifuss muscular dystrophy Facioscapulohumeral muscular dystrophy Limb-girdle muscular dystrophy Myotonic dystrophy Oculopharyngeal muscular dystrophy ALS Spinal-bulbar muscular atrophy Spinal muscular atrophy  ersen-Tawil syndrome Periodic paralyses Myotonia congenita Friedreich's ataxia Mitochondrial myopathies Charcot-Marie-Tooth disease Giant axonal neuropathy Congenital myasthenic syndrome Lambert-Eaton myasthenic syndrome Myasthenia gravis Metabolic myopathy Congenital myopathy Distal myopathy Endocrine myopathy Inflammatory myopathy Muscular dystrophy Lymphangioleiomyomatosis ALS"; 
-</script>

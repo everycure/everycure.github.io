@@ -18,6 +18,8 @@ permalink: "/roadmap.html"
 
 {% include navbar-dark.html %}
 
+
+
 <!-- START MOBILE WARNING -->
 <div class="warning p-5  container">
     <h1 class="p-5"><span><i class="fa-solid fa-triangle-exclamation"></i> &nbsp; </span>
@@ -191,7 +193,7 @@ permalink: "/roadmap.html"
 <!-- END HEADINGS -->
 
 <!-- START LEFT SCREEN SPLIT -->
-<div class="split left " scroll="no" style="overflow: hidden">
+<div class="split left " wmode="opaque" scroll="no" style="overflow: hidden">
 
     <!-- START MAIN SUBWAY LINE -->
     <div class="main_line">
@@ -513,7 +515,10 @@ permalink: "/roadmap.html"
     
     <!-- START MAIN (vertical) SUBWAY STOPS -->
     <div id="mainstop1" class="">
+
         {% include /TOOL/content/mainstops/mainstop1.html %}
+        {% include TOOL/popup.html %}
+
     </div>
 
     <div id="mainstop2" class="contentPanel animate__animated animate__fadeIn" style="display: none;">

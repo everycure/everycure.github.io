@@ -32,11 +32,15 @@
     width: auto; 
 }
 
-/*  remove the popup overlay (helps during editing/troubleshooting)
+.whitespace{
+    height: 200px!important;
+}
+
 
 .overlay {
     display: none!important;
 } 
+/*  remove the popup overlay (helps during editing/troubleshooting)
 
 */
 
@@ -50,6 +54,7 @@
     left: 0;
     background: rgba(135, 135, 135, 0.87);
     background-image: var(--cardboard);
+    
 }
 
 /* add a little padding around the white screen */
@@ -102,7 +107,7 @@
 }
 
 /* open button (to re-open the overlay) */
-.open-overlay {
+.open-overlay, .about-button {
       align-self: center;
       background-color: #fff;
       background-image: none;
@@ -132,12 +137,12 @@
       touch-action: manipulation;
     }
     
-    .open-overlay:hover {
+    .open-overlay:hover, .about-button:hover {
       box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
       transform: translate3d(0, 2px, 0);
     }
     
-    .open-overlay:focus {
+    .open-overlay:focus, .about-button:focus {
       box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
     }
 
@@ -406,7 +411,7 @@ and arrange the dots in evenly-spaced lines*/
     background-color: white;
     font-weight: 700;
     z-index: 1000;
-    margin-top:23px!important;
+    margin-top:37px!important;
 
 }
 
@@ -515,10 +520,14 @@ and arrange the dots in evenly-spaced lines*/
 /* hide branch stops until clicked */
 .branch_dot_inactive {
     opacity: 0;
+    pointer-events: none;
+
 }
 
 .branch_dot_active {
     opacity: 100%;
+    pointer-events: auto;
+
 }
 
 .verticalLine, .verticalLineLong {
@@ -755,7 +764,7 @@ and arrange the dots in evenly-spaced lines*/
     #heading_5_2,
     #heading_6_1,
     #heading_6_2,
-    #heading_6_3 .location {
+    #heading_6_3, .location {
         display: none !important;
     }
 

@@ -53,8 +53,8 @@ rel="stylesheet"
 
 @media screen and (min-width: 1200px) {
   .siteContent {
-  padding-left: 130px;
-  padding-right: 130px;
+  padding-left: 100px;
+  padding-right: 100px;
 
 }
 }
@@ -64,6 +64,16 @@ rel="stylesheet"
         height: 400px !important;
     }
 
+    .nav-lvl-3 {
+      padding-left: 10px !important;
+      font-style: italic;
+    }
+
+    .link-text-inactive{
+      padding-left: 20px !important;
+      font-weight: bold;
+
+    }
 section {
   margin-top: 100px;
   margin-bottom: 100px;
@@ -174,8 +184,8 @@ section {
                       Welcome</p>
             </a>
           </li>
-          <li class="nav-item_gds heading ">
-                    <p class = "link-text">RARE DISEASE NON PROFITS</p>
+          <li class="nav-item_gds heading  px-2 ">
+                    <p class = "link-text link-text-inactive">RARE DISEASE NON PROFITS</p>
           </li>
 
           <li class="nav-item_gds nav-1">
@@ -191,9 +201,15 @@ section {
             </a>
           </li>
           <li class="nav-item_gds nav-3">
-            <a href="/survey-insights-drug-repurposing" class="nav-link_gds">
+            <a href="/survey-insights-drug-repurposing.html" class="nav-link_gds">
                <p class = "link-text">
                 Drug repurposing</p>
+            </a>
+          </li>
+          <li class="nav-item_gds nav-3-5 nav-lvl-3">
+            <a href="/survey-insights-drug-repurposing-sirolimus.html" class="nav-link_gds">
+               <p class = "link-text">
+                ↳ Orgs repurposing Sirolimus</p>
             </a>
           </li>
           <li class="nav-item_gds nav-4">
@@ -203,7 +219,7 @@ section {
             </a>
           </li>
           <li class="nav-item_gds heading ">
-            <p class = "link-text">STAKEHOLDER DATA</p>
+            <p class = "link-text link-text-inactive">STAKEHOLDER DATA</p>
     </li>
 
 
@@ -369,365 +385,6 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
     </div>
   </section>
 
-
-  <section>
-    <h2 class="pt-5 pb-2">Organizations repurposing Sirolimus</h2>
-
-    <p>
-      Both from anecdotal evidence from conversations, rare disease research events and our ROADMAP survey data, we can
-      see that sirolimus (Rapamyacin) is a very commonly repurposed drug. This is because it has demonstrated efficacy
-      in a number of medical conditions beyond its original intended use, which was as an immunosuppressive drug after
-      organ transplantation. It has been found to have antiproliferative effects on certain types of cells, such as
-      smooth muscle cells and cancer cells, and has been studied for its potential use in treating cancer,
-      atherosclerosis, and even to prevent aging. Additionally, its relatively low toxicity and well-established safety
-      profile make it an attractive candidate for repurposing.
-    </p>
-
-    <p class="pb-5">
-      Through various sources, we have identified that as many as 17 rare disease nonprofit organizations are in various
-      stages of repurposing it for their patient population, whether its supporting off label use, funding preclinical
-      research or supporting clinical trials. Through the ROADMAP project, we spoke to 9 of these organizations and have
-      their permission to share the following data:
-    </p>
-
-    <!-- START ROW 1 -->
-    <div class="row">
-
-      <!-- START LDGA -->
-      <div class="col-12 col-lg-4">
-        <div class="card shadow-4-strong h-100">
-          <div class="card-body h-100">
-            <div class="row">
-              <div class="col-3 d-flex justify-content-center">
-                <img class="img-fluid siroLogo " src="/assets/images/sirolimus-logos/smalllogo-241x300.png" /> <br> <br>
-              </div>
-              <div class="col-9">
-                <h4><a href="https://lgdalliance.org/" target="_blank">Lymphangiomatosis & Gorham's Disease Alliance
-                    (LGDA)</a></h4>
-              </div>
-              <div class="card-text px-lg-4">
-                <p class="pt-3"><b>Rare disease: </b> Complex Lymphatic Anomalies</p>
-                <p class="pb-2 mt-0"> <i class="fa-solid fa-x" style="color: black;"></i>
-                  &nbsp;
-                  There are no FDA-approved drugs for CLAs.
-                </p>
-                <p>
-                  CLAs are a group of rare diseases that are characterized by abnormal growth of lymphatic vessels that
-                  may
-                  involve multiple organ systems, including lung, spleen, soft tissue and bones
-                </p>
-                <p>
-                  Sirolimus has shown efficacy in phase II clinical trials and is being used off label; It is currently
-                  one of
-                  the frontline agent for patients with complex lymphatic anomalies.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- END LDGA -->
-
-      <!-- START PCP -->
-      <div class="col-12 col-lg-4">
-        <div class="card shadow-4-strong h-100">
-          <div class="card-body h-100">
-            <div class="row">
-              <div class="col-3 d-flex justify-content-center">
-                <img class="img-fluid siroLogo" src="/assets/images/sirolimus-logos/PC project.jpeg" />
-              </div>
-              <div class="col-9">
-                <h4><a href="https://www.pachyonychia.org/" target="_blank">Pachyonychia
-                    Congenita Project</a></h4>
-              </div>
-              <div class="card-text px-lg-4">
-                <p class="pt-3"><b>Rare disease: </b> Pachyonychia Congenita (PC)</p>
-                <p class="pb-2"> <i class="fa-solid fa-x" style="color: black;"></i> &nbsp; There are no FDA-approved
-                  drugs for PC.</p>
-                <p>
-                  PC is an ultra-rare, chronic, genetic autosomal dominant skin disorder, which causes lifelong limited
-                  mobility and severe pain.
-                </p>
-                <p>
-                  <a href="https://palvellatx.com/program-details/" target="_blank">Palvella therapeutics</a> is
-                  conducting a <a href="https://clinicaltrials.gov/ct2/show/NCT05180708" target="_blank"> Phase III
-                    clinical trial</a> called "VAPAUS" of QTORIN™, a 3.9% topical sirolimus.
-                </p>
-                <p>
-                  Palvella has been awarded both FDA Orphan Drug and Fast Track designation.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- END PCP -->
-
-      <!-- START CDCN -->
-      <div class="col-12 col-lg-4">
-        <div class="card shadow-4-strong h-100">
-          <div class="card-body h-100">
-            <div class="row">
-              <div class="col-3 d-flex justify-content-center">
-                <img class="img-fluid siroLogo" src="/assets/images/sirolimus-logos/CDCN logo.png" />
-              </div>
-              <div class="col-9">
-                <h4><a href="https://cdcn.org/" target="_blank">Castleman Disease
-                  Collaborative Network</a></h4>
-              </div>
-              <div class="card-text px-lg-4">
-                <p class="pt-3"><b>Rare disease: </b> Castleman Disease</p>
-                <p class="pb-2"> <i class="fa-solid fa-prescription-bottle-medical" style="color: black;"></i> &nbsp; CD has
-                  one FDA-approved drug,
-                  siltuximab (Sylvant), which is effective for about 30-50% of CD patients.</p>
-    
-                <p>
-                  CD is a group of rare disorders that involve enlarged lymph nodes and a broad range of inflammatory
-                  symptoms
-                  and laboratory abnormalities. In CD, the cells of the immune system become hyperactivated, overproduce
-                  cytokines and other inflammatory compounds, and fail to return to a surveillance mode.
-                  </p>
-                <p>
-                  <a href="https://chasingmycure.com/" target="_blank">Dr. Fajgenbaum</a> discovered the potential for
-                  treating CD with Sirolimus in 2014.
-                  </p>
-                  <p>
-                    Sirolimus is currently being used off-label for patients with iMCD and UCD, and is being studied in a <a
-                    href="https://clinicaltrials.gov/ct2/show/NCT03933904" target="_blank">Phase II clinical trial</a>.
-                  </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- END CDCN -->
-
-    </div>
-    <!-- END ROW 1 -->
-    
-    <br> <br>
-    <!-- START ROW 2 -->
-    <div class="row">
-
-      <!-- START CURE HHT -->
-      <div class="col-12 col-lg-4">
-        <div class="card shadow-4-strong h-100">
-          <div class="card-body h-100">
-            <div class="row">
-              <div class="col-3 d-flex justify-content-center">
-                <img class="img-fluid siroLogo"
-                src="/assets/images/sirolimus-logos/Curehht-Horizontal-Logo-No-Tagline-Transparent-Back.PNG.png" />
-                </div>
-              <div class="col-9">
-                <h4><a href="https://curehht.org/" target="_blank">Cure HHT</a></h4>
-              </div>
-              <div class="card-text px-lg-4">
-                <p class="pt-3"><b>Rare disease: </b> Hereditary Hemorrhagic Telangiectasia (HHT)</p>
-                <p class="pb-2"> <i class="fa-solid fa-x" style="color: black;"></i> &nbsp;
-                  There are no FDA-approved drugs for HHT</p>
-                                  <p>
-                                    HHT is a genetic disorder that causes malformed blood vessels and can affect multiple organs of the
-                                    body.
-                                    The disorder is also sometimes referred to as Osler-Weber-Rendu (OWR).
-                                    </p>
-                <p>
-                  Currently, sirolimus in a <a href="https://clinicaltrials.gov/ct2/show/NCT05269849"
-                  target="_blank">Phase II
-                  clinical trial</a> for patients with HHT that are experiencing moderate or severe epistaxis
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- END CURE HHT -->
-       
-      <!-- START SKS -->
-      <div class="col-12 col-lg-4">
-        <div class="card shadow-4-strong h-100">
-          <div class="card-body h-100">
-            <div class="row">
-              <div class="col-3 d-flex justify-content-center">
-                <img class="img-fluid siroLogo" src="/assets/images/sirolimus-logos/SKS-Logo-New2_6-5-19.png" />
-              </div>
-              <div class="col-9">
-                <h4><a href="https://smithkingsmore.org/" target="_blank">Smith-Kingsmore
-                  Syndrome Foundation</a></h4>
-              </div>
-              <div class="card-text px-lg-4">
-                <p class="pt-3"><b>Rare disease: </b> Smith-Kingsmore syndrome (SKS)</p>
-                <p class="pb-2"> <i class="fa-solid fa-x" style="color: black;"></i> &nbsp;
-                  There are no FDA-approved drugs for ﻿SKS</p>
-                    <p>
-                      SKS is a rare, neurodevelopmental genetic disorder, which impacts the digestive, endocrine, metabolic
-                      and
-                      nervous systems.                
-                    </p>
-                <p>
-                  Sirolimus is currently being used off label for patients with SKS to treat intractable seizures.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- END SKS -->
-
-      <!-- START RUNX1 -->
-      <div class="col-12 col-lg-4">
-        <div class="card shadow-4-strong h-100">
-          <div class="card-body h-100">
-            <div class="row">
-              <div class="col-3 d-flex justify-content-center">
-                <img class="img-fluid siroLogo" src="/assets/images/sirolimus-logos/runx1_logo_wTag.png" />
-              </div>
-              <div class="col-9">
-                <h4><a href="https://www.runx1-fpd.org/" target="_blank">RUNX1 Research
-                  Program</a></h4>
-              </div>
-              <div class="card-text px-lg-4">
-                <p class="pt-3"><b>Rare disease: </b> RUNX1 familial platelet disorder</p>
-                <p class="pb-2"> <i class="fa-solid fa-x" style="color: black;"></i> &nbsp;
-                  There are no FDA-approved drugs for RUNX1.</p>
-                    <p>
-                      RUNX1-FPD is a hereditary blood disorder which predisposes an individual to developing blood cancer in
-                      their lifetime.                    
-                    </p>
-                <p>
-                  Preclinical data identified sirolimus as promising, currently developing a clinical trial.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- END RUNX1 -->
-      </div>
-      <!-- END ROW 2 -->
-      <br> <br>
-
-    <!-- START ROW 3 -->
-    <div class="row">
-
-      
-      <!-- START LAM -->
-      <div class="col-12 col-lg-4">
-        <div class="card shadow-4-strong h-100">
-          <div class="card-body h-100">
-            <div class="row">
-              <div class="col-3 d-flex justify-content-center">
-                <img class="img-fluid siroLogo" src="/assets/images/sirolimus-logos/LAM.svg" />
-              </div>
-              <div class="col-9">
-                <h4><a href="https://www.thelamfoundation.org/" target="_blank">LAM
-                  Foundation</a></h4>
-              </div>
-              <div class="card-text px-lg-4">
-                <p class="pt-3"><b>Rare disease: </b> Lymphangioleiomyomatosis (LAM)</p>
-                <p class="pb-2"> <i class="fa-solid fa-prescription-bottle-medical" style="color: black;"></i> &nbsp;
-                  Sirolimus was <a
-                    href="https://www.pfizer.com/news/press-release/press-release-detail/pfizer_s_rapamune_sirolimus_becomes_first_fda_approved_treatment_for_lymphangioleiomyomatosis_lam_a_rare_progressive_lung_disease"
-                    target="_blank">FDA approved</a> for LAM in 2015.</p>
-                    <p>
-                      LAM is a rare lung disease that usually affects women; it's characterized by an abnormal growth of
-                      smooth
-                      muscle cells, especially in the lungs, lymphatic system and kidneys. Unregulated growth of these cells
-                      can
-                      lead to loss of lung function, accumulation of lymph rich-fluid in the chest and abdomen and growth of
-                      tumors in the kidneys.
-                          </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- END LAM -->
-
-      <!-- START MSU -->
-      <div class="col-12 col-lg-4">
-        <div class="card shadow-4-strong h-100">
-          <div class="card-body h-100">
-            <div class="row">
-              <div class="col-3 d-flex justify-content-center">
-                <img class="img-fluid siroLogo" src="/assets/images/sirolimus-logos/MSU-Logo-web-ret-700.png" />
-              </div>
-              <div class="col-9">
-                <h4><a href="https://understandingmyositis.org/" target="_blank">Myositis
-                  Support and Understanding Association</a></h4>
-              </div>
-              <div class="card-text px-lg-4">
-                <p class="pt-3"><b>Rare disease: </b> Idiopathic Inflammatory Myopathies (IIM)</p>
-                <p class="pb-2"> <i class="fa-solid fa-x" style="color: black;"></i> &nbsp; There are no FDA-approved
-                  therapies for any form of myositis.</p>
-                        <p>
-                          IIM, generally referred to as myositis, are a group of rare, acquired, incurable, systemic autoimmune
-                          diseases. While myositis is classified as a muscle disease, it can also affect the heart, lungs, skin,
-                          and GI tract, and can be associated with cancer. IIMs are thought to be caused by an overactive immune
-                          system.
-                                    </p>
-                                    <p>
-                                      A randomised, double-blind, placebo-controlled, proof-of-concept, <a
-                                      href="https://www.thelancet.com/journals/lanrhe/article/PIIS2665-9913(20)30280-0/fulltext"
-                                      target="_blank">Phase 2b clinical trial</a> was completed in 2020, which showed no evidence for
-                                    efficacy of sirolimus for treating inclusion body myositis based on the clinical trial measures;
-                                    however, the researchers found enough evidence of benefit in certain secondary outcomes to suggest
-                                    conducting a phase 3 trial.
-                    
-                                    </p>
-                                    <p>
-                Some patients are using sirolimus off-label, but it is not currently integrated into treatment
-                guidelines.
-
-                                    </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- END MSU -->
-
-
-      <!-- START PROJECT FAVA -->
-      <div class="col-12 col-lg-4">
-        <div class="card shadow-4-strong h-100">
-          <div class="card-body h-100">
-            <div class="row">
-              <div class="col-3 d-flex justify-content-center">
-                <img class="img-fluid siroLogo" src="/assets/images/sirolimus-logos/FAVA-logo-final.webp" />
-              </div>
-              <div class="col-9">
-                <h4><a href="https://www.projectfava.org/" target="_blank">Project FAVA</a></h4>
-              </div>
-              <div class="card-text px-lg-4">
-                <p class="pt-3"><b>Rare disease: </b> Fibro-adipose vascular anomaly (FAVA)</p>
-                <p class="pb-2"> <i class="fa-solid fa-prescription-bottle-medical" style="color: black;"></i> &nbsp; FDA
-                  approved drug??????</p>
-                        <p>
-                          FAVA is a rare vascular anomaly occurring when the body’s own tissue infiltrates a muscle, creating a
-                          tumor-like mass typically found in one or more limbs.
-                                    </p>
-                                    <p>
-                                      A randomised, double-blind, placebo-controlled, proof-of-concept, <a
-                                      href="https://www.thelancet.com/journals/lanrhe/article/PIIS2665-9913(20)30280-0/fulltext"
-                                      target="_blank">Phase 2b clinical trial</a> was completed in 2020, which showed no evidence for
-                                    efficacy of sirolimus for treating inclusion body myositis based on the clinical trial measures;
-                                    however, the researchers found enough evidence of benefit in certain secondary outcomes to suggest
-                                    conducting a phase 3 trial.
-                    
-                                    </p>
-                                    <p>
-                                      Sirolimus is currently being used off-label.
-
-                                    </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- END PROJECT FAVA -->
-    </div>
-    <!-- END ROW -->
-  </section>
 
 
   <section>

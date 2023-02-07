@@ -376,7 +376,8 @@ $(document).ready(function () {
     $("#heading_5").removeClass("active_heading_5");
     $("#heading_6").removeClass("active_heading_6");
   };
-  $("#heading5_2".click(changeSubheading));
+  $("#heading5_2").click(changeSubheading);
+
 
   var changeSubheading = function () {
     $("#heading_2_1").removeClass("active_heading_2_1");
@@ -405,6 +406,7 @@ $(document).ready(function () {
   };
   $("#heading6_1").click(changeSubheading);
 
+  
   var changeSubheading = function () {
     $("#heading_2_1").removeClass("active_heading_2_1");
     $("#heading_2_2").removeClass("active_heading_2_2");
@@ -458,6 +460,7 @@ $(document).ready(function () {
     $("#heading_6").removeClass("active_heading_6");
   };
   $("#heading6_3").click(changeSubheading);
+
 
 });
 

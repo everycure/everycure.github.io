@@ -36,11 +36,11 @@
     height: 200px!important;
 }
 
+/*  remove the popup overlay (helps during editing/troubleshooting)
 
 .overlay {
     display: none!important;
 } 
-/*  remove the popup overlay (helps during editing/troubleshooting)
 
 */
 

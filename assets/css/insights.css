@@ -15,6 +15,9 @@
 
     }
 
+    p small {
+      font-size: 10px !important;
+    }
     .nav-item_gds p {
       padding-left: 30px;
       padding-top: 15px;

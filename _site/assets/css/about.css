@@ -1,8 +1,7 @@
 
 .sidebar {
   width: 20%;
-  height: 50vh; 
-  min-height: 200px;
+  height:89vh; 
   overflow: auto;
   position: -webkit-sticky;
   position: sticky;

@@ -52,7 +52,12 @@ height: 500px;
       <div class = "col-xl-6 ">
         <div id="leadershipTitlesCloud" style = "margin-top: -70px;"></div>    
       </div>
-      <p class = "text-end"><small>n = 146</small></p>
+      <p class = "text-end">
+        <small>
+          n (organizations): 146 <br>
+          n (job titles): 200
+        </small>
+      </p>
     </div>
 
 </section>
@@ -64,7 +69,7 @@ height: 500px;
       ​Our organizations are "young"! 83 organizations (56%) were founded in 2010 or later, with 9 founded as recently as 2020 during the COVID pandemic. 
     </p>
     <canvas style="width:40vw!important;" id="yearOfFounding"></canvas>
-    <p class = "text-end"><small>n = 147</small></p>
+    <p class = "text-end"><small>n (organizations): 147</small></p>
   </div>
 </section>
 
@@ -75,7 +80,7 @@ height: 500px;
       Impressively, most organizations (62%) have no or just one full time, paid staff member. This speaks to the incredibly valuable role that volunteers play in both leading these organizations, as well as conducting all the day to day duties, from patient support to research coordination.  
     </p>
     <canvas style="width:40vw!important;" id="fullTimeStaff"></canvas>
-    <p class = "text-end"><small>n = 146</small></p>
+    <p class = "text-end"><small>n (organizations): 146</small></p>
   </div>
 </section>
 
@@ -86,7 +91,7 @@ height: 500px;
       Though some of the 147 RDNPs in our survey reported notably higher or lower funding levels, generally most of our 147 organizations lean towards middle ground funding, from $50 to $1,000k on average.
     </p>
     <canvas style="width:40vw!important;" id="averageFunding"></canvas>
-    <p class = "text-end"><small>n = 144</small></p>
+    <p class = "text-end"><small>n (organizations): 144</small></p>
   </div>
 </setion>
 
@@ -97,7 +102,7 @@ height: 500px;
       Though our organizations focus on a wide range of activities, patient education, disease awareness and community development are clear top choices for both general focus as well as top 3 prioritization.     
     </p>
     <canvas style="width:40vw!important;" id="activitiesOfFocus"></canvas>
-    <p class = "text-end"><small>n = 147</small></p>
+    <p class = "text-end"><small>n (organizations): 147</small></p>
   </div>
 </section>
 
@@ -108,11 +113,11 @@ height: 500px;
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
     <canvas style = "height: 300px;" id="supportingResearchPie"></canvas>
-    <p class = "text-end"><small>n = 145</small></p>
+    <p class = "text-end"><small>n (organizations): 145</small></p>
   </div>
 <div class = "container">
   <canvas style="width:40vw!important;" id="supportingResearchBar"></canvas>
-  <p class = "text-end"><small>n = 145</small></p>
+  <p class = "text-end"><small>n (organizations): 145</small></p>
 </div>
 </section>
 
@@ -123,7 +128,7 @@ height: 500px;
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
     <canvas style="width:40vw!important;" id="percentageFunding"></canvas>
-    <p class = "text-end"><small>n = 100</small></p>
+    <p class = "text-end"><small>n (organizations): 100</small></p>
   </div>
 </section>
 
@@ -134,7 +139,7 @@ height: 500px;
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
     <canvas style="width:40vw!important;" id="fundraisingActivities"></canvas>
-    <p class = "text-end"><small>n = 138</small></p>
+    <p class = "text-end"><small>n (organizations): 138</small></p>
   </div>
 </section>
 
@@ -145,7 +150,7 @@ height: 500px;
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
     <canvas style="width:40vw!important;" id="orgResources"></canvas>
-    <p class = "text-end"><small>n = 144</small></p>
+    <p class = "text-end"><small>n (organizations): 144</small></p>
   </div>
 </section>
 
@@ -183,14 +188,14 @@ height: 500px;
 <div class = "chartBox">
   <canvas id = "reasonsNotInterested"></canvas>
 </div>
-<p class = "text-end"><small>n = 130</small></p>
+<p class = "text-end"><small>n (organizations): = 130</small></p>
 
 <script>
  const ctxNotInterested = document.getElementById('reasonsNotInterested').getContext('2d');
   const reasonsNotInterestedBar = new Chart(ctxNotInterested, {
       type: 'horizontalBar',
       data: {
-          labels: ["Academic or industry partners have already developed", "Lack of academic or industry collaboration/partership/support", "Not enough data or knowledge about rare disease", "Not enough funding", "Not enough people", "Not feasible to develop", "Not interested", "Other organizations focused on the same/similar rare disease or genetic mutation as yours"],
+          labels: ["Academic or industry partners have already developed", "Lack of academic or industry collaboration/partership/support", "Not enough data or knowledge about rare disease", "Not enough funding", "Not enough people (staff, researchers, patients, etc.)", "Not feasible to develop (based on rare disease characteristics)", "Not interested", "Other organizations focused on the same/similar rare disease or genetic mutation as yours"],
           datasets: [{
               label: 'Biobank to collect patient samples',
               data: [11, 2, 1, 7, 6, 5, 3, 5],
@@ -554,8 +559,8 @@ data: {
   },
 options: {
   legend: {
-                  position: 'right' ,
-                  align: 'start'
+                  position: 'top' ,
+                  align: 'end'
                 },
 
   scales: {
@@ -685,34 +690,23 @@ var orgResourcesBar = new Chart(ctxOrgResources, {
 
   type: 'horizontalBar',
 data: {
-    labels: ['Biobank to collect patient samples'
-              , 'Community discussion space'
-              , 'Contact registry'
-              , 'Fundraising events'
-              , 'Natural history study'
-              , 'Patient & Loved one community gatherings'
-              , 'Patient community navigator'
-              , 'Patient registry'
-              , 'Patient reported outcomes (PRO) assessments'
-              , 'Research Conferences'
-              , 'Research strategy or research agenda'
-              , 'Scientific or medical advisory board'],
+    labels: ["Contact registry","Community discussion space","Scientific or medical advisory board","Patient registry","Fundraising events","Natural history study","Research Conferences","Research strategy or research agenda","Patient community navigator","Patient reported outcomes (PRO) assessments","Patient & Loved one community gatherings","Biobank to collect patient samples"],
     datasets: [{
       label: 'Yes',
       backgroundColor: color1,
-      data: [45, 133, 105, 118, 59, 103, 88, 85, 34, 98, 76, 132],
+      data: [105,133,132,85,118,59,98,76,88,34,103,45],
     }, {
       label: 'Not yet, but we are actively developing',
       backgroundColor: color2,
-      data: [14, 2, 17, 5, 25, 4, 10, 25, 30, 9, 28, 4],
+      data: [17,2,4,25,5,25,9,28,10,30,4,14],
     }, {
-      label: 'Not yet, but we are actively developing',
+      label: 'No, but we are interested in developing in the future',
       backgroundColor: color3,
-      data: [14, 2, 17, 5, 25, 4, 10, 25, 30, 9, 28, 4],
+      data: [17,4,6,27,15,50,29,29,28,65,21,46],
     }, {
       label: 'No, and we are not interested in developing',
       backgroundColor: color4,
-      data: [27, 4, 5, 3, 6, 9, 12, 5, 8, 3, 5, 1],
+      data: [5,4,1,5,3,6,3,5,12,8,9,27],
     }],
   },
 options: {

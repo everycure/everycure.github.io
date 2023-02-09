@@ -89,7 +89,6 @@ permalink: "/survey-insights-drug-repurposing.html"
     <div class="container">
       <h2 class="">Has your organization been involved in any drug repurposing efforts for your rare disease of
         interest?</h2>
-
       <div class="row py-5">
         <div class="col-12 col-xl-4">
           <p>
@@ -105,18 +104,31 @@ permalink: "/survey-insights-drug-repurposing.html"
           <p class="text-end"><small>n (organizations): 138</small></p>
         </div>
       </div>
-
       <div id="drugRepurposingCloud" style="height: 400px;"></div>
       <p class="text-end"><small>
         n (organizations): 40
         n (drugs): 94
-
       </small></p>
-
     </div>
   </section>
 
-
+  <section>
+    <div class="container">
+      <h2 class="">What stage is the repurposing process currently at?</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+      </p>
+      <canvas style="width:60vw!important;" id="stageRepurposing"></canvas>
+      <p class="text-end"><small>
+        n (organizations): 40<br>
+        n (drugs): 94
+    </small></p>
+    </div>
+  </section>
 
   <section>
     <div class="container">
@@ -228,7 +240,26 @@ permalink: "/survey-insights-drug-repurposing.html"
       </p>
       <canvas style="width:60vw!important;" id="successEndpoints"></canvas>
       <p class="text-end"><small>
-        n (organizations): 40
+        n (organizations): 40<br>
+        n (endpoints): 235
+      </small></p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="">Has this/these endpoints been met?</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+      </p>
+      <canvas style="width:60vw!important;" id="successEndpointsMet"></canvas>
+      <p class="text-end"><small>
+        n (organizations): 40<br>
+        n (endpoints): 219
       </small></p>
     </div>
   </section>
@@ -734,7 +765,7 @@ permalink: "/survey-insights-drug-repurposing.html"
       datasets: [{
         label: '# of responses',
         data: [58, 17, 2],
-        backgroundColor: [color3, color6]
+        backgroundColor: [color3, color7, color6]
       }]
     },
     options: {
@@ -905,5 +936,72 @@ permalink: "/survey-insights-drug-repurposing.html"
     }
   });
 
+// STAGE REPURPOSING
+  var ctxStageRepurposing = document.getElementById("stageRepurposing");
+  var stageRepurposingBar = new Chart(ctxStageRepurposing, {
+    type: 'horizontalBar',
+    data: {
+      labels: ["Recruiting patients for clinical trials", "Use of the drug in patients off label", "Testing existing drugs in mouse or other animal models", "Running Phase II clinical trials", "Securing funding", "Analyzing clinical trial data", "Running Phase I clinical trials", "Abandoned", "Running Phase III clinical trials", "Submitting to FDA for approval", "FDA approval granted", "Facilitated national or international researcher collaboration", "Gathered and shared patient samples for research", "Support compassionate use during ongoing experimental clinical trials", "Support utilization of the drug off label", "Supported patient recruitment into a clinical trial", "Other: trying to secure researcher interest to pursue", "Other: FDA approval denied", "Other: Patient Data Collection", "Other: Patient Education & Support", "Other: Received FDA Breakthrough designation"],
+      datasets: [{
+        label: '# of responses',
+        data: [23, 21, 20, 19, 19, 14, 14, 12, 12, 9, 5, 1, 1, 1, 1, 1, 4, 1, 1, 1, 1],
+        backgroundColor: [color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3]
+      }]
+    },
+    options: {
+      scales: {
+        xAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      },
+      legend: {
+        display: false
+      },
+      responsive: true,
+    }
+  });
 
+
+
+
+  // SUCCESS ENDPOINTS MET
+  var ctxSuccessEndpointsMet = document.getElementById("successEndpointsMet");
+  var successEndpointsMetBar = new Chart(ctxSuccessEndpointsMet, {
+    type: 'horizontalBar',
+    data: {
+      labels: ["Drug to be freely available to patients off label with safety / efficacy data", "Drug to provide significant improvement in quality of life", "Drug to receive FDA approval", "Drug to provide significant reduction in symptoms", "Drug to increase life expectancy / decrease in mortality", "Drug to be freely available to patients off label, even without safety / efficacy data", "Drug to provide cure of disease", "Drug to provide prevention of relapse"],
+      datasets: [{
+        label: 'Yes',
+        backgroundColor: color3,
+        data: [17, 11, 4, 3, 2, 0, 1, 1],
+      }, {
+        label: 'No',
+        backgroundColor: color6,
+        data: [45, 37, 36, 31, 21, 5, 4, 1],
+      }],
+    },
+    options: {
+      scales: {
+        xAxes: [{
+          stacked: true,
+          ticks: {
+            beginAtZero: true
+          }
+        }],
+        yAxes: [{
+          stacked: true // this also..
+        }]
+      },
+      
+      legend: {
+        position: 'top',
+        align: 'end'
+      },
+      
+      responsive: true,
+
+    }
+  });
 </script>

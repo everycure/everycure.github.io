@@ -3,7 +3,6 @@ title: "home"
 layout: default
 ---
 
-<script src = "http://cdn.jsdelivr.net/npm/vivus@latest/dist/vivus.min.js"></script>
 
 <style>
    body {
@@ -12,16 +11,6 @@ layout: default
 
    }
 
-   .card {
-    border: 1px solid black;
-   }
-   .card-img-top {
-    height: 10em !important;
-    object-fit: cover;
-    }
-   .bg-white {
-    background-color: #fff !important;
-   }
    .navbar, header{
       background-color: #E7F3FF !important;
       box-shadow: none !important;
@@ -33,13 +22,9 @@ layout: default
     font-weight: 600 !important;
    }
 
-   .card-img-top img-fluid {
+   .card-img-top {
     height: 100px;
-    margin-top: -20px;
     object-fit: contain;
-   }
-   .card-title {
-    font-size: 12px;
    }
 
    .card {
@@ -61,110 +46,110 @@ layout: default
   <!--Section: Content-->
   <section class="text-center px-md-5 mx-md-5 dark-grey-text">
     
-    <div class="row py-0 my-0  animate__animated animate__slideInDown" style = "padding-top: 120px!important;">
-      <div class="col-md-5 mx-auto" >
-        <!-- START SVG ANIMATION -->
-            {% include svglogo.html %}
-        
-        </div>
+    <div class="row py-0 my-0  animate__animated animate__slideInDown" >
+      <div class="col-md-5 mx-auto">
+          <img src="{{site.baseurl}}/assets/svg/icons8/mega-creator.png" class="img-fluid roadmapHero" alt="ROADMAP logo">
+      </div>
     </div>
+    <h1 style = "margin-top: -50px !important;" class="font-weight-bold mt-0 pt-0  mb-4 pb-2">The ROADMAP Project </h1>
     
-    <p class="text-center mx-auto px-5 w-75 mb-5 pb-3"><b>The Repurposing Of All Drugs, Mapping All Paths (ROADMAP)</b> project aims to answer some fundamental questions about the experience of drug repurposing for rare disease nonprofit organizations and their relevant stakeholders and to design a solution to some of the challenges rare disease organizations are facing through the creation of an interactive “ROADMAP” tool.
+    <p class="text-center mx-auto px-5 w-75 mb-5 pb-5"><b>The Repurposing Of All Drugs, Mapping All Paths (ROADMAP)</b> project aims to answer some fundamental questions about the experience of drug repurposing for rare disease nonprofit organizations and their relevant stakeholders and to design a solution to some of the challenges rare disease organizations are facing through the creation of an interactive “ROADMAP” tool.
 
     </p>
     
   </section>
 
+  <div class="container mt-5">
 
 
+    <!--Section: Content-->
+    <section class="">
+      <!-- Grid row -->
+      <div class="row animate__animated animate__slideInUp">
+
+        <!-- Grid column -->
+        <div class="col-lg-3 col-md-12 mb-lg-0 mb-4">
+          <!-- Card -->
+          <div class="card hoverable">
+            <!-- Card image -->
+            <a href="/about.html">  <img class="card-img-top" src="{{site.baseurl}}/assets/svg/icons8/tutti-bubble-with-information-icon.png" alt="Card image cap"></a>
+            
+            <!-- Card content -->
+            <div class="card-body text-center ">
+              <!-- Title -->
+              <a href="/about.html" class="black-text">About the ROADMAP project</a>
+              <!-- Text -->
+              <p class="card-title text-center text-muted font-small mt-3 mb-2">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title.</p>
+            </div>
+          </div>
+          <!-- Card -->
+  
+        </div>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="col-lg-3 col-md-6 mb-md-0 mb-4">
+          <!-- Card -->
+          <div class="card hoverable">
+            <!-- Card image -->
+            <a href="/roadmap.html">  <img class="card-img-top" src="{{site.baseurl}}/assets/svg/icons8/tutti-path-from-point-a-to-point-b-with-location-icon.png" alt="Card image cap"></a>
+            <!-- Card content -->
+            <div class="card-body text-center">
+              <!-- Title -->
+              <a href="/roadmap.html" class="black-text">Use the ROADMAP tool</a>
+              <!-- Text -->
+              <p class="card-title text-center text-muted font-small mt-3 mb-2">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title.</p>
+            </div>
+          </div>
+          <!-- Card -->
+        </div>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="col-lg-3 col-md-6 mb-0">
+          <!-- Card -->
+          <div class="card hoverable">
+            <!-- Card image -->
+            <a href="/survey-insights-welcome.html"> <img class="card-img-top p-2" src="{{site.baseurl}}/assets/svg/icons8/tutti-pie-chart-percentage-format.png" alt="Card image cap"></a>
+            <!-- Card content -->
+            <div class="card-body text-center">
+              <!-- Title -->
+              <a href="/survey-insights-welcome.html" class="black-text">Explore survey data</a>
+              <!-- Text -->
+              <p class="card-title text-center text-muted font-small mt-3 mb-2">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title.</p>
+            </div>
+          </div>
+          <!-- Card -->
+        </div>
+        <!-- Grid column -->
 
 
-
-
-<div class = "row">
-  <div class = "col-3">
-    <div class = "card h-100">
-      <div class="view overlay">
-        <img class="card-img-top img-fluid" src="/assets/svg/icons8/methods.png"
-          alt="Card image cap">
-        <a href="/about.html">
-          <div class="mask rgba-white-slight"></div>
-        </a>
+        <!-- Grid column -->
+        <div class="col-lg-3 col-md-6 mb-0">
+          <!-- Card -->
+          <div class="card hoverable">
+            <!-- Card image -->
+            <a href="/resources.html"><img class="card-img-top w-50 mx-auto d-block " style="object-fit:cover!important;" src="{{site.baseurl}}/assets/svg/icons8/tutti-notepad-and-pencil-for-ideas.png" alt="Card image cap"></a>
+            <!-- Card content -->
+            <div class="card-body text-center">
+              <!-- Title -->
+              <a href="/resources.html" class="black-text">Check out more resources</a>
+              <!-- Text -->
+              <p class="card-title text-center text-muted font-small mt-3 mb-2">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title.</p>
+            </div>
+          </div>
+          <!-- Card -->
+        </div>
+        <!-- Grid column -->
+  
       </div>
-          <div class = "card-body bg-white shadow-3-strong">
-            <a href="/about.html" class="black-text">About the ROADMAP project</a>
-        <p class="card-title  font-small mt-3 mb-2">
-          Learn about the Repurposing Of All Drugs, Mapping All Paths (ROADMAP) project by the Castleman Disease Collaborative Network. Learn about the project’s goals, data collection methods, data analysis approaches, research findings, and how the ROADMAP tool was created through synthesizing insights.  
-        </p>
-      </div>
-    </div>
+      <!-- Grid row -->
+    </section>
+    <!--Section: Content-->
+  
+  
   </div>
-  <div class = "col-3">
-    <div class = "card h-100">
-      <div class="view overlay" >
-        <img class="card-img-top img-fluid" src="/assets/svg/icons8/roadmap-tool.png"
-          alt="Card image cap">
-        <a href="/roadmap.html">
-          <div  class="mask rgba-white-slight" ></div>
-        </a>
-      </div>
-          <div class = "card-body bg-white shadow-3-strong">
-            <a href="/roadmap.html" class="black-text">Use the ROADMAP tool</a>
-        <p class="card-title  font-small mt-3 mb-2">
-          Directly interact with the ROADMAP tool, designed to help support rare disease nonprofit organizations in their pursuit of drug repurposing projects. This tool is based on insights from hundreds of rare disease stakeholders, formatted into a 5-step easy to follow process, with potential roadblocks highlighted at every stage.   
-        </p>
-      </div>
-    </div>
-  </div>
-  <div class = "col-3">
-    <div class = "card h-100">
-      <div class="view overlay">
-        <img class="card-img-top img-fluid" src="assets/svg/icons8/survey-insights.png"
-          alt="Card image cap">
-        <a href="/survey-insights-welcome.html">
-          <div class="mask rgba-white-slight"></div>
-        </a>
-      </div>
-          <div class = "card-body bg-white shadow-3-strong">
-            <a href="/survey-insights-welcome.html" class="black-text">Explore survey data</a>
-        <p class="card-title  font-small mt-3 mb-2">
-          Explore the ROADMAP survey data through interactive data visualizations. Gain valuable insights into the perspectives of stakeholders, including rare disease organizations, patients and loved ones, researchers, and physicians, on the state of rare disease drug repurposing. 
-        </p>
-      </div>
-    </div>
-  </div>
-  <div class = "col-3">
-    <div class = "card h-100">
-      <div class="view overlay">
-        <img class="card-img-top img-fluid" src="assets/svg/icons8/survey-insights.png"
-          alt="Card image cap">
-        <a href="/resources.html">
-          <div class="mask rgba-white-slight"></div>
-        </a>
-      </div>
-          <div class = "card-body bg-white shadow-3-strong">
-            <a href="/resources.html" class="black-text">Check out more resources</a>
-        <p class="card-title  font-small mt-3 mb-2">
-          Here you can access additional resources and data, which we are able to provide as supporting material. 
-        </p>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <!--Section: Content-->
 
 
   <section>

@@ -48,10 +48,6 @@ permalink: "/survey-insights-drug-repurposing.html"
           <p class="text-end"><small>n (organizations): 40</small></p>
         </div>
       </div>
-
-      <canvas style="width:60vw!important;" id="multipleDrugsBar"></canvas>
-      <p class="text-end mb-5"><small>n (organizations): 40</small></p>
-
     </div>
   </section>
 
@@ -112,6 +108,24 @@ permalink: "/survey-insights-drug-repurposing.html"
     </div>
   </section>
 
+  <section>
+    <div class="container">
+      <h2 class="">What was your organization’s involvement in the repurposing process for [Field-1]?</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+      </p>
+      <canvas style="width:60vw!important;" id="involvementRepurposing"></canvas>
+      <p class="text-end"><small>
+        n (organizations): 39<br>
+        n (drugs): 92
+    </small></p>
+    </div>
+  </section>
+  
   <section>
     <div class="container">
       <h2 class="">What stage is the repurposing process currently at?</h2>
@@ -294,7 +308,7 @@ permalink: "/survey-insights-drug-repurposing.html"
   var multipleDrugsPie = new Chart(ctxMultipleDrugsPie, {
     type: 'doughnut',
     data: {
-      labels: ['1', '2', '3', '4', '5', '6', '7'],
+      labels: ['1 drug', '2 drugs', '3 drugs', '4 drugs', '5 drugs', '6 drugs', '7 drugs'],
       datasets: [{
         label: '# of responses',
         data: [21, 8, 3, 3, 2, 2, 1],
@@ -307,33 +321,6 @@ permalink: "/survey-insights-drug-repurposing.html"
         align: 'start'
       },
       responsive: false,
-    }
-  });
-
-  // HOW MANY LISTED MULTIPLE DRUGS (BAR) 
-  var ctxMultipleDrugsBar = document.getElementById("multipleDrugsBar");
-  var multipleDrugsBar = new Chart(ctxMultipleDrugsBar, {
-    type: 'horizontalBar',
-    data: {
-      labels: ['1', '2', '3', '4', '5', '6', '7'],
-      datasets: [{
-        label: '# of responses',
-        data: [21, 8, 3, 3, 2, 2, 1],
-        backgroundColor: [color3, color3, color3, color3, color3, color3, color3]
-      }]
-    },
-    options: {
-      scales: {
-        xAxes: [{
-          ticks: {
-            beginAtZero: true
-          }
-        }]
-      },
-      legend: {
-        display: false
-      },
-      responsive: true,
     }
   });
 
@@ -936,16 +923,48 @@ permalink: "/survey-insights-drug-repurposing.html"
     }
   });
 
+  
+
+
+
+// INVOLVEMENT REPURPOSING
+var ctxinvolvementRepurposing = document.getElementById("involvementRepurposing");
+  var involvementRepurposingBar = new Chart(ctxinvolvementRepurposing, {
+    type: 'horizontalBar',
+    data: {
+      labels: ["Funded preclinical research","Facilitated national or international researcher collaboration","Supported patient recruitment into a clinical trial","Provided research ideas that led towards drug repurposing","Supported the development of a clinical trial","Support utilization of the drug off label","Gathered and shared patient samples for research","Tracked off label drug usage in a patient registry provided this data for research","Support compassionate use during ongoing experimental clinical trials","After FDA approval informed patient and physicians of the results","Other: facilitated conversations with pharmaceutical company","Other: not involved","Other: Patient Education & Support","After FDA approval, worked w/ insurance to ensure coverage + promote patient access to the new drug."],
+      datasets: [{
+        label: '# of responses',
+        data: [52,48,42,32,27,24,15,12,8,2,2,2,2,1],
+        backgroundColor: [color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3]
+      }]
+    },
+    options: {
+      scales: {
+        xAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      },
+      legend: {
+        display: false
+      },
+      responsive: true,
+    }
+  });
+
+
 // STAGE REPURPOSING
   var ctxStageRepurposing = document.getElementById("stageRepurposing");
   var stageRepurposingBar = new Chart(ctxStageRepurposing, {
     type: 'horizontalBar',
     data: {
-      labels: ["Recruiting patients for clinical trials", "Use of the drug in patients off label", "Testing existing drugs in mouse or other animal models", "Running Phase II clinical trials", "Securing funding", "Analyzing clinical trial data", "Running Phase I clinical trials", "Abandoned", "Running Phase III clinical trials", "Submitting to FDA for approval", "FDA approval granted", "Facilitated national or international researcher collaboration", "Gathered and shared patient samples for research", "Support compassionate use during ongoing experimental clinical trials", "Support utilization of the drug off label", "Supported patient recruitment into a clinical trial", "Other: trying to secure researcher interest to pursue", "Other: FDA approval denied", "Other: Patient Data Collection", "Other: Patient Education & Support", "Other: Received FDA Breakthrough designation"],
+      labels: ["Securing funding","Testing existing drugs in mouse or other animal models","Other: trying to secure researcher interest to pursue","Other: Patient Data Collection","Recruiting patients for clinical trials","Running Phase I clinical trials","Running Phase II clinical trials","Running Phase III clinical trials","Analyzing clinical trial data","Submitting to FDA for approval","Other: Received FDA Breakthrough designation"],
       datasets: [{
         label: '# of responses',
-        data: [23, 21, 20, 19, 19, 14, 14, 12, 12, 9, 5, 1, 1, 1, 1, 1, 4, 1, 1, 1, 1],
-        backgroundColor: [color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3]
+        data: [19,20,4,1,23,14,19,12,14,9,1],
+        backgroundColor: [color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3]
       }]
     },
     options: {

@@ -36,6 +36,10 @@ layout: default
     object-fit: cover;
    }
    
+   .font-small {
+    font-size: 12px;
+    color: var(--roadmap_dark);
+   }
 </style>
 
 {% include navbar.html %}
@@ -47,13 +51,12 @@ layout: default
   <section class="text-center px-md-5 mx-md-5 dark-grey-text">
     
     <div class="row py-0 my-0  animate__animated animate__slideInDown" >
-      <div class="col-md-5 mx-auto">
-          <img src="{{site.baseurl}}/assets/svg/icons8/mega-creator.png" class="img-fluid roadmapHero" alt="ROADMAP logo">
+      <div class="col-md-5 mt-5 pt-5 mx-auto">
+          {% include svglogo.html %}
       </div>
     </div>
-    <h1 style = "margin-top: -50px !important;" class="font-weight-bold mt-0 pt-0  mb-4 pb-2">The ROADMAP Project </h1>
     
-    <p class="text-center mx-auto px-5 w-75 mb-5 pb-5"><b>The Repurposing Of All Drugs, Mapping All Paths (ROADMAP)</b> project aims to answer some fundamental questions about the experience of drug repurposing for rare disease nonprofit organizations and their relevant stakeholders and to design a solution to some of the challenges rare disease organizations are facing through the creation of an interactive “ROADMAP” tool.
+    <p class="text-center mx-auto px-5 w-75 pt-5 mb-5 pb-5"><b>The Repurposing Of All Drugs, Mapping All Paths (ROADMAP)</b> project aims to answer some fundamental questions about the experience of drug repurposing for rare disease nonprofit organizations and their relevant stakeholders and to design a solution to some of the challenges rare disease organizations are facing through the creation of an interactive “ROADMAP” tool.
 
     </p>
     
@@ -101,7 +104,7 @@ layout: default
               <a href="/roadmap.html" class="black-text">Use the ROADMAP tool</a>
               <!-- Text -->
               <p class="card-title text-center text-muted font-small mt-3 mb-2">
-                Directly interact with the ROADMAP tool, designed to help support rare disease nonprofit organizations in their pursuit of drug repurposing projects. This tool is based on insights from hundreds of rare disease stakeholders, formatted into a 5-step easy to follow process, with potential roadblocks highlighted at every stage.   
+                Directly interact with the ROADMAP tool, designed to help support rare disease nonprofit organizations in their pursuit of drug repurposing projects. This tool is based on insights from hundreds of rare disease stakeholders, formatted into a 5-step easy-to-follow process, with potential roadblocks highlighted at every stage.   
               </p>
             </div>
           </div>

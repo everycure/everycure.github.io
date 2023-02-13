@@ -398,10 +398,10 @@ var ctxHowManyOrgs = document.getElementById("howManyOrgs");
 var howManyOrgsBar = new Chart(ctxHowManyOrgs, {
 type: 'horizontalBar',
 data: {
-  labels: ['1-5 organizations', '10-20 organizations', '20-50 organizations', '5-10 organizations', '50 or more'],
+  labels: ['1-5 organizations', '5-10 organizations', '10-20 organizations', '20-50 organizations', '50 or more'],
   datasets: [{
     label: '# of responses',
-    data: [51, 23, 11, 41, 4],
+    data: [51, 41, 23, 11, 4],
     backgroundColor: [ color3, color3, color3, color3, color3]
   }]
 },

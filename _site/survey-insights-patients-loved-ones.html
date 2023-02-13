@@ -619,17 +619,9 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
-              
             
-              <p class = "pt-3"><b>Safe</b></p>
               <canvas style="width:60vw!important;" id="drSafe"></canvas>
-              <p class = "text-end"><small>n (patients): 318</small></p>
-              <p class = "pt-5"><b>Important</b></p>
-              <canvas style="width:60vw!important;" id="drImportant"></canvas>
               <p class = "text-end"><small>n (patients): 358</small></p>
-              <p class = "pt-5"><b>Necessary</b></p>
-              <canvas style="width:60vw!important;" id="drNecessary"></canvas>
-              <p class = "text-end"><small>n (patients): 334</small></p>
 
         </div>
     </section>
@@ -3043,86 +3035,50 @@ options: {
 }
 });
 
-// DR - SAFE
+
+
+// DO YOU THINK DR IS...
 var ctxdrSafe = document.getElementById("drSafe");
 var drSafeBar = new Chart(ctxdrSafe, {
-type: 'bar',
+
+  type: 'bar',
 data: {
-  labels: ["1", "2", "3", "4", "5"],
-  datasets: [{
-    label: '# of responses',
-    data: [5, 19, 63, 177, 54],
-    backgroundColor: [ color3, color3, color3, color3, color3]
-  }]
-},
+    labels: ["Strongly Disagree", "Disagree", "Neither Agree nor Disagree", "Agree", "Strongly Agree"],
+    datasets: [{
+      label: 'Safe',
+      backgroundColor: color1,
+      data: [5, 19, 63, 177, 54],
+    }, {
+      label: 'Important',
+      backgroundColor: color2,
+      data: [10, 7, 27, 119, 195],
+    }, {
+      label: 'Necessary',
+      backgroundColor: color4,
+      data: [13, 14, 34, 91, 182],
+    }],
+  },
 options: {
-    scales: {
-        yAxes: [{
+  scales: {
+         xAxes: [{
+            stacked: true // this should be set to make the bars stacked
+         }],
+         yAxes: [{
+            stacked: true,
             ticks: {
                 beginAtZero: true
             }
-        }]
-    },
-    legend: {
-                display: false
-            },
+         }]
+      },
+                legend: {
+                  position: 'right' ,
+                  align: 'start'
+                },
   responsive: true,
+
 }
 });
 
-// DR - IMPORTANT
-var ctxdrImportant = document.getElementById("drImportant");
-var drImportantBar = new Chart(ctxdrImportant, {
-type: 'bar',
-data: {
-  labels: ["1", "2", "3", "4", "5"],
-  datasets: [{
-    label: '# of responses',
-    data: [10, 7, 27, 119, 195],
-    backgroundColor: [ color3, color3, color3, color3, color3]
-  }]
-},
-options: {
-    scales: {
-        yAxes: [{
-            ticks: {
-                beginAtZero: true
-            }
-        }]
-    },
-    legend: {
-                display: false
-            },
-  responsive: true,
-}
-});
-
-// DR - NECESSARY
-var ctxdrNecessary = document.getElementById("drNecessary");
-var drNecessaryBar = new Chart(ctxdrNecessary, {
-type: 'bar',
-data: {
-  labels: ["1", "2", "3", "4", "5"],
-  datasets: [{
-    label: '# of responses',
-    data: [13, 14, 34, 91, 182],
-    backgroundColor: [ color3, color3, color3, color3, color3]
-  }]
-},
-options: {
-    scales: {
-        yAxes: [{
-            ticks: {
-                beginAtZero: true
-            }
-        }]
-    },
-    legend: {
-                display: false
-            },
-  responsive: true,
-}
-});
 
 
 

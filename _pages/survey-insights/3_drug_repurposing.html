@@ -42,6 +42,7 @@ permalink: "/survey-insights-drug-repurposing.html"
             nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
             anim id est laborum.
           </p>
+          {% include /INSIGHTS/excludeNote.html %}
         </div>
         <div class="col-12 col-xl-6">
           <canvas style="height:300px;" id="multipleDrugsPie"></canvas>
@@ -94,6 +95,7 @@ permalink: "/survey-insights-drug-repurposing.html"
             nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
             anim id est laborum.
           </p>
+          {% include /INSIGHTS/excludeNote.html %}
         </div>
         <div class="col-12 col-xl-6">
           <canvas style="height:300px;" id="drugRepurposingPie"></canvas>
@@ -158,6 +160,7 @@ permalink: "/survey-insights-drug-repurposing.html"
             nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
             anim id est laborum.
           </p>
+          {% include /INSIGHTS/excludeNote.html %}
         </div>
         <div class="col-12 col-xl-6">
           <canvas style="height:300px;" id="drWithoutOrg"></canvas>
@@ -181,6 +184,7 @@ permalink: "/survey-insights-drug-repurposing.html"
             nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
             anim id est laborum.
           </p>
+          {% include /INSIGHTS/excludeNote.html %}
         </div>
         <div class="col-12 col-xl-6">
           <canvas style="height:300px;" id="drFutureInterest"></canvas>
@@ -270,6 +274,7 @@ permalink: "/survey-insights-drug-repurposing.html"
         pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
         laborum.
       </p>
+      {% include /INSIGHTS/excludeNote.html %}
       <canvas style="width:60vw!important;" id="successEndpointsMet"></canvas>
       <p class="text-end"><small>
         n (organizations): 40<br>
@@ -290,6 +295,7 @@ permalink: "/survey-insights-drug-repurposing.html"
         pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
         laborum.
       </p>
+      {% include /INSIGHTS/excludeNote.html %}
       <canvas style="width:60vw!important;" id="additionalSupport"></canvas>
       <p class="text-end"><small>n (organizations): 124</small></p>
     </div>
@@ -932,7 +938,7 @@ var ctxinvolvementRepurposing = document.getElementById("involvementRepurposing"
   var involvementRepurposingBar = new Chart(ctxinvolvementRepurposing, {
     type: 'horizontalBar',
     data: {
-      labels: ["Funded preclinical research","Facilitated national or international researcher collaboration","Supported patient recruitment into a clinical trial","Provided research ideas that led towards drug repurposing","Supported the development of a clinical trial","Support utilization of the drug off label","Gathered and shared patient samples for research","Tracked off label drug usage in a patient registry provided this data for research","Support compassionate use during ongoing experimental clinical trials","After FDA approval informed patient and physicians of the results","Other: facilitated conversations with pharmaceutical company","Other: not involved","Other: Patient Education & Support","After FDA approval, worked w/ insurance to ensure coverage + promote patient access to the new drug."],
+      labels: ["Funded preclinical research","Facilitated national or international researcher collaboration","Supported patient recruitment into a clinical trial","Provided research ideas that led towards drug repurposing","Supported the development of a clinical trial","Support utilization of the drug off label","Gathered and shared patient samples for research","Tracked off label drug usage in a patient registry provided this data for research","Support compassionate use during ongoing experimental clinical trials","After FDA approval informed patient and physicians of the results","Other: facilitated conversations with pharmaceutical company","Other: not involved","Other: Patient Education & Support","After FDA approval worked with insurance companies to ensure coverage and promote patient access to the new drug."],
       datasets: [{
         label: '# of responses',
         data: [52,48,42,32,27,24,15,12,8,2,2,2,2,1],

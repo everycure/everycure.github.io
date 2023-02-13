@@ -8,6 +8,13 @@
       background-image: url("https://www.transparenttextures.com/patterns/black-paper.png");
       height: 100vh;
     }
+
+    .excludeNote {
+      color: rgba(0,126,167, 0.9);
+      font-weight: 600;
+      font-style: italic;
+      font-size: 12px;
+    }
     
     .navbar_gds, .navbar_gds-nav, .nav-item_gds, .nav-link_gds, .link-text {
         width: 270px;

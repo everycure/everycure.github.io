@@ -1,47 +1,41 @@
 <p>
-    The CDCN team did extensive data cleaning and analysis of the survey data. Most of the work was completed using a combination of Google Sheets and R studio (citation), packages:  tidyverse, stringr, dplyr, and googlesheets4.
-
+    The ROADMAP team did extensive data cleaning and analysis of the survey data, primarily using R studio (8), packages: tidyverse (9), stringr (10), dplyr (11), and googlesheets4 (12).
 </p>
 
+<h3>
+    Inclusion criteria implementation & data cleaning
+</h3>
 
 <p>
-    <b>Data cleaning</b><br>
-    The data cleaning process consisted of five approaches, which were executed concurrently:
-
+    The data cleaning process consisted of five steps, which were executed concurrently:
 </p>
 
 <ol>
     <li>
-        Filtering based on inclusion criteria
-
+        Implementing inclusion criteria
     </li>
     <li>
         Deduplication and merging
-
     </li>
     <li>
         Name cleaning and translations 
-
     </li>
     <li>
         (Re-)classification and categorization 
-
     </li>
     <li>
         Data changes, corrections, and updates 
-
     </li>
 </ol>
 
 
 <h4>
-    1. Filtering based on inclusion criteria
+    1. Implementing inclusion criteria
 
 </h4>
 
 <p>
-    Organizations were removed from the final dataset for the following reasons:
-
+    Organizations were removed from the final dataset for the following reasons*:
 </p>
 
 <ul>
@@ -52,153 +46,215 @@
         Organization does not support a rare disease
     </li>
     <li>
-        Organization did not meet US location criteria
+        Organization did not meet US location criteria (<b>155</b>)
     </li>
     <li>
-        Data submitted to Qualtrics after completion deadline
+        Data submitted to Qualtrics after completion deadline (<b>6</b>)
     </li>
     <li>
-        Progress less than 10% survey completion
+        Progress less than 10% survey completion (<b>399</b>)
     </li>
     <li>
-        Did not consent / did not answer consent question
+        Did not consent / did not answer consent question (<b>572</b>)
     </li>
     <li>
-        Did not answer any questions associated with stakeholder sections
+        Did not answer any questions associated with stakeholder sections (<b>53</b>)
     </li>
     <li>
-        Data was a duplicate marked for removal (see “Deduplication and merging” for details)
+        Data was a duplicate marked for removal (see “Deduplication and merging” for details) (<b>10</b>, not including RDNPs)
     </li>
 </ul>
 
+<p><i>
+    <small>*We applied each inclusion/exclusion criteria in the order presented here and updated the numbers of removals that were made after each step was applied to the dataset. This means that survey entries from later steps (e.g., “Didn’t meet US location criteria”) do not include entries from earlier steps (e.g., progress less than 10%). 
+    </i></p></small>
 <p>
-    In total, 1,324 entries (out of an original 1,929) were removed from the dataset, leaving 605 entries that qualified to remain in the final dataset.
-
+    In total, <b>1,324</b> entries (out of an original <b>1,929</b>) were removed due to not meeting inclusion criteria leaving <b>605</b> entries that qualified to remain in the final dataset.
 </p>
 
 
 
 <h4>
     2. Deduplication and merging
-
 </h4>
 
-<p>
-    By “deduplication,” we are referring to the process of removing duplicate data in two types of cases:
-
-</p>
-
-<ul>
-    <li>
-        Cases where the same individual completed the survey twice. 
-
-    </li>
-    <li>
-        Cases where representatives from the same rare disease nonprofit completed the rare disease nonprofit stakeholder section of the ROADMAP survey. 
-
-    </li>
-</ul>
+<b>Deduplication procedure</b>
 
 <p>
-    To identify cases where the same individual completed the survey twice, we looked for duplicate email addresses and/or IP addresses, as there was no other identifiable data collected via the survey. To identify cases where multiple rare disease nonprofit representatives completed the survey, we looked for rare disease nonprofit name matches among those who opted into the associated section of the survey. 
-
+    In some cases, the same individual completed the survey twice. To identify these cases, we looked for duplicate email addresses and/or IP addresses, as there was no other identifiable data collected via the survey. Then, we identified mismatches between their survey responses, if any, and manually reconciled these differences by combining information to make entries as complete as possible. We also resolved any contradictions and inconsistencies between entries that we identified. 
 </p>
 
 <p>
-    When the same individual completed the survey twice, we identified mismatches between their survey responses, if any, and manually reconciled these differences by combining information to make entries as complete as possible. , and Wwwe alsoe also resolved any contradictions and inconsistencies between entries that we identified. 
-
+    There were some cases where multiple rare disease nonprofit representatives completed the survey for the same organization, causing this deduplication process to be more complex. To identify these cases, we looked for rare disease nonprofit name matches among those who opted into the associated section of the survey. Then, we compared the completion rates on these entries; entries with higher progress were automatically selected over entries with lower progress. In cases where the completion rate of each entry was equal (e.g., 100%), we compared the titles of each representative. In cases where one entry’s representative had seniority (founder, CEO, executive director), we kept that entry. In a select handful of cases where both the progress and participant hierarchical standing were equal, we followed the same process described prior and manually reconciled any differences identified.
 </p>
+<figure class = " py-4">
 
-<p>
-    There were someIn cases where multiple rare disease nonprofit representatives completed the survey for the same organization, causing thise deduplication process to bewas a bit  more complex. First, we compared the completion rates on these entries; entries with higher progress were automatically selected over entries with lower progress. In cases where the completion rate of each entry was equal (e.g., 100%), we compared the titles of each representative. In cases where one entry’s representative had clear seniority (founder, CEO, executive director), we kept that entry. In a select handful of cases where both the progress and participant hierarchical standing were equal, we followed the same process described prior and manually reconciled any differences identified.
+<table class="table">
+    <thead class="table-dark">
+        <tr>
+            <th scope="col">Type of duplicate</th>
+            <th scope="col">Variables of interest</th>
+            <th scope="col">Identification method</th>
+            <th scope="col">Deduplication process</th>
+          </tr>      
+    </thead>
+    <tbody>
+        <tr>
+            <td scope="row">
+                Cases where the same individual completed the survey twice
+            </td>
+            <td>
+                Question Q13 (email address) + IP addresses
+            </td>
+            <td>
+                Look for duplicate email and/or IP addresses.
+            </td>
+            <td>
+                Keep data that is the same between the multiple entries; reconcile differences between entries with contradicting information.
+            </td>
+          </tr>
+          <tr>
+            <td scope="row">
+                Cases where representatives from the same rare disease nonprofit completed the rare disease nonprofit stakeholder section of the ROADMAP survey
+            </td>
+            <td>
+                Question Q10 (stakeholder survey selection) + question Q301 (rare disease nonprofit name) + question Q17 (title) + Progress
+            </td>
+            <td>
+                Look for rare disease nonprofit name matches among those who opted into the rare disease nonprofit stakeholder section of the survey.
+            </td>
+            <td>
+                If one entry is more complete than another, keep the entry that is more complete. <br><br> If completion rate is equal, but one of the entries was completed by a more senior representative founder, CEO, executive director);  <br><br> Keep data that is the same between the multiple entries; reconcile differences between entries with contradicting information.
+            </td>
+          </tr>
+      
+      
+    </tbody>
+  </table>
+  <figcaption>Overview of the deduplication process
+</figcaption>
+</figure>
 
-</p>
+  <b>Merging procedure</b>
 
-<b>ADD TABLE</b>
+  <p>
+    The merging procedure involved combining the data from the follow up survey with the original survey data as described in a prior section. We began with <b>200</b> follow-up survey entries, and we successfully matched <b>191</b> of these entries to their corresponding ROADMAP survey entries. To do so, we compared the IP and email addresses from the original and follow-up surveys, and we merged entries where matches were found. We then isolated the data on which drugs patients from each survey reported taking. We compared groupings of drugs, and combined entries where unique matching pairs were found. Ultimately, we discarded 9 follow-up survey entries that could not be matched to the original survey data via IP/email addresses or drug names.
+  </p>
 
-<p>
-    The merging procedure refers to the process of combining the data from the follow up survey with the original survey data as described in a prior section. We began with 200 follow-up survey entries, and we successfully matched 191 of these entries to their corresponding ROADMAP survey entries. To do so, we compared the IP and email addresses from the original and follow-up surveys, and we merged entries where matches were found. We then isolated the data on which drugs patients from each survey reported taking. We compared groupings of drugs, and combined entries where unique matching pairs were found. Ultimately, we discarded 9 follow-up survey entries that could not be matched to the original survey data via IP/email addresses or drug names.
+  <p>
+    It should be noted that while <b>191</b> successful matches were made, only <b>156</b> entries were ultimately combined with their original ROADMAP survey data. This is because <b>35</b> of the follow-up survey entries were from respondents whose entries were removed from the dataset during the inclusion filtering process outlined in the <i>“Filtering based on inclusion criteria”</i> and <i>“Deduplication and merging”</i> sections. 
+  </p>
 
-</p>
 
-<p>
-    It should be noted that while 191 successful matches were made, only 156 entries were ultimately combined with their original ROADMAP survey data. This is because 35 of the follow-up survey entries were from respondents whose entries were removed from the dataset during the inclusion filtering process outlined in “Filtering based on inclusion criteria” and “Deduplication and merging” sections. 
-
-</p>
-
-<h4>
+  <h4>
     3. Name cleaning and translations
-
 </h4>
+
+<b>
+    Name cleaning
+</b>
 
 <p>
     We reviewed and cleaned all manually-inputted job titles, specialties, organization names, disease names, and drug names. While each process varied in its scale (whereas there were only a few unique specialties to clean, there were hundreds of drug names to clean) and scope (e.g., drug/disease name cleaning efforts were extended to additional projects), the actual cleaning process was nearly identical across each cleaning activity. 
-
 </p>
 
 <p>
-    Each step in the cleaning process required isolating unique names, and then developing a “key-pair” dictionary with a column for the original name, and a column for its (optional) replacement.  Members of the ROADMAP team, including volunteers, would then review the original names, identify inaccuracies and inconsistencies, and generate a final list of accurate replacements. In some cases, data was marked for removal (e.g., if a disease listed was not rare, or a drug listed as FDA-approved turned out to not be FDA-approved). Any use of brand name drugs were replaced with their generic name, and the names of pharmaceutical salts were removed as well. Acronyms were avoided whenever possible. Each dictionary was imported into R and used to clean the corresponding survey data. 
-
+    Each step in the cleaning process required isolating unique names, and then developing a “key-pair” dictionary with a column for the original name, and a column for its (optional) replacement.  Members of the ROADMAP team, including volunteers, would then review the original names, identify inaccuracies and inconsistencies, and generate a final list of accurate replacements. In some cases, data was marked for removal (e.g., if a disease listed was not rare, or a drug listed as FDA-approved turned out to not be FDA-approved). Any use of brand-name drugs was replaced with their generic name, and the names of pharmaceutical salts were removed as well. Acronyms were avoided whenever possible. Each dictionary was imported into R and used to clean the corresponding survey data. 
 </p>
 
-<b>ADD TABLE</b>
+
+<figure>
+
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">Original drug name</th>
+                <th scope="col">Replacement drug name</th>
+              </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row">Tylenol</td>
+                <td>Acetaminophen</td>          
+            </tr>
+            <tr>
+                <td scope="row">Tyelnol</td>
+                <td>Acetaminophen</td>          
+            </tr>
+            <tr>
+                <td scope="row">Acetaminophen</td>
+                <td>Acetaminophen</td>          
+            </tr>
+            <tr>
+                <td scope="row">Acetaminophen (500mg)</td>
+                <td>Acetaminophen</td>          
+            </tr>
+            <tr>
+                <td scope="row">I can’t remember</td>
+                <td>REMOVE</td>          
+            </tr>
+        </tbody>
+      </table>
+      
+    
+<figcaption>Example key-pair dictionary
+</figcaption>
+</figure>
+
+
+<b>Translations</b>
 
 <p>
-    Two participants who met our inclusion criteria completed the Spanish-language version of the survey. To ensure that their data would be represented in our analysis, we translated their survey responses into English. In cases where translations of participant-entered text were required, two Spanish-speakers (one native speaker, one non-native speaker) reviewed each translation for accuracy.
-
+    Two participants who met our inclusion criteria completed the Spanish-language version of the survey. To ensure that their data would be represented in our analysis, we translated their survey responses into English. In cases where translations of participant-entered text were required, two Spanish speakers (one native speaker, and one non-native speaker) reviewed each translation for accuracy.
 </p>
 
 <h4>
     4. (Re-)classification and categorization
-
 </h4>
 
 <p>
-    For the purposes of analysis and visualization, we created new variables that were used to classify/categorize existing data. Examples include, but are not limited to:
-
+    For the purposes of analysis and visualization, we created new variables that were used to classify/categorize existing data. Examples include, but are not limited to the following:
 </p>
 
-<ul>
-        <li>
-            Creating new categories for existing questions based on responses provided in the “other” sections
-
-        </li>
-        <li>
-            Classifying disease names
-        </li>
-        <li>
-            Classifying drug repurposing stages, status, and progress
-        </li>
-        <li>
-            Classifying job titles
-
-        </li>
-        <li>
-            Creating new variables (e.g., indicating whether drugs are FDA-approved based on human review; indicating whether an organization is focused on multiple diseases)
-
-        </li>
+<ul class = "liststylenone">
+    <li>
+        Creating new categories for existing questions based on responses provided in the “other” sections
+    </li>
+    <li>
+        Classifying disease names
+    </li>
+    <li>
+        Classifying drug repurposing stages, status, and progress
+    </li>
+    <li>
+        Classifying job titles
+    </li>
+    <li>
+        Creating new variables (e.g., indicating whether drugs are FDA-approved based on human review; indicating whether an organization is focused on multiple diseases)
+    </li>
 </ul>
 
-<p>
+  <p>
     Additionally, some response categories were renamed, merged, and/or removed based on team expertise and consensus.
-
-</p>
+  </p>
+  
 
 <h4>
     5. Data changes, corrections, and updates
-
 </h4>
 
 <p>
-    We have made changes, corrections, and updates to our data on an ongoing, case-by-case basis. While we have made small updates to our patient, loved one, researcher, and physician data, the overwhelming majority of our updates have been made to our rare disease nonprofit survey data. For example, whenever a major drug status change was identified among our list of 147 rare disease nonprofits (e.g., a new drug being targeted for repurposing; a drug receiving FDA approval), we updated all survey question data corresponding to that drug. In a few instances where participant clarification was required to resolve inconsistencies, we reached out directly to rare disease nonprofits for their assistance using the email addresses that they provided. In some of these cases - such as when the participants directly let us know that the drug was listed in error - we would remove all data related to that drug from our dataset. Except for these major changes, we did not make updates based on any other status updates that were discovered throughout the research and interview process, and the dataset provides a snapshot of the state of drug repurposing as of survey date completion and some of the data may be or soon will be outdated.
-
+    We have made changes, corrections, and updates to our data on an ongoing, case-by-case basis. While we made minor updates to our patient, loved one, researcher, and physician data, most of our updates have been made to our rare disease nonprofit survey data. For example, in the rare case when a drug status change was identified among our list of 147 rare disease nonprofits since (e.g., a new drug being targeted for repurposing; a drug receiving FDA approval), we updated all survey question data corresponding to that drug. In a few instances where participant clarification was required to resolve inconsistencies, we reached out directly to rare disease nonprofits for their assistance using the email addresses that they provided. In some of these cases - such as when the participants directly let us know that the drug was listed in error - we would remove all data related to that drug from our dataset. Except for these major changes, we did not make updates based on any other status updates that were discovered throughout the research and interview process, and the dataset provides a snapshot of the state of drug repurposing as of survey date completion and some of the data may be or soon will be outdated.
 </p>
+
+<h3>
+    Data analysis
+</h3>
 
 <p>
-    <b>Data analysis</b><br>
     The survey data analysis process mostly focused on:
-
 </p>
+
 
 <ol>
     <li>
@@ -212,65 +268,71 @@
     </li>
 </ol>
 
+
+
 <h4>
     1. Descriptive statistics 
-
 </h4>
 
 <p>
-    The use of descriptive statistics has been an essential component of the analysis process; it has involved the reporting of basic quantitative statistical data about the ROADMAP survey. Examples include frequencies, measures of central tendency, and correlations. Generally speaking, we summarized raw survey data in our descriptive analysis. In a handful of cases, however, we developed new variables and/or created aggregations of variables for the purposes of analysis. All descriptive statistics have been calculated using R and R studio (citation).  The overarching goal of this descriptive analysis has been to characterize the rare disease nonprofits who participated in the ROADMAP survey (their typologies; outcomes and endpoints; characteristics; resources; etc.). Below, we review the general process that we followed to visualize, report, and share our findings from the ROADMAP survey. We also explore in more detail how we used the descriptive data that we collected to answer essential questions about the drug repurposing process and the progress of RDNPs in their drug repurposing journeys.
-
+    We performed descriptive statistics analysis to report basic quantitative statistical data about the ROADMAP survey. Examples include frequencies, measures of central tendency, and correlations. Generally speaking, we summarized raw survey data in our descriptive analysis. In a handful of cases, however, we developed new variables and/or created aggregations of variables for the purposes of analysis. All descriptive statistics have been calculated using R and R studio(8).  The overarching goal of this descriptive analysis has been to characterize the rare disease nonprofits who participated in the ROADMAP survey (their typologies; outcomes and endpoints; characteristics; resources; etc.). Below, we review the general process that we followed to visualize, report, and share our findings from the ROADMAP survey. We also explore in more detail how we used the descriptive data that we collected to answer essential questions about the drug repurposing process and the progress of RDNPs in their drug repurposing journeys.
 </p>
 
-<h5>
-    General process
-</h5>
-
 <p>
-    Most of the descriptive data that  we generated was  presented through barcharts, pie charts, and word clouds, among other visualizations. We relied primarily on  a tool called Google Data Studio (citation) to generate these visualizations, which focused primarily on showcasing aggregated frequencies  of selected survey options. In certain cases, multiple questions were combined and aggregated; in other cases, individual questions were broken down into multiple charts. . The Google Data Studio, available to explore here [LINK], is one of the ways that rare disease nonprofit organizations, as well as any other interested stakeholders, can  explore our dataset and use it to inform further research or generate new insights. 
-
+    Most of the descriptive data that we generated were presented through bar charts, pie charts, and word clouds, among other visualizations. We created rough drafts of these visualizations using R. We generally focused on showcasing aggregated frequencies of survey options. In certain cases, multiple questions were combined and aggregated; in other cases, individual questions were broken down into multiple charts. Once we narrowed our selection of visualizations and created summaries of our findings, we built out a set of interactive web pages showcasing these final visualizations and the insights gathered from them. The ROADMAP Project’s Survey Insights, available to explore <a href = "survey-insights-welcome.html" target = "_blank">here</a>, are one of the ways that rare disease nonprofit organizations, as well as any other interested stakeholders, can explore our dataset and use it to inform further research or generate new insights. 
 </p>
 
 <figure class = " py-4">
     <img class = "img-fluid shadow-3-strong" src = "{{site.baseurl}}/assets/images/about/gds.png"/>
-    <figcaption>Snapshot of the Google Data Studio
+    <figcaption>Snapshot of the ROADMAP Project’s Survey Insights
     </figcaption>
 </figure>
 
-<h5>
-    Drug Repurposing
 
-</h5>
+<b>
+    Drug Repurposing
+</b>
 
 <p>
-    In order to analyze the progress of RDNPs in the drug repurposing process, we categorized the various steps involved in this process into stages. The stages that we developed were based on several questions from the survey:
-
+    In order to analyze the progress of rare disease nonprofits in the drug repurposing process, we categorized the various steps involved in this process into stages. The stages that we developed were based on several questions from the survey:
 </p>
 
-<ul>
-    <li>
-        Early stage: Securing funding, testing existing drugs in mouse or other animal models, trying to secure researcher interest to pursue, patient data collection, recruiting patients for clinical trials)
 
+<ul class = "liststylenone">
+    <li>
+        <b>Early stage</b>: Securing funding, testing existing drugs in mouse or other animal models, trying to secure researcher interest to pursue, patient data collection, recruiting patients for clinical trials)
     </li>
 
-<li>
-    Clinical trials: stage I, II, III clinical trials or analyzing clinical trial data 
+    <li>
+        <b>Clinical trials</b>: stage I, II, III clinical trials or analyzing clinical trial data 
+    </li>
+    <li>
+        <b>Late stage</b>: submitting clinical trial data to FDA
 
-</li>
-<li>
-    Late stage: submitting clinical trial data to FDA
+    </li>
+    <li>
+        <b>Endpoint</b>:
+    <br>
+    <span class = "mx-4">FDA approval</span><br>
+    <span class = "mx-4">Use off-label with some measures of subjective success</span><br>
+    <span class = "mx-4">Unsuccessful (project abandoned or FDA approval denied)</span>
+. 
 
-</li>
-<li>
-    Endpoint:
-<br>
-FDA approval
-an alternative success endpoint (use of drug off label)
-a subjective success endpoint (Drug to provide significant reduction in symptoms, significant improvement in quality of life, increase life expectancy / decrease in mortality, provide cure of disease, provide prevention of relapse)
-unsuccessful (project abandoned or FDA approval denied). 
-
-</li>
+    </li>
 </ul>
+
+
+
+
+
+
+
+
+<!-- 
+    
+    STOPPED HERE
+
+
 
 <p>
     Once we had identified and classified these stages, we began to formulate specific questions about our data. While our general interest was to assess the relationship between organizational characteristics, drug identification methods, and stage(s) of progress, specific research questions included (but were not limited to): 
@@ -389,3 +451,4 @@ unsuccessful (project abandoned or FDA approval denied).
     One of the sections of the rare disease nonprofit organization representative survey focused exclusively on their collaboration network. In this section, the rare disease nonprofit organization representatives were asked to list their top collaborator organizations by name, and then specify what kind of collaboration activities they were engaged in with them. From this data, we also built a network dataset of nodes (organization) and edges (the relationships between organizations). We visualized this network using a tool called Gephi (citation). This allowed us to gain a better understanding of the types of relationships going on between different rare disease nonprofit organizations, as well as their external links to research institutions, pharmaceutical companies and government organizations. 
 
 </p>
+ -->

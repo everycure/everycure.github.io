@@ -60,6 +60,34 @@
     text-align: center;
 
   }
+
+  h2 {
+    font-size: 28px;
+    font-weight: 600;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  h3 {
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+
+
+  h4 {
+    font-size: 17px;
+    font-weight: 500;
+    font-style: italic;
+    padding-bottom: 8px;
+    padding-top: 20px;
+  }
+
+  .liststylenone li {
+    list-style: none;
+    padding-bottom:10px;
+  }
   body {
     margin:0px;
     padding:0px;

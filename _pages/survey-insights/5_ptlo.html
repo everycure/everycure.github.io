@@ -17,48 +17,57 @@ permalink: "/survey-insights-patients-loved-ones.html"
 
 <div class = "container siteContent">
     <h1>Patients and loved ones</h1>
-    
+    <p>
+      As a part of the ROADMAP project participation, we asked the rare disease nonprofits to forward the survey to their US-based patient, loved one network and invite them to take the survey. Rare disease patients and their loved ones received the same set of questions, focused on the patient’s experience with off-label drugs for their rare disease, including roadblocks in access, as well as their general attitude towards and comfort level with drug repurposing. We had participation from 340 patients and 170 loved ones from 64 organizations. 
+    </p>
     <section>
         <div class = "container">
-            <h2 class = "">What kinds of activities in the rare disease organization that sent you this survey are you involved in?</h2>
+            <h2 class = "">Involvement in organization’s activitiesWhat</h2>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Patients are central to a rare disease nonprofit organization. They may also be involved in various activities. In our data, the top selected choices were contributing data through surveys, helping raise awareness about their rare disease, and providing support to other patients through various community resources and events. 
             </p>
+            <p><small class = "text-end">Note: respondents were able to select multiple answer choices.</small></p>
               <canvas style="width:60vw!important;" id="activitiesInvolvedIn"></canvas>
-              <p class = "text-end"><small>n (patients): 429</small></p>
+              <p class = "text-end"><small><b>n (patients): 429</b></small></p>
         </div>
     </section>
 
     <section>
         <div class = "container">
-            <h2 class = "">What prescription drugs have you taken to treat your RD in the last 5 years?</h2>
+            <h2 class = "">Prescription drugs used for rare disease treatment in the last 5 years</h2>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              We were also interested in what drugs patients were being prescribed for their rare disease. Among the many drugs listed, specifically 1,291, the most common one by far was prednisone, with 129 reports. It is a glucocorticoid medication used to suppress the immune system and decrease inflammation in various diseases. 
+            </p>
+            <p>
+              <small class = "text-end">          *Note: the set of questions regarding drugs merges data from 1-5 drug(s) listed from each respondent. Where applicable, both patients and drug totals are provided. These numbers vary by how many patients answered each question and how many drugs they listed
+              </small>
             </p>
               <div id="prescriptionCloud" style = "height: 400px;"></div>
               <p class = "text-end"><small>
-                n (patients): 348<br>
-                n (drugs): 1291
+                <b>n (drugs): 1291</b><br>
+                n (patients): 348
               </small></p>
         </div>
     </section>
     
     <section>
         <div class = "container">
-            <h2 class = "">For the prescription drugs you listed, please specify whether they are FDA-approved for your rare disease or if they are "off-label."</h2>
+            <h3 class = "">Prescription drugs: approval status</h3>
 
         <div class = "row py-5">
             <div class = "col-12 col-xl-4">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            {% include /INSIGHTS/excludeNote.html %}
+                We also asked patients to state whether the drugs they listed are FDA-approved for their rare disease, off-label or if they weren’t sure. Curiously, the data showed almost an even split between the three categories, illustrating that the discussion of whether the treatments are FDA-approved or not may not be part of the discussions between doctor and patient. 
+              </p>
+              <p>
+                Also, from our data we know that there are 64 unique rare diseases represented in the patient data. It is unlikely that such a high percentage of them are FDA-approved for the patient’s rare disease(s).
+              </p>
             </div>
             <div class = "col-12 col-xl-6">
               <canvas style="height:300px;" id="fdaOrOffLabel"></canvas>
               <p class = "text-end"><small>
-                n (patients): 347<br>
-                n (drugs): 1275
+                <b>n (drugs): 1275</b><br>
+                n (patients): 347
               </small></p>
             </div>
           </div>
@@ -68,134 +77,135 @@ permalink: "/survey-insights-patients-loved-ones.html"
 
     <section>
         <div class = "container">
-            <h2 class = "">How long have you been taking these drugs?</h2>
+            <h3 class = "">Prescription drugs: duration of use</h3>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              We asked patients to list the drugs they have been prescribed in the last 5 years, but we also wanted to know how much time they have been taking them in order to better understand the later questions about their effectiveness on various aspects of their rare disease(s). From our data, most of the drugs have been utilized for at least a few years and thus long enough to have a good measure of effectiveness. 
             </p>
               <canvas style="width:60vw!important;" id="howLong"></canvas>
               <p class = "text-end"><small>
-                n (patients): 121<br>
-                n (drugs): 460
-
+                <b>n (drugs): 460</b><br>
+                n (patients): 121
               </small></p>
         </div>
     </section>
 
     <section>
         <div class = "container">
-            <h2 class = "">How comfortable are you taking these drugs?
-            </h2>
+            <h3 class = "">Prescription drugs: comfort level
+            </h3>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              In our data, most of the patients listed quite a high level of comfort with the drugs they have prescribed and utilized in the past 5 years: 165 drugs were listed as associated with a “very comfortable” level. 
             </p>
               <canvas style="width:60vw!important;" id="howComfortable"></canvas>
               <p class = "text-end"><small>
-                n (patients): 121 <br>
-                n (drugs): 463
+                <b>n (drugs): 463</b> <br>
+                n (patients): 121
               </small></p>
         </div>
     </section>
 
     <section>
         <div class = "container">
-            <h2 class = "">How effective are these drugs at reducing the overall symptoms associated with your rare disease?
-            </h2>
+            <h3 class = "">Prescription drugs: symptom reduction effectiveness
+            </h3>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Overall, over 300 drugs were reported as somewhat or very effective at reducing the overall symptoms associated with the rare disease(s), regardless of their approval status.
             </p>
               <canvas style="width:60vw!important;" id="howEffectiveOverall"></canvas>
               <p class = "text-end"><small>
-                n (patients): = 121 <br>
-                n (drugs): 460
+                <b>n (drugs): 460</b> <br>
+                n (patients): = 121
               </small></p>
         </div>
     </section>
     
     <section>
         <div class = "container">
-            <h2 class = "">
-                How effective are these drugs at preventing worsening of your disease?
-            </h2>
+            <h3 class = "">
+              Prescription drugs: preventing disease worsening
+            </h3>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              In regards to preventing worsening of the rare disease symptoms, there are still 232 drugs reported as very or somewhat effective, but also a high number of drugs listed as not effective - 91 drugs. 
             </p>
               <canvas style="width:60vw!important;" id="howEffectiveWorsening"></canvas>
               <p class = "text-end"><small>
-                n (patients): 120<br>
-                n (drugs): 459
+                <b>n (drugs): 459</b><br>
+                n (patients): 120
               </small></p>
         </div>
     </section>
 
     <section>
         <div class = "container">
-            <h2 class = "">
-                How effective are these drugs at completely addressing all challenges associated with your rare disease?
-            </h2>
+            <h3 class = "">
+              Prescription drugs: addressing all challenges
+            </h3>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              When asked about whether the currently prescribed drugs address all challenges related to a patient’s rare disease, we see quite a high degree of drugs that patients report to be not at all effective - 124 (27%). Though a significant amount - 172 (37%) are reported to be very or somewhat effective as well, illustrating that even though existing drugs are helping a portion of the patients, there is still a need which can be potentially filled via additional drug repurposing research. 
             </p>
               <canvas style="width:60vw!important;" id="completelyAddressing"></canvas>
               <p class = "text-end"><small>
-                n (patients): 121<br>
-                n (drugs): 460
+                <b>n (drugs): 460</b><br>
+                n (patients): 121
               </small></p>
         </div>
     </section>
 
     <section>
         <div class = "container">
-            <h2 class = "">
-                What roadblocks have you had in getting access to these drugs?
-            </h2>
+            <h3 class = "">
+              Prescription drugs: roadblocks to access
+            </h3>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              One of the important things we wanted to identify is whether existing drugs are generally freely available to the patients, or whether there are roadblocks in access. Mostly, patients reported having no roadblocks in access to 301 drugs, though some drugs are still difficult to get due to insurance issues, availability, prescription, and drug costs. 
             </p>
+            <p><small class = "text-end">Note: respondents were able to select multiple answer choices.</small></p>
+
               <canvas style="width:60vw!important;" id="whatRoadblocks"></canvas>
               <p class = "text-end"><small>
-                n (patients): 122<br>
-                n (drugs): 464
+                <b>n (drugs): 464</b><br>
+                n (patients): 122
               </small></p>
         </div>
     </section>
 
+    <div class = "py-3">
+      <hr>
+    </div>
+
     <section>
         <div class = "container">
             <h2 class = "">
-                Have you heard of off-label drug use prior to this survey?
-            </h2>
-
+              Awareness of the term “off-label drugs” 
+                        </h2>
             <div class = "row py-5">
                 <div class = "col-12 col-xl-4">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                {% include /INSIGHTS/excludeNote.html %}
+                    In our data, the majority of patients (322) reported being familiar with the term “off-label drugs” prior to this survey. 
+                  </p>
                 </div>
                 <div class = "col-12 col-xl-6">
                   <canvas style="height:300px;" id="heardOfOffLabel"></canvas>
-                  <p class = "text-end"><small>n (patients): 420</small></p>
+                  <p class = "text-end"><small><b>n (patients): 420</b></small></p>
                 </div>
               </div>
-      
         </div>
     </section>
 
     <section>
         <div class = "container">
-            <h2 class = "">
-                Have you asked your doctor to try an off-label drug before?
-            </h2>
+            <h3 class = "">
+              Off-label drugs: Requesting prescription
+                        </h3>
             <div class = "row py-5">
                 <div class = "col-12 col-xl-4">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                {% include /INSIGHTS/excludeNote.html %}
+                    Surprisingly, despite the majority of patients being aware of the term off-label drug use in general, the majority (288 patients) have not directly asked their doctor to try an off-label drug for their rare disease before.
+                  </p>
                 </div>
                 <div class = "col-12 col-xl-6">
                   <canvas style="height:300px;" id="askedDoctor"></canvas>
-                  <p class = "text-end"><small>n (patients): 418</small></p>
+                  <p class = "text-end"><small><b>n (patients): 418</b></small></p>
                 </div>
               </div>
 
@@ -204,19 +214,21 @@ permalink: "/survey-insights-patients-loved-ones.html"
 
     <section>
         <div class = "container">
-            <h2 class = "">
-                Are you aware of any off-label drugs which have been given to other patients with your disease, but you have not received?
-            </h2>
+            <h3 class = "">
+              Off-label drugs: awareness of other options
+            </h3>
             <div class = "row py-5">
                 <div class = "col-12 col-xl-4">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                {% include /INSIGHTS/excludeNote.html %}
+                    One of the potential reasons for why patients may not directly request to try an off-label drug for their rare disease is a lack of awareness of specific drugs that can potentially be helpful for their rare disease. 
+                  </p>
+                  <p>
+                    We asked patients to list which off-label drugs they are aware of that they have been given to other patients with their rare disease, but they haven’t received themselves. Among all these drugs - 246 drugs specifically - sirolimus was the most common (24 patients listed it), with infliximab coming up as the second most common (17 patients listed it). 
+                  </p>
                 </div>
                 <div class = "col-12 col-xl-6">
                   <canvas style="height:300px;" id="othersNotReceived"></canvas>
-                  <p class = "text-end"><small>n (patients): 418</small></p>
+                  <p class = "text-end"><small><b>n (patients): 418</b></small></p>
                 </div>
               </div>
 
@@ -225,87 +237,97 @@ permalink: "/survey-insights-patients-loved-ones.html"
 
     <section>
         <div class = "container">
-            <h2 class = "">
-                What off-label drugs do you know of that given to other patients with your rare disease, but you have not received?
-            </h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
               <div id="othersNotReceivedCloud" style = "height: 400px;"></div>
               <p class = "text-end"><small>
-                n (patients): 129<br>
-                n (drugs): 246
+                <b>n (drugs): 246</b><br>
+                n (patients): 129
               </small></p>
         </div>
     </section>
 
     <section>
         <div class = "container">
-            <h2 class = "">
-                How willing are you to follow your doctor’s recommendation to take an off-label drug?
-            </h2>
+            <h3 class = "">
+              Off-label drugs: willingness to take
+            </h3>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Another aspect of the rare disease patients’ experience that we really wanted to find out about is whether they had reservations of utilizing drugs which are not FDA-approved for their rare disease. In our data, this doesn’t seem to be the case, with the 48% of patients (196) reporting being very willing to follow their doctor’s recommendations to take an off-label drug. 
             </p>
               <canvas style="width:60vw!important;" id="howWilling"></canvas>
-              <p class = "text-end"><small>n (patients): 409</small></p>
+              <p class = "text-end"><small><b>n (patients): 409</b></small></p>
         </div>
     </section>
 
     <section>
         <div class = "container">
-            <h2 class = "">
-                What factors impact your decision to take an off-label drug or not?
-            </h2>
+            <h3 class = "">
+              Off-label drugs: factors
+            </h3>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Among the reasons for the factors which might influence their decision as to taking an off-label drug or not, the top 3 in our data were there being enough data on the drug’s safety and effectiveness, and trust in their doctor’s expertise. 
             </p>
+            <p><small class = "text-end">Note: respondents were able to select multiple answer choices.</small></p>
               <canvas style="width:60vw!important;" id="whatFactors"></canvas>
-              <p class = "text-end"><small>n (patients): 413</small></p>
+              <p class = "text-end"><small><b>n (patients): 413</b></small></p>
         </div>
+    </section>
+
+    <div class = "py-3">
+      <hr>
+    </div>
+
+    <section>
+      <div clas = "container">
+        <h2>
+          Drug Repurposing
+        </h2>
+        <p>
+          For purposes of this project, we utilized a broad definition of drug repurposing, as a process of research to identify potential treatments that are already FDA-approved or in development for one disease, for use in another disease by gathering data and analyzing efficacy in order to improve treatment guidelines and access. 
+        </p>
+      </div>
     </section>
 
     <section>
         <div class = "container">
-            <h2 class = "">
-                Please rate your level of familiarity with drug repurposing for your rare disease prior to this survey.
-            </h2>
+            <h3 class = "">
+              Drug repurposing: level of familiarity
+                        </h3>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Generally, patients in our data were not very familiar with the term “drug repurposing” or what it entailed prior to this survey. 119 (30%) patients reported being not familiar at all, 167 (42%) were slightly to moderately familiar. 
             </p>
+            <p><small class = "text-end">Note: as a part of the survey, we did provide a definition to help familiarize patients with our definition of drug repurposing.</small></p>
               <canvas style="width:60vw!important;" id="familiarityPrior"></canvas>
-              <p class = "text-end"><small>n (patients): 399</small></p>
+              <p class = "text-end"><small><b>n (patients): 399</b></small></p>
         </div>
     </section>
 
     <section>
         <div class = "container">
-            <h2 class = "">
-                Please rate your level of interest in drug repurposing for your rare disease prior to this survey.
-            </h2>
+            <h3 class = "">
+              Drug repurposing: level of interest
+                        </h3>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Despite a low level of familiarity with drug repurposing prior to this survey, a lot of patients (135, 34%) were extremely interested in what drug repurposing can offer for their rare disease. 
             </p>
               <canvas style="width:60vw!important;" id="interestPrior"></canvas>
-              <p class = "text-end"><small>n (patients): 397</small></p>
+              <p class = "text-end"><small><b>n (patients): 397</b></small></p>
         </div>
     </section>
 
     <section>
         <div class = "container">
-            <h2 class = "">
-                Do you know of any examples of drug repurposing being done for your rare disease?
-            </h2>
+            <h3 class = "">
+              Drug repurposing: awareness
+                        </h3>
             <div class = "row py-5">
                 <div class = "col-12 col-xl-4">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                {% include /INSIGHTS/excludeNote.html %}
+                    Most patients (238) in our data were not aware of any examples of drug repurposing being done for their rare disease. Interestingly, this also includes patients from the organizations which are currently supporting drug repurposing projects. 
+                  </p>
                 </div>
                 <div class = "col-12 col-xl-6">
                   <canvas style="height:300px;" id="drExamples"></canvas>
-                  <p class = "text-end"><small>n (patients): 396</small></p>
+                  <p class = "text-end"><small><b>n (patients): 396</b></small></p>
                 </div>
             </div>
         </div>
@@ -313,28 +335,29 @@ permalink: "/survey-insights-patients-loved-ones.html"
 
     <section>
         <div class = "container">
-            <h2 class = "">
-                What aspects of drug repurposing could be most impactful for you?
-            </h2>
+            <h3 class = "">
+              Drug repurposing: most impactful aspects
+                        </h3>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Among the aspects that patients selected as ones that drug repurposing could offer the most impact on their rare disease experience, the top three were having more options for treatments, including off-label drugs, with sufficient safety and efficacy data. 
             </p>
+            <p><small class = "text-end">Note: respondents were able to select multiple answer choices.</small></p>
               <canvas style="width:60vw!important;" id="mostImpactful"></canvas>
-              <p class = "text-end"><small>n (patients): 394</small></p>
+              <p class = "text-end"><small><b>n (patients): 394</b></small></p>
         </div>
     </section>
 
     <section>
         <div class = "container">
-            <h2 class = "">
-                On a scale from 1-5, do you think drug repurposing is….
-            </h2>
+            <h3 class = "">
+              Drug repurposing: safety, importance and necessity assessment
+                        </h3>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              The patients in our data stated that they feel that drug repurposing is generally safe, important and necessary for their rare disease. 
             </p>
             {% include /INSIGHTS/excludeNote.html %}
               <canvas style="width:60vw!important;" id="drSafe"></canvas>
-              <p class = "text-end"><small>n (patients): 358</small></p>
+              <p class = "text-end"><small><b>n (patients): 358</b></small></p>
 
         </div>
     </section>

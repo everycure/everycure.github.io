@@ -4,8 +4,6 @@ layout: survey-insights
 permalink: "/survey-insights-rare-disease-state-of-research.html"
 ---
 
-
-
 <style>
     .nav-2 a, .nav-2 .link-text {
         font-weight: 500;
@@ -18,300 +16,331 @@ permalink: "/survey-insights-rare-disease-state-of-research.html"
         width: 100%;
         height: 500px;
     }
-
 </style>
 
-<div class = "container siteContent">
+<div class="container siteContent">
     <h1>Rare disease state of research</h1>
     <p>
-      Among the 147 organizations who participated in the ROADMAP survey, we had representation of 244 rare diseases. In this section, we share data and insights into the state of research of these rare diseases. It provides information into which rare diseases have definite diagnostic criteria, mouse or cell lines models, mutations, treatment guidelines, etc.
+        Among the 147 organizations who participated in the ROADMAP survey, we had representation of 244 rare diseases. In this section, we share data and insights into the state of research of these rare diseases. It provides information into which rare diseases have definite diagnostic criteria, mouse or cell lines models, mutations, treatment guidelines, etc.
     </p>
-
     <section>
-      <div class="container">
-          <h2>Rare Disease Resources</h2>
-          <p>
-            In our dataset, 130 organizations (88.4%) reported focusing on one rare disease, while the rest (17, 11.6%) focus on multiple rare diseases. To see which rare diseases are represented in our sample, we list every rare disease listed separately, except organizations that focus on all rare diseases or categories such as rare pediatric cancers or rare forms of epilepsy. In this way, we see some minor overlap in rare disease focus among our organizations in focus on neurofibromatosis, myasthenia gravis and cardiofaciocutaneous syndrome, but overall each organization tends to have a unique focus on a specific rare disease.
+        <div class="container">
+            <h2>Rare diseases of focus</h2>
+            <p>
+                In our dataset, 130 organizations (88.4%) reported focusing on one rare disease, while the rest (17, 11.6%) focus on multiple rare diseases. To see which rare diseases are represented in our sample, we list every rare disease listed separately, except organizations that focus on all rare diseases or categories such as rare pediatric cancers or rare forms of epilepsy. In this way, we see some minor overlap in rare disease focus among our organizations in focus on neurofibromatosis, myasthenia gravis and cardiofaciocutaneous syndrome, but overall each organization tends to have a unique focus on a specific rare disease.
+            </p>
+        </div>
+        <div class="container">
+            <div id="rareDiseases"></div>
+            <p class="text-end">
+                <small>
+                    <b>n (diseases): 244</b>
+                    <br>
+                    n (organizations): 147
+                </small>
+            </p>
+        </div>
+        <div class="container">
+          <canvas style="width:60vw!important;" id="rdCategories"></canvas>
+          <p class="text-end">
+              <small>
+                  <b>n (categories): 171</b>
+                  <br>
+                  n (organizations): 147
+              </small>
           </p>
       </div>
-  
-      <div class="container">
-          <div id="rareDiseases"></div>
-          <p class="text-end"><small>
-            <b>n (diseases): 244</b> <br>
-            n (organizations): 147
-          </small></p>
-  </section>
-
-  
-<section>
-    <div class = "container">
-        <h2 class = "">Rare Disease Resources</h2>
-        <p class = "pb-4">
-          Among the rare disease organizations in our survey, 116 reported having diagnostic criteria for their rare disease(s). Many of them have treatment guidelines (71), a clear understanding of disease etiology/pathogenesis (68) and an ICD10 code (65). Interestingly, 112 organizations have already identified a genetic mutation involved in their rare disease. Among the top assets not planned to be developed by our organizations are cell lines (24), ICD10 codes (23), and predictive biomarkers (20).
-        </p>
-        {% include /INSIGHTS/excludeNote.html %}        
-          <canvas style="width:60vw!important;" id="rdHasFollowing"></canvas>
-          <p class = "text-end"><small><b>n (organizations): = 140</b></small></p>
-    </div>
-</section>
-
-<div class = "py-3">
-  <hr>
-</div>
-
-<section>
-    <div class = "container">
-        <h2 class = "">FDA-approved drugs</h2>
-  
-        <p>
-          <small class = "text-end">          *Note: In this section, organizations had the option of listing - and answering questions about - up to 5 FDA-approved drugs. Where applicable, we include how many organizations answered the question, and how many drugs (i.e., response selections) are included in the visualization. The number of response selections is bolded.
-          </small>
-        </p>
-          <div class = "row py-5 ">
-            <div class = "col-12 col-xl-4">
-              <canvas style = "height: 200px;" id="fdaApprovedDrugsPie"></canvas>
-              <p class = "text-end"><small><b>n (organizations): = 139</b></small></p>    
+        </section>
+        <section>
+            <div class="container">
+                <h2 class="">Rare Disease Resources</h2>
+                <p class="pb-4">
+                    Among the rare disease organizations in our survey, 116 reported having diagnostic criteria for their rare disease(s). Many of them have treatment guidelines (71), a clear understanding of disease etiology/pathogenesis (68) and an ICD10 code (65). 112 organizations have already identified a genetic mutation involved in their rare disease. Among the top assets not planned to be developed by our organizations are cell lines (24), ICD10 codes (23), and predictive biomarkers (20).
+                </p>
+                {% include /INSIGHTS/excludeNote.html %}
+                <canvas style="width:60vw!important;" id="rdHasFollowing"></canvas>
+                <p class="text-end">
+                    <small>
+                        <b>n (organizations): = 140</b>
+                    </small>
+                </p>
             </div>
-            <div class = "col-12 col-xl-8 px-xl-5 mt-xl-4">
-              <p>
-                Only 41 organizations have an FDA-approved drug for their targeted rare disease, while 98 do not. This is not surprising, as getting FDA approval for a drug for a rare disease presents very many challenges, such as the small patient population, limited resources for clinical trials, and a lack of incentive for pharmaceutical companies to invest in developing drugs for rare diseases. 
-              </p>
-    
-                      </div>
-          </div>
-
-          <p>
-            Among the FDA-approved drugs listed by our participating organizations, ImmunoGlobulin was the top choice (4), with several other drugs approved for 2-3 indications. 
-          </p>
-    </div>
-        <div id="fdaApprovedDrugsCloud" style = "height: 400px;"></div>
-        <p class="text-end"><small>
-          <b>n (drugs): 84</b><br>
-          n (organizations): 33
-        </small></p>
-</section>
-
-<section>
-    <div class = "container">
-        <h3 class = "">FDA-approved drugs: general benefit</h3>
-        <p>
-          Maximizing benefits of drugs is challenging and their efficacy remains a key issue for rare disease patients. Only one organization responded that 100% of their rare disease patients taking the FDA approved drug benefit from it. Surprisingly, most organizations reported very low benefit, with 53 FDA-approved drugs providing 50% or less benefit. 
-        </p>
-          <canvas style="width:60vw!important;" id="percentageBenefitsFda"></canvas>
-          <p class = "text-end"><small>
-            <b>n (drugs): 72</b> <br>
-            n (organizations): 30
-            
-          </small></p>
-    </div>
-</section>
-
-<section>
-    <div class = "container">
-        <h3 class = "">FDA-approved drugs: effectiveness, among those that benefit</h3>
-        <p>
-          28 organizations listed 58 drugs as being FDA-approved for their rare disease(s) of focus. Most of these drugs seem to be most effective at reducing symptoms, and, to a lesser extent, to prevent worsening of symptoms. 
-        </p>
-        {% include /INSIGHTS/excludeNote.html %}
-                  <canvas style="width:60vw!important;" id="howEffectiveFDA"></canvas>
-          <p class = "text-end"><small>
-            <b>n (drugs): 58</b> <br>
-            n (organizations): 28
-          </small></p>
-    </div>
-</section>
-
-<section>
-    <div class = "container">
-        <h3 class = "">FDA-approved drugs: providing cure</h3>
-
-        <div class = "row py-5">
-          <div class = "col-12 col-xl-4">
-            <p>
-              The vast majority (76, 96.2%) of drugs listed, even though they are FDA-approved, were reported that they do not provide a ‘cure’ for the rare disease in question.
+        </section>
+        <hr>
+        <section>
+            <div class="container">
+                <h2 class="">FDA-approved drugs</h2>
+                <p>
+                    <small class="text-end">
+                        *Note: In this section, organizations had the option of listing - and answering questions about - up to 5 FDA-approved drugs. Where applicable, we include how many organizations answered the question, and how many drugs (i.e., response selections) are included in the visualization. The number of response selections is bolded.
+                    </small>
+                </p>
+                <div class="row py-5 ">
+                    <div class="col-12 col-xl-4">
+                        <canvas style="height: 200px;" id="fdaApprovedDrugsPie"></canvas>
+                        <p class="text-end">
+                            <small>
+                                <b>n (organizations): = 139</b>
+                            </small>
+                        </p>
+                    </div>
+                    <div class="col-12 col-xl-8 px-xl-5 mt-xl-4">
+                        <p>
+                            Only 41 organizations have an FDA-approved drug for their targeted rare disease, while 98 do not. This is not surprising, as getting FDA approval for a drug for a rare disease presents very many challenges, such as the small patient population, limited resources for clinical trials, and a lack of incentive for pharmaceutical companies to invest in developing drugs for rare diseases.
+                        </p>
+                    </div>
+                </div>
+                <p>
+                    Among the FDA-approved drugs listed by our participating organizations, ImmunoGlobulin was the top choice (4), with several other drugs approved for 2-3 indications.
+                </p>
+            </div>
+            <div id="fdaApprovedDrugsCloud" style="height: 400px;"></div>
+            <p class="text-end">
+                <small>
+                    <b>n (drugs): 84</b>
+                    <br>
+                    n (organizations): 33
+                </small>
             </p>
-                  </div>
-          <div class = "col-12 col-xl-6">
-            <canvas style="height:300px;" id="fdaCure"></canvas>
-            <p class = "text-end"><small>
-              <b>n (drugs): 79</b> <br>
-              n (organizations): 32
-            </small></p>
-          </div>
-        </div>
-
-    </div>
-</section>
-
-<section>
-    <div class = "container">
-        <h3 class = "">FDA-approved drugs: Roadblocks</h3>
-        <p>
-          Receiving treatments, even if they are FDA-approved, can be a major issue for patients and their families. Top 3 roadblocks reported were issues with insurance coverage, the costs and its accessibility (how easy it is to access in the patient’s preferred hospital). 7 organizations reported that their patients do not face any roadblocks in accessing the FDA-approved drugs for their rare disease. 
-        </p>
-        <p><small class = "text-end">Note: respondents were able to select multiple answer choices.          </small></p>
-          <canvas style="width:60vw!important;" id="patientRoadblocksFda"></canvas>
-          <p class = "text-end"><small>
-            <b>n (drugs): 74</b> <br>
-            n (organizations): 30
-          </small></p>
-    </div>
-</section>
-
-<div class = "py-3">
-  <hr>
-</div>
-
-<section>
-    <div class = "container">
-        <h2 class = "">Off-label drugs</h2>
-       <p>
-        <small class = "text-end">*Note: In this section, organizations had the option of listing - and answering questions about - up to 5 FDA-approved drugs. Where applicable, we include how many organizations answered the question, and how many drugs (i.e., response selections) are included in the visualization. The number of response selections is bolded.
-        </small>
-       </p>
-
-        <div class = "row py-5">
-          <div class = "col-12 col-xl-4">
-            <p>
-              “Off-label” refers to the use of a drug for a disease that has not been specifically approved by regulatory authorities, such as the FDA in the US. It is quite common and is used in cases where a drug has been found to be potentially safe and effective for a new disease through research, or a physician has reason to believe it may help a patient from their own medical knowledge or anecdotal reports from other doctors. Tracking off-label use of drugs in a rare disease can help to identify drugs that should be studied further for that rare disease. Among the organizations in our data, 79 reported to have identified an off-label drug which was promising for their rare disease.
+        </section>
+        <section>
+            <div class="container">
+                <h3 class="">FDA-approved drugs: general benefit</h3>
+                <p>
+                    Maximizing benefits of drugs is challenging and their efficacy remains a key issue for rare disease patients. Only one organization responded that 100% of their rare disease patients taking the FDA approved drug benefit from it. Surprisingly, most organizations reported very low benefit, with 53 FDA-approved drugs providing 50% or less benefit.
+                </p>
+                <canvas style="width:60vw!important;" id="percentageBenefitsFda"></canvas>
+                <p class="text-end">
+                    <small>
+                        <b>n (drugs): 72</b>
+                        <br>
+                        n (organizations): 30
+                    </small>
+                </p>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <h3 class="">FDA-approved drugs: effectiveness, among those that benefit</h3>
+                <p>
+                    28 organizations listed 58 drugs as being FDA-approved for their rare disease(s) of focus. Most of these drugs seem to be most effective at reducing symptoms, and, to a lesser extent, to prevent worsening of symptoms.
+                </p>
+                {% include /INSIGHTS/excludeNote.html %}
+                <canvas style="width:60vw!important;" id="howEffectiveFDA"></canvas>
+                <p class="text-end">
+                    <small>
+                        <b>n (drugs): 58</b>
+                        <br>
+                        n (organizations): 28
+                    </small>
+                </p>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <h3 class="">FDA-approved drugs: providing cure</h3>
+                <div class="row py-5">
+                    <div class="col-12 col-xl-4">
+                        <p>
+                            The vast majority (76, 96.2%) of drugs listed, even though they are FDA-approved, were reported that they do not provide a ‘cure’ for the rare disease in question.
+                        </p>
+                    </div>
+                    <div class="col-12 col-xl-6">
+                        <canvas style="height:300px;" id="fdaCure"></canvas>
+                        <p class="text-end">
+                            <small>
+                                <b>n (drugs): 79</b>
+                                <br>
+                                n (organizations): 32
+                            </small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <h3 class="">FDA-approved drugs: Roadblocks</h3>
+                <p>
+                    Receiving treatments, even if they are FDA-approved, can be a major issue for patients and their families. Top 3 roadblocks reported were issues with insurance coverage, the costs and its accessibility (how easy it is to access in the patient’s preferred hospital). 7 organizations reported that their patients do not face any roadblocks in accessing the FDA-approved drugs for their rare disease.
+                </p>
+                {% include /INSIGHTS/multipleAnswers.html %}
+                <canvas style="width:60vw!important;" id="patientRoadblocksFda"></canvas>
+                <p class="text-end">
+                    <small>
+                        <b>n (drugs): 74</b>
+                        <br>
+                        n (organizations): 30
+                    </small>
+                </p>
+            </div>
+        </section>
+        <hr>
+        <section>
+            <div class="container">
+                <h2 class="">Off-label drugs</h2>
+                <p>
+                    <small class="text-end">
+                        *Note: In this section, organizations had the option of listing - and answering questions about - up to 5 FDA-approved drugs. Where applicable, we include how many organizations answered the question, and how many drugs (i.e., response selections) are included in the visualization. The number of response selections is bolded.
+                    </small>
+                </p>
+                <div class="row py-5">
+                    <div class="col-12 col-xl-4">
+                        <p>
+                            “Off-label” refers to the use of a drug for a disease that has not been specifically approved by regulatory authorities, such as the FDA in the US. It is quite common and is used in cases where a drug has been found to be potentially safe and effective for a new disease through research, or a physician has reason to believe it may help a patient from their own medical knowledge or anecdotal reports from other doctors. Tracking off-label use of drugs in a rare disease can help to identify drugs that should be studied further for that rare disease. Among the organizations in our data, 79 reported to have identified an off-label drug which was promising for their rare disease.
+                        </p>
+                    </div>
+                    <div class="col-12 col-xl-6">
+                        <canvas style="height:300px;" id="nonFdaPie"></canvas>
+                        <p class="text-end">
+                            <small>
+                                <b>n (organizations): 119</b>
+                            </small>
+                        </p>
+                    </div>
+                </div>
+                <p>
+                    Among these, sirolimus is most common, reported by 9 organizations, closely followed by rituximab (8).
+                </p>
+            </div>
+            <div id="nonFdaCloud" style="height: 400px;"></div>
+            <p class="text-end">
+                <small>
+                    <b> n (drugs): 236</b>
+                    <br>
+                    n (organizations): 69
+                </small>
             </p>
-          </div>
-          <div class = "col-12 col-xl-6">
-            <canvas style="height:300px;" id="nonFdaPie"></canvas>
-            <p class = "text-end"><small>
-              <b>n (organizations): 119</b>
-            </small></p>
-          </div>
-        </div>
-<p>
-  Among these, sirolimus is most common, reported by 9 organizations, closely followed by rituximab (8).
-</p>
+        </section>
+        <section>
+            <div class="container">
+                <h3 class="">Off-label drugs: general benefit</h3>
+                <p>
+                    While 9 off-label drugs were reported to benefit 100% of patients, 125 drugs provided benefit to 50% or less, with the highest category (62 drugs) only benefiting 10% of patients.
+                </p>
+                <canvas style="width:60vw!important;" id="patientBenefitOff"></canvas>
+                <p class="text-end">
+                    <small>
+                        <b>n (drugs): 166</b>
+                        <br>
+                        n (organizations): 58
+                    </small>
+                </p>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <h3 class="">Off-label drugs: effectiveness, among those that benefit</h3>
+                <p>
+                    The off label drugs reported were mostly moderately effective at reducing symptoms and preventing their worsening, though some were reported to be very effective. This underlines how important it is to identify these drugs and funnel them into the process of repurposing to gain additional insights into their use.
+                </p>
+                {% include /INSIGHTS/excludeNote.html %}
+                <canvas style="width:60vw!important;" id="howEffectiveOffLabel"></canvas>
+                <p class="text-end">
+                    <small>
+                        <b>n (drugs): 118</b>
+                        <br>
+                        n (organizations): 48
+                    </small>
+                </p>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <h3 class="">Off-label drugs: providing cure</h3>
+                <div class="row py-5">
+                    <div class="col-12 col-xl-4">
+                        <p>
+                            Though 28 of the reported off label drugs seem to be good enough to be considered “cures” for the patients that utilize them, the majority, 182 drugs, did not meet that threshold.
+                        </p>
+                    </div>
+                    <div class="col-12 col-xl-6">
+                        <canvas style="height:300px;" id="offLabelCure"></canvas>
+                        <p class="text-end">
+                            <small>
+                                <b>n (drugs): 210</b>
+                                <br>
+                                n (organizations): 67
+                            </small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <h3 class="">Off-label drugs: roadblocks</h3>
+                <p>
+                    Similar challenges are experienced by the patients for accessing off-label drug(s) and FDA approved drugs. Majority of organizations reported that their patients have problems with insurance coverage, accessing prescriptions, and drug costs.
+                </p>
+                {% include /INSIGHTS/multipleAnswers.html %}
+                <canvas style="width:60vw!important;" id="patientRoadblocksOffLabel"></canvas>
+                <p class="text-end">
+                    <small>
+                        <b>n (drugs): 199</b>
+                        <br>
+                        n (organizations): 65
+                    </small>
+                </p>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <h3 class="">Off-label use: systematic data tracking</h3>
+                <div class="row py-5">
+                    <div class="col-12 col-xl-4">
+                        <p>
+                            The overwhelming majority - 122 -  of the participating organizations do not track off-label drug uses in their patients. This is important to note, since tracking off-label drug use can be beneficial in the repurposing of drugs for rare diseases. By monitoring the use of drugs outside of their FDA-approved indications, it may uncover new treatment options for patients with rare diseases and provide valuable data for further research and development.
+                        </p>
+                    </div>
+                    <div class="col-12 col-xl-6">
+                        <canvas style="height:300px;" id="trackOffLabel"></canvas>
+                        <p class="text-end">
+                            <small>
+                                <b>n (organizations): 139</b>
+                            </small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <h3 class="">Off-label use: interested in tracking in the future</h3>
+                <div class="row py-5">
+                    <div class="col-12 col-xl-4">
+                        <p>
+                            The survey showed encouraging responses from those organizations who do not currently track off-label use data: the majority (101, 83.4%)  said they are interested in doing so in the future.
+                        </p>
+                    </div>
+                    <div class="col-12 col-xl-6">
+                        <canvas style="height:300px;" id="interestedTrackOffLabel"></canvas>
+                        <p class="text-end">
+                            <small>
+                                <b>n (organizations): 121</b>
+                            </small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <h3 class="">Off-label use: data tracking strategies</h3>
+                <p>
+                    Organizations that reported they do currently track off-label drug use for their patients said they primarily use patient registry and natural history studies for data collection.
+                </p>
+                {% include /INSIGHTS/multipleAnswers.html %}
+                <canvas style="width:60vw!important;" id="howTrackOffLabel"></canvas>
+                <p class="text-end">
+                    <small>
+                        <b>n (organizations): 17</b>
+                    </small>
+                </p>
+            </div>
+        </section>
     </div>
-        <div id="nonFdaCloud" style = "height: 400px;"></div>
-        <p class="text-end"><small>
-          <b> n (drugs): 236</b> <br>
-          n (organizations): 69
-         </small></p>
-</section>
-
-<section>
-    <div class = "container">
-        <h3 class = "">Off-label drugs: general benefit</h3>
-        <p>
-          While 9 off-label drugs were reported to benefit 100% of patients, 125 drugs provided benefit to 50% or less, with the highest category (62 drugs) only benefiting 10% of patients. 
-        </p>
-          <canvas style="width:60vw!important;" id="patientBenefitOff"></canvas>
-          <p class = "text-end"><small>
-            <b>n (drugs): 166</b><br>
-            n (organizations): 58
-          </small></p>
-    </div>
-</section>
-
-<section>
-    <div class = "container">
-        <h3 class = "">Off-label drugs: effectiveness, among those that benefit</h3>
-        <p>
-          The off label drugs reported were mostly moderately effective at reducing symptoms and preventing their worsening, though some were reported to be very effective. This underlines how important it is to identify these drugs and funnel them into the process of repurposing to gain additional insights into their use. 
-        </p>
-        {% include /INSIGHTS/excludeNote.html %}
-          <canvas style="width:60vw!important;" id="howEffectiveOffLabel"></canvas>
-          <p class = "text-end"><small>
-            <b>n (drugs): 118</b><br>
-            n (organizations): 48
-          </small></p>
-    </div>
-</section>
-
-<section>
-  <div class = "container">
-      <h3 class = "">Off-label drugs: providing cure</h3>
-
-      <div class = "row py-5">
-        <div class = "col-12 col-xl-4">
-          <p>
-            Though 28 of the reported off label drugs seem to be good enough to be considered “cures” for the patients that utilize them, the majority, 182 drugs, did not meet that threshold.  
-          </p>
-        </div>
-        <div class = "col-12 col-xl-6">
-          <canvas style="height:300px;" id="offLabelCure"></canvas>
-          <p class = "text-end"><small>
-            <b>n (drugs): 210</b><br>
-            n (organizations): 67
-          </small></p>
-        </div>
-      </div>
-  </div>
-</section>
-
-<section>
-    <div class = "container">
-        <h3 class = "">Off-label drugs: roadblocks</h3>
-        <p>
-          Similar challenges are experienced by the patients for accessing off-label drug(s) and FDA approved drugs. Majority of organizations reported that their patients have problems with insurance coverage, accessing prescriptions, and drug costs.
-        </p>
-        <p><small class = "text-end">Note: respondents were able to select multiple answer choices.          </small></p>
-          <canvas style="width:60vw!important;" id="patientRoadblocksOffLabel"></canvas>
-          <p class = "text-end"><small>
-            <b>n (drugs): 199</b> <br>
-            n (organizations): 65
-          </small></p>
-    </div>
-</section>
-
-<section>
-    <div class = "container">
-        <h3 class = "">Off-label use: systematic data tracking</h3>
-       
-        <div class = "row py-5">
-          <div class = "col-12 col-xl-4">
-            <p>
-              The overwhelming majority - 122 -  of the participating organizations do not track off-label drug uses in their patients. This is important to note, since tracking off-label drug use can be beneficial in the repurposing of drugs for rare diseases. By monitoring the use of drugs outside of their FDA-approved indications, it may uncover new treatment options for patients with rare diseases and provide valuable data for further research and development.
-            </p>
-          </div>
-          <div class = "col-12 col-xl-6">
-            <canvas style="height:300px;" id="trackOffLabel"></canvas>
-            <p class = "text-end"><small><b>n (organizations): 139</b></small></p>
-          </div>
-        </div>
-
-    </div>
-</section>
-
-<section>
-    <div class = "container">
-        <h3 class = "">Off-label use: interested in tracking in the future</h3>
-        <div class = "row py-5">
-          <div class = "col-12 col-xl-4">
-            <p>
-              The survey showed encouraging responses from those organizations who do not currently track off-label use data: the majority (101, 83.4%)  said they are interested in doing so in the future.
-            </p>
-          </div>
-          <div class = "col-12 col-xl-6">
-            <canvas style="height:300px;" id="interestedTrackOffLabel"></canvas>
-            <p class = "text-end"><small><b>n (organizations): 121</b></small></p>
-          </div>
-        </div>
-    </div>
-</section>
-
-<section>
-    <div class = "container">
-        <h3 class = "">Off-label use: data tracking strategies</h3>
-        <p>
-          Organizations that reported they do currently track off-label drug use for their patients said they primarily use patient registry and natural history studies for data collection.
-        </p>
-        <p><small class = "text-end">Note: respondents were able to select multiple answer choices.          </small></p>
-
-          <canvas style="width:60vw!important;" id="howTrackOffLabel"></canvas>
-          <p class = "text-end"><small><b>n (organizations): 17</b></small></p>
-    </div>
-</section>
-</div>
-
-
-<script>
+    <script>
     
 // RD WORD CLOUD
 am4core.useTheme(am4themes_animated);
@@ -1644,6 +1673,37 @@ options: {
 }
 });
 
+
+// RARE DISEASE CATEGORIES
+var rdCategories = document.getElementById("rdCategories");
+var rdCategoriesBar = new Chart(rdCategories, {
+type: 'horizontalBar',
+data: {
+  labels: ["Neurological","Behavioral/Neurodevelopmental","Metabolic and endocrine","Congenital disorders","Cancer and neoplasms","Inflammatory and immune system","Musculoskeletal","Blood","Oral and gastrointestinal","Skin","Respiratory","Cardiovascular","Infection","Renal and urogenital","N/A","Eye"],
+  datasets: [{
+    label: '# of responses',
+    data: [36,19,19,17,15,15,14,8,7,5,4,3,3,3,2,1], 
+    backgroundColor: [color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3, color3]
+  }]
+},
+options: {
+  scales: {
+    xAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+    display: false
+    },  
+  responsive: true,
+}
+});
+
+
+
+
 // HOW EFFECTIVE IS FDA APPROVED DRUG
 var ctxHowEffectiveFda = document.getElementById("howEffectiveFDA");
 var howEffectiveFdaBar = new Chart(ctxHowEffectiveFda, {
@@ -2691,5 +2751,4 @@ options: {
   responsive: true,
 }
 });
-
-</script>
+    </script>

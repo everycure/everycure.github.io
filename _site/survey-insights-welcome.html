@@ -320,36 +320,34 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
 </style>
 
 <!-- WELCOME SECTION -->
-<div class = "siteContent">
-<div class="container">
-    <h1 class="mb-5 mt-4 text-center">ROADMAP Survey Insights</h1>
-    <div class="row">
-        <div class="col-lg-4">
-            <img src="/assets/svg/icons8/tutti-analyses-1.png" class="img-fluid z-depth-1" alt="1">
-        </div>
-        <div class="col-lg-6 mx-lg-5 mt-5">
-            <h2>Welcome!</h2>
-            <p>
-                Between 2021 and 2022, the Castleman Disease Collaborative Network (CDCN) conducted a survey of
+<div class="siteContent">
+    <div class="container">
+        <h1 class="mb-5 mt-4 text-center">ROADMAP Survey Insights</h1>
+        <div class="row">
+            <div class="col-lg-4">
+                <img src="/assets/svg/icons8/tutti-analyses-1.png" class="img-fluid z-depth-1" alt="1">
+            </div>
+            <div class="col-lg-6 mx-lg-5 mt-5">
+                <h2>Welcome!</h2>
+                <p>
+                    Between 2021 and 2022, the Castleman Disease Collaborative Network (CDCN) conducted a survey of
                 US-based rare disease non profit organizations (RDNPs) and their stakeholder populations (patients,
                 loved ones, physicians, and researchers).
-            </p>
-            <p>
-                We had 147 RDNPs participate, and along with their stakeholders we received over 1,900 survey
+                </p>
+                <p>
+                    We had 147 RDNPs participate, and along with their stakeholders we received over 1,900 survey
                 responses.
-            </p>
-            <p>
-                The following report offers a high-level overview of the findings from our survey. Our hope is that
+                </p>
+                <p>
+                    The following report offers a high-level overview of the findings from our survey. Our hope is that
                 this report helps answer some of the fundamental questions regarding the state of rare disease drug
                 repurposing in the US.
-            </p>
-            <a type="button" class="about-button my-3" href = "/about.html">Learn more about the ROADMAP project, its data sources and tool development</a>
-
+                </p>
+                <a type="button" class="about-button my-3" href="/about.html">Learn more about the ROADMAP project, its data sources and tool development</a>
+            </div>
         </div>
     </div>
 </div>
-</div>
-
 <section>
     <!-- COUNTER -->
     <div class="mt-5 counterContainer d-sm-none d-md-block px-0 mx-0">
@@ -394,30 +392,34 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
         </div>
     </div>
 </section>
-
-<div class = "siteContent">
-<section>
-    <div class="container">
-        <h2 class="">Stakeholder group representation among RDNP leadership</h2>
-        <div class="row py-4">
-            <div class="col-md-4">
-                <p>Interestingly, more than 65% of the rare disease organization representatives themselves are also
-                    representatives of these other stakeholder groups.Most of these (67, 25%) are also rare disease patient's loved ones, which include parents, spouses,
-                    siblings, etc. 
-                </p>
-            </div>
-            <div class="col-md-8">
-                <div class="container">
-                    <div>
-                        <canvas id="stakeholders"></canvas>
-                        <p class="text-end"><small><b>n (organizations): 147</b></small></p>
+<div class="siteContent">
+    <section>
+        <div class="container">
+            <h2 class="">Stakeholder group representation among RDNP leadership</h2>
+            <div class="row py-4">
+                <div class="col-md-4">
+                    <p>
+                        Rare disease non profit (RDNP) representatives were asked to list what additional stakeholder roles they represent. Roughly 65% of these RDNP representatives listed one or more additional stakeholder identities. Of those who selected an additional stakeholder role, a majority (67, 69.8%) identified themselves as the loved one of a rare disease patient (e.g., a parent, spouse, sibling, etc.).
+                    </p>
+                </div>
+                <div class="col-md-8">
+                    <div class="container">
+                        <div>
+                            <canvas style="height:300px;" id="stakeholderPie"></canvas>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
+        <div class = "container pt-4">
+            <canvas id="stakeholders"></canvas>
+            <p class="text-end">
+                <small>
+                    <b>n (organizations): 147</b>
+                </small>
+            </p>
+        </div>
+    </section>
 </div>
 </div>
 <script>
@@ -428,11 +430,11 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
     new Chart(ctxStakeholders, {
         type: 'horizontalBar',
         data: {
-            labels: ['Rare disease patient', 'Rare disease patient’s loved one', 'Rare disease non profit organization representative', 'Rare disease researcher', 'Rare disease physician', 'Other'],
+            labels: ["Rare disease non profit organization representative","Rare disease patient’s loved one","Rare disease patient","Rare disease researcher","Rare disease physician"],
             datasets: [{
                 label: '# of responses',
-                data: [326, 205, 181, 64, 33, 3],
-                backgroundColor:  [color3, color3, color3, color3, color3, color3],
+                data: [147,67,34,16,5],
+                backgroundColor:  [color3, color3, color3, color3, color3],
                 borderWidth: 1
             }]
         },
@@ -450,7 +452,6 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
         }
     });
 </script>
-
 <script>
     $(document).ready(function () {
         $('.counter').each(function () {
@@ -466,9 +467,28 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
         });
 
     });
+
+    // PIE CHART
+var stakeholderPie = document.getElementById("stakeholderPie");
+var createstakeholderPie = new Chart(stakeholderPie, {
+  type: 'doughnut',
+  data: {
+    labels: ["RDNP only", "RDNP + other stakeholder(s)"],
+    datasets: [{
+      label: '# of responses',
+      data: [51, 96],
+      backgroundColor: [color3, color2]
+    }]
+  },
+  options: {
+    legend: {
+                  position: 'right' ,
+                  align: 'start'
+                },
+    responsive: false,
+  }
+});
 </script>
-
-
 
       </div>
 <div class="whitespace"></div>

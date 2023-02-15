@@ -279,9 +279,6 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
 
 </script>
 <style>
-  body {
-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
 
 #chartdiv, #leadershipTitlesCloud {
 width:100%;
@@ -304,194 +301,222 @@ height: 500px;
         color: black;
         background-image: var(--project_paper);
 }
-
 </style>
 
-
-<div class = "container siteContent">
-<h1>Organizational characteristics</h1>
-<p>
-  147 rare disease nonprofit organizations (RDNPs) participated in the ROADMAP survey. In this section we share information about the general characteristics of these organizations.​ These characteristics not only provide insight into the kinds of organizations who participated in the project, but they also help to explore precursors for success in both pushing rare disease research forward and the pursuit of drug repurposing.	
-</p>
-
-<p><small class = "text-end">*Note that most of the survey questions were not required, so the total number of responses is noted for each graph, as they vary.</small></p>
-<section>
-    <h3 class="">Leadership Titles</h3>
-    <div class = "row py-3">
-      <div class = "col-xl-6 col-12">
-        <p>
-          Only members of the rare disease nonprofit’s leadership team were invited to provide data for their organization. Most (101) of our responses were from the leadership team category (President, Founder) and the Director-level category (Executive Director).
-        </p>  
-      <p class = "excludeNote">
+<div class="container siteContent">
+    <h1>Organizational characteristics</h1>
+    <p>
+        147 rare disease nonprofit organizations (RDNPs) participated in the ROADMAP survey. In this section we share information about the general characteristics of these organizations.​ These characteristics not only provide insight into the kinds of organizations who participated in the project, but they also help to explore precursors for success in both pushing rare disease research forward and the pursuit of drug repurposing.
+    </p>
+    <p>
+        <small class="text-end">*Note that most of the survey questions were not required, so the total number of responses is noted for each graph, as they vary.</small>
+    </p>
+    <section>
+        <h3 class="">Leadership Titles</h3>
+        <div class="row py-3">
+            <div class="col-xl-6 col-12">
+                <p>
+                    Only members of the rare disease nonprofit’s leadership team were invited to provide data for their organization. Most (101) of our responses were from the leadership team category (President, Founder) and the Director-level category (Executive Director).
+                </p>
+                <p class = "excludeNote">
     To exclude certain answer choices and view a subset of the data, please click the answer choices in the chart legend.
   </p>
 
-          <canvas class = "canvasViz mt-5" id="leadershipTitlesPie"></canvas>
-      </div>
-      <div class = "col-xl-6 ">
-        <div id="leadershipTitlesCloud" style = "margin-top: -70px;"></div>    
-      </div>
-      <p class = "text-end">
-        <small>
-          <b>n (job titles): 200</b><br>
-          n (organizations): 146 
-        </small>
-      </p>
-    </div>
-
-</section>
-
-<section>
-  <div class = "container">
-    <h3 class = "">Organization year of founding​</h3>
-    <p>
-      The participating organizations are "young"! 83 organizations (56%) were founded in 2010 or later, with 9 founded as recently as 2020 during the COVID pandemic.
-    </p>
-    <canvas style="width:40vw!important;" id="yearOfFounding"></canvas>
-    <p class = "text-end"><small><b>n (organizations): 147</b></small></p>
-  </div>
-</section>
-
-<section>
-  <div class = "container">
-    <h3 class = "">Number of full-time staff</h3>
-    <p>
-      Impressively, most organizations in our survey (62%) have no or just one full-time staff member. This speaks to the incredibly valuable role that volunteers play in both leadership and support roles.
-    </p>
-    <canvas style="width:40vw!important;" id="fullTimeStaff"></canvas>
-    <p class = "text-end"><small><b>n (organizations): 146</b></small></p>
-  </div>
-</section>
-
-<setion>
-  <div class = "container">
-    <h3 class = "">Average annual funding (past 3 years)</h3>
-    <p>
-      Though some of the organizations in our survey reported notably higher or lower funding levels, generally most of our 147 organizations lean towards middle ground funding, from $50k to $1,000k on average.
-    </p>
-    <canvas style="width:40vw!important;" id="averageFunding"></canvas>
-    <p class = "text-end"><small><b>n (organizations): 144</b></small></p>
-  </div>
-</setion>
-
-<section>
-  <div class = "container">
-    <h3 class = "">Organizations' activities of focus </h3>
-    <p>
-      Our organizations focus on a wide range of activities. Patient education, disease awareness and community development are clear top choices for both general focus as well as top 3 prioritization.
-    </p>
-    <p><small class = "text-end">Note: respondents were able to select multiple answer choices, and then were asked to select their top 3 out of the full list of previously selected choices.</small></p>
-    <p class = "excludeNote">
+                <canvas class="canvasViz mt-5" id="leadershipTitlesPie"></canvas>
+            </div>
+            <div class="col-xl-6 ">
+                <div id="leadershipTitlesCloud" style="margin-top: -70px;"></div>
+            </div>
+            <p class="text-end">
+                <small>
+                    <b>n (job titles): 200</b>
+                    <br>
+                    n (organizations): 146
+                </small>
+            </p>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <h3 class="">Organization year of founding​</h3>
+            <p>
+                The participating organizations are "young"! 83 organizations (56%) were founded in 2010 or later, with 9 founded as recently as 2020 during the COVID pandemic.
+            </p>
+            <canvas style="width:40vw!important;" id="yearOfFounding"></canvas>
+            <p class="text-end">
+                <small>
+                    <b>n (organizations): 147</b>
+                </small>
+            </p>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <h3 class="">Number of full-time staff</h3>
+            <p>
+                Impressively, most organizations in our survey (62%) have no or just one full-time staff member. This speaks to the incredibly valuable role that volunteers play in both leadership and support roles.
+            </p>
+            <canvas style="width:40vw!important;" id="fullTimeStaff"></canvas>
+            <p class="text-end">
+                <small>
+                    <b>n (organizations): 146</b>
+                </small>
+            </p>
+        </div>
+    </section>
+    <setion>
+        <div class="container">
+            <h3 class="">Average annual funding (past 3 years)</h3>
+            <p>
+                Though some of the organizations in our survey reported notably higher or lower funding levels, generally most of our 147 organizations lean towards middle ground funding, from $50k to $1,000k on average.
+            </p>
+            <canvas style="width:40vw!important;" id="averageFunding"></canvas>
+            <p class="text-end">
+                <small>
+                    <b>n (organizations): 144</b>
+                </small>
+            </p>
+        </div>
+    </setion>
+    <section>
+        <div class="container">
+            <h3 class="">Organizations' activities of focus</h3>
+            <p>
+                Our organizations focus on a wide range of activities. Patient education, disease awareness and community development are clear top choices for both general focus as well as top 3 prioritization.
+            </p>
+            <p>
+                <small class="text-end">Note: respondents were able to select multiple answer choices, and then were asked to select their top 3 out of the full list of previously selected choices.</small>
+            </p>
+            <p class = "excludeNote">
     To exclude certain answer choices and view a subset of the data, please click the answer choices in the chart legend.
   </p>
 
-    <canvas style="width:40vw!important;" id="activitiesOfFocus"></canvas>
-    <p class = "text-end"><small><b>n (organizations): 147</b></small></p>
-  </div>
-</section>
-
-<section>
-  <div class = "container">
-    <h3 class = "">Organizations supporting research</h3>
-    <p>
-      From the organizations we surveyed, the majority (127, 87.5%) support research and 28 organizations plan to do so in the future. Only 6 organizations do not support research and do not plan to do so in the future.
-    </p>
-    <p class = "excludeNote">
+            <canvas style="width:40vw!important;" id="activitiesOfFocus"></canvas>
+            <p class="text-end">
+                <small>
+                    <b>n (organizations): 147</b>
+                </small>
+            </p>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <h3 class="">Organizations supporting research</h3>
+            <p>
+                From the organizations we surveyed, the majority (127, 87.5%) support research and 28 organizations plan to do so in the future. Only 6 organizations do not support research and do not plan to do so in the future.
+            </p>
+            <p class = "excludeNote">
     To exclude certain answer choices and view a subset of the data, please click the answer choices in the chart legend.
   </p>
 
-    <canvas style = "height: 300px;" id="supportingResearchPie"></canvas>
-    <p class = "text-end"><small><b>n (organizations): 145</b></small></p>
-  </div>
-<div class = "container">
-  <p>
-    Those organizations who support research do so by finding and funding researchers that study a specific disease of interest, providing funding through request for proposal (RFP) programs, as well as providing non-financial support for research. Other organizations reported that they support research by creating research partnerships, patient registries, natural history studies and/or conducting research themselves. 
-  </p>
-  <canvas style="width:40vw!important;" id="supportingResearchBar"></canvas>
-  <p class = "text-end"><small><b>n (organizations): 145</b></small></p>
-</div>
-</section>
-
-<section>
-  <div class = "container">
-    <h3 class = "">Percentage of funding that supports research</h3>
-    <p>
-      For those organizations that support research in one way or another, we asked what percentage of their funding is targeted towards supporting research. 71 organizations stated that 50% or more of their funding goes to research support, while 11 organizations reported that 100% of their funding goes towards research.
-    </p>
-    <canvas style="width:40vw!important;" id="percentageFunding"></canvas>
-    <p class = "text-end"><small><b>n (organizations): 100</b></small></p>
-  </div>
-</section>
-
-<section>
-  <div class = "container">
-    <h3 class = "">Fundraising activities the organization is involved in to be able to fund research</h3>
-    <p>
-      The top three fundraising activities organizations used to raise money for supporting research were patient-led initiatives, organization-led events and grants. Second tier of funding for many organizations comes from private donors, industry donors and employer matching donations.
-    </p>
-    <canvas style="width:40vw!important;" id="fundraisingActivities"></canvas>
-    <p class = "text-end"><small><b>n (organizations): 138</b></small></p>
-  </div>
-</section>
-
-<section>
-  <div class = "container">
-    <h3 class = "">Organization’s resources for research support</h3>
-    <p>
-
-      Most organizations reported that they already have multiple resources developed, or that they are in process of developing resources that are able to support research. The top 3 resources which organizations already have developed are community discussion spaces, scientific/medical advisory boards (SABs/MABs) and contact registries. Among the resources organizations are not focused on having, the top 3 are biobanks, a patient community navigator, and, interestingly, patient community gatherings.
-    </p>
-    <p class = "excludeNote">
+            <canvas style="height: 300px;" id="supportingResearchPie"></canvas>
+            <p class="text-end">
+                <small>
+                    <b>n (organizations): 145</b>
+                </small>
+            </p>
+        </div>
+        <div class="container">
+            <p>
+                Those organizations who support research do so by finding and funding researchers that study a specific disease of interest, providing funding through request for proposal (RFP) programs, as well as providing non-financial support for research. Other organizations reported that they support research by creating research partnerships, patient registries, natural history studies and/or conducting research themselves.
+            </p>
+            <canvas style="width:40vw!important;" id="supportingResearchBar"></canvas>
+            <p class="text-end">
+                <small>
+                    <b>n (organizations): 145</b>
+                </small>
+            </p>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <h3 class="">Percentage of funding that supports research</h3>
+            <p>
+                For those organizations that support research in one way or another, we asked what percentage of their funding is targeted towards supporting research. 71 organizations stated that 50% or more of their funding goes to research support, while 11 organizations reported that 100% of their funding goes towards research.
+            </p>
+            <canvas style="width:40vw!important;" id="percentageFunding"></canvas>
+            <p class="text-end">
+                <small>
+                    <b>n (organizations): 100</b>
+                </small>
+            </p>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <h3 class="">Fundraising activities the organization is involved in to be able to fund research</h3>
+            <p>
+                The top three fundraising activities organizations used to raise money for supporting research were patient-led initiatives, organization-led events and grants. Other funding for many organizations comes from private donors, industry donors and employer matching donations.
+            </p>
+            <canvas style="width:40vw!important;" id="fundraisingActivities"></canvas>
+            <p class="text-end">
+                <small>
+                    <b>n (organizations): 138</b>
+                </small>
+            </p>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <h3 class="">Organization’s resources for research support</h3>
+            <p>
+                Most organizations reported that they already have multiple resources developed, or that they are in process of developing resources that are able to support research. The top 3 resources which organizations already have developed are community discussion spaces, scientific/medical advisory boards (SABs/MABs) and contact registries. Among the resources organizations are not focused on having, the top 3 are biobanks, a patient community navigator, and, interestingly, patient community gatherings.
+            </p>
+            <p class = "excludeNote">
     To exclude certain answer choices and view a subset of the data, please click the answer choices in the chart legend.
   </p>
 
-    <canvas style="width:40vw!important;" id="orgResources"></canvas>
-    <p class = "text-end"><small><b>n (organizations): 144</b></small></p>
-  </div>
-</section>
-
-<section>
-  <div class = "container">
-    <h3 class = "">Reasons for not developing certain resources</h3>
-    <p>
-      To better understand why certain resources are not of interest to the organizations, we broke down the survey with specific questions.     <span class = "excludeNote">
-        Please use the dropdown menu below to select a given resource.
-      </span> 
-    </p>
-
-    <p>Organizations reported not prioritizing the development of their own biobanks as they already have access to biobanks from academic or industry partners. A lack of staff is the main reason listed for not focusing on research and strategy development. For natural history studies, reasons cited include the presence of ongoing studies with academic and industry partners and a lack of funding.
-    </p>
-    <div class = "row buttonContainer py-3">
-
-<style>
+            <canvas style="width:40vw!important;" id="orgResources"></canvas>
+            <p class="text-end">
+                <small>
+                    <b>n (organizations): 144</b>
+                </small>
+            </p>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <h3 class="">Reasons for not developing certain resources</h3>
+            <p>
+                To better understand why certain resources are not of interest to the organizations, we broke down the survey with specific questions.
+                <span class="excludeNote">
+                    Please use the dropdown menu below to select a given resource.
+                </span>
+            </p>
+            <p>
+                Organizations reported not prioritizing the development of their own biobanks as they already have access to biobanks from academic or industry partners. A lack of staff is the main reason listed for not focusing on research and strategy development. For natural history studies, reasons cited include the presence of ongoing studies with academic and industry partners and a lack of funding.
+            </p>
+            <div class="row buttonContainer py-3">
+                <style>
   .chartBox {
       width: 90vw;
   }
-</style>
-
-<div class = "selectBox my-3  mb-5">
-  <select id = "notBeingDeveloped">
-      <option value = "11, 2, 1, 7, 6, 5, 3, 5">Biobank to collect patient samples</option>
-      <option value = "1, null, null, 1, 1, null, 1, 3">Community discussion space</option>
-      <option value = "1, null, null, 1, 2, null, 2, 1">Contact registry</option>
-      <option value = "null, null, null, null, null, null, 3, null">Fundraising events</option>
-      <option value = "3, null, null, 2, 1, null, null, 1">Natural history study</option>
-      <option value = "1, 2, 1, 4, 3, 1, 2, 4">Patient & Loved one community gatherings</option>
-      <option value = "null, null, null, 7, 6, null, 3, 2">Patient community navigator</option>
-      <option value = "1, null, null, 1, null, null, null, 4">Patient registry</option>
-      <option value = "2, null, 1, 3, 3, 1, 2, 2">Patient reported outcomes (PRO) assessments</option>
-      <option value = "1, null, null, 1, null, null, null, 1">Research Conferences</option>
-      <option value = "1, null, null, 1, 2, null, 1, null">Research strategy or research agenda</option>
-      <option value = "null, null, null, null, null, null, 1, null">Scientific or medical advisory board</option>
-  </select>
-</div>
-
-<div class = "chartBox">
-  <canvas id = "reasonsNotInterested"></canvas>
-</div>
-<p class = "text-end"><small><b>n (organizations): = 130</b></small></p>
-
-<script>
+                </style>
+                <div class="selectBox my-3  mb-5">
+                    <select id="notBeingDeveloped">
+                        <option value="11, 2, 1, 7, 6, 5, 3, 5">Biobank to collect patient samples</option>
+                        <option value="1, null, null, 1, 1, null, 1, 3">Community discussion space</option>
+                        <option value="1, null, null, 1, 2, null, 2, 1">Contact registry</option>
+                        <option value="null, null, null, null, null, null, 3, null">Fundraising events</option>
+                        <option value="3, null, null, 2, 1, null, null, 1">Natural history study</option>
+                        <option value="1, 2, 1, 4, 3, 1, 2, 4">Patient & Loved one community gatherings</option>
+                        <option value="null, null, null, 7, 6, null, 3, 2">Patient community navigator</option>
+                        <option value="1, null, null, 1, null, null, null, 4">Patient registry</option>
+                        <option value="2, null, 1, 3, 3, 1, 2, 2">Patient reported outcomes (PRO) assessments</option>
+                        <option value="1, null, null, 1, null, null, null, 1">Research Conferences</option>
+                        <option value="1, null, null, 1, 2, null, 1, null">Research strategy or research agenda</option>
+                        <option value="null, null, null, null, null, null, 1, null">Scientific or medical advisory board</option>
+                    </select>
+                </div>
+                <div class="chartBox">
+                    <canvas id="reasonsNotInterested"></canvas>
+                </div>
+                <p class="text-end">
+                    <small>
+                        <b>n (organizations): = 130</b>
+                    </small>
+                </p>
+                <script>
  const ctxNotInterested = document.getElementById('reasonsNotInterested').getContext('2d');
   const reasonsNotInterestedBar = new Chart(ctxNotInterested, {
       type: 'horizontalBar',
@@ -526,18 +551,11 @@ function changeData() {
   reasonsNotInterestedBar.data.datasets[0].data = notBeingDeveloped.value.split(',');
   reasonsNotInterestedBar.update();
 }
-</script>
-
-
+                </script>
+            </section>
+        </div>
+    </div>
 </section>
-
-
-</div>
-
-
-</div>
-</section>
-
 <script>
 
 // LEADERSHIP TITLES (DONUT)
@@ -1061,9 +1079,7 @@ options: {
   responsive: true,
 }
 });
-
 </script>
-
 
       </div>
 <div class="whitespace"></div>

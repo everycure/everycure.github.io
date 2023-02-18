@@ -908,14 +908,19 @@ and arrange the dots in evenly-spaced lines*/
     #pill_container.animate_6 {top: 760px;}
 }
 
-@media only screen and (min-width: 1500px) {
+@media only screen and (max-width: 1500px) {
 
+    .branchTextWider {
+        margin-left: -50px !important;
+    
+    }
 }
 
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1501px) {
+    
     .branchTextWide {
         width: 130px;
-        margin-left: -60px;
+        margin-left: -60px !important;
     }
 
     .flexcontainer {
@@ -923,5 +928,12 @@ and arrange the dots in evenly-spaced lines*/
         justify-content: space-between;
         margin-left: 90px !important;
     }
+
+
 }
 
+
+.branchTextWider {
+    margin-right: -50px !important;
+    width: 140px !important;
+}

@@ -87,7 +87,7 @@ figcaption {
 }
 
 body,
-.fontWorkSans {
+.fontWorkSans, .navbar-brand {
   font-family: 'IBM Plex Sans', sans-serif !important;
 }
 
@@ -225,7 +225,7 @@ h6 {
 
 
 /* toggle larger/smaller navbars based on screen width */
-@media screen and (max-width: 65em) {
+@media screen and (max-width: 1000px) {
   .nav1 {
     display: none;
   }
@@ -235,7 +235,7 @@ h6 {
   }
 }
 
-@media screen and (min-width: 66em) {
+@media screen and (min-width:1001px) {
   .nav1 {
     display: block;
   }

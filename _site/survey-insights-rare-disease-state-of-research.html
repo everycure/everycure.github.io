@@ -51,6 +51,25 @@ rel="stylesheet"
 
 }
 
+.insightsNav, .insightsContent {
+    display: block;
+  }
+
+  .insightsMobileWarning {
+    display: none;
+  }
+.fa-triangle-exclamation {
+  color: var(--roadmap_dark);
+}
+@media screen and (max-width: 1000px) {
+  .insightsNav, .insightsContent {
+    display: none !important;
+  }
+  .insightsMobileWarning {
+    display: block !important;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .siteContent {
   padding-left: 100px;
@@ -84,6 +103,7 @@ section {
 <body >
 
 
+  
 <style>
     .globalnavdark {
         background-color: #00171f !important;
@@ -147,33 +167,38 @@ section {
   </div>
   
   <div class="nav2">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <!-- Navbar brand -->
-        <ul class="navbar-nav">
-          <!-- Dropdown -->
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-              data-mdb-toggle="dropdown" aria-expanded="false">
-              Navigation
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="/about.html">About</a></li>
-              <li><a class="dropdown-item" href="/roadmap.html">ROADMAP tool</a></li>
-              <li><a class="dropdown-item" href="/survey-insights-welcome.html">Survey data</a></li>
-              <li><a class="dropdown-item" href="/resources.html">More resources</a></li>
-            </ul>
-          </li>
-        </ul>
-        <div class="d-flex align-items-center">
-          <!-- Icon -->
-          <a class="text-reset me-3" href="/index.html">
-            <img src="./assets/ROADMAP.png" height="25px;" style="margin-top: -10px;" alt="logo" /> </a>
+    <nav class="navbar globalnavdark navbar-expand-lg navbar-dark bg-dark">
+      <!-- Container wrapper -->
+        <div class = "d-flex" style = "margin-top: -20px;">
+          <a class="navbar-brand mt-2 mt-lg-0"  href="/index.html">
+            <img src="./assets/ROADMAP.png" style = "margin-top: -20px!important; padding-left:10px;" height="27px" alt="ROADMAP logo" loading="lazy" />
+          </a>
+          <p class=""><a class="nav-link" href="/about.html">About</a></p>
+          <p class=""><a class="nav-link" href="/roadmap.html">ROADMAP tool</a></p>
+          <p class=""><a class="nav-link" href="/survey-insights-welcome.html">Survey data</a></p>
+          <o class=""><a class="nav-link" href="/resources.html">More resources</a></p>
+
         </div>
-      </div>
+    </div>
+      <!-- Container wrapper -->
     </nav>
-  </div>
+    </div>
+
+<!-- START MOBILE WARNING -->
+<div class=" p-5  insightsMobileWarning container">
+  <h1 class="p-5"><span><i class="fa-solid fa-triangle-exclamation"></i> &nbsp; </span>
+      Your device screen is too small.
+  </h1>
+  <p class="px-5">
+      The ROADMAP Survey Insights can be viewed on devices such as larger tablets, laptops, and computers. (If you're currently
+      on a computer/laptop, make sure the page is full screen.) We apologize for any inconvenience.
+  </p>
+</div>
+
+<!-- END MOBILE WARNING -->
+
+<div class = "insightsNav">
+
     <!-- Content -->
     <div class = "pt-5">
       <nav class="navbar_gds ">
@@ -218,8 +243,8 @@ section {
                       Collaboration</p>
             </a>
           </li>
-          <li class="nav-item_gds heading ">
-            <p class = "link-text link-text-inactive">STAKEHOLDER DATA</p>
+          <li class="nav-item_gds heading px-2 ">
+            <p class = "link-text link-text-inactive">OTHER STAKEHOLDER DATA</p>
     </li>
 
 
@@ -248,6 +273,8 @@ section {
       </nav>
 
     </div>
+</div>
+
     <main role="main" class="site-content">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
@@ -278,6 +305,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
 
 
 </script>
+<div class = "insightsContent">
 <style>
     .nav-2 a, .nav-2 .link-text {
         font-weight: 500;
@@ -3048,7 +3076,9 @@ options: {
 });
     </script>
 
-      </div>
+
+</div>
+</div>
 <div class="whitespace"></div>
 
     </main>

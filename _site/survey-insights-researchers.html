@@ -51,6 +51,25 @@ rel="stylesheet"
 
 }
 
+.insightsNav, .insightsContent {
+    display: block;
+  }
+
+  .insightsMobileWarning {
+    display: none;
+  }
+.fa-triangle-exclamation {
+  color: var(--roadmap_dark);
+}
+@media screen and (max-width: 1000px) {
+  .insightsNav, .insightsContent {
+    display: none !important;
+  }
+  .insightsMobileWarning {
+    display: block !important;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .siteContent {
   padding-left: 100px;
@@ -84,6 +103,7 @@ section {
 <body >
 
 
+  
 <style>
     .globalnavdark {
         background-color: #00171f !important;
@@ -147,33 +167,38 @@ section {
   </div>
   
   <div class="nav2">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <!-- Navbar brand -->
-        <ul class="navbar-nav">
-          <!-- Dropdown -->
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-              data-mdb-toggle="dropdown" aria-expanded="false">
-              Navigation
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="/about.html">About</a></li>
-              <li><a class="dropdown-item" href="/roadmap.html">ROADMAP tool</a></li>
-              <li><a class="dropdown-item" href="/survey-insights-welcome.html">Survey data</a></li>
-              <li><a class="dropdown-item" href="/resources.html">More resources</a></li>
-            </ul>
-          </li>
-        </ul>
-        <div class="d-flex align-items-center">
-          <!-- Icon -->
-          <a class="text-reset me-3" href="/index.html">
-            <img src="./assets/ROADMAP.png" height="25px;" style="margin-top: -10px;" alt="logo" /> </a>
+    <nav class="navbar globalnavdark navbar-expand-lg navbar-dark bg-dark">
+      <!-- Container wrapper -->
+        <div class = "d-flex" style = "margin-top: -20px;">
+          <a class="navbar-brand mt-2 mt-lg-0"  href="/index.html">
+            <img src="./assets/ROADMAP.png" style = "margin-top: -20px!important; padding-left:10px;" height="27px" alt="ROADMAP logo" loading="lazy" />
+          </a>
+          <p class=""><a class="nav-link" href="/about.html">About</a></p>
+          <p class=""><a class="nav-link" href="/roadmap.html">ROADMAP tool</a></p>
+          <p class=""><a class="nav-link" href="/survey-insights-welcome.html">Survey data</a></p>
+          <o class=""><a class="nav-link" href="/resources.html">More resources</a></p>
+
         </div>
-      </div>
+    </div>
+      <!-- Container wrapper -->
     </nav>
-  </div>
+    </div>
+
+<!-- START MOBILE WARNING -->
+<div class=" p-5  insightsMobileWarning container">
+  <h1 class="p-5"><span><i class="fa-solid fa-triangle-exclamation"></i> &nbsp; </span>
+      Your device screen is too small.
+  </h1>
+  <p class="px-5">
+      The ROADMAP Survey Insights can be viewed on devices such as larger tablets, laptops, and computers. (If you're currently
+      on a computer/laptop, make sure the page is full screen.) We apologize for any inconvenience.
+  </p>
+</div>
+
+<!-- END MOBILE WARNING -->
+
+<div class = "insightsNav">
+
     <!-- Content -->
     <div class = "pt-5">
       <nav class="navbar_gds ">
@@ -218,8 +243,8 @@ section {
                       Collaboration</p>
             </a>
           </li>
-          <li class="nav-item_gds heading ">
-            <p class = "link-text link-text-inactive">STAKEHOLDER DATA</p>
+          <li class="nav-item_gds heading px-2 ">
+            <p class = "link-text link-text-inactive">OTHER STAKEHOLDER DATA</p>
     </li>
 
 
@@ -248,6 +273,8 @@ section {
       </nav>
 
     </div>
+</div>
+
     <main role="main" class="site-content">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
@@ -278,6 +305,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
 
 
 </script>
+<div class = "insightsContent">
 <style>
     .nav-7 a, .nav-7 .link-text {
         font-weight: 500;
@@ -297,20 +325,20 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
     </p>
     <section>
         <div class="container">
-            <h2 class="">
+            <h2>
                 Current title at research institution
             </h2>
             <p>
-                Among the researchers that participated in our survey, 23 currently professor-level appointments at academic institutions.
+              Among the researchers that participated in our survey, 23 currently professor-level appointments at academic institutions, most of which reported being associate professors. This illustrates that most participants are likely in the mid-career stage of their academic careers. 
             </p>
             <div id="currentTitleCloud" style="height: 400px;"></div>
             <p class="text-end">
               <small>
                   <b>n (titles): 41</b> <br>
                   n (researchers): 40
+                  </small>
           </p>
         </div>
-      </div>
     </section>
 
     <section>
@@ -322,14 +350,13 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
               </small>
           </p>
       </div>
-    </div>
   </section>
 
 
 
     <section>
         <div class="container">
-            <h2 class="">
+            <h2>
                 Primary Affiliation
             </h2>
             <p>
@@ -343,9 +370,10 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
             </p>
         </div>
     </section>
+
     <section>
         <div class="container">
-            <h2 class="">
+            <h2>
                 Years at current position
             </h2>
             <p>
@@ -440,12 +468,9 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
                 Supporting different types of research
             </h3>
             <p>
-                Among the researchers in our dataset, there seems to be almost perfect overlap between those that focus on novel drug development and those that focus on drug repurposing research. This illustrates that researchers are able to pursue both, and maximize their impact on the lives of rare disease patients.
+              Among the researchers in our dataset, we found overlap between those that focus on novel drug development and those that focus on drug repurposing research (19/26, 73% focus on both). This illustrates that researchers are able to pursue both, and maximize their impact on the lives of rare disease patients. 
             </p>
         </div>
-    </section>
-    <section>
-        <div class="container">
           
             <div class="row py-5">
                 <div class="col-12 col-xl-6">
@@ -470,7 +495,6 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
                         </small>
                     </p>
                 </div>
-            </div>
         </div>
     </section>
     
@@ -526,9 +550,12 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
                 Drugs of focus for repurposing research
             </h3>
             <p>
-                <small class="text-end">
-                    *Note: this section merges data from 1-5 drug(s) listed per researcher. Where applicable, both researcher and drug totals are provided. These numbers vary by how many organizations answered each question and how many drugs they listed. The unit which is visualized in the chart is provided in bold*
-                </small>
+              Among the 47 drugs reported to have been pursued for repurposing, again sirolimus is most common, with 5 researchers reporting it as their promising drug of focus. Also, among the top 5 are ruxolitinib, sodium phenylbutyrate and various statins not otherwise specified.  
+            </p>
+            <p>
+              <small class="text-end">
+                *Note: this section merges data from 1-5 drug(s) listed per researcher. Where applicable, both researcher and drug totals are provided. These numbers vary by how many organizations answered each question and how many drugs they listed. The unit which is visualized in the chart is provided in bold*
+            </small>
             </p>
             <div id="drugsFocusCloud" style="height: 400px;"></div>
             <p class="text-end">
@@ -612,7 +639,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
             <div class="row py-5">
                 <div class="col-12 col-xl-4">
                     <p>
-                        TBD                    
+                      Out of the 29 researchers, only 3 consider the repurposing project to be completed while the majority reported the research to be ongoing.                    
                     </p>
                 </div>
                 <div class="col-12 col-xl-6">
@@ -776,6 +803,8 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
                 </div>
             </div>
         </div>
+</div>
+
     </section>
     <script>
 
@@ -1597,7 +1626,9 @@ var engagePatientsPie = new Chart(engagePatients, {
 </div>
 
 
-      </div>
+
+</div>
+</div>
 <div class="whitespace"></div>
 
     </main>

@@ -51,6 +51,25 @@ rel="stylesheet"
 
 }
 
+.insightsNav, .insightsContent {
+    display: block;
+  }
+
+  .insightsMobileWarning {
+    display: none;
+  }
+.fa-triangle-exclamation {
+  color: var(--roadmap_dark);
+}
+@media screen and (max-width: 1000px) {
+  .insightsNav, .insightsContent {
+    display: none !important;
+  }
+  .insightsMobileWarning {
+    display: block !important;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .siteContent {
   padding-left: 100px;
@@ -84,6 +103,7 @@ section {
 <body >
 
 
+  
 <style>
     .globalnavdark {
         background-color: #00171f !important;
@@ -147,33 +167,38 @@ section {
   </div>
   
   <div class="nav2">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <!-- Navbar brand -->
-        <ul class="navbar-nav">
-          <!-- Dropdown -->
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-              data-mdb-toggle="dropdown" aria-expanded="false">
-              Navigation
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="/about.html">About</a></li>
-              <li><a class="dropdown-item" href="/roadmap.html">ROADMAP tool</a></li>
-              <li><a class="dropdown-item" href="/survey-insights-welcome.html">Survey data</a></li>
-              <li><a class="dropdown-item" href="/resources.html">More resources</a></li>
-            </ul>
-          </li>
-        </ul>
-        <div class="d-flex align-items-center">
-          <!-- Icon -->
-          <a class="text-reset me-3" href="/index.html">
-            <img src="./assets/ROADMAP.png" height="25px;" style="margin-top: -10px;" alt="logo" /> </a>
+    <nav class="navbar globalnavdark navbar-expand-lg navbar-dark bg-dark">
+      <!-- Container wrapper -->
+        <div class = "d-flex" style = "margin-top: -20px;">
+          <a class="navbar-brand mt-2 mt-lg-0"  href="/index.html">
+            <img src="./assets/ROADMAP.png" style = "margin-top: -20px!important; padding-left:10px;" height="27px" alt="ROADMAP logo" loading="lazy" />
+          </a>
+          <p class=""><a class="nav-link" href="/about.html">About</a></p>
+          <p class=""><a class="nav-link" href="/roadmap.html">ROADMAP tool</a></p>
+          <p class=""><a class="nav-link" href="/survey-insights-welcome.html">Survey data</a></p>
+          <o class=""><a class="nav-link" href="/resources.html">More resources</a></p>
+
         </div>
-      </div>
+    </div>
+      <!-- Container wrapper -->
     </nav>
-  </div>
+    </div>
+
+<!-- START MOBILE WARNING -->
+<div class=" p-5  insightsMobileWarning container">
+  <h1 class="p-5"><span><i class="fa-solid fa-triangle-exclamation"></i> &nbsp; </span>
+      Your device screen is too small.
+  </h1>
+  <p class="px-5">
+      The ROADMAP Survey Insights can be viewed on devices such as larger tablets, laptops, and computers. (If you're currently
+      on a computer/laptop, make sure the page is full screen.) We apologize for any inconvenience.
+  </p>
+</div>
+
+<!-- END MOBILE WARNING -->
+
+<div class = "insightsNav">
+
     <!-- Content -->
     <div class = "pt-5">
       <nav class="navbar_gds ">
@@ -218,8 +243,8 @@ section {
                       Collaboration</p>
             </a>
           </li>
-          <li class="nav-item_gds heading ">
-            <p class = "link-text link-text-inactive">STAKEHOLDER DATA</p>
+          <li class="nav-item_gds heading px-2 ">
+            <p class = "link-text link-text-inactive">OTHER STAKEHOLDER DATA</p>
     </li>
 
 
@@ -248,6 +273,8 @@ section {
       </nav>
 
     </div>
+</div>
+
     <main role="main" class="site-content">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
@@ -278,6 +305,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
 
 
 </script>
+<div class = "insightsContent">
 <style>
 
 .nav-3-5 {
@@ -323,51 +351,48 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
     <section style="margin-top:70px!important;">
         <!-- START ROW 1 -->
         <div class="row">
-            <!-- START LDGA -->
+           
+            <!-- START SKS -->
             <div class="col-12 col-lg-4">
                 <div class="card card border-dark  h-100">
                     <div class="card-body h-100">
                         <div class="py-3 d-flex justify-content-center">
-                            <img class="img-fluid siroLogo " src="/assets/images/sirolimus-logos/smalllogo-241x300.png">
-                            <br>
-                            <br>
+                            <img class="img-fluid siroLogo" src="/assets/images/sirolimus-logos/SKS-Logo-New2_6-5-19.png">
                         </div>
                         <div class="row">
                             <h4 class="pt-4 text-center">
-                                <a href="https://lgdalliance.org/" target="_blank">
-                                    Lymphangiomatosis & Gorham's Disease Alliance
-                    (LGDA)
+                                <a href="https://smithkingsmore.org/" target="_blank">
+                                    Smith-Kingsmore
+                  Syndrome Foundation
                                 </a>
                             </h4>
                             <div class="card-text px-lg-4">
                                 <p class="pt-3">
-                                    <b>Rare disease:</b> Complex Lymphatic Anomalies
+                                    <b>Rare disease:</b> Smith-Kingsmore syndrome (SKS)
                                 </p>
-                                <p class="pb-2 mt-0">
+                                <p class="pb-2">
                                     <i class="fa-solid fa-x" style="color: black;"></i>
                                     &nbsp;
-                  There are no FDA-approved drugs for CLAs.
+                  There are no FDA-approved drugs for ﻿SKS
                                 </p>
                                 <p>
-                                    CLAs are a group of rare diseases that are characterized by abnormal growth of lymphatic vessels that may involve multiple organ systems, including lung, spleen, soft tissue and bones
+                                    SKS is a rare, neurodevelopmental genetic disorder, which impacts the digestive, endocrine, metabolic and nervous systems.
                                 </p>
                                 <p>
-                                    Sirolimus has shown efficacy in
-                                    <a href="" target="_blank">phase II clinical trials</a>
-                                    and is being used off label; It is currently one of the frontline agents for patients with complex lymphatic anomalies.
+                                    Sirolimus is currently being used off label for patients with SKS to treat intractable seizures.
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- END LDGA -->
+            <!-- END SKS -->
             <!-- START PCP -->
             <div class="col-12 col-lg-4">
                 <div class="card card border-dark  h-100">
                     <div class="card-body h-100">
                         <div class="py-3 d-flex justify-content-center">
-                            <img class="img-fluid siroLogo" src="/assets/images/sirolimus-logos/PC project.jpeg">
+                            <img class="img-fluid siroLogo" src="/assets/images/sirolimus-logos/pcproject.png">
                         </div>
                         <div class="row">
                             <h4 class="pt-4 text-center">
@@ -407,48 +432,43 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
                 </div>
             </div>
             <!-- END PCP -->
-            <!-- START CDCN -->
+          
+            <!-- START LAM -->
             <div class="col-12 col-lg-4">
                 <div class="card card border-dark  h-100">
                     <div class="card-body h-100">
                         <div class="py-3 d-flex justify-content-center">
-                            <img class="img-fluid siroLogo" src="/assets/images/sirolimus-logos/CDCN logo.png">
+                            <img class="img-fluid siroLogo" src="/assets/images/sirolimus-logos/LAM.svg">
                         </div>
                         <div class="row">
                             <h4 class="pt-4 text-center">
-                                <a href="https://cdcn.org/" target="_blank">
-                                    Castleman Disease
-                  Collaborative Network
+                                <a href="https://www.thelamfoundation.org/" target="_blank">
+                                    LAM
+                  Foundation
                                 </a>
                             </h4>
                             <div class="card-text px-lg-4">
                                 <p class="pt-3">
-                                    <b>Rare disease:</b> Castleman Disease
+                                    <b>Rare disease:</b> Lymphangioleiomyomatosis (LAM)
                                 </p>
                                 <p class="pb-2">
                                     <i class="fa-solid fa-prescription-bottle-medical" style="color: black;"></i>
-                                    &nbsp; CD has
-                  one FDA-approved drug, siltuximab (Sylvant), which is effective for about 30-50% of CD patients.
+                                    &nbsp;
+                  Sirolimus was
+                                    <a href="https://www.pfizer.com/news/press-release/press-release-detail/pfizer_s_rapamune_sirolimus_becomes_first_fda_approved_treatment_for_lymphangioleiomyomatosis_lam_a_rare_progressive_lung_disease" target="_blank">FDA approved</a> for LAM in 2015.
                                 </p>
                                 <p>
-                                    CD is a group of rare disorders that involve enlarged lymph nodes and a broad range of inflammatory symptoms and laboratory abnormalities. In CD, the cells of the immune system become hyperactivated, overproduce cytokines and other inflammatory compounds, and fail to return to a surveillance mode.
+                                    LAM is a rare lung disease that almost exclusively affects women; it's characterized by an abnormal growth of smooth muscle cells, especially in the lungs, lymphatic system and kidneys. 
                                 </p>
                                 <p>
-                                    <a href="https://chasingmycure.com/" target="_blank">Dr. Fajgenbaum</a>
-                                    discovered the potential for
-                  treating CD with Sirolimus in 2014.
-                                </p>
-                                <p>
-                                    Sirolimus is currently being used off-label for patients with iMCD and UCD, and is being studied in a
-                                    <a href="https://clinicaltrials.gov/ct2/show/NCT03933904" target="_blank">Phase II clinical trial</a>
-                                    .
+                                    Unregulated growth of these cells can lead to loss of lung function, accumulation of lymph rich-fluid in the chest and abdomen and growth of tumors in the kidneys.
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- END CDCN -->
+            <!-- END LAM -->
         </div>
         <!-- END ROW 1 -->
         <br>
@@ -492,41 +512,47 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
                 </div>
             </div>
             <!-- END CURE HHT -->
-            <!-- START SKS -->
-            <div class="col-12 col-lg-4">
+             <!-- START LDGA -->
+             <div class="col-12 col-lg-4">
                 <div class="card card border-dark  h-100">
                     <div class="card-body h-100">
                         <div class="py-3 d-flex justify-content-center">
-                            <img class="img-fluid siroLogo" src="/assets/images/sirolimus-logos/SKS-Logo-New2_6-5-19.png">
+                            <img class="img-fluid siroLogo " src="/assets/images/sirolimus-logos/smalllogo-241x300.png">
+                            <br>
+                            <br>
                         </div>
                         <div class="row">
                             <h4 class="pt-4 text-center">
-                                <a href="https://smithkingsmore.org/" target="_blank">
-                                    Smith-Kingsmore
-                  Syndrome Foundation
+                                <a href="https://lgdalliance.org/" target="_blank">
+                                    Lymphangiomatosis & Gorham's Disease Alliance
+                    (LGDA)
                                 </a>
                             </h4>
                             <div class="card-text px-lg-4">
                                 <p class="pt-3">
-                                    <b>Rare disease:</b> Smith-Kingsmore syndrome (SKS)
+                                    <b>Rare disease:</b> Complex Lymphatic Anomalies
                                 </p>
-                                <p class="pb-2">
+                                <p class="pb-2 mt-0">
                                     <i class="fa-solid fa-x" style="color: black;"></i>
                                     &nbsp;
-                  There are no FDA-approved drugs for ﻿SKS
+                  There are no FDA-approved drugs for CLAs.
                                 </p>
                                 <p>
-                                    SKS is a rare, neurodevelopmental genetic disorder, which impacts the digestive, endocrine, metabolic and nervous systems.
+                                    CLAs are a group of rare diseases that are characterized by abnormal growth of lymphatic vessels that may involve multiple organ systems, including lung, spleen, soft tissue and bones
                                 </p>
                                 <p>
-                                    Sirolimus is currently being used off label for patients with SKS to treat intractable seizures.
+                                    Sirolimus has shown efficacy in
+                                    <a href="" target="_blank">phase II clinical trials</a>
+                                    and is being used off label; It is currently one of the frontline agents for patients with complex lymphatic anomalies.
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- END SKS -->
+            <!-- END LDGA -->
+        
+            
             <!-- START RUNX1 -->
             <div class="col-12 col-lg-4">
                 <div class="card card border-dark  h-100">
@@ -537,14 +563,12 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
                             </div>
                             <h4 class="pt-4 text-center">
                                 <a href="https://www.runx1-fpd.org/" target="_blank">
-                                    RUNX1 Research
-                  Program
+                                    <span style = "font-style:italic;">RUNX1</span> Research Program
                                 </a>
                             </h4>
                             <div class="card-text px-lg-4">
                                 <p class="pt-3">
-                                    <b>Rare disease:</b>
-                                    <i>RUNX1</i> familial platelet disorder
+                                    <b>Rare disease:</b> <span style = "font-style:italic;">RUNX1</span> familial platelet disorder
                                 </p>
                                 <p class="pb-2">
                                     <i class="fa-solid fa-x" style="color: black;"></i>
@@ -553,8 +577,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
                                     <i>RUNX1</i>-FPD.
                                 </p>
                                 <p>
-                                    <i>RUNX1</i>
-                                    -FPD is a hereditary blood disorder causing bleeding, bruising, inflammatory conditions and a 40-50% lifetime risk of developing blood cancer
+                                    <span style = "font-style:italic;">RUNX1</span> FPD is a hereditary blood disorder causing bleeding, bruising, inflammatory conditions and a 40-50% lifetime risk of developing blood cancer
                                 </p>
                                 <p>
                                     Preclinical data identified sirolimus as promising; currently developing a clinical trial.
@@ -571,39 +594,49 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
         <br>
         <!-- START ROW 3 -->
         <div class="row">
-            <!-- START LAM -->
-            <div class="col-12 col-lg-4">
+              <!-- START CDCN -->
+              <div class="col-12 col-lg-4">
                 <div class="card card border-dark  h-100">
                     <div class="card-body h-100">
                         <div class="py-3 d-flex justify-content-center">
-                            <img class="img-fluid siroLogo" src="/assets/images/sirolimus-logos/LAM.svg">
+                            <img class="img-fluid siroLogo" src="/assets/images/sirolimus-logos/CDCN logo.png">
                         </div>
                         <div class="row">
                             <h4 class="pt-4 text-center">
-                                <a href="https://www.thelamfoundation.org/" target="_blank">
-                                    LAM
-                  Foundation
+                                <a href="https://cdcn.org/" target="_blank">
+                                    Castleman Disease
+                  Collaborative Network
                                 </a>
                             </h4>
                             <div class="card-text px-lg-4">
                                 <p class="pt-3">
-                                    <b>Rare disease:</b> Lymphangioleiomyomatosis (LAM)
+                                    <b>Rare disease:</b> Castleman Disease
                                 </p>
                                 <p class="pb-2">
                                     <i class="fa-solid fa-prescription-bottle-medical" style="color: black;"></i>
-                                    &nbsp;
-                  Sirolimus was
-                                    <a href="https://www.pfizer.com/news/press-release/press-release-detail/pfizer_s_rapamune_sirolimus_becomes_first_fda_approved_treatment_for_lymphangioleiomyomatosis_lam_a_rare_progressive_lung_disease" target="_blank">FDA approved</a> for LAM in 2015.
+                                    &nbsp; CD has
+                  one FDA-approved drug, siltuximab (Sylvant), which is effective for about 30-50% of CD patients.
                                 </p>
                                 <p>
-                                    LAM is a rare lung disease that almost exclusively affects women; it's characterized by an abnormal growth of smooth muscle cells, especially in the lungs, lymphatic system and kidneys. Unregulated growth of these cells can lead to loss of lung function, accumulation of lymph rich-fluid in the chest and abdomen and growth of tumors in the kidneys.
+                                    CD is a group of rare disorders that involve enlarged lymph nodes and a broad range of inflammatory symptoms and laboratory abnormalities. In CD, the cells of the immune system become hyperactivated, overproduce cytokines and other inflammatory compounds, and fail to return to a surveillance mode.
+                                </p>
+                                <p>
+                                    <a href="https://chasingmycure.com/" target="_blank">Dr. Fajgenbaum</a>
+                                    discovered the potential for
+                  treating CD with Sirolimus in 2014.
+                                </p>
+                                <p>
+                                    Sirolimus is currently being used off-label for patients with iMCD and UCD, and is being studied in a
+                                    <a href="https://clinicaltrials.gov/ct2/show/NCT03933904" target="_blank">Phase II clinical trial</a>
+                                    .
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- END LAM -->
+            <!-- END CDCN -->
+            
             <!-- START MSU -->
             <div class="col-12 col-lg-4">
                 <div class="card card border-dark  h-100">
@@ -679,7 +712,9 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
     </section>
 </div>
 
-      </div>
+
+</div>
+</div>
 <div class="whitespace"></div>
 
     </main>

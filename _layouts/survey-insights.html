@@ -37,6 +37,25 @@ rel="stylesheet"
 
 }
 
+.insightsNav, .insightsContent {
+    display: block;
+  }
+
+  .insightsMobileWarning {
+    display: none;
+  }
+.fa-triangle-exclamation {
+  color: var(--roadmap_dark);
+}
+@media screen and (max-width: 1000px) {
+  .insightsNav, .insightsContent {
+    display: none !important;
+  }
+  .insightsMobileWarning {
+    display: block !important;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .siteContent {
   padding-left: 100px;
@@ -69,7 +88,24 @@ section {
     
 <body >
 
-{% include navbar-dark.html %}
+
+  {% include navbar-dark.html %}
+
+<!-- START MOBILE WARNING -->
+<div class=" p-5  insightsMobileWarning container">
+  <h1 class="p-5"><span><i class="fa-solid fa-triangle-exclamation"></i> &nbsp; </span>
+      Your device screen is too small.
+  </h1>
+  <p class="px-5">
+      The ROADMAP Survey Insights can be viewed on devices such as larger tablets, laptops, and computers. (If you're currently
+      on a computer/laptop, make sure the page is full screen.) We apologize for any inconvenience.
+  </p>
+</div>
+
+<!-- END MOBILE WARNING -->
+
+<div class = "insightsNav">
+
     <!-- Content -->
     <div class = "pt-5">
       <nav class="navbar_gds ">
@@ -114,8 +150,8 @@ section {
                       Collaboration</p>
             </a>
           </li>
-          <li class="nav-item_gds heading ">
-            <p class = "link-text link-text-inactive">STAKEHOLDER DATA</p>
+          <li class="nav-item_gds heading px-2 ">
+            <p class = "link-text link-text-inactive">OTHER STAKEHOLDER DATA</p>
     </li>
 
 
@@ -144,6 +180,8 @@ section {
       </nav>
 
     </div>
+</div>
+
     <main role="main" class="site-content">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
@@ -174,8 +212,11 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
 
 
 </script>
+<div class = "insightsContent">
 {{content}}
-      </div>
+
+</div>
+</div>
 <div class="whitespace"></div>
 
     </main>

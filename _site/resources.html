@@ -141,9 +141,62 @@
     </nav>
   </div>
 <div class = "pt-5"></div>
+<style>
 
+
+.cssbuttons-io-button {
+  --color: var(--accent3);
+  font-family: inherit;
+  display: inline-block;
+  width: 6em;
+  height: 2.2em;
+  line-height: 1.86em;
+  overflow: hidden;
+  font-size: 17px;
+  z-index: 1;
+  color: var(--color);
+  border: 2px solid var(--color);
+  border-radius: 6px;
+  position: relative;
+}
+
+.cssbuttons-io-button::before {
+  position: absolute;
+  content: "";
+  background: var(--color);
+  width: 150px;
+  height: 200px;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.cssbuttons-io-button:hover {
+  color: white;
+}
+
+.cssbuttons-io-button:before {
+  top: 100%;
+  left: 100%;
+  transition: .3s all;
+}
+
+.cssbuttons-io-button:hover::before {
+  top: -30px;
+  left: -30px;
+}
+
+</style>
+<script src="https://app.awesome-table.com/AwesomeTableInclude.js"></script>
 <div class = "container pt-5">
     <h1>Resources</h1>
+    <p>Click the link below to download the file.</p>    
+    <a class="cssbuttons-io-button text-center" role="button" href="/csv/crowdsourced_data.csv" download="ROADMAP-Crowdsourced-Data-US-RDNP"><small>Download</small> 
+    </a>
+</div>
+<div class = "container mb-5">
+
+    <div data-type="AwesomeTableView" data-filters="" data-viewID="-NOaCd1LgkHJPvKQvDQ2"></div>
+
 </div>
     </main>
 

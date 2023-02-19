@@ -4,7 +4,7 @@ layout: default
 permalink: "/about.html"
 ---
 <script src="https://kit.fontawesome.com/90f1981f5b.js"></script>
-<link href="{{site.baseurl}}/assets/css/about.css" rel="stylesheet">
+<link href="/assets/css/about.css" rel="stylesheet">
 {% include navbar-dark.html %}
 <div class="wrapper " style="padding-top: 100px!important;">
     <div class="sidebar  animate__animated animate__slideInLeft">
@@ -12,7 +12,7 @@ permalink: "/about.html"
             <div class="current">
                 <div class="scrollbar" id="style-1">
                     <ul class="navul">
-                        <li class="navli">
+                        <li class="navli aboutnav">
                             <a href="#background">
                                 <img src="https://img.icons8.com/plasticine/512/information.png" class="icon">
                                 <span class="nav-text">
@@ -20,7 +20,7 @@ permalink: "/about.html"
                                 </span>
                             </a>
                         </li>
-                        <li class="navli">
+                        <li class="navli aboutnav">
                             <a href="#methods">
                                 <img src="https://img.icons8.com/external-becris-flat-becris/512/external-social-science-literary-genres-becris-flat-becris.png" class="icon">
                                 <span class="nav-text px-1">
@@ -28,39 +28,46 @@ permalink: "/about.html"
                                 </span>
                             </a>
                         </li>
-                        <li class="navli mx-5">
+                        <li class="navli aboutnav mx-5">
+                            <a href="#citations">
+                                <span class="nav-text" style="line-height: 1.3;">
+                                    Citing this project
+                                </span>
+                            </a>
+                        </li>
+                        <li class="navli aboutnav mx-5">
                             <a href="#crowdsourcing-data">
                                 <span class="nav-text" style="line-height: 1.3;">
                                     Identifying & characterizing stakeholders
                                 </span>
                             </a>
                         </li>
-                        <li class="navli mx-5">
+                        <li class="navli aboutnav mx-5">
                             <a href="#survey-execution">
                                 <span class="nav-text">Survey execution</span>
                             </a>
                         </li>
-                        <li class="navli mx-5">
+                        <li class="navli aboutnav mx-5">
                             <a href="#survey-data-analysis">
                                 <span class="nav-text">Survey data analysis</span>
                             </a>
                         </li>
-                        <li class="navli mx-5">
+                        <li class="navli aboutnav mx-5">
                             <a href="#interview-execution">
                                 <span class="nav-text">Interview execution</span>
                             </a>
                         </li>
-                        <li class="navli mx-5">
+                        <li class="navli aboutnav mx-5">
                             <a href="#interview-data-analysis">
                                 <span class="nav-text">Interview data analysis</span>
                             </a>
                         </li>
-                        <li class="navli mx-5">
+                        <li class="navli aboutnav mx-5">
                             <a href="#synthesis-and-tool-development">
                                 <span class="nav-text">Synthesis and tool development</span>
                             </a>
                         </li>
-                        <li class="navli">
+                        <li class="navli aboutnav">
                             <a href="#overview-of-findings">
                                 <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/512/external-discovery-bioengineering-flaticons-lineal-color-flat-icons.png" class="icon">
                                 <span class="nav-text">
@@ -68,37 +75,37 @@ permalink: "/about.html"
                                 </span>
                             </a>
                         </li>
-                        <li class="navli mx-5">
+                        <li class="navli aboutnav mx-5">
                             <a href="#state-of-rdnps">
                                 <span class="nav-text" style="line-height: 1.3;">State of rare disease nonprofits in the US</span>
                             </a>
                         </li>
-                        <li class="navli mx-5">
+                        <li class="navli aboutnav mx-5">
                             <a href="#off-label-use">
                                 <span class="nav-text" style="line-height: 1.3;">Off-Label use according to established medical resources</span>
                             </a>
                         </li>
-                        <li class="navli mx-5">
-                            <a href="#insights-rdnps">
+                        <li class="navli aboutnav mx-5">
+                            <a href="#insights-rdnp">
                                 <span class="nav-text" style="line-height: 1.3;">Survey insights: Rare Disease Nonprofits</span>
                             </a>
                         </li>
-                        <li class="navli mx-5">
+                        <li class="navli aboutnav mx-5">
                             <a href="#insights-patients-loved-ones">
                                 <span class="nav-text" style="line-height: 1.3;">Survey insights: Patients & Loved ones</span>
                             </a>
                         </li>
-                        <li class="navli mx-5">
+                        <li class="navli aboutnav mx-5">
                             <a href="#insights-physicians">
                                 <span class="nav-text" style="line-height: 1.3;">Survey insights: Physicians</span>
                             </a>
                         </li>
-                        <li class="navli mx-5">
+                        <li class="navli aboutnav mx-5">
                             <a href="#insights-researchers">
                                 <span class="nav-text" style="line-height: 1.3;">Survey insights: Researchers</span>
                             </a>
                         </li>
-                        <li class="navli">
+                        <li class="navli aboutnav">
                             <a href="#acknowledgements">
                                 <img src="https://img.icons8.com/parakeet/512/applause.png" class="icon">
                                 <span class="nav-text">
@@ -106,7 +113,7 @@ permalink: "/about.html"
                                 </span>
                             </a>
                         </li>
-                        <li class="navli">
+                        <li class="navli aboutnav">
                             <a href="#references">
                                 <img src="https://img.icons8.com/external-flaticons-flat-flat-icons/512/external-books-lifestyles-flaticons-flat-flat-icons-2.png" class="icon">
                                 <span class="nav-text">
@@ -119,13 +126,10 @@ permalink: "/about.html"
             </nav>
         </div>
         <div class="main animate__animated  animate__fadeIn">
-            <div class="container">
-                <h1 class="text-center mainTitle ">About the ROADMAP project</h1>
+            <div class="container d-flex ">
+                <img style="object-fit: contain;" class="img-fluid" src="/assets/svg/icons8/marginalia-657.svg">
             </div>
-            <div class="container d-flex justify-content-center">
-                <img style="height: 390px; width: auto; object-fit: contain;" class="img-fluid" src="/assets/animated/juicy-team-analyzes-graphs-and-diagrams.gif">
-            </div>
-            <section id="background" class="pt-5 ">
+            <section id="background">
                 <h1 class="pt-5">
                     <span class="d-inline">
                         <img src="https://img.icons8.com/plasticine/512/information.png" class="iconLarge img-fluid">Background
@@ -142,27 +146,27 @@ permalink: "/about.html"
                 {% include /ABOUT/methods.html %}
             </section>
             <section id="crowdsourcing-data">
-                <h2>Identifying and characterizing stakeholders</h2>
+                <h2 class = "pt-5">Identifying and characterizing stakeholders</h2>
                 {% include /ABOUT/identifying-stakeholders.html %}
             </section>
             <section id="survey-execution">
-                <h2> Survey execution</h2>
+                <h2 class = "pt-5"> Survey execution</h2>
                 {% include /ABOUT/survey-execution.html %}
             </section>
             <section id="survey-data-analysis">
-                <h2>Survey data analysis</h2>
+                <h2 class = "pt-5">Survey data analysis</h2>
                 {% include /ABOUT/survey-data-analysis.html %}
             </section>
             <section id="interview-execution">
-                <h2>Interview execution</h2>
+                <h2 class = "pt-5">Interview execution</h2>
                 {% include /ABOUT/interview-execution.html %}
             </section>
             <section id="interview-data-analysis">
-                <h2>Interview data analysis</h2>
+                <h2 class = "pt-5">Interview data analysis</h2>
                 {% include /ABOUT/interview-data-analysis.html %}
             </section>
             <section id="synthesis-and-tool-development">
-                <h2>Synthesis and tool development</h2>
+                <h2 class = "pt-5">Synthesis and tool development</h2>
                 {% include /ABOUT/synthesis-and-tool.html %}
             </section>
             <section id="overview-of-findings">

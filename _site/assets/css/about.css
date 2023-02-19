@@ -10,10 +10,11 @@
 
 }
 
-
 .mainTitle {
-  font-size: 80px;
+  font-size: 60px;
+  font-weight: 800!important;
 }
+
 @media screen and (max-width: 980px) {
   .sidebar {
     display: none!important;
@@ -53,30 +54,49 @@
   figure {
     text-align: center;
   }
+h1, h2, h3, h4, h5, h6 {
+  /* color: var(--accent1)!important; */
+
+}
+
+a {
+  color:#368ED6!important;
+}
+
+  h1 {
+    font-size: 40px;
+    font-weight: regular !important;
+  }
 
   h2 {
     font-size: 28px;
-    font-weight: 600;
-    padding-bottom: 20px;
-    padding-top: 20px;
+    font-weight: regular !important ;
   }
 
   h3 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
-    padding-bottom: 20px;
-    padding-top: 20px;
   }
 
 
   h4 {
-    font-size: 17px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 600;
     font-style: italic;
-    padding-bottom: 8px;
-    padding-top: 20px;
   }
 
+  h5 {
+    font-size: 14px;
+    font-weight: 500;
+    font-style: italic;
+  }
+
+  p b, li b {
+    font-weight: 600 !important;
+  }
+  
+
+  
   .liststylenone li {
     list-style: none;
     padding-bottom:10px;
@@ -148,7 +168,7 @@
   
   /* Main body */
   section {
-    padding-top: 3rem;
+    padding-top: 1rem;
     padding-left: 5rem;
     padding-right: 5rem;
   }
@@ -162,3 +182,11 @@
   
   }
   
+
+  .aboutnav a {
+    color: var(--roadmap_dark)!important;
+  }
+
+  .aboutnav a:hover {
+    color: var(--accent2)!important;
+  }

@@ -15,7 +15,9 @@
     when the tool is loaded/refreshed
 
 */
-
+ a {
+    font-weight: 700 !important;
+ }
 .cardboard {
     background-image: var(--cardboard)!important;
 }
@@ -264,8 +266,8 @@
 
 /* format the name of each main stop*/
 .main_dot_text,
-.main_dot_text p,
-.main_dot_text span {
+.main_dot_text p
+ {
     text-transform: uppercase;
     text-align: center !important;
     align-items: center !important;
@@ -313,6 +315,13 @@
     -moz-transition: top 1s cubic-bezier(0.645, 0.045, 0.355, 1);
     -ms-transition: top 1s cubic-bezier(0.645, 0.045, 0.355, 1);
     -o-transition: top 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.main_dot {
+    pointer-events: auto !important;
+    cursor: pointer;
+}
+#main_pill, #main_pill_img, #pill_container, .branch_line_active {
+    pointer-events:none !important;
 }
 
 /* img of the pill */
@@ -937,3 +946,10 @@ and arrange the dots in evenly-spaced lines*/
     margin-right: -50px !important;
     width: 140px !important;
 }
+
+
+.addCursor {
+    cursor:pointer;
+}
+
+

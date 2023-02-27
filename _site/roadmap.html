@@ -143,7 +143,6 @@
     </div>
 
 
-
 <!-- START MOBILE WARNING -->
 <div class="warning p-5  container">
     <h1 class="p-5"><span><i class="fa-solid fa-triangle-exclamation"></i> &nbsp; </span>
@@ -1064,17 +1063,17 @@
                 <div id="main_dot_1" tabindex="1" class="main_dot" onclick="mainstop1()">
                 </div>
                 <p class="main_dot_text">
-                    Home
+                    <span id = "main_dot_expand_1" class = "addCursor" onclick="mainstop1()">Home</span>
                 </p>
             </div>
             <!-- END STOP 1 (HOME) -->
 
             <!-- START STOP 2 -->
-            <div class="main_stop_2 main_stop">
+            <div class="main_stop_2 main_stop" >
                 <div id="main_dot_2" tabindex="1" class="main_dot" onclick="mainstop2()">
                 </div>
                 <p class="main_dot_text">
-                    Supporting <br> repurposing
+                    <span id = "main_dot_expand_2" class = "addCursor" onclick="mainstop2()">Supporting <br> repurposing</span>
                 </p>
                 <div id="branch_line_2" class="branch_line_inactive">
 
@@ -1132,11 +1131,10 @@
                 <div id="main_dot_3" tabindex="1" class="main_dot" onclick="mainstop3()">
                 </div>
                 <p class="main_dot_text">
-                    Identifying <br> the drug
+                    <span id = "main_dot_expand_3" class = "addCursor" onclick="mainstop3()">Identifying <br> the drug</span>
                 </p>
                 <div id="branch_line_3" class="branch_line_inactive">
                 <div class="flexcontainer">
-
                     <div id="branch_dot_3" class="branch_dot_inactive">
                         <div id="heading3_1">
                             <div id="branch_dot" tabindex="1" class="branch_dot" onclick="mainstop3_stop1()">
@@ -1224,7 +1222,7 @@
                 <div id="main_dot_4" tabindex="1" class="main_dot" onclick="mainstop4()">
                 </div>
                 <p class="main_dot_text">
-                    Validating <br> the drug
+                    <span id = "main_dot_expand_4" class = "addCursor" onclick="mainstop4()">Validating <br> the drug</span>
                 </p>
                 <div id="branch_line_4" class="branch_line_inactive">
                 <div class="flexcontainer">
@@ -1270,7 +1268,7 @@
                 <div id="main_dot_5" tabindex="1" class="main_dot" onclick="mainstop5()">
                 </div>
                 <p class="main_dot_text">
-                    Utilizing the <br> drug clinically
+                    <span id = "main_dot_expand_5" class = "addCursor" onclick="mainstop5()">Utilizing the <br> drug clinically</span>
                 </p>
                 <div id="branch_line_5" class="branch_line_inactive">
                 <div class="flexcontainer">
@@ -1306,7 +1304,7 @@
                 <div id="main_dot_6" tabindex="1" class="main_dot" onclick="mainstop6()">
                 </div>
                 <p class="main_dot_text">
-                    Reaching <br> an outcome
+                    <span id = "main_dot_expand_6" class = "addCursor" onclick="mainstop6()">Reaching <br> an outcome</span>
                 </p>    
                 <div id="branch_line_6" class="branch_line_inactive">
                 <div class="flexcontainer">
@@ -1368,7 +1366,7 @@
 
         <div class="intro  container p-5 ">
     <div class="">
-        <h1 id="title" class="" style = "font-size: 5.5em;">ROADMAP tool</h1>
+        <h1 id="scroll-anchor-1" id="title" class="" style = "font-size: 5.5em;">ROADMAP tool</h1>
         <div class="row py-3">
             <div class="col-md-6">
                 <div class="d-flex justify-content-center  mb-0 my-0 py-0">
@@ -1576,7 +1574,7 @@
     </div>
 
     <div id="mainstop2" class="contentPanel animate__animated animate__fadeIn" style="display: none;">
-        <h1>
+        <h1 id="scroll-anchor-2">
     Supporting repurposing
 </h1>
 <div class="row mb-4">
@@ -1614,7 +1612,7 @@
     <div id="mainstop3" class="contentPanel animate__animated animate__fadeIn" style="display: none;">
         <div class=" text-light d-flex justify-content-center flex-column pt-sm-5 ">
     <div class="">
-        <h1>
+        <h1 id="scroll-anchor-3">
             Identifying the drug
         </h4>
         <div class="row py-5">
@@ -1763,7 +1761,7 @@
     </div>
 
     <div id="mainstop4" class="contentPanel animate__animated animate__fadeIn" style="display: none;">
-                <h1>
+                <h1 id="scroll-anchor-4">
             Validating the drug
         </h1>
 
@@ -1885,7 +1883,7 @@
     </div>
 
     <div id="mainstop5" class="contentPanel animate__animated animate__fadeIn" style="display: none;">
-                <h1>
+                <h1 id="scroll-anchor-5">
             Utilizing the drug clinically
         </h1>
 
@@ -2060,7 +2058,7 @@
     </div>
 
     <div id="mainstop6" class="contentPanel animate__animated animate__fadeIn" style="display: none;">
-        <h1>
+        <h1 id="scroll-anchor-6">
     Reaching an outcome
 </h1>
 <div class = "row my-3">
@@ -2187,7 +2185,8 @@
  margin-left: 10px;
 }
 </style>
-<h1 class="mb-3">Funding support</h1>
+
+<h1 id="scroll-anchor-2-1" class="mb-3">Funding support</h1>
 <p class="mb-4">
     Drug repurposing projects require financial resources. In order to support these projects, a rare disease nonprofit serves two intertwined functions, as a fundraising entity and as a fund-allocating entity.
 </p>
@@ -2299,7 +2298,7 @@
     </div>
 
     <div id="mainstop2_stop2" class="contentPanel animate__animated animate__fadeIn" style="display: none;">
-        <h1 class="mb-5">Research support</h1>
+        <h1 id="scroll-anchor-2-2" class="mb-5">Research support</h1>
 <div class="row mb-3">
     <div class="col-md-4">
         <img src="/assets/svg/icons8/marginalia-bio-technologies.png" class="img-fluid">
@@ -2596,7 +2595,7 @@
 
     <div id="mainstop2_stop3" class="contentPanel animate__animated animate__fadeIn" style="display: none;">
         <div class="container z-depth-1 my-4 pt-4 pb-2 px-4">
-    <h1 class="mb-5">Partnering & collaboration</h1>
+    <h1 id="scroll-anchor-2-3" class="mb-5">Partnering & collaboration</h1>
     <div class="row">
         <div class="col-md-6">
             <img src="/assets/svg/icons8/marginalia-1248.png" class="img-fluid">
@@ -2669,7 +2668,7 @@
 
     <div id="mainstop2_stop4" class="contentPanel animate__animated animate__fadeIn" style="display: none;">
         <div class="container z-depth-1 my-4 pt-4 pb-2 px-4">
-    <h1 class="mb-5">Patient support</h1>
+    <h1 id="scroll-anchor-2-4" class="mb-5">Patient support</h1>
     <p>
         Rare disease nonprofits can provide direct patient support in the process of drug repurposing in various ways:
     </p>
@@ -2733,13 +2732,14 @@
 </div>
 <div class="py-5 my-5"></div>
     </div>
+    
 
     <!-- END BRANCH 2 -->
 
     <!-- START BRANCH 3 -->
     <div id="mainstop3_stop1" class="contentPanel animate__animated animate__fadeIn" style="display: none;">
         <div class="container z-depth-1 my-4 pt-4 pb-2 px-4">
-    <h1 class="mb-5">Drug screen approach</h1>
+    <h1 id="scroll-anchor-3-1" class="mb-5">Drug screen approach</h1>
 
     <div class = "row">
         <div class = "col-md-2">
@@ -2797,7 +2797,7 @@
 
     <div id="mainstop3_stop2" class="contentPanel animate__animated animate__fadeIn" style="display: none;">
         <div class="container z-depth-1 my-4 pt-4 pb-2 px-4">
-    <h1 class="mb-5">Pathogenesis targeting approach</h1>
+    <h1 id="scroll-anchor-3-2" class="mb-5">Pathogenesis targeting approach</h1>
     <p>
         <b>Preclinical/translational research</b> was the most common drug identification method in our data (
         <b>66</b>
@@ -2843,7 +2843,7 @@
     <div id="mainstop3_stop3" class="contentPanel animate__animated animate__fadeIn" style="display: none;">
         <div class="container z-depth-1 my-4 pt-4 pb-2 px-5">
 
-      <h1 class="mb-5">Data from similar diseases approach</h1>
+      <h1 id="scroll-anchor-3-3" class="mb-5">Data from similar diseases approach</h1>
       <p>
             Rare disease nonprofit organizations can identify promising drugs for repurposing by researching drugs that are used for similar diseases. Genomic analyses (studying the genetic makeup of patients with different rare diseases to identify common genetic mutations or variations that may indicate an overlap), phenotypic analysis (studying the observable characteristics or symptoms of patients with different rare diseases to identify commonalities) and various computational approaches, in which large-scale data sets of genetic, protein, cellular, etc. are analyzed can help to find potential similarities between diseases that may benefit from the same drug. 
       </p>
@@ -2920,7 +2920,7 @@
 
     <div id="mainstop3_stop4" class="contentPanel animate__animated animate__fadeIn" style="display: none;">
         <div class="container z-depth-1 my-4 pt-4 pb-2 px-4">
-    <h1 class="mb-5">Computational approach</h1>
+    <h1 id="scroll-anchor-3-4" class="mb-5">Computational approach</h1>
     <div class = "row">
         <div class = "col-md-2">
             <img src="/assets/svg/icons8/marginalia-205.png" class="img-fluid">
@@ -2997,7 +2997,7 @@
     <div id="mainstop3_stop5" class="contentPanel animate__animated animate__fadeIn" style="display: none;">
         <div class="container z-depth-1 my-4 pt-4 pb-2 px-4">
 
-  <h1 class = "mb-5">Data from off label use approach</h1>
+  <h1 id="scroll-anchor-3-5" class = "mb-5">Data from off label use approach</h1>
   <div class = "row mb-4">
     <div class = "col-md-4">
       <img src="/assets/svg/icons8/tutti-medical-id-and-drugs-1.png" class="img-fluid">
@@ -3102,7 +3102,7 @@
     <!-- START BRANCH 4 -->
     <div id="mainstop4_stop1" class="contentPanel animate__animated animate__fadeIn" style="display: none;">
         <div class="container z-depth-1 my-4 pt-4 pb-2 px-4">
-    <h1 class="mb-5">In vivo</h1>
+    <h1 id="scroll-anchor-4-1" class="mb-5">In vivo</h1>
     <div class="row">
         <div class="col-6">
             <p>
@@ -3126,7 +3126,7 @@
     </div>
 
     <div id="mainstop4_stop2" class="contentPanel animate__animated animate__fadeIn" style="display: none;">
-        <h1 class="mb-5">In vitro</h1>
+        <h1 id="scroll-anchor-4-2" class="mb-5">In vitro</h1>
 <div class="row">
     <div class="col-md-4 p-4">
         <img src="/assets/svg/icons8/marginalia-141.png" class="img-fluid">
@@ -3150,7 +3150,7 @@
 
     <div id="mainstop4_stop3" class="contentPanel animate__animated animate__fadeIn" style="display: none;">
         <div class="container z-depth-1 my-4 pt-4 pb-2 px-4">
-    <h1 class="mb-5">Evaluation of Real World Evidence</h1>
+    <h1 id="scroll-anchor4-3" class="mb-5">Evaluation of Real World Evidence</h1>
     <p>
         <b>Real World Evidence (RWE)</b>
         refers to data collected in routine clinical practice, outside of the controlled environment of a clinical trial. This type of evidence can provide valuable information on the safety and effectiveness of a drug in a real-world setting, in a broader patient population and with longer follow-up.
@@ -3181,7 +3181,7 @@
     <!-- START BRANCH 5 -->
     <div id="mainstop5_stop1" class="contentPanel animate__animated animate__fadeIn" style="display: none;">
         <div class="container z-depth-1 my-4 pt-4 pb-2 px-4">
-    <h1 class="mb-5">Clinical trial</h1>
+    <h1 id="scroll-anchor-5-1" class="mb-5">Clinical trial</h1>
     <img src="/assets/svg/icons8/tutti-analyses-1.png" class="img-fluid accentImage ">
     <p>
         Clinical trials are research studies that are conducted to evaluate the safety, efficacy, and effectiveness of drugs, medical devices, or other interventions in humans, after preclinical work has been done to evaluate potential efficacy and safety. The clinical trial process is divided into several phases, each of which has a specific purpose and set of objectives:
@@ -3301,7 +3301,7 @@
 
     <div id="mainstop5_stop2" class="contentPanel animate__animated animate__fadeIn" style="display: none;">
         <div class="container z-depth-1 my-4 pt-4 pb-2 px-4">
-    <h1 class="mb-5">Off label use</h1>
+    <h1 id="scroll-anchor-5-2" class="mb-5">Off label use</h1>
     <p>
         <b>Off-label drug use</b>
         refers to the use of a drug for a disease that has not been specifically approved by regulatory authorities, such as the FDA in the US. It is quite common and is used in cases where a drug has been found to be safe and effective for a new disease through research, or a physician has reason to believe it may help a patient from their own medical knowledge or anecdotal reports from other doctors. Additionally, doctors may prescribe drugs off-label for the disease which the drug is approved for, but for a different population, such as children, pregnant women, or other populations, which were not included in the original clinical trials. This can be incredibly helpful for patients that are not responding to the standard of care or have no standard of care for their disease. However, off-label use of drugs can also have risks. Since the safety and effectiveness of a drug for an off-label use have not been established, there is a potential for adverse events or lack of efficacy.
@@ -3334,7 +3334,7 @@
     <!-- START BRANCH 6 -->
     <div id="mainstop6_stop1" class="contentPanel animate__animated animate__fadeIn" style="display: none;">
         <div class="container z-depth-1 my-4 pt-4 pb-2 px-4">
-    <h1 class="mb-5">FDA-Approval</h1>
+    <h1 id="scroll-anchor-6-1" class="mb-5">FDA-Approval</h1>
     <p>
         <b>The Food and Drug Administration (FDA)</b>
         is a federal agency within the United States Department of Health and Human Services that is responsible for ensuring the safety, efficacy, and security of human and veterinary drugs, biological products, and medical devices. The FDA is also responsible for ensuring that these products are accurately labeled and that they meet the standards set by the federal government.
@@ -3524,7 +3524,7 @@
     </div>
 
     <div id="mainstop6_stop2" class="contentPanel animate__animated animate__fadeIn" style="display: none;">
-            <h1 class="mb-3">Alternatives</h1>
+            <h1 id="scroll-anchor-6-2" class="mb-3">Alternatives</h1>
     <h3 class = "sectionheading">
         Off-label use
     </h3>
@@ -3623,7 +3623,7 @@
 
     <div id="mainstop6_stop3" class="contentPanel animate__animated animate__fadeIn" style="display: none;">
         <div class="container z-depth-1 my-4 pt-4 pb-2 px-4">
-    <h1 class="mb-5">Abandoned</h1>
+    <h1 id="scroll-anchor-6-3" class="mb-5">Abandoned</h1>
    
    
             <img src="/assets/svg/icons8/marginalia-752.png" class="img-fluid" style = "height: 250px; width: auto;">
@@ -3780,6 +3780,8 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js">
 </script>
 
+
+
 <!-- activate display panels on the right side -->
 <script src="./assets/tool_scripts/right_side.js">
 </script>
@@ -3792,6 +3794,7 @@
 <script src="./assets/tool_scripts/button_selected.js">
 </script>
 <!-- END SCRIPTS -->
+
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

@@ -19,7 +19,6 @@ permalink: "/roadmap.html"
 {% include navbar-dark.html %}
 
 
-
 <!-- START MOBILE WARNING -->
 <div class="warning p-5  container">
     <h1 class="p-5"><span><i class="fa-solid fa-triangle-exclamation"></i> &nbsp; </span>
@@ -214,17 +213,17 @@ permalink: "/roadmap.html"
                 <div id="main_dot_1" tabindex="1" class="main_dot" onclick="mainstop1()">
                 </div>
                 <p class="main_dot_text">
-                    Home
+                    <span id = "main_dot_expand_1" class = "addCursor" onclick="mainstop1()">Home</span>
                 </p>
             </div>
             <!-- END STOP 1 (HOME) -->
 
             <!-- START STOP 2 -->
-            <div class="main_stop_2 main_stop">
+            <div class="main_stop_2 main_stop" >
                 <div id="main_dot_2" tabindex="1" class="main_dot" onclick="mainstop2()">
                 </div>
                 <p class="main_dot_text">
-                    Supporting <br> repurposing
+                    <span id = "main_dot_expand_2" class = "addCursor" onclick="mainstop2()">Supporting <br> repurposing</span>
                 </p>
                 <div id="branch_line_2" class="branch_line_inactive">
 
@@ -282,11 +281,10 @@ permalink: "/roadmap.html"
                 <div id="main_dot_3" tabindex="1" class="main_dot" onclick="mainstop3()">
                 </div>
                 <p class="main_dot_text">
-                    Identifying <br> the drug
+                    <span id = "main_dot_expand_3" class = "addCursor" onclick="mainstop3()">Identifying <br> the drug</span>
                 </p>
                 <div id="branch_line_3" class="branch_line_inactive">
                 <div class="flexcontainer">
-
                     <div id="branch_dot_3" class="branch_dot_inactive">
                         <div id="heading3_1">
                             <div id="branch_dot" tabindex="1" class="branch_dot" onclick="mainstop3_stop1()">
@@ -374,7 +372,7 @@ permalink: "/roadmap.html"
                 <div id="main_dot_4" tabindex="1" class="main_dot" onclick="mainstop4()">
                 </div>
                 <p class="main_dot_text">
-                    Validating <br> the drug
+                    <span id = "main_dot_expand_4" class = "addCursor" onclick="mainstop4()">Validating <br> the drug</span>
                 </p>
                 <div id="branch_line_4" class="branch_line_inactive">
                 <div class="flexcontainer">
@@ -420,7 +418,7 @@ permalink: "/roadmap.html"
                 <div id="main_dot_5" tabindex="1" class="main_dot" onclick="mainstop5()">
                 </div>
                 <p class="main_dot_text">
-                    Utilizing the <br> drug clinically
+                    <span id = "main_dot_expand_5" class = "addCursor" onclick="mainstop5()">Utilizing the <br> drug clinically</span>
                 </p>
                 <div id="branch_line_5" class="branch_line_inactive">
                 <div class="flexcontainer">
@@ -456,7 +454,7 @@ permalink: "/roadmap.html"
                 <div id="main_dot_6" tabindex="1" class="main_dot" onclick="mainstop6()">
                 </div>
                 <p class="main_dot_text">
-                    Reaching <br> an outcome
+                    <span id = "main_dot_expand_6" class = "addCursor" onclick="mainstop6()">Reaching <br> an outcome</span>
                 </p>    
                 <div id="branch_line_6" class="branch_line_inactive">
                 <div class="flexcontainer">
@@ -559,6 +557,7 @@ permalink: "/roadmap.html"
     <div id="mainstop2_stop4" class="contentPanel animate__animated animate__fadeIn" style="display: none;">
         {% include /TOOL/content/mainstop2/stop4.html %}
     </div>
+    
 
     <!-- END BRANCH 2 -->
 
@@ -641,6 +640,8 @@ permalink: "/roadmap.html"
 <!-- MDB5 JS -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js">
 </script>
+
+
 
 <!-- activate display panels on the right side -->
 <script src="./assets/tool_scripts/right_side.js">

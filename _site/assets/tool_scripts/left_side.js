@@ -1,4 +1,7 @@
+
 $(document).ready(function () {
+
+  
   // Activate subheadings
   var changeSubheading = function () {
     $("#heading_2_1").addClass("active_heading_2_1");
@@ -24,6 +27,8 @@ $(document).ready(function () {
     $("#heading_4").removeClass("active_heading_4");
     $("#heading_5").removeClass("active_heading_5");
     $("#heading_6").removeClass("active_heading_6");
+    $('body, html, #mainstop2_stop1').scrollTop(0);
+
   };
   $("#heading2_1").click(changeSubheading);
 
@@ -511,7 +516,7 @@ $(document).ready(function () {
         $("#heading_6_2").removeClass("active_heading_6_2");
         $("#heading_6_3").removeClass("active_heading_6_3");
     }
-    $("#main_dot_1").click(expandBranch);
+    $("#main_dot_1, #main_dot_expand_1").click(expandBranch);
 
 
   // Activate subway stop 2
@@ -560,7 +565,7 @@ $(document).ready(function () {
     $("#heading_6_2").removeClass("active_heading_6_2");
     $("#heading_6_3").removeClass("active_heading_6_3");
 }
-$("#main_dot_2").click(expandBranch);
+$("#main_dot_2, #main_dot_expand_2").click(expandBranch);
 
 
   // Activate subway stop 3
@@ -609,7 +614,7 @@ $("#main_dot_2").click(expandBranch);
     $("#heading_6_2").removeClass("active_heading_6_2");
     $("#heading_6_3").removeClass("active_heading_6_3");
 }
-$("#main_dot_3").click(expandBranch);
+$("#main_dot_3,#main_dot_expand_3").click(expandBranch);
 
 
   // Activate subway stop 4
@@ -658,7 +663,7 @@ $("#main_dot_3").click(expandBranch);
     $("#heading_6_2").removeClass("active_heading_6_2");
     $("#heading_6_3").removeClass("active_heading_6_3");
 }
-$("#main_dot_4").click(expandBranch);
+$("#main_dot_4,#main_dot_expand_4").click(expandBranch);
 
 
   // Activate subway stop 5
@@ -707,7 +712,7 @@ $("#main_dot_4").click(expandBranch);
     $("#heading_6_2").removeClass("active_heading_6_2");
     $("#heading_6_3").removeClass("active_heading_6_3");
 }
-$("#main_dot_5").click(expandBranch);
+$("#main_dot_5,#main_dot_expand_5").click(expandBranch);
 
 
 
@@ -757,6 +762,6 @@ $("#main_dot_5").click(expandBranch);
     $("#heading_6_2").removeClass("active_heading_6_2");
     $("#heading_6_3").removeClass("active_heading_6_3");
 }
-$("#main_dot_6").click(expandBranch);
+$("#main_dot_6,#main_dot_expand_6").click(expandBranch);
 
 

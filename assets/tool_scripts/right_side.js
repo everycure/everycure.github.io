@@ -1,4 +1,5 @@
 
+
     function mainstop1() {
 
         var mainstop1 = document.getElementById("mainstop1");
@@ -84,6 +85,7 @@
         loc6_1.style.display = "none";
         loc6_2.style.display = "none";
         loc6_3.style.display = "none";
+        document.querySelector('#scroll-anchor-1').scrollIntoView()
     }
 
 
@@ -172,6 +174,7 @@
         loc6_1.style.display = "none";
         loc6_2.style.display = "none";
         loc6_3.style.display = "none";
+        document.querySelector('#scroll-anchor-2').scrollIntoView()
     }
 
 
@@ -260,6 +263,7 @@
         loc6_1.style.display = "none";
         loc6_2.style.display = "none";
         loc6_3.style.display = "none";
+        document.querySelector('#scroll-anchor-3').scrollIntoView()
     }
 
 
@@ -348,6 +352,7 @@
         loc6_1.style.display = "none";
         loc6_2.style.display = "none";
         loc6_3.style.display = "none";
+        document.querySelector('#scroll-anchor-4').scrollIntoView()
     }
 
 
@@ -436,6 +441,7 @@
         loc6_1.style.display = "none";
         loc6_2.style.display = "none";
         loc6_3.style.display = "none";
+        document.querySelector('#scroll-anchor-5').scrollIntoView()
     }
 
 
@@ -524,6 +530,7 @@
         loc6_1.style.display = "none";
         loc6_2.style.display = "none";
         loc6_3.style.display = "none";
+        document.querySelector('#scroll-anchor-6').scrollIntoView()
     }
 
 
@@ -616,6 +623,7 @@
         loc6_1.style.display = "none";
         loc6_2.style.display = "none";
         loc6_3.style.display = "none";
+        document.querySelector('#scroll-anchor-2-1').scrollIntoView()
     }
 
 
@@ -706,6 +714,7 @@
         loc6_1.style.display = "none";
         loc6_2.style.display = "none";
         loc6_3.style.display = "none";
+        document.querySelector('#scroll-anchor-2-2').scrollIntoView()
     }
 
 
@@ -796,6 +805,8 @@
         loc6_1.style.display = "none";
         loc6_2.style.display = "none";
         loc6_3.style.display = "none";
+
+        document.querySelector('#scroll-anchor-2-3').scrollIntoView()
     }
 
 
@@ -886,6 +897,8 @@
         loc6_1.style.display = "none";
         loc6_2.style.display = "none";
         loc6_3.style.display = "none";
+
+        document.querySelector('#scroll-anchor-2-4').scrollIntoView()
     }
 
 
@@ -976,6 +989,8 @@
         loc6_1.style.display = "none";
         loc6_2.style.display = "none";
         loc6_3.style.display = "none";
+
+        document.querySelector('#scroll-anchor-3-1').scrollIntoView()
     }
 
 
@@ -1064,6 +1079,8 @@
         loc6_1.style.display = "none";
         loc6_2.style.display = "none";
         loc6_3.style.display = "none";
+
+        document.querySelector('#scroll-anchor-3-2').scrollIntoView()
     }
 
 
@@ -1152,6 +1169,8 @@
         loc6_1.style.display = "none";
         loc6_2.style.display = "none";
         loc6_3.style.display = "none";
+
+        document.querySelector('#scroll-anchor-3-3').scrollIntoView()
     }
 
 
@@ -1240,6 +1259,8 @@
         loc6_1.style.display = "none";
         loc6_2.style.display = "none";
         loc6_3.style.display = "none";
+
+        document.querySelector('#scroll-anchor-3-4').scrollIntoView()
     }
 
 
@@ -1328,6 +1349,8 @@
         loc6_1.style.display = "none";
         loc6_2.style.display = "none";
         loc6_3.style.display = "none";
+
+        document.querySelector('#scroll-anchor-3-5').scrollIntoView()
     }
 
 
@@ -1416,6 +1439,8 @@
         loc6_1.style.display = "none";
         loc6_2.style.display = "none";
         loc6_3.style.display = "none";
+
+        document.querySelector('#scroll-anchor-4-1').scrollIntoView()
     }
 
 
@@ -1504,6 +1529,8 @@
         loc6_1.style.display = "none";
         loc6_2.style.display = "none";
         loc6_3.style.display = "none";
+
+        document.querySelector('#scroll-anchor-4-2').scrollIntoView()
     }
 
 
@@ -1592,6 +1619,8 @@
         loc6_1.style.display = "none";
         loc6_2.style.display = "none";
         loc6_3.style.display = "none";
+
+        document.querySelector('#scroll-anchor-4-3').scrollIntoView()
     }
 
 
@@ -1680,6 +1709,8 @@
         loc6_1.style.display = "none";
         loc6_2.style.display = "none";
         loc6_3.style.display = "none";
+
+        document.querySelector('#scroll-anchor-5-1').scrollIntoView()
     }
 
 
@@ -1769,6 +1800,8 @@
         loc6_1.style.display = "none";
         loc6_2.style.display = "none";
         loc6_3.style.display = "none";
+
+        document.querySelector('#scroll-anchor-5-2').scrollIntoView()
     }
 
 
@@ -1858,6 +1891,8 @@
         loc6_1.style.display = "block";
         loc6_2.style.display = "none";
         loc6_3.style.display = "none";
+
+        document.querySelector('#scroll-anchor-6-1').scrollIntoView()
     }
 
 
@@ -1946,6 +1981,8 @@
         loc6_1.style.display = "none";
         loc6_2.style.display = "block";
         loc6_3.style.display = "none";
+
+        document.querySelector('#scroll-anchor-6-2').scrollIntoView()
     }
 
 
@@ -2034,4 +2071,6 @@
         loc6_1.style.display = "none";
         loc6_2.style.display = "none";
         loc6_3.style.display = "block";
+
+        document.querySelector('#scroll-anchor-6-3').scrollIntoView()
     }

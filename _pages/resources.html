@@ -61,45 +61,6 @@ Click the link below to download the file.</p>
     <a class="cssbuttons-io-button text-center" role="button" href="/csv/crowdsourced_data.csv" download="ROADMAP-Crowdsourced-Data-US-RDNP"><small>Download</small> 
     </a>
 </div>
-<div class = "container mb-5">
 
-    <style>
-        table {
-  border-collapse: collapse;
-  border: 2px black solid;
-  font: 12px sans-serif;
-  margin-left: 100px;
-}
 
-td {
-  border: 1px black solid;
-  padding: 5px;
-  max-width: 100px;
-  word-wrap: break-word;
-}
-    </style>
-    <script src = "https://d3js.org/d3.v3.min.js"></script>
 
-    <script>
-        d3.text("/csv/crowdsourced_data.csv", function(data) {
-    var parsedCSV = d3.csv.parseRows(data);
-
-    var container = d3.select("body")
-        .append("table")
-
-    .selectAll("tr")
-        .data(parsedCSV).enter()
-        .append("tr")
-
-    .selectAll("td")
-        .data(function(d) {
-            return d;
-        }).enter()
-        .append("td")
-        .text(function(d) {
-            return d;
-        });
-});
-    </script>
-
-</div>

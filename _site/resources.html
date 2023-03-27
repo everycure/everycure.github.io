@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PS05PDEZVC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PS05PDEZVC');
+</script>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -37,6 +48,7 @@
   href="/assets/css/style.css"
   rel="stylesheet"
 />    
+
 
 <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
 
@@ -175,52 +187,50 @@
 }
 
 </style>
+
 <div class = "container pt-5">
     <h1>Resources</h1>
-    <p>Click the link below to download the file.</p>    
+    
+    <h3> State of rare disease nonprofits in the US </h3>
+    <p>
+    
+As our first step to building the ROADMAP, we set out to build a comprehensive list of all rare disease nonprofit organizations in the US. A team of volunteers spent seven months extracting data from the websites of these organizations, gathering basic information such as their year of founding, name & contact information of founders, information on the organization’s resources (conference, research agenda, biobank, registry, natural history study, etc.), whether the rare disease has treatment guidelines, or whether it is known that it is caused by a genetic mutation, is there any mention of drug repurposing, and if so - which drug(s) were pursued, or is there any mention of partnerships or collaborations with other organizations. As a result of this exercise, 711 organizations were confirmed as rare disease nonprofit organizations in the US with active websites as of 12/2021. Because this data is publicly available through organizations' websites and separate from the ROADMAP survey, we have made available open-source here.
+    
+Click the link below to download the file.</p>    
     <a class="cssbuttons-io-button text-center" role="button" href="/csv/crowdsourced_data.csv" download="ROADMAP-Crowdsourced-Data-US-RDNP"><small>Download</small> 
     </a>
 </div>
-<div class = "container mb-5">
 
-    <style>
-        table {
-  border-collapse: collapse;
-  border: 2px black solid;
-  font: 12px sans-serif;
-  margin-left: 100px;
-}
+<div class = "container pt-5">    
+    <h3> PDFs of the ROADMAP content </h3>
+    <p>
+    
+For your convenience, we also are providing the following in PDF form if you have trouble accessing the information on the interactive tool:
+    
+Click the link below to download the files.</p>    
 
-td {
-  border: 1px black solid;
-  padding: 5px;
-  max-width: 100px;
-  word-wrap: break-word;
-}
-    </style>
-    <script src = "https://d3js.org/d3.v3.min.js"></script>
+<p> <b> About the ROADMAP Project:</b> </p>
+    <a class="cssbuttons-io-button text-center" role="button" href="assets/ABOUT%20ROADMAP.pdf" download="ABOUT THE ROADMAP PROJECT"><small>Download</small> 
+    </a>
+    
+    <p> <b> ROADMAP tool content: </b></p>
+    <a class="cssbuttons-io-button text-center" role="button" href="assets/ROADMAP%20tool%20content.pdf" download="ROADMAP tool content"><small>Download</small> 
+    </a>
+    
+</div>
 
-    <script>
-        d3.text("/csv/crowdsourced_data.csv", function(data) {
-    var parsedCSV = d3.csv.parseRows(data);
 
-    var container = d3.select("body")
-        .append("table")
 
-    .selectAll("tr")
-        .data(parsedCSV).enter()
-        .append("tr")
+<div class = "container pt-5">
+   
+    <h3> ROADMAP Paper [coming soon] </h3>
+    <p>
 
-    .selectAll("td")
-        .data(function(d) {
-            return d;
-        }).enter()
-        .append("td")
-        .text(function(d) {
-            return d;
-        });
-});
-    </script>
+A paper describing the findings from this project will be submitted to a peer-review, open source journal soon, and will be made available for download here as soon as possible.
+  </p>
+  <p>In the meantime, if you would like cite this project or the data available in the data explorer, please utilize this citation:
+<b>Korsunska, A., Bolden, S. E., Repasky, M., Zuccato, M., Fajgenbaum, D. (2023) The ROADMAP Project. https://www.everycure.org/roadmap </b>
+  </p>
 
 </div>
     </main>
